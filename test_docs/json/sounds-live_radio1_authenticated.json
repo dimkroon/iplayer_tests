@@ -1,0 +1,1033 @@
+{
+  "modules": {
+    "data": [
+      {
+        "controls": null,
+        "id": "live_play_area",
+        "type": "inline_display_module",
+        "title": "Player",
+        "description": null,
+        "image_url": null,
+        "data": [
+          {
+            "id": "p0gl32br",
+            "type": "broadcast_summary",
+            "urn": "urn:bbc:radio:episode:m001rwjf",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "titles": {
+              "primary": "Radio 1's Indie Show",
+              "secondary": "with Jack Saunders: Indie Roulette",
+              "tertiary": ""
+            },
+            "synopses": {
+              "short": "Another listener takes on the Radio 1 Generator in Indie Roulette!",
+              "medium": "Another listener takes on the Radio 1 Generator in Indie Roulette!",
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cykx2w.jpg",
+            "duration": 7200,
+            "container": {
+              "type": "brand",
+              "id": "m00008zy",
+              "urn": "urn:bbc:radio:brand:m00008zy",
+              "title": "Radio 1's Indie Show",
+              "activities": []
+            },
+            "start": "2023-11-05T21:00:00Z",
+            "end": "2023-11-05T23:00:00Z",
+            "service_id": "bbc_radio_one",
+            "playable_item": null
+          },
+          {
+            "id": "p0gl32bw",
+            "type": "broadcast_summary",
+            "urn": "urn:bbc:radio:episode:m001rwjk",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "titles": {
+              "primary": "BBC Introducing on Radio 1",
+              "secondary": "with Jess Iszatt: Venbee artist advice",
+              "tertiary": ""
+            },
+            "synopses": {
+              "short": "Jess showcases the best of BBC Music Introducing and Venbee gives advice for new artists.",
+              "medium": "Jess has the best from BBC Music Introducing including Master Peace and Georgia, Jarki Monno and Immi Dash. Plus Venbee shares some advice for aspiring artists.",
+              "long": "Jess has the best from BBC Music Introducing including Master Peace and Georgia, Jarki Monno and Immi Dash. Venbee shares some advice for aspiring artists. Plus a new Tune Of The Week from London artist Deja."
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ghzhl2.jpg",
+            "duration": 3600,
+            "container": {
+              "type": "brand",
+              "id": "m0000blt",
+              "urn": "urn:bbc:radio:brand:m0000blt",
+              "title": "BBC Introducing on Radio 1",
+              "activities": []
+            },
+            "start": "2023-11-05T23:00:00Z",
+            "end": "2023-11-06T00:00:00Z",
+            "service_id": "bbc_radio_one",
+            "playable_item": null
+          },
+          {
+            "id": "p0gl32by",
+            "type": "broadcast_summary",
+            "urn": "urn:bbc:radio:episode:m001rwjp",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "titles": {
+              "primary": "Radio 1's Future Soul with Victoria Jane",
+              "secondary": "Gotts Street Park step into the Soul Spotlight",
+              "tertiary": ""
+            },
+            "synopses": {
+              "short": "Victoria Jane is joined by Gotts Street Park as they step into the Soul Spotlight.",
+              "medium": "Victoria Jane is joined by Gotts Street Park as they step into the Soul Spotlight. Plus there is a brand new Vic's Pick revealed for the month of November.",
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bvyyql.jpg",
+            "duration": 5400,
+            "container": {
+              "type": "brand",
+              "id": "m000zd5w",
+              "urn": "urn:bbc:radio:brand:m000zd5w",
+              "title": "Radio 1's Future Soul with Victoria Jane",
+              "activities": []
+            },
+            "start": "2023-11-06T00:00:00Z",
+            "end": "2023-11-06T01:30:00Z",
+            "service_id": "bbc_radio_one",
+            "playable_item": null
+          },
+          {
+            "id": "p0gl32c4",
+            "type": "broadcast_summary",
+            "urn": "urn:bbc:radio:episode:m001rwjt",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "titles": {
+              "primary": "Radio 1's UK R&B Mix",
+              "secondary": "The best in UK R&B",
+              "tertiary": ""
+            },
+            "synopses": {
+              "short": "Victoria Jane plays you 30 minutes of the best UK R&B.",
+              "medium": "Victoria Jane plays you 30 minutes of the best UK R&B with music from the likes of Nippa, Ayanna, Jaz Karis plus many more.",
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bw5vgj.jpg",
+            "duration": 1800,
+            "container": {
+              "type": "brand",
+              "id": "m000zn65",
+              "urn": "urn:bbc:radio:brand:m000zn65",
+              "title": "Radio 1's UK R&B Mix",
+              "activities": []
+            },
+            "start": "2023-11-06T01:30:00Z",
+            "end": "2023-11-06T02:00:00Z",
+            "service_id": "bbc_radio_one",
+            "playable_item": null
+          },
+          {
+            "id": "p0gl32c6",
+            "type": "broadcast_summary",
+            "urn": "urn:bbc:radio:episode:m001rwjy",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "titles": {
+              "primary": "Radio 1's Decompression Session",
+              "secondary": "Managing your time",
+              "tertiary": ""
+            },
+            "synopses": {
+              "short": "Stuart Sandeman gives you the tips and tools to mange your time and maximise productivity.",
+              "medium": "Stuart Sandeman gives you a soothing mix of chilled beats, and tips and tools to mange your time and make time work for you.",
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dw0zpg.jpg",
+            "duration": 3600,
+            "container": {
+              "type": "brand",
+              "id": "p09652dl",
+              "urn": "urn:bbc:radio:brand:p09652dl",
+              "title": "Radio 1's Decompression Session",
+              "activities": []
+            },
+            "start": "2023-11-06T02:00:00Z",
+            "end": "2023-11-06T03:00:00Z",
+            "service_id": "bbc_radio_one",
+            "playable_item": null
+          }
+        ],
+        "state": "ok",
+        "style": null,
+        "uris": {
+          "pagination": {
+            "uri": "/v2/my/broadcasts/sub-services/poll/bbc_radio_one?experience=domestic&offset={offset}&limit={limit}",
+            "offset": 0,
+            "limit": 5,
+            "total": 23
+          },
+          "polling": {
+            "uri": "/v2/my/broadcasts/sub-services/poll/bbc_radio_one?experience=domestic&offset={offset}&limit={limit}",
+            "wait_before_poll_sec": 1800
+          }
+        },
+        "total": 23
+      },
+      {
+        "controls": null,
+        "id": "recent_tracks",
+        "type": "inline_display_module",
+        "title": "Recent Tracks",
+        "description": null,
+        "image_url": null,
+        "data": [
+          {
+            "id": "p0gqwyn8",
+            "type": "segment_item",
+            "titles": {
+              "primary": "Samantha Urbani",
+              "secondary": "Time Keeps Slipping (feat. Rexy)",
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bqcdzf.jpg",
+            "offset": {
+              "start": 2434,
+              "end": 2644,
+              "label": "Less Than a Minute Ago",
+              "now_playing": false
+            },
+            "synopses": null,
+            "uris": []
+          },
+          {
+            "id": "p0gqwyjq",
+            "type": "segment_item",
+            "titles": {
+              "primary": "Will Joseph Cook",
+              "secondary": "NOBODY'S HOME",
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02ssmnh.jpg",
+            "offset": {
+              "start": 2186,
+              "end": 2380,
+              "label": "4 Minutes Ago",
+              "now_playing": false
+            },
+            "synopses": null,
+            "uris": []
+          },
+          {
+            "id": "p0gqwy5y",
+            "type": "segment_item",
+            "titles": {
+              "primary": "Kid Kapichi",
+              "secondary": "Tamagotchi",
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bqcdzf.jpg",
+            "offset": {
+              "start": 1723,
+              "end": 1935,
+              "label": "12 Minutes Ago",
+              "now_playing": false
+            },
+            "synopses": null,
+            "uris": []
+          },
+          {
+            "id": "p0gqwy1w",
+            "type": "segment_item",
+            "titles": {
+              "primary": "Bob Vylan",
+              "secondary": "He's A Man",
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bqcdzf.jpg",
+            "offset": {
+              "start": 1505,
+              "end": 1663,
+              "label": "16 Minutes Ago",
+              "now_playing": false
+            },
+            "synopses": null,
+            "uris": []
+          }
+        ],
+        "state": "ok",
+        "style": null,
+        "uris": {
+          "pagination": {
+            "uri": "/v2/services/bbc_radio_one/segments/latest?experience=domestic&offset={offset}&limit={limit}",
+            "offset": 0,
+            "limit": 4,
+            "total": 4
+          },
+          "polling": {
+            "uri": "/v2/services/bbc_radio_one/segments/latest?experience=domestic&offset={offset}&limit={limit}",
+            "wait_before_poll_sec": 30
+          }
+        },
+        "total": 4
+      },
+      {
+        "controls": null,
+        "id": "display_promos",
+        "type": "inline_display_module",
+        "title": "More from Radio 1",
+        "description": null,
+        "image_url": null,
+        "data": [
+          {
+            "id": "p0gjf69z",
+            "type": "display_item",
+            "titles": {
+              "primary": "Live Lounge Month 2023",
+              "secondary": null,
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gjf69s.jpg",
+            "uris": [
+              {
+                "type": "link",
+                "id": null,
+                "label": "Link",
+                "uri": "https://www.bbc.co.uk/sounds/curation/m001qnn1"
+              }
+            ],
+            "synopses": {
+              "short": "Listen to all the performances here.",
+              "medium": null,
+              "long": null
+            },
+            "cta_text": null,
+            "item": null
+          },
+          {
+            "id": "p0gjf70x",
+            "type": "display_item",
+            "titles": {
+              "primary": "Watch - Live Lounge Month 2023",
+              "secondary": null,
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ghxb4h.jpg",
+            "uris": [
+              {
+                "type": "link",
+                "id": null,
+                "label": "Link",
+                "uri": "https://www.bbc.co.uk/tv/radio1"
+              }
+            ],
+            "synopses": {
+              "short": "All the performances + covers via Radio 1's iPlayer channel.",
+              "medium": null,
+              "long": null
+            },
+            "cta_text": null,
+            "item": null
+          },
+          {
+            "id": "p0c3ql7y",
+            "type": "display_item",
+            "titles": {
+              "primary": "The Playlist",
+              "secondary": null,
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bshzl5.jpg",
+            "uris": [
+              {
+                "type": "link",
+                "id": null,
+                "label": "Link",
+                "uri": "https://www.bbc.co.uk/programmes/articles/3tqPdBWF9yMbTrfjWvfKV8t/radio-1-playlist"
+              }
+            ],
+            "synopses": {
+              "short": "See the latest additions.",
+              "medium": null,
+              "long": null
+            },
+            "cta_text": null,
+            "item": null
+          },
+          {
+            "id": "p087jqwq",
+            "type": "display_item",
+            "titles": {
+              "primary": "The Official Chart",
+              "secondary": null,
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0807d3r.jpg",
+            "uris": [
+              {
+                "type": "link",
+                "id": null,
+                "label": "Link",
+                "uri": "https://www.officialcharts.com/charts/singles-chart/"
+              }
+            ],
+            "synopses": {
+              "short": "Discover who is Number 1",
+              "medium": null,
+              "long": null
+            },
+            "cta_text": null,
+            "item": null
+          },
+          {
+            "id": "p0b6jjxq",
+            "type": "display_item",
+            "titles": {
+              "primary": "Terms of Use and Privacy Notice",
+              "secondary": null,
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b6jjxn.jpg",
+            "uris": [
+              {
+                "type": "link",
+                "id": null,
+                "label": "Link",
+                "uri": "https://www.bbc.co.uk/programmes/articles/1qDmdH8V94XKTPB51Q6ZFPN/about-radio-1"
+              }
+            ],
+            "synopses": {
+              "short": "How to listen to Radio 1, our contact details and Terms & Conditions.",
+              "medium": null,
+              "long": null
+            },
+            "cta_text": null,
+            "item": null
+          },
+          {
+            "id": "p09fgn1s",
+            "type": "display_item",
+            "titles": {
+              "primary": "Radio 1 Relax - listen now",
+              "secondary": null,
+              "tertiary": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09ff0cf.jpg",
+            "uris": [
+              {
+                "type": "link",
+                "id": null,
+                "label": "Link",
+                "uri": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_one_relax"
+              }
+            ],
+            "synopses": {
+              "short": "Listen to our new 24/7 stream to help unwind your mind.",
+              "medium": null,
+              "long": null
+            },
+            "cta_text": null,
+            "item": null
+          }
+        ],
+        "state": "ok",
+        "style": null,
+        "uris": null,
+        "total": null
+      },
+      {
+        "controls": null,
+        "id": "playable_promos",
+        "type": "inline_display_module",
+        "title": "Live Lounge Month 2023",
+        "description": null,
+        "image_url": null,
+        "data": [
+          {
+            "id": "m001qw87",
+            "type": "playable_item",
+            "urn": "urn:bbc:radio:episode:m001qw88",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "release": {
+              "date": "2023-10-02T00:00:00Z",
+              "label": "02 Oct 2023"
+            },
+            "titles": {
+              "primary": "Radio 1's Live Lounge",
+              "secondary": "Live Lounge Month 2023",
+              "tertiary": "Olivia Rodrigo Live Lounge Extra"
+            },
+            "synopses": {
+              "short": "Live Lounge Month 2023 starts with an extended session in LA from Olivia Rodrigo.",
+              "medium": null,
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ghxcvs.jpg",
+            "duration": {
+              "value": 1800,
+              "label": "30 mins"
+            },
+            "progress": null,
+            "availability": {
+              "from": "2023-10-06T02:00:00Z",
+              "to": "2023-12-02T02:00:00Z",
+              "label": "Available for 26 days"
+            },
+            "container": {
+              "type": "brand",
+              "id": "p01029mq",
+              "urn": "urn:bbc:radio:brand:p01029mq",
+              "title": "Radio 1's Live Lounge",
+              "synopses": {
+                "short": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "medium": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "long": null
+              },
+              "activities": []
+            },
+            "uris": [
+              {
+                "type": "latest",
+                "id": null,
+                "label": "Latest",
+                "uri": "/v2/programmes/playable?container=m001qrvk&sort=sequential&type=episode&experience=domestic"
+              }
+            ],
+            "activities": [],
+            "play_context": null,
+            "guidance": {
+              "competition_warning": false,
+              "warnings": null
+            },
+            "recommendation": null
+          },
+          {
+            "id": "m001r71g",
+            "type": "playable_item",
+            "urn": "urn:bbc:radio:episode:m001r71h",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "release": {
+              "date": "2023-10-19T00:00:00Z",
+              "label": "19 Oct 2023"
+            },
+            "titles": {
+              "primary": "Radio 1's Live Lounge",
+              "secondary": "Live Lounge Month 2023",
+              "tertiary": "Becky Hill"
+            },
+            "synopses": {
+              "short": "Becky Hill performs Disconnect and a cover of The Blessed Madonna with a twist!",
+              "medium": null,
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gmj87n.jpg",
+            "duration": {
+              "value": 900,
+              "label": "15 mins"
+            },
+            "progress": null,
+            "availability": {
+              "from": "2023-10-19T11:15:00Z",
+              "to": "2023-12-16T01:09:00Z",
+              "label": "Available for 40 days"
+            },
+            "container": {
+              "type": "brand",
+              "id": "p01029mq",
+              "urn": "urn:bbc:radio:brand:p01029mq",
+              "title": "Radio 1's Live Lounge",
+              "synopses": {
+                "short": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "medium": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "long": null
+              },
+              "activities": []
+            },
+            "uris": [
+              {
+                "type": "latest",
+                "id": null,
+                "label": "Latest",
+                "uri": "/v2/programmes/playable?container=m001qrvk&sort=sequential&type=episode&experience=domestic"
+              }
+            ],
+            "activities": [],
+            "play_context": null,
+            "guidance": {
+              "competition_warning": false,
+              "warnings": null
+            },
+            "recommendation": null
+          },
+          {
+            "id": "m001r6zn",
+            "type": "playable_item",
+            "urn": "urn:bbc:radio:episode:m001r6zr",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "release": {
+              "date": "2023-10-18T00:00:00Z",
+              "label": "18 Oct 2023"
+            },
+            "titles": {
+              "primary": "Radio 1's Live Lounge",
+              "secondary": "Live Lounge Month 2023",
+              "tertiary": "YUNGBLUD Live Lounge Extra"
+            },
+            "synopses": {
+              "short": "Stand by for another performance in the Radio 1 Live Lounge.",
+              "medium": null,
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gm8kc9.jpg",
+            "duration": {
+              "value": 1800,
+              "label": "30 mins"
+            },
+            "progress": null,
+            "availability": {
+              "from": "2023-10-18T17:30:00Z",
+              "to": "2023-12-16T02:00:00Z",
+              "label": "Available for 40 days"
+            },
+            "container": {
+              "type": "brand",
+              "id": "p01029mq",
+              "urn": "urn:bbc:radio:brand:p01029mq",
+              "title": "Radio 1's Live Lounge",
+              "synopses": {
+                "short": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "medium": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "long": null
+              },
+              "activities": []
+            },
+            "uris": [
+              {
+                "type": "latest",
+                "id": null,
+                "label": "Latest",
+                "uri": "/v2/programmes/playable?container=m001qrvk&sort=sequential&type=episode&experience=domestic"
+              }
+            ],
+            "activities": [],
+            "play_context": null,
+            "guidance": {
+              "competition_warning": false,
+              "warnings": null
+            },
+            "recommendation": null
+          },
+          {
+            "id": "m001rff3",
+            "type": "playable_item",
+            "urn": "urn:bbc:radio:episode:m001rff8",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "release": {
+              "date": "2023-10-26T00:00:00Z",
+              "label": "26 Oct 2023"
+            },
+            "titles": {
+              "primary": "Radio 1's Live Lounge",
+              "secondary": "Live Lounge Month 2023",
+              "tertiary": "Doja Cat"
+            },
+            "synopses": {
+              "short": "Doja Cat closes Live Lounge Month 2023 in Los Angeles with a three-track special!",
+              "medium": null,
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gnz93d.jpg",
+            "duration": {
+              "value": 1800,
+              "label": "30 mins"
+            },
+            "progress": null,
+            "availability": {
+              "from": "2023-10-26T11:30:00Z",
+              "to": "2023-12-23T01:30:00Z",
+              "label": "Available for 47 days"
+            },
+            "container": {
+              "type": "brand",
+              "id": "p01029mq",
+              "urn": "urn:bbc:radio:brand:p01029mq",
+              "title": "Radio 1's Live Lounge",
+              "synopses": {
+                "short": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "medium": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "long": null
+              },
+              "activities": []
+            },
+            "uris": [
+              {
+                "type": "latest",
+                "id": null,
+                "label": "Latest",
+                "uri": "/v2/programmes/playable?container=m001qrvk&sort=sequential&type=episode&experience=domestic"
+              }
+            ],
+            "activities": [],
+            "play_context": null,
+            "guidance": {
+              "competition_warning": false,
+              "warnings": null
+            },
+            "recommendation": null
+          },
+          {
+            "id": "m001qs5b",
+            "type": "playable_item",
+            "urn": "urn:bbc:radio:episode:m001qs5c",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "release": {
+              "date": "2023-10-05T00:00:00Z",
+              "label": "05 Oct 2023"
+            },
+            "titles": {
+              "primary": "Radio 1's Live Lounge",
+              "secondary": "Live Lounge Month 2023",
+              "tertiary": "Madison Beer"
+            },
+            "synopses": {
+              "short": "Madison Beer performs Spinnin and a cover of Joji in her Live Lounge debut.",
+              "medium": null,
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gjmflv.jpg",
+            "duration": {
+              "value": 900,
+              "label": "15 mins"
+            },
+            "progress": null,
+            "availability": {
+              "from": "2023-10-05T11:15:00Z",
+              "to": "2023-12-02T01:30:00Z",
+              "label": "Available for 26 days"
+            },
+            "container": {
+              "type": "brand",
+              "id": "p01029mq",
+              "urn": "urn:bbc:radio:brand:p01029mq",
+              "title": "Radio 1's Live Lounge",
+              "synopses": {
+                "short": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "medium": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "long": null
+              },
+              "activities": []
+            },
+            "uris": [
+              {
+                "type": "latest",
+                "id": null,
+                "label": "Latest",
+                "uri": "/v2/programmes/playable?container=m001qrvk&sort=sequential&type=episode&experience=domestic"
+              }
+            ],
+            "activities": [],
+            "play_context": null,
+            "guidance": {
+              "competition_warning": false,
+              "warnings": null
+            },
+            "recommendation": null
+          },
+          {
+            "id": "m001s6hf",
+            "type": "playable_item",
+            "urn": "urn:bbc:radio:episode:m001rfbr",
+            "network": {
+              "id": "bbc_radio_one",
+              "key": "radio1",
+              "short_title": "Radio 1",
+              "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+              "network_type": "master_brand"
+            },
+            "release": {
+              "date": "2023-10-23T00:00:00Z",
+              "label": "23 Oct 2023"
+            },
+            "titles": {
+              "primary": "Radio 1's Live Lounge",
+              "secondary": "Live Lounge Month 2023",
+              "tertiary": "Usher"
+            },
+            "synopses": {
+              "short": "Usher performs his new single Good Good and a cover of Daniel Caesar's Best Part.",
+              "medium": "Usher performs his new single Good Good and a cover of Daniel Caesar's Best Part, and chats to Rickie, Melvin and Charlie.",
+              "long": null
+            },
+            "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gn8cby.jpg",
+            "duration": {
+              "value": 1800,
+              "label": "30 mins"
+            },
+            "progress": null,
+            "availability": {
+              "from": "2023-10-26T01:30:00Z",
+              "to": "2023-11-25T01:30:00Z",
+              "label": "Available for 19 days"
+            },
+            "container": {
+              "type": "brand",
+              "id": "p01029mq",
+              "urn": "urn:bbc:radio:brand:p01029mq",
+              "title": "Radio 1's Live Lounge",
+              "synopses": {
+                "short": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "medium": "Amazing performances from Radio 1's world famous Live Lounge!",
+                "long": null
+              },
+              "activities": []
+            },
+            "uris": [
+              {
+                "type": "latest",
+                "id": null,
+                "label": "Latest",
+                "uri": "/v2/programmes/playable?container=m001qrvk&sort=sequential&type=episode&experience=domestic"
+              }
+            ],
+            "activities": [],
+            "play_context": null,
+            "guidance": {
+              "competition_warning": false,
+              "warnings": null
+            },
+            "recommendation": null
+          }
+        ],
+        "state": "ok",
+        "style": null,
+        "uris": null,
+        "total": null
+      }
+    ]
+  },
+  "locales": {
+    "cy": "Cymraeg",
+    "ga": "Gaeilge",
+    "gd": "G\u00e0idhlig"
+  },
+  "footerLinks": {
+    "https://bbc.co.uk/sounds/help": "BBC Sounds Help",
+    "https://www.bbc.co.uk/programmes/articles/0c6dcea5-420b-4caf-b3b9-e97b605a50fd": "Contacts, Privacy and Information",
+    "https://www.bbc.co.uk/usingthebbc/account/": "Help with Signing In",
+    "https://www.bbc.co.uk/newsletters/email/zbdmwty": "Newsletter"
+  },
+  "idCta": null,
+  "userSettings": {
+    "isPersonalisationEnabled": true,
+    "isPerformanceCookieOn": false,
+    "isUnder16": false,
+    "isSignedIn": true,
+    "isFunctionalityCookieOn": false,
+    "isInUk": true
+  },
+  "appConfig": {
+    "baseUrl": "https://rms.api.bbc.co.uk",
+    "clientApiKey": "3A5LU4tQWvWW3lpgF5OT4IWUoyLaju9z",
+    "personalisedActivitiesUriSegment": "/v2/my/activities",
+    "subscribeDelay": 1000,
+    "dials": {
+      "is16x9CategoryCardEnabled": true,
+      "isMusicMixesEnabled": true,
+      "isAnalyticsEnabled": true,
+      "isOptimizelyEnabled": true,
+      "isSubscribeButtonEnabled": true,
+      "isPromoModalEnabled": true,
+      "areIdServicesEnabled": true,
+      "hasSurveyBanner": false,
+      "isWebPEnabled": true,
+      "msiExperimentOverride": "text_only",
+      "smpSignInExperimentOverride": "default",
+      "isCommercialLinksEnabled": true,
+      "isTracksPollingEnabled": true,
+      "isTracklistPlayingEnabled": true,
+      "isLiveExperienceApiEnabled": false,
+      "isJwtOnLivePlaybackEnabled": true,
+      "isChaptersDialEnabled": false
+    },
+    "pageTitle": "",
+    "experimentationClientUrl": "https://static.files.bbci.co.uk/sounds/web/sounds-web/js/tvr-experimentation-client.1632238eed",
+    "bumpUrl": "https://emp.bbci.co.uk/emp/bump-4/bump-4",
+    "msiUrl": "//rmp.files.bbci.co.uk/radio-msi/latest",
+    "clientSideTelemetryOptions": {
+      "url": "https://telemetry.api.bbci.co.uk/tvr-telemetry/sounds-web/telemetry",
+      "sampleRate": 25,
+      "service": "sounds-web",
+      "pageType": "play-live"
+    },
+    "isPlayout": true,
+    "playbackIdentifier": "bbc_radio_one",
+    "pageType": "live",
+    "aodHeartbeatInterval": 30000,
+    "isSelectedSegmentsEnabled": false,
+    "isMobile": false
+  },
+  "soundsNav": {
+    "contentType": "player-live"
+  },
+  "experimentation": {
+    "activeRetentionMetrics": []
+  },
+  "bookmark": {
+    "isBookmarksEnabled": true,
+    "isBookmarkStatusUpdating": false,
+    "bookmarkDelay": 1000
+  },
+  "subscribe": {
+    "isSubscribeEnabled": true,
+    "isSubscribeStatusUpdating": false,
+    "subscribeDelay": 1000
+  },
+  "smp": {
+    "isSplashScreenEnabled": true,
+    "isSplashScreenRunning": true,
+    "live": true,
+    "writePlaysData": true,
+    "liveStreamJwt": "eyJhYWYiOnRydWUsImtpZCI6IjMiLCJpc3MiOiJ1ay5jby5iYmNfc291bmRzIiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJhdWQiOiJiYmNyYWRpbyIsInN1YiI6InVrLmNvLmJiY19zb3VuZHMiLCJ2ZXIiOjEsImlzcyI6InVrLmNvLmJiY19zb3VuZHMiLCJleHAiOjE2OTkzMDY4MTksImlhdCI6MTY5OTIyMDQxOSwiY3ZpZHMiOlsidXJuOmJiYzpwaXBzOnBpZDpiYmNfcmFkaW9fb25lIl19.UMO7roO2PdmIdT52IlSnvHgqsUatBCzpwuB_f871Fir_q3moT2zjfrLHvTBTOhsb7kVLun1OB98wCJJPzCMyUg",
+    "jwtFetchWasRetried": false,
+    "chaptersSmpPluginUrl": "https://static.files.bbci.co.uk/sounds/web/sounds-web/js/sounds-segments.83ed74f3a6.js"
+  },
+  "msiModal": {
+    "open": false,
+    "shouldShowOnPlayback": false
+  },
+  "locale": "en",
+  "pageType": "play",
+  "programmes": {
+    "current": {
+      "id": "p0gl32br",
+      "type": "broadcast_summary",
+      "urn": "urn:bbc:radio:episode:m001rwjf",
+      "network": {
+        "id": "bbc_radio_one",
+        "key": "radio1",
+        "short_title": "Radio 1",
+        "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+        "network_type": "master_brand"
+      },
+      "titles": {
+        "primary": "Radio 1's Indie Show",
+        "secondary": "with Jack Saunders: Indie Roulette",
+        "tertiary": ""
+      },
+      "synopses": {
+        "short": "Another listener takes on the Radio 1 Generator in Indie Roulette!",
+        "medium": "Another listener takes on the Radio 1 Generator in Indie Roulette!",
+        "long": null
+      },
+      "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cykx2w.jpg",
+      "duration": 7200,
+      "container": {
+        "type": "brand",
+        "id": "m00008zy",
+        "urn": "urn:bbc:radio:brand:m00008zy",
+        "title": "Radio 1's Indie Show",
+        "activities": []
+      },
+      "start": "2023-11-05T21:00:00Z",
+      "end": "2023-11-05T23:00:00Z",
+      "service_id": "bbc_radio_one",
+      "playable_item": null
+    },
+    "next": {
+      "id": "p0gl32bw",
+      "type": "broadcast_summary",
+      "urn": "urn:bbc:radio:episode:m001rwjk",
+      "network": {
+        "id": "bbc_radio_one",
+        "key": "radio1",
+        "short_title": "Radio 1",
+        "logo_url": "https://sounds.files.bbci.co.uk/3.5.0/networks/bbc_radio_one/{type}_{size}.{format}",
+        "network_type": "master_brand"
+      },
+      "titles": {
+        "primary": "BBC Introducing on Radio 1",
+        "secondary": "with Jess Iszatt: Venbee artist advice",
+        "tertiary": ""
+      },
+      "synopses": {
+        "short": "Jess showcases the best of BBC Music Introducing and Venbee gives advice for new artists.",
+        "medium": "Jess has the best from BBC Music Introducing including Master Peace and Georgia, Jarki Monno and Immi Dash. Plus Venbee shares some advice for aspiring artists.",
+        "long": "Jess has the best from BBC Music Introducing including Master Peace and Georgia, Jarki Monno and Immi Dash. Venbee shares some advice for aspiring artists. Plus a new Tune Of The Week from London artist Deja."
+      },
+      "image_url": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ghzhl2.jpg",
+      "duration": 3600,
+      "container": {
+        "type": "brand",
+        "id": "m0000blt",
+        "urn": "urn:bbc:radio:brand:m0000blt",
+        "title": "BBC Introducing on Radio 1",
+        "activities": []
+      },
+      "start": "2023-11-05T23:00:00Z",
+      "end": "2023-11-06T00:00:00Z",
+      "service_id": "bbc_radio_one",
+      "playable_item": null
+    },
+    "error": {},
+    "broadcastPollingEnabled": true,
+    "broadcastPollingInterval": 1800000,
+    "broadcastPollingFeed": "/v2/my/broadcasts/sub-services/poll/bbc_radio_one?experience=domestic&offset=0&limit=5"
+  }
+}

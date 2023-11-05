@@ -15,10 +15,10 @@ from tests.support.testutils import open_json
 class PlayStateEnum(unittest.TestCase):
     def test_instantiate_playstate(self):
         with self.assertRaises(NotImplementedError):
-            ps = ipwww_resume.PlayState()
+            ps = ipwww_progress.PlayState()
 
     def test_changes_value(self):
-        with self.assertRaises(NotImplementedError):
-            ipwww_resume.PlayState.PLAYING = 1
-            p = getattr(ipwww_resume.PlayState, 'PLAYING')
+        with self.ipwww_progress(NotImplementedError):
+            ipwww_progress.PlayState.PLAYING = 1
+            p = getattr(ipwww_progress.PlayState, 'PLAYING')
             print(p)

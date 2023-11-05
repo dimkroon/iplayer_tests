@@ -17,7 +17,6 @@ class AuthenticatedPages(unittest.TestCase):
         ipwww_video.ListWatching()
 
 
-
 class TestAddAvailableStreamItem(unittest.TestCase):
     def test_play_epdisode(self):
         ipwww_video.AddAvailableStreamItem(

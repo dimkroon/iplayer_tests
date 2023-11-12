@@ -10,6 +10,7 @@ import os.path
 import re
 
 from requests.models import Response
+from http import cookiejar
 
 
 def doc_path(doc: str) -> str:
@@ -91,3 +92,25 @@ class HttpResponse(Response):
             if status_code is None:
                 self.status_code = 200
                 self.reason = 'OK'
+
+
+class ExpiredCookieJar(cookiejar.LWPCookieJar):
+    """A cookiejar that loads a set of cookies with expired access tokens and
+    valid refresh tokens.
+    """
+    def __init__(self, filename=None, delayload=None, policy=None):
+        super().__init__(filename, delayload, policy)
+        self.load(doc_path('cookies/expired.cookies'), ignore_discard=True)
+
+    def save(self, filename=None, ignore_discard=False, ignore_expires=False):
+        """Prevent overwriting the specially crafted expired cookies file."""
+        pass
+
+
+class NotLoggedInCookieJar(cookiejar.LWPCookieJar):
+    """An empty cookiejar"""
+    def save(self, filename=None, ignore_discard=False, ignore_expires=False):
+        pass
+
+    def load(self, filename=None, ignore_discard=None, ignore_expires=None):
+        pass

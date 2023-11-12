@@ -10,7 +10,8 @@ from http import cookiejar
 from unittest import TestCase
 from resources.lib import ipwww_common
 from resources.lib import ipwww_video
-from tests.support.testutils import save_json, save_doc, doc_path
+from support.testutils import save_json, save_doc, doc_path, NotLoggedInCookieJar
+from support.object_checks import is_not_empty
 
 
 setUpModule = fixtures.setup_web_test()
@@ -25,13 +26,18 @@ def scrape_sound_data(html):
 
 
 class TestLive(TestCase):
-    def test_bbc_one_web_page(self):
+    def test_bbc_one_web_page_not_signed_in(self):
+        """When not logged in the radio one webpage returns without redirects
+        and contains a valid JWT token
+
+        """
         resp = requests.get('https://www.bbc.co.uk/sounds/play/live:bbc_radio_one', allow_redirects=False)
         self.assertEqual(200, resp.status_code)
         data  = scrape_sound_data(resp.text)
         # save_json(data, 'json/sounds-live_radio1.json')
         # save_doc(resp.text, 'html/sounds-live_radio1.html')
-        pass
+        self.assertFalse(data['userSettings']['isSignedIn'])
+        self.assertTrue(is_not_empty(data['smp']['liveStreamJwt'], str))
 
     def test_bbc_one_web_page_authenticated(self):
         resp = requests.get('https://www.bbc.co.uk/sounds/play/live:bbc_radio_one',
@@ -42,10 +48,11 @@ class TestLive(TestCase):
         data  = scrape_sound_data(resp.text)
         # save_json(data, 'json/sounds-live_radio1_authenticated.json')
         # save_doc(resp.text, 'html/sounds-live_radio1_authenticated.html')
-        pass
+        self.assertTrue(data['userSettings']['isSignedIn'])
+        self.assertTrue(is_not_empty(data['smp']['liveStreamJwt'], str))
 
     def test_media_selector_live_not_authenticated(self):
-        """Request media selector with no authentication whatsoever."""
+        """Request media selector with no authentication and no JWT."""
         resp = requests.get('https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/bbc_radio_one/format/json/jsfunc/JS_callbacks0')
         self.assertEqual(200, resp.status_code)
         content = resp.text
@@ -53,13 +60,20 @@ class TestLive(TestCase):
         self.assertFalse('bitrate' in content)
         self.assertTrue('result":"selectionunavailable' in content)
 
-    def _get_radio_one_data(self):
+    def _get_radio_one_data(self, authenticated=True):
         # Get data from the radio one website
+        if authenticated:
+            cookies = ipwww_common.cookie_jar
+        else:
+            cookies = NotLoggedInCookieJar()
         resp = requests.get('https://www.bbc.co.uk/sounds/play/live:bbc_radio_one',
                             headers=ipwww_common.headers,
-                            cookies=ipwww_common.cookie_jar)
+                            cookies=cookies)
         data = scrape_sound_data(resp.text)
-        self.assertTrue(data['userSettings']['isSignedIn'])  # No JWT token when not signed in
+        if authenticated:
+            self.assertTrue(data['userSettings']['isSignedIn'])
+        else:
+            self.assertFalse(data['userSettings']['isSignedIn'])
         return data
 
     def test_media_selector_live_authenticated(self):
@@ -96,7 +110,7 @@ class TestLive(TestCase):
         """Check if passing auth cookies is required when JWT token is present in the querystring.
 
         """
-        data = self._get_radio_one_data()
+        data = self._get_radio_one_data(authenticated=False)
 
         # Request media selector WITHOUT auth cookies, but WITH JWT.
         resp = requests.get('https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/bbc_radio_one/format/json/jsfunc/JS_callbacks0',

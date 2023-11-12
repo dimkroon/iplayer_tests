@@ -51,7 +51,7 @@ def global_setup():
                 return credentials.uname
             if key == 'bbc_id_password':
                 return credentials.passw
-            if key in('catchup_source', 'subtitle_source'):
+            if key in('catchup_source', 'subtitle_source', 'radio_source'):
                 return '0'
 
         xbmcaddon.Addon.getSetting = addon_setting
@@ -149,7 +149,7 @@ def patch_listitem():
             assert isinstance(type, str), "Argument 'type' must be a string."
             assert isinstance(infoLabels, dict), "Argument 'infoLabels' must be a dict."
             type = type.lower()
-            assert type in ('video', 'music', 'pictures', 'game')
+            assert type in ('video', 'audio', 'music', 'pictures', 'game')
             info_dict = self._info.setdefault(type, {})
             info_dict.update(infoLabels)
 

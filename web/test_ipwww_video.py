@@ -25,6 +25,7 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             None,
             '')
 
+
 @patch('resources.lib.ipwww_video.ParseJSON')
 class GenericListings(unittest.TestCase):
     def test_list_live(self, _):

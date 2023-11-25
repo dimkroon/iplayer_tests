@@ -10,7 +10,7 @@ from unittest import TestCase
 from resources.lib import ipwww_common
 from resources.lib import ipwww_video
 from tests.support.testutils import save_json, save_doc, doc_path
-from tests.support.object_checks import has_keys, expect_keys
+from tests.support.object_checks import has_keys, expect_keys, is_not_empty
 
 setUpModule = fixtures.setup_web_test()
 
@@ -160,3 +160,54 @@ class Favourites(TestCase):
     """User's own favourites"""
     def test_favourites_page(self):
         check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/added')
+
+
+class Guide(TestCase):
+    def test_get_guide_unauthenticated(self):
+        """Produces a schedule of BBC one from 1 day ago upto now"""
+        resp = requests.get('https://www.bbc.co.uk/iplayer/guide', allow_redirects=-False)
+        self.assertEqual(200, resp.status_code)
+        self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
+        data = ipwww_video.ScrapeJSON(resp.text)
+        save_json(data, 'json/tv-schedules-bbcone-london.json')
+        schedule = data['schedule']
+        has_keys(schedule, 'channelKey','title', 'bbcDate', 'ukDate', 'daysFromBBCToday', 'items' )
+        self.assertEqual('bbcone', schedule['channelKey'])
+        self.assertEqual('BBC One', schedule['title'])
+        self.assertEqual(0, schedule['daysFromBBCToday'])
+        self.assertTrue(is_not_empty(schedule['items'], list))
+        items_list = schedule['items']
+        last_idx = len(items_list) - 1
+        for i in  range(len(items_list)):
+            item = items_list[i]
+            if i == last_idx:
+                self.assertEqual('LIVE', item['type'])
+            else:
+                self.assertEqual('AVAILABLE', item['type'])
+            has_keys(item['meta'], 'scheduledEnd','scheduledStart', obj_name='BBCOneSchedule.item-{}.meta'.format(i))
+            has_keys(item['props'], 'href', 'imageTemplate', 'title', 'subtitle', 'synopsis',  obj_name='BBCOneSchedule.item-{}.props'.format(i))
+            if i == last_idx:
+                has_keys(item['props'], 'progressPercent', 'label', obj_name='BBCOneSchedule.item-{}.props'.format(i))
+            else:
+                has_keys(item['props'], 'durationSubLabel', 'secondarySubLabel', obj_name='BBCOneSchedule.item-{}.props'.format(i))
+                expect_keys(item['props'], 'label')
+
+    def test_guide_other_regions(self):
+        region_cookies = {
+            'Wales': 'wa',
+            'Scotland': 'sc',
+            'Northern Ireland': 'ni',
+            'Channel Islands': 'ci',
+            'East': 'ea',
+            'East Midlands': 'em',
+            'East Yorks & Lincs': 'ey',
+            'London': 'lo',
+            'North East & Cumbria': 'ne',
+            'North West': 'nw',
+            'South': 'so',
+            'South East': 'se',
+            'South West': 'sw',
+            'West': 'we',
+            'West Midlands': 'wm',
+            'Yorkshire': 'yo'
+        }

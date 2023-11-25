@@ -25,9 +25,11 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             None,
             '')
 
-
+@patch('resources.lib.ipwww_video.ParseJSON')
 class GenericListings(unittest.TestCase):
-    @patch('resources.lib.ipwww_video.ParseJSON')
+    def test_list_live(self, _):
+        ipwww_video.ListLive()
+
     def test_list_most_popular(self, patched_parse):
         ipwww_video.ListMostPopular()
         patched_parse.assert_called_once()
@@ -38,3 +40,9 @@ class GenericListings(unittest.TestCase):
         with patch('xbmcplugin.addDirectoryItem') as p_add_item:
             ipwww_video.ListRecommendations()
             self.assertGreater(p_add_item.call_count, 5)
+
+
+class TvSchedule(unittest.TestCase):
+    def test_tv_schedules(self):
+        schedules = ipwww_video.GetSchedules()
+        self.assertEqual(4, len(schedules))

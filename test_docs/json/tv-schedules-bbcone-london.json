@@ -1,0 +1,858 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": false,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": false,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": false,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": true,
+        "id": "tv-guide"
+      },
+      {
+        "title": "My Programmes",
+        "href": "/iplayer/watching",
+        "active": false,
+        "id": "my-programmes"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false,
+    "disableDataAttributes": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": true
+  },
+  "language": "en",
+  "experiments": {},
+  "locations": {
+    "nations": [
+      {
+        "id": "ni",
+        "title": "Northern Ireland"
+      },
+      {
+        "id": "sc",
+        "title": "Scotland"
+      },
+      {
+        "id": "wa",
+        "title": "Wales"
+      }
+    ],
+    "regions": [
+      {
+        "id": "ci",
+        "title": "Channel Islands"
+      },
+      {
+        "id": "ea",
+        "title": "East"
+      },
+      {
+        "id": "em",
+        "title": "East Midlands"
+      },
+      {
+        "id": "ey",
+        "title": "East Yorks & Lincs"
+      },
+      {
+        "id": "lo",
+        "title": "London"
+      },
+      {
+        "id": "ne",
+        "title": "North East & Cumbria"
+      },
+      {
+        "id": "nw",
+        "title": "North West"
+      },
+      {
+        "id": "so",
+        "title": "South"
+      },
+      {
+        "id": "se",
+        "title": "South East"
+      },
+      {
+        "id": "sw",
+        "title": "South West"
+      },
+      {
+        "id": "we",
+        "title": "West"
+      },
+      {
+        "id": "wm",
+        "title": "West Midlands"
+      },
+      {
+        "id": "yo",
+        "title": "Yorkshire"
+      }
+    ]
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": null,
+    "dismissedModal": false
+  },
+  "page": {
+    "status": 0
+  },
+  "schedule": {
+    "channelKey": "bbcone",
+    "title": "BBC One",
+    "bbcDate": "2023-11-25",
+    "ukDate": "2023-11-25",
+    "daysFromBBCToday": 0,
+    "items": [
+      {
+        "type": "LIVE",
+        "props": {
+          "href": "/iplayer/live/bbcone",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fxfnwr.jpg",
+          "progressPercent": 4,
+          "label": "News",
+          "title": "Breakfast",
+          "subtitle": "25/11/2023",
+          "synopsis": "The latest news, sport, business and weather from the BBC's Breakfast team. "
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T06:00:00.000Z",
+          "scheduledEnd": "2023-11-25T10:00:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx66",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08zkqzw.jpg",
+          "label": "Food",
+          "title": "Saturday Kitchen",
+          "subtitle": "25/11/2023",
+          "synopsis": "Matt Tebbutt is joined by Rick Stein, Andi Oliver and Beverley Knight."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T10:00:00.000Z",
+          "scheduledEnd": "2023-11-25T11:30:00.000Z"
+        }
+      },
+      {
+        "type": "AVAILABLE_FUTURE",
+        "props": {
+          "href": "/iplayer/episode/m001sqkm/mary-makes-it-easy-series-1-4-simple-timesavers",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gsf092.jpg",
+          "label": "Food",
+          "title": "Mary Makes It Easy ",
+          "subtitle": "Series 1: 4. Simple Time-Savers",
+          "synopsis": "Mary surprises Lorraine Kelly and daughter Rosie with some delicious time-saving recipes.",
+          "durationSubLabel": "29 mins",
+          "secondarySubLabel": "Available for over a year"
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T11:30:00.000Z",
+          "scheduledEnd": "2023-11-25T12:00:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx68",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gvq15d.jpg",
+          "label": "Sport",
+          "title": "Football Focus",
+          "subtitle": "25/11/2023",
+          "synopsis": "Alex Scott and guests preview the massive game between Manchester City and Liverpool."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T12:00:00.000Z",
+          "scheduledEnd": "2023-11-25T13:00:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6b",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g6cmtt.jpg",
+          "label": "News",
+          "title": "BBC Weekend News",
+          "subtitle": "Lunchtime News: 25/11/2023",
+          "synopsis": "The latest national and international news from the BBC."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T13:00:00.000Z",
+          "scheduledEnd": "2023-11-25T13:10:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6d",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dc8npj.jpg",
+          "title": "BBC Weather",
+          "subtitle": "25/11/2023",
+          "synopsis": "The latest weather forecast."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T13:10:00.000Z",
+          "scheduledEnd": "2023-11-25T13:15:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6g",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gvj6s0.jpg",
+          "label": "Sport",
+          "title": "Snooker: UK Championship",
+          "subtitle": "2023: Day 1, Part 1",
+          "synopsis": "Live coverage from day one of the 2023 UK Snooker Championship."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T13:15:00.000Z",
+          "scheduledEnd": "2023-11-25T16:30:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6j",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g71c5s.jpg",
+          "label": "Sport",
+          "title": "Final Score",
+          "subtitle": "25/11/2023",
+          "synopsis": "Jason Mohammad keeps you up to date on developments in the afternoon\u2019s matches."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T16:30:00.000Z",
+          "scheduledEnd": "2023-11-25T17:25:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6l",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g6cmtt.jpg",
+          "label": "News",
+          "title": "BBC Weekend News",
+          "subtitle": "Evening News: 25/11/2023",
+          "synopsis": "The latest national and international news from the BBC."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T17:25:00.000Z",
+          "scheduledEnd": "2023-11-25T17:35:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001symx",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dkt7rv.jpg",
+          "label": "News",
+          "title": "BBC London",
+          "subtitle": "Evening News: 25/11/2023",
+          "synopsis": "The latest news, sport and weather from London.\n"
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T17:35:00.000Z",
+          "scheduledEnd": "2023-11-25T17:40:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6q",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dc8npj.jpg",
+          "title": "BBC Weather",
+          "subtitle": "25/11/2023",
+          "synopsis": "The latest weather forecast."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T17:40:00.000Z",
+          "scheduledEnd": "2023-11-25T17:45:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx6w",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gtygjd.jpg",
+          "label": "Entertainment",
+          "title": "The Weakest Link",
+          "subtitle": "Series 3: Episode 2",
+          "synopsis": "Celebrities including Stephen Mangan, Myra DuBois and Alistair McGowan compete to win. "
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T17:45:00.000Z",
+          "scheduledEnd": "2023-11-25T18:30:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx3h",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gtzfm1.jpg",
+          "label": "Sci-Fi",
+          "title": "Doctor Who (2023\u2013)",
+          "subtitle": "The Star Beast",
+          "synopsis": "The Doctor lands in London to find an old friend, a new enemy and aliens wreaking havoc."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T18:30:00.000Z",
+          "scheduledEnd": "2023-11-25T19:30:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx70",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gf9sf7.jpg",
+          "label": "Entertainment",
+          "title": "Strictly Come Dancing",
+          "subtitle": "Series 21: Week 10",
+          "synopsis": "The couples have more to do than ever to secure their place in the quarter-finals."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T19:30:00.000Z",
+          "scheduledEnd": "2023-11-25T20:30:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx74",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gvmk3w.jpg",
+          "label": "Entertainment",
+          "title": "Survivor",
+          "subtitle": "Series 1: Episode 9",
+          "synopsis": "Who will win immunity? At Tribal Council, the vote descends into chaos."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T20:30:00.000Z",
+          "scheduledEnd": "2023-11-25T21:30:00.000Z"
+        }
+      },
+      {
+        "type": "AVAILABLE_FUTURE",
+        "props": {
+          "href": "/iplayer/episode/m0004pwd/not-going-out-series-10-2-holiday-share",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0773td0.jpg",
+          "label": "Comedy",
+          "title": "Not Going Out",
+          "subtitle": "Series 10: 2. Holiday Share",
+          "synopsis": "Lee and Lucy spend a long weekend in a country cottage with Toby and Anna.",
+          "durationSubLabel": "27 mins",
+          "secondarySubLabel": "Available for over a year"
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T21:30:00.000Z",
+          "scheduledEnd": "2023-11-25T22:00:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx78",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g6cmtt.jpg",
+          "label": "News",
+          "title": "BBC Weekend News",
+          "subtitle": "Late News: 25/11/2023",
+          "synopsis": "The latest national and international news from the BBC."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T22:00:00.000Z",
+          "scheduledEnd": "2023-11-25T22:15:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx7d",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dc8npj.jpg",
+          "label": "News",
+          "title": "BBC Weather",
+          "subtitle": "25/11/2023",
+          "synopsis": "The latest weather forecast."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T22:15:00.000Z",
+          "scheduledEnd": "2023-11-25T22:20:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx7j",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cr8xdx.jpg",
+          "label": "Sport",
+          "title": "Match of the Day",
+          "subtitle": "2023/24: 25/11/2023",
+          "synopsis": "Gary Lineker presents highlights from the day\u2019s Premier League games."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T22:20:00.000Z",
+          "scheduledEnd": "2023-11-25T23:45:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx3m",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gtzkcp.jpg",
+          "label": "Documentary",
+          "title": "Doctor Who: Unleashed",
+          "subtitle": "60th Anniversary Specials: 1. The Star Beast",
+          "synopsis": "We catch up with David Tennant and Catherine Tate ahead of their much-anticipated reunion."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-25T23:45:00.000Z",
+          "scheduledEnd": "2023-11-26T00:15:00.000Z"
+        }
+      },
+      {
+        "type": "AVAILABLE_FUTURE",
+        "props": {
+          "href": "/iplayer/episode/m001sqdq/the-rap-game-uk-series-5-3-clash-and-create",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gsvd44.jpg",
+          "label": "Entertainment",
+          "title": "The Rap Game UK",
+          "subtitle": "Series 5: 3. Clash and Create",
+          "synopsis": "Artists clash and then collab with their opponent for the chance to win a unique prize.",
+          "durationSubLabel": "63 mins",
+          "secondarySubLabel": "Available for over a year"
+        },
+        "meta": {
+          "scheduledStart": "2023-11-26T00:15:00.000Z",
+          "scheduledEnd": "2023-11-26T01:20:00.000Z"
+        }
+      },
+      {
+        "type": "AVAILABLE_FUTURE",
+        "props": {
+          "href": "/iplayer/episode/m001spg2/the-graham-norton-show-series-31-episode-8",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gvqln4.jpg",
+          "label": "Entertainment",
+          "title": "The Graham Norton Show",
+          "subtitle": "Series 31: Episode 8",
+          "synopsis": "Guests include Michael Fassbender, Jennifer Saunders, Daisy Haggard and Take That.",
+          "durationSubLabel": "49 mins",
+          "secondarySubLabel": "Available for over a year"
+        },
+        "meta": {
+          "scheduledStart": "2023-11-26T01:20:00.000Z",
+          "scheduledEnd": "2023-11-26T02:10:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx7p",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dc8npj.jpg",
+          "title": "Weather for the Week Ahead",
+          "subtitle": "26/11/2023",
+          "synopsis": "Detailed weather forecast."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-26T02:10:00.000Z",
+          "scheduledEnd": "2023-11-26T02:15:00.000Z"
+        }
+      },
+      {
+        "type": "UNAVAILABLE_FUTURE",
+        "props": {
+          "href": "/programmes/m001sx7t",
+          "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g6cmtt.jpg",
+          "label": "News",
+          "title": "Joins BBC News",
+          "subtitle": "BBC News",
+          "synopsis": "BBC One joins the BBC's rolling news channel for a night of news."
+        },
+        "meta": {
+          "scheduledStart": "2023-11-26T02:15:00.000Z",
+          "scheduledEnd": "2023-11-26T06:00:00.000Z"
+        }
+      }
+    ]
+  },
+  "translations": {
+    "tvGuideTitle": "TV Guide",
+    "watchLive": "Watch live",
+    "watchFromStart": "Watch from start",
+    "watchNow": "Watch now",
+    "changeLocation": "Change location"
+  },
+  "user": {
+    "region": "lo"
+  },
+  "identity": {}
+}

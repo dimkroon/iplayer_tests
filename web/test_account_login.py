@@ -14,10 +14,9 @@ from resources.lib import ipwww_common
 
 import credentials
 from resources.lib import ipwww_common
-from tests.support.testutils import doc_path
+from tests.support.testutils import doc_path, ExpiredCookieJar, NotLoggedInCookieJar
 
 # setUpModule = fixtures.setup_web_test()
-
 
 
 class SignIn(TestCase):
@@ -657,11 +656,8 @@ class CheckLoginStatus(TestCase):
         thus picking up all token cookies.
 
         """
-        c_jar = cookiejar.LWPCookieJar(doc_path('cookies/expired.cookies'))
-        c_jar.load()
-        c_jar.save = MagicMock()
         with requests.Session() as session:
-            session.cookies = c_jar
+            session.cookies = ExpiredCookieJar()
             resp = session.get('https://account.bbc.com/account', allow_redirects=False)
             self.assertEqual(302, resp.status_code)
             self.assertTrue('ckns_settings-nonce' in resp.cookies)
@@ -694,13 +690,12 @@ class CheckLoginStatus(TestCase):
         thus pickup all access token cookies.
 
         """
-        c_jar = cookiejar.LWPCookieJar(doc_path('cookies/expired.cookies'))
-        c_jar.load()
+        c_jar = ExpiredCookieJar()
         with requests.Session() as session:
             session.cookies = c_jar
             resp = session.head('https://account.bbc.com/account', allow_redirects=False)
             self.assertEqual(302, resp.status_code)
-            self.assertTrue('ckns_settings_nonce' in resp.cookies)
+            self.assertTrue('ckns_settings-nonce' in resp.cookies)
             new_location = resp.headers['location']
             self.assertTrue(new_location.startswith('https://session.bbc.com'))
 
@@ -728,8 +723,7 @@ class CheckLoginStatus(TestCase):
 
         Account accepts and redirects to session, but session refers to login page.
         """
-        jar = cookiejar.LWPCookieJar(doc_path('cookies/expired.cookies'))
-        jar.load()
+        jar = ExpiredCookieJar()
         jar.clear('.bbc.co.uk')
         jar.clear('.bbc.com')
         jar.clear('.session.bbc.co.uk')
@@ -750,13 +744,15 @@ class CheckLoginStatus(TestCase):
     def test_expired_login_at_session(self):
         """Check a request to session with expired access tokens, but with valid refresh tokens.
 
-        Just redirects to the main page, without any authentication.
+        Just redirects to the main page, without any authentication and set new token cookies.
         """
-        resp = requests.get('https://session.bbc.co.uk/session', allow_redirects=False)
+        resp = requests.get('https://session.bbc.co.uk/session',
+                            cookies=ExpiredCookieJar(),
+                            allow_redirects=False)
         self.assertEqual(302, resp.status_code)
-        self.assertFalse('ckns_atkn' in resp.cookies)
-        self.assertFalse('ckns_idtkn' in resp.cookies)
-        self.assertFalse('ckns_id' in resp.cookies)
+        self.assertTrue('ckns_atkn' in resp.cookies)
+        self.assertTrue('ckns_idtkn' in resp.cookies)
+        self.assertTrue('ckns_id' in resp.cookies)
         self.assertTrue('ckns_nonce' in resp.cookies)
         new_location = resp.headers['location']
         self.assertTrue(new_location.startswith('https://www.bbc.co.uk'))
@@ -764,13 +760,12 @@ class CheckLoginStatus(TestCase):
     def test_iplayer_statusbbcid(self):
         """Test the function in the addon to get singed-in status"""
         # Check without tokens
-        jar = cookiejar.CookieJar()
+        jar = NotLoggedInCookieJar()
         jar.save = MagicMock()
         self.assertFalse(ipwww_common.StatusBBCiD(jar))
         jar.save.assert_not_called()
         # Check with expired tokens
-        jar = cookiejar.LWPCookieJar(doc_path('cookies/expired.cookies'))
-        jar.load()
+        jar = ExpiredCookieJar()
         jar.save = MagicMock()
         self.assertTrue(ipwww_common.StatusBBCiD(jar))
         jar.save.assert_called_once()

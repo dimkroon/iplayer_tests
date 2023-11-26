@@ -292,7 +292,7 @@ class Guide(TestCase):
         self.assertEqual(200, resp.status_code)
         self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
         data = ipwww_video.ScrapeJSON(resp.text)
-        save_json(data, 'json/tv-schedules-bbcone-london.json')
+        # save_json(data, 'json/tv-schedules-bbcone-london.json')
         schedule = data['schedule']
         has_keys(schedule, 'channelKey','title', 'bbcDate', 'ukDate', 'daysFromBBCToday', 'items' )
         self.assertEqual('bbcone', schedule['channelKey'])
@@ -334,3 +334,10 @@ class Guide(TestCase):
             'West Midlands': 'wm',
             'Yorkshire': 'yo'
         }
+
+    def test_guid_bbc_alba(self):
+        resp = requests.get('https://www.bbc.co.uk/iplayer/guide/bbcalba', allow_redirects=-False)
+        self.assertEqual(200, resp.status_code)
+        self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
+        data = ipwww_video.ScrapeJSON(resp.text)
+        pass

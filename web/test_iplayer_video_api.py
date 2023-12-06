@@ -299,6 +299,18 @@ class TestAdded(TestCase):
                 check_programme_data(self, item['programme'], 'Added.items')
                 self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 
+        def test_get_added_by_ibl_api(self):
+            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/',
+                                headers= ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)
+            self.assertEqual(404, resp.status_code)
+            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                headers=ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)
+            self.assertEqual(404, resp.status_code)
+
 
 class Recommendations(TestCase):
     def test_get_recommendations_signed_in(self):

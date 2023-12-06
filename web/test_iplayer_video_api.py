@@ -234,7 +234,35 @@ class RemoveWatching(TestCase):
         self.assertEqual('Missing authorization header', data['error']['details'])
 
 
-class Favourites(TestCase):
-    """User's own favourites"""
-    def test_favourites_page(self):
-        check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/added')
+class TestAdded(TestCase):
+        """User's own favourites"""
+        def test_get_added_signed_in(self):
+            resp = requests.get('https://www.bbc.co.uk/iplayer/added',
+                                headers=ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+            self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
+            page = resp.text
+            data = ipwww_video.ScrapeJSON(page)
+            # save_json(data, 'html/added.json')
+            self.assertTrue(data['id']['signedIn'])
+            items_list = data['items']['elements']
+            for item in items_list:
+                has_keys(item, 'urn', 'type', 'programme', obj_name='Added.items')
+                self.assertTrue(is_not_empty(item['urn'], str))
+                self.assertEqual('added', item['type'])
+                check_programme_data(self, item['programme'], 'Added.items')
+                self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
+
+        def test_get_added_by_ibl_api(self):
+            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/',
+                                headers= ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)
+            self.assertEqual(404, resp.status_code)
+            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                headers=ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)
+            self.assertEqual(404, resp.status_code)

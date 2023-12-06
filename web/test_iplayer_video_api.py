@@ -234,7 +234,25 @@ class RemoveWatching(TestCase):
         self.assertEqual('Missing authorization header', data['error']['details'])
 
 
-class Favourites(TestCase):
-    """User's own favourites"""
-    def test_favourites_page(self):
-        check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/added')
+class TestAdded(TestCase):
+        """User's own favourites"""
+        def test_get_added_signed_in(self):
+            resp = requests.get('https://www.bbc.co.uk/iplayer/added',
+                                headers=ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+            self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
+            page = resp.text
+            data = ipwww_video.ScrapeJSON(page)
+            # save_json(data, 'html/added.json')
+            self.assertTrue(data['id']['signedIn'])
+            items_list = data['items']
+            for item in items_list:
+                has_keys(item, 'type', 'props', 'meta')
+                has_keys(item['props'], 'title', 'href', 'imageTemplate', 'durationSubLabel',
+                         'secondarySubLabel')
+                expect_keys(item['props'], 'subtitle', 'progressPercent', 'showPlayIcon')
+                has_keys(item['meta'], 'status', 'secondaryHref')
+                expect_keys(item['meta'], 'remaining', 'programmeId')
+

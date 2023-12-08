@@ -11,10 +11,21 @@ from resources.lib import ipwww_resume
 
 from tests.support.testutils import open_json
 
+
+class ResolveUrn(unittest.TestCase):
+    def test_resolve_valid_tv_urn(self):
+        url = ipwww_resume.resolve_urn('urn:bbc:tv:episode:m001s8qd')
+        self.assertEqual('https://www.bbc.co.uk/iplayer/episode/m001s8qd', url)
+
+    def test_resolve_invalid_tv_url(self):
+        self.assertRaises(ValueError, ipwww_resume.resolve_urn, 'urn:bbc:iplayer:some:programme')
+
+
 class Resume(unittest.TestCase):
     def test_parse_resume(self):
         data = open_json('html/watching.json')
-        ipwww_resume.parse_watching(data)
+        results = list(ipwww_resume.parse_watching(data))
+        pass
 
 
 class PlayStateEnum(unittest.TestCase):

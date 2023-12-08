@@ -18,4 +18,4 @@ class Watching(TestCase):
         # save_json(data, 'html/watching.json')
 
     def test_watching_plain(self):
-        r = ipwww_video.ListWatching(True)
+        r = ipwww_video.ListWatching()

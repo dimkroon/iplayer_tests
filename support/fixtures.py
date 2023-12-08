@@ -12,6 +12,7 @@ from typing import Dict, List, Tuple
 from unittest.mock import patch
 
 import xbmcaddon
+import xbmcvfs
 
 patch_g = None
 
@@ -32,6 +33,8 @@ def global_setup():
         patch_g = patch('xbmcaddon.Addon.getAddonInfo',
                          new=lambda self, item: profile_dir if item == 'profile' else '')
         patch_g.start()
+
+        xbmcvfs.translatePath = lambda path: path
 
         # Define an addon handle
         if len(sys.argv) == 1:

@@ -84,15 +84,12 @@ class Watching(TestCase):
         self.assertTrue(data['id']['signedIn'])
         # save_json(data, 'html/watching.json')
         self.assertTrue(data['id']['signedIn'])
-        items_list = data['items']
+        items_list = data['items']['elements']
         for item in items_list:
-            has_keys(item, 'type', 'props', 'meta')
-            has_keys(item['props'], 'title', 'href', 'imageTemplate', 'durationSubLabel',
-                     'secondarySubLabel')
-            expect_keys(item['props'], 'subtitle', 'progressPercent', 'showPlayIcon')
-            has_keys(item['meta'], 'status', 'secondaryHref')
-            expect_keys(item['meta'], 'remaining', 'programmeId')
-
+            has_keys(item, 'type', 'urn', 'status', 'episode', 'programme', 'has_next', 'version', obj_name='Watching')
+            self.assertTrue(item['status'] in ('current', 'next'))
+            if item['status'] == 'current':
+                has_keys(item, 'offset', 'remaining', 'progress', obj_name='Watching')
 
     def test_get_watching_without_signed_in(self):
         """This just return a normal HTML page with a button to sign in or register."""
@@ -102,7 +99,7 @@ class Watching(TestCase):
         self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
         data = ipwww_video.ScrapeJSON(resp.text)
         self.assertFalse(data['id']['signedIn'])
-        self.assertEqual(0, len(data['items']))
+        self.assertEqual(0, len(data['items']['elements']))
         # save_doc(resp.text, 'html/watching_not_signed_in.html')
 
     def test_get_watching_with_signed_in_expired(self):

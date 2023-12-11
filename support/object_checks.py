@@ -101,6 +101,25 @@ def is_iso_utc_time(time_str):
         return False
 
 
+def iso_duration_2_seconds(iso_str: str) -> int | None:
+    """Convert an ISO 8601 duration string into seconds.
+
+    Simple parser to match durations found in films and tv episodes.
+    Handles only hours, minutes and seconds.
+
+    """
+    try:
+        if len(iso_str) > 3:
+            import re
+            match = re.match(r'^PT(?:([\d.]+)H)?(?:([\d.]+)M)?(?:([\d.]+)S)?$', iso_str)
+            if match:
+                hours, minutes, seconds = match.groups(default=0)
+                return int(float(hours) * 3600 + float(minutes) * 60 + float(seconds))
+    except (ValueError, AttributeError, TypeError):
+        pass
+    return None
+
+
 def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
     """Check if `dict_obj` is a dict that can be passed to codequick's Listitem.from_dict()
 

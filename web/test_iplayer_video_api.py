@@ -263,10 +263,9 @@ class TestAdded(TestCase):
             self.assertTrue(data['id']['signedIn'])
             items_list = data['items']['elements']
             for item in items_list:
-                has_keys(item, 'type', 'props', 'meta')
-                has_keys(item['props'], 'title', 'href', 'imageTemplate', 'durationSubLabel',
-                         'secondarySubLabel')
-                expect_keys(item['props'], 'subtitle', 'progressPercent', 'showPlayIcon')
-                has_keys(item['meta'], 'status', 'secondaryHref')
-                expect_keys(item['meta'], 'remaining', 'programmeId')
+                has_keys(item, 'urn', 'type', 'programme', obj_name='Added.items')
+                self.assertTrue(is_not_empty(item['urn'], str))
+                self.assertEqual('added', item['type'])
+                check_programme_data(self, item['programme'], 'Added.items')
+                self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 

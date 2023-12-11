@@ -10,7 +10,8 @@ from unittest import TestCase
 from resources.lib import ipwww_common
 from resources.lib import ipwww_video
 from tests.support.testutils import save_json, save_doc, doc_path
-from tests.support.object_checks import has_keys, expect_keys, is_not_empty, is_url, is_iso_utc_time
+from tests.support.object_checks import (has_keys, expect_keys, is_not_empty, is_url, is_iso_utc_time,
+                                         iso_duration_2_seconds)
 
 setUpModule = fixtures.setup_web_test()
 
@@ -33,12 +34,13 @@ def check_programme_data(testcase, programme, parent_name):
     obj_name = '.'.join((parent_name, programme['title']))
     has_keys(programme, 'id', 'title', 'type', 'images', 'synopses', 'programme_type', 'count',
              'initial_children', obj_name=obj_name)
+
     expect_keys(programme, 'labels', 'tleo_type', 'categories', 'master_brand', 'lexical_sort_letter',
                 'status', obj_name=obj_name)
 
     testcase.assertTrue(is_not_empty(programme['id'], str))
     testcase.assertEqual('programme', programme['type'])
-    testcase.assertTrue(programme['tleo_type'] in ('episode', 'brand'))    # just to flag when other values appear.
+    testcase.assertTrue(programme['tleo_type'] in ('episode', 'brand', 'series'))    # just to flag when other values appear.
     testcase.assertTrue(is_not_empty(programme['title'], str))
     testcase.assertIsInstance(programme['images'], dict)
     testcase.assertTrue(is_url(programme['images']['standard'], ('.jpg', '.png')))
@@ -50,16 +52,32 @@ def check_programme_data(testcase, programme, parent_name):
         check_episode_data(testcase, child, '.'.join((obj_name, 'children')))
 
 
+def check_version_data(testcase, version, parent_name=''):
+    obj_name = '.'.join((parent_name, 'version'))
+    has_keys(version, 'id', 'kind', 'duration', 'availability', 'first_broadcast_date_time', obj_name=obj_name)
+
+    expect_keys(version, 'hd', 'uhd', 'type', 'events', 'download', 'first_broadcast', obj_name=obj_name)
+
+    testcase.assertTrue(version['kind'] in ('original', 'audio-described', 'signed', 'technical-replacement', 'editorial'))
+    testcase.assertEqual('version', version['type'])
+    testcase.assertIsInstance(version['duration'], dict)
+    testcase.assertTrue(is_not_empty(version['duration']['text'], str))
+    testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 600)
+    testcase.assertTrue(is_not_empty(version['availability']['remaining']['text'], str))
+    testcase.assertTrue(is_iso_utc_time(version['first_broadcast_date_time']))
+
+
 def check_episode_data(testcase, episode, parent_name=''):
     obj_name = '.'.join((parent_name, episode['title']))
     has_keys(episode, 'title', 'images', 'tleo_id', 'synopses', 'original_title', 'programme_type', obj_name=obj_name)
+
     expect_keys(episode, 'id', 'live', 'type', 'labels', 'signed', 'status', 'guidance', 'versions', 'childrens',       # childrens is not a typo (at least not mine)
                 'tleo_type', 'categories', 'has_credits', 'requires_ab', 'master_brand', 'release_date',
                 'audio_described', 'requires_sign_in', 'release_date_time', 'editorial_subtitle', 'lexical_sort_letter',
                 'requires_tv_licence', obj_name=obj_name)
 
     testcase.assertEqual('episode', episode['type'])    # even films and documentaries appear to be of the episode.
-    testcase.assertTrue(episode['tleo_type'] in ('episode', 'brand'))   # just to flag when other values appear.
+    testcase.assertTrue(episode['tleo_type'] in ('episode', 'brand', 'series'))   # just to flag when other values appear.
     testcase.assertIsInstance(episode['images'], dict)
     testcase.assertTrue(is_url(episode['images']['standard'], ('.jpg', '.png')))
     testcase.assertIsInstance(episode['signed'], bool)
@@ -68,6 +86,8 @@ def check_episode_data(testcase, episode, parent_name=''):
     check_synopses(testcase, episode['synopses'])
     testcase.assertTrue(is_not_empty(episode['release_date'], str))     # format varies from '2007' to '21 May 2018'
     testcase.assertTrue(is_iso_utc_time(episode['release_date_time']))
+    for version in episode['versions']:
+        check_version_data(testcase, version, obj_name)
 
 
 class ChannelsAtoZ(TestCase):
@@ -138,8 +158,8 @@ class Watching(TestCase):
                 has_keys(item, 'offset', 'remaining', 'progress', obj_name='Watching')
 
             # This is the data of the episode (Next, or Watching)
-            episode = item['episode']
-            check_episode_data(self, episode, 'Watching.episode')
+            check_episode_data(self, item['episode'], 'Watching.episode')
+            check_version_data(self, item['version'], 'Watching.version')
 
             programme = item['programme']
             check_programme_data(self, programme, 'Watching.programme')

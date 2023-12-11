@@ -247,7 +247,7 @@ class TestAdded(TestCase):
             data = ipwww_video.ScrapeJSON(page)
             # save_json(data, 'html/added.json')
             self.assertTrue(data['id']['signedIn'])
-            items_list = data['items']
+            items_list = data['items']['elements']
             for item in items_list:
                 has_keys(item, 'type', 'props', 'meta')
                 has_keys(item['props'], 'title', 'href', 'imageTemplate', 'durationSubLabel',

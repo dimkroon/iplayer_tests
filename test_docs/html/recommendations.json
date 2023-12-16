@@ -1,0 +1,3543 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": false,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": false,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": false,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": false,
+        "id": "tv-guide"
+      },
+      {
+        "title": "My Programmes",
+        "href": "/iplayer/watching",
+        "active": true,
+        "id": "my-programmes"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false,
+    "disableDataAttributes": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": false
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": "o18",
+    "dismissedModal": false
+  },
+  "language": "en",
+  "experiments": {},
+  "config": {
+    "iblBaseUrl": "https://ibl.api.bbc.co.uk/ibl/v1",
+    "iblUserBaseUrl": "https://user.ibl.api.bbc.co.uk/ibl/v1"
+  },
+  "id": {
+    "signedIn": true,
+    "auth": {
+      "token": "Bearer eyJ0eXAiOiJKV1QiLCJraWQiOiJFZ1VVKzhOaGFBWUtjNnlsb0NCcm5LUFRjZTg9IiwiYWxnIjoiRVMyNTYifQ.eyJzdWIiOiI2MDRkZWU1NS1kYmVjLTRjMjItYjg5Zi00OWFmNTkwMzUxMDciLCJjdHMiOiJPQVVUSDJfU1RBVEVMRVNTX0dSQU5UIiwiYXV0aF9sZXZlbCI6MiwiYXVkaXRUcmFja2luZ0lkIjoiMDBmNzZkYmQtNGM2OS00NzNkLTk2ZmUtZTYwNzE4OWYxODBlLTIxNjYzMjA2IiwiaXNzIjoiaHR0cHM6Ly9hY2Nlc3MuYXBpLmJiYy5jb20vYmJjaWR2NS9vYXV0aDIiLCJ0b2tlbk5hbWUiOiJhY2Nlc3NfdG9rZW4iLCJ0b2tlbl90eXBlIjoiQmVhcmVyIiwiYXV0aEdyYW50SWQiOiJVeGpTcEE3UjlXOVItd200WVlWQTBhU0QtcVUiLCJhdWQiOiJBY2NvdW50IiwibmJmIjoxNzAzMzU0NjQ2LCJncmFudF90eXBlIjoicmVmcmVzaF90b2tlbiIsInNjb3BlIjpbImV4cGxpY2l0IiwidWlkIiwiaW1wbGljaXQiLCJwaWkiLCJjb3JlIiwib3BlbmlkIl0sImF1dGhfdGltZSI6MTY5ODYxOTU3NiwicmVhbG0iOiIvIiwiZXhwIjoxNzAzMzYxODQ2LCJpYXQiOjE3MDMzNTQ2NDYsImV4cGlyZXNfaW4iOjcyMDAsImp0aSI6IlltN0ZGWmxMV18yTG5HTGU1Q25HVU5TenlmUSIsInVzZXJBdHRyaWJ1dGVzIjp7ImFnZUJyYWNrZXQiOiJvMTgiLCJhbGxvd1BlcnNvbmFsaXNhdGlvbiI6dHJ1ZSwiYW5hbHl0aWNzSGFzaGVkSWQiOiJXaXJCaVZGLVRWZnR0aFc3eFh3S2lKNXJyS3JNTURGMVoyXzJ0c3VGR01FIiwicHNldWRvbnltIjoiTmtWTm9QcWZhZW9GaXNEX0JacnZaemRJSmtEWHhRaGUtVW9oc3JON1otQSJ9fQ.C3Rjf-sldIWdzVkBMCiG4vBvDDXERJZ2tFMQ3tKNpOKm-YqJUA8U80yOz8h2Qiw5OO_-V6tp-_ArBbC8PrIIOw",
+      "provider": "idv5"
+    },
+    "personalisationEnabled": true,
+    "ageBracket": "o18"
+  },
+  "page": {
+    "type": "recommendations",
+    "status": 0
+  },
+  "translations": {
+    "myProgrammesTitle": "My Programmes",
+    "watching": "Watching",
+    "added": "Added",
+    "recommendations": "Recommendations",
+    "resume": "Resume",
+    "myNextEpisode": "My Next Episode",
+    "remaining": "%s mins left",
+    "remainingSingular": "%s min left",
+    "addedSignInPurpose": "start adding programmes.",
+    "watchingSignInPurpose": "start using your Watching list.",
+    "recommendationsSignInPurpose": "start getting recommendations.",
+    "addedUpsellTitle": "Add Programmes to enjoy later",
+    "addedUpsellText": "Short on time? Add a programme and we'll pop it in here, so you can come back and enjoy it later.",
+    "watchingUpsellTitle": "The easy way to pick up where you left off",
+    "watchingUpsellText": "Want a quick, simple way to resume watching episodes and series?",
+    "watchingEmptyUpsellTitle": "Your Watching list is empty",
+    "watchingEmptyUpsellText": "Watch programmes on iPlayer and your Watching list will show any unfinished or next episodes that are available.",
+    "watchingPersonalisationUpsellText": "Watch programmes on iPlayer and your Watching list will show any unfinished or next episodes that are available.",
+    "watchingPersonalisationUpsellTitle": "Turn on personalisation to use your Watching list",
+    "recommendationsUpsellTitle": "Get ready to discover new programmes you\u2019ll love",
+    "recommendationsUpsellText": "We\u2019ll give you suggestions based on things you\u2019ve already watched.",
+    "recommendationsEmptyUpsellTitle": "Let\u2019s fill this with programmes you\u2019ll love",
+    "recommendationsEmptyUpsellText": "Start watching shows to get recommendations that are personalised to your tastes.",
+    "recommendationsPersonalisationUpsellTitle": "Turn on personalisation to start getting recommendations",
+    "recommendationsPersonalisationUpsellText": "We\u2019ll suggest new programmes based on things you\u2019ve already watched.",
+    "addedMetaDescription": "Add programmes to your list to enjoy later or be notified when they return",
+    "addedMetaKeywords": "Add, Added, Notifications, List, My Programmes",
+    "watchingMetaDescription": "A quick, simple way to resume watching episodes and series you\u2019ve been watching.",
+    "watchingMetaKeywords": "watching, next, resume, My Programmes",
+    "recommendationsMetaDescription": "Discover new programmes you\u2019ll love with recommendations based on what you watch.",
+    "recommendationsMetaKeywords": "My Programmes, recommendations, personal, personalised",
+    "findOutMore": "Find out more",
+    "turnOnPersonalisation": "Turn on personalisation",
+    "remove": "Remove",
+    "yes": "Yes",
+    "no": "No",
+    "viewAllEpisodes": "View all episodes",
+    "removeAriaLabel": "Remove %s from my %s list.",
+    "removeConfirmAriaLabel": "Yes, remove %s from my %s list.",
+    "removeCancelAriaLabel": "No, don't remove %s from my %s list.",
+    "viewAllEpisodesAriaLabel": "View all episodes for %s."
+  },
+  "items": {
+    "pageType": "recommendations",
+    "elements": [
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "b07bp64b",
+          "live": false,
+          "type": "episode_large",
+          "title": "Upstart Crow",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0955tqp.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jlt3c.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jlt80.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jlt95.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b0959g26",
+          "guidance": false,
+          "slice_id": "b07bp62s",
+          "subtitle": "Series 1: 1. Star Crossed Lovers",
+          "synopses": {
+            "large": "Comedy starring David Mitchell as William Shakespeare. Will starts to make a name for himself in London while also trying to be a husband and father for his family in Stratford-upon-Avon.\n\nThis episode sees Will struggle to find inspiration for Romeo while at the same time having to deal with an angry actor, a very annoying house-guest and his family's not-terribly-helpful script suggestions.",
+            "small": "Will struggles to find inspiration for Romeo and has to deal with an angry actor.",
+            "medium": "Comedy about William Shakespeare. Will struggles to find inspiration for Romeo whilst also dealing with an angry actor and an annoying guest.",
+            "editorial": "Will Shakespeare\u2019s chaotic life and work collide? With David Mitchell and Gemma Whelan.",
+            "programme_small": "Comedy about William Shakespeare as he starts to make a name for himself in London."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "b07bp631",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1669,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1610,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1610,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT29M48.680S"
+              },
+              "availability": {
+                "end": "2030-10-03T05:00:00Z",
+                "start": "2023-10-03T05:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1758,
+              "first_broadcast": "10pm 9 May 2016",
+              "first_broadcast_date_time": "2016-05-09T21:00:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p03tnlwy",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1667,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1609,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1609,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT29M47.400S"
+              },
+              "availability": {
+                "end": "2030-10-03T05:00:00Z",
+                "start": "2023-10-03T05:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "9 May 2016",
+              "first_broadcast_date_time": "2016-05-09T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b07bp62s",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "9 May 2016",
+          "related_links": [],
+          "original_title": "Star Crossed Lovers",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Star Crossed Lovers",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2016-05-09T00:00:00.000Z",
+          "editorial_subtitle": "Comedy of errors",
+          "lexical_sort_letter": "U",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p0fxc4mk",
+          "live": false,
+          "type": "episode_large",
+          "title": "The Power of Parker",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0dsq4.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g1hvbs.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0dsls.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0dsx4.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "p0fvmzb8",
+          "guidance": true,
+          "slice_id": "p0fvmzjq",
+          "subtitle": "Series 1: 1. Two Soaps and a Talc",
+          "synopses": {
+            "large": "Kath is planning her anniversary celebrations, while Diane is worried she\u2019s not got enough cheese for the soiree she\u2019s organising for the \u2018French exchange people\u2019.\n\nMeanwhile, Martin is under financial pressure and needs to make some big decisions - decisions that will end up impacting him and everyone close to him.",
+            "small": "Martin Parker is under financial pressure and needs to make some big decisions.",
+            "medium": "Martin Parker is under financial pressure and needs to make some big decisions \u2013 decisions that will end up impacting him and everyone close to him.",
+            "editorial": "Martin seems to have it all\u2026 Until his wife and mistress team up to bring him down",
+            "programme_small": "It\u2019s Stockport, 1990, and Martin Parker is about to get his comeuppance."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "p0fxc5gk",
+              "uhd": false,
+              "kind": "editorial",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1655,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1598,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1598,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT29M35.040S"
+              },
+              "guidance": {
+                "id": "L1",
+                "text": {
+                  "large": "Contains some strong language.",
+                  "small": "Has guidance",
+                  "medium": "Contains some strong language."
+                }
+              },
+              "availability": {
+                "end": "2028-07-28T04:59:00Z",
+                "start": "2023-07-28T05:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1747,
+              "first_broadcast": "28 Jul 2023",
+              "first_broadcast_date_time": "2023-07-28T00:00:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p0g3kqv2",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1655,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1597,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1597,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT29M34.640S"
+              },
+              "guidance": {
+                "id": "L1",
+                "text": {
+                  "large": "Contains some strong language.",
+                  "small": "Has guidance",
+                  "medium": "Contains some strong language."
+                }
+              },
+              "availability": {
+                "end": "2028-07-28T04:59:00Z",
+                "start": "2023-07-28T05:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "28 Jul 2023",
+              "first_broadcast_date_time": "2023-07-28T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p0fvmzjq",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "ident_id": "p06g87jc",
+            "attribution": "bbc_one"
+          },
+          "release_date": "28 Jul 2023",
+          "related_links": [],
+          "original_title": "Two Soaps and a Talc",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Two Soaps and a Talc",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2023-07-28T00:00:00.000Z",
+          "editorial_subtitle": "Martin seems to have it all\u2026",
+          "lexical_sort_letter": "P",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "b008nddx",
+          "live": false,
+          "type": "episode_large",
+          "title": "Red Dwarf",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fwp739.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08vxj4r.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fwp8mb.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fwpgny.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b008ncn6",
+          "guidance": false,
+          "slice_id": "b008ncm8",
+          "subtitle": "I: 1. The End",
+          "synopses": {
+            "large": "The first series of the cult space comedy by Rob Grant and Doug Naylor. The mining ship Red Dwarf is an old tramp steamer, working around the moons of Saturn. It is five miles long and three miles wide, with a crew of 169. Within 24 hours, 168 of them will be dead.",
+            "small": "Red Dwarf is a mining ship with a crew of 169. Within 24 hours, 168 of them will be dead.",
+            "medium": "The cult space comedy series by Rob Grant and Doug Naylor. 168 of mining ship Red Dwarf's crew complement of 169 are about to die.",
+            "editorial": "The universe's favourite sitcom. The last man alive is a total idiot. But he's not alone\u2026",
+            "programme_small": "The first series of the cult space comedy by Rob Grant and Doug Naylor."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "p0fssl3b",
+              "uhd": false,
+              "kind": "technical-replacement",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1680,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1620,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1620,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT30M0.040S"
+              },
+              "availability": {
+                "end": "2024-06-20T05:00:00Z",
+                "start": "2023-06-20T05:00:00Z",
+                "remaining": {
+                  "text": "Available for 5 months"
+                }
+              },
+              "credits_start": 1756,
+              "first_broadcast": "15 Feb 1988",
+              "first_broadcast_date_time": "1988-02-15T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b008ncm8",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "15 Feb 1988",
+          "related_links": [],
+          "original_title": "The End",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. The End",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "1988-02-15T00:00:00.000Z",
+          "editorial_subtitle": "The universe's favourite sitcom",
+          "lexical_sort_letter": "R",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p0blnfqt",
+          "live": false,
+          "type": "episode_large",
+          "title": "2 Point 4 Children",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0brzzf2.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bpq9hp.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bpq6gt.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0brzzkj.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "p00fngkk",
+          "guidance": false,
+          "slice_id": "p0bln6tw",
+          "subtitle": "Series 1: 1. Leader of the Pack",
+          "synopses": {
+            "small": "An encounter with another man sets Bill thinking about her life.",
+            "programme_small": "Sitcom following the trials and tribulations of the fictional Porter family."
+          },
+          "versions": [
+            {
+              "hd": false,
+              "id": "p0blnhxh",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1664,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1606,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1606,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT29M44.040S"
+              },
+              "availability": {
+                "end": "2025-06-22T05:00:00Z",
+                "start": "2022-03-10T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1733,
+              "first_broadcast": "8:30pm 3 Sep 1991",
+              "first_broadcast_date_time": "1991-09-03T19:30:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p0bln6tw",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": false,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "ident_id": "p06g87jc",
+            "attribution": "bbc_one"
+          },
+          "release_date": "3 Sep 1991",
+          "related_links": [],
+          "original_title": "Leader of the Pack",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Leader of the Pack",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "1991-09-03T00:00:00.000Z",
+          "lexical_sort_letter": "0-9",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "b007sf76",
+          "live": false,
+          "type": "episode_large",
+          "title": "Porridge",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p094nz3n.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jhk2v.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jhkch.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jhklz.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b006m9kn",
+          "guidance": true,
+          "slice_id": "b006m9kk",
+          "subtitle": "Series 1: 1. New Faces, Old Hands",
+          "synopses": {
+            "small": "Veteran inmate Norman Stanley Fletcher passes on his experience to new inmate Godber.",
+            "medium": "Classic sitcom set in Slade Prison. Veteran inmate Norman Stanley Fletcher gives the benefit of his experience to his green young cellmate Godber.",
+            "editorial": "Little victories and lots of laughs with Fletch, Godber and the inmates at Slade Prison.",
+            "programme_small": "Ronnie Barker stars as a habitual criminal doing more time at HM Prison Slade"
+          },
+          "versions": [
+            {
+              "hd": false,
+              "id": "p07dktrj",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1609,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1556,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1556,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M49.040S"
+              },
+              "guidance": {
+                "id": "WL",
+                "text": {
+                  "large": "Contains language which some may find offensive.",
+                  "small": "Has guidance",
+                  "medium": "Contains language which may offend."
+                }
+              },
+              "availability": {
+                "end": "2030-08-24T05:00:00Z",
+                "start": "2023-12-04T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1693,
+              "first_broadcast": "5 Sep 1974",
+              "first_broadcast_date_time": "1974-09-05T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b006m9kk",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "ident_id": "p06g87jc",
+            "attribution": "bbc_one"
+          },
+          "release_date": "5 Sep 1974",
+          "related_links": [],
+          "original_title": "New Faces, Old Hands",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. New Faces, Old Hands",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "1974-09-05T00:00:00.000Z",
+          "editorial_subtitle": "Enjoy a long stretch with the classic comedy",
+          "lexical_sort_letter": "P",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p0dj1l2y",
+          "live": false,
+          "type": "episode_large",
+          "title": "Sandylands",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gflfz2.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gg42mc.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g1yyfs.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g1yygp.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "p0dkkv4x",
+          "guidance": true,
+          "slice_id": "p0dkkvvx",
+          "subtitle": "Series 1: Episode 1",
+          "synopses": {
+            "small": "After her father goes missing at sea, Emily returns to her hometown for his memorial.",
+            "medium": "Emily Verma arrives in Sandylands to attend her estranged dad's memorial. She meets local loudmouth Tina and childhood crush Nathan - but there's another, entirely unexpected meeting to come...",
+            "editorial": "Something's smelling fishy in Sandylands. Is Emily's dad really 'lost at sea'?",
+            "programme_small": "Something's smelling fishy in Sandylands. Is Emily's dad really 'lost at sea'?"
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "p0dkkxf9",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1594,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1542,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1542,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M33.840S"
+              },
+              "guidance": {
+                "id": "W1",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2024-03-25T06:00:00Z",
+                "start": "2023-09-25T05:00:00Z",
+                "remaining": {
+                  "text": "Available for 3 months"
+                }
+              },
+              "credits_start": 1684,
+              "first_broadcast": "10pm 25 Sep 2023",
+              "first_broadcast_date_time": "2023-09-25T21:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p0dkkvvx",
+          "tleo_type": "brand",
+          "categories": [
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": false,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "25 Sep 2023",
+          "related_links": [],
+          "original_title": "Episode 1",
+          "programme_type": "narrative",
+          "slice_subtitle": "Episode 1",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2023-09-25T00:00:00.000Z",
+          "editorial_subtitle": "Something's smelling fishy",
+          "lexical_sort_letter": "S",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m001tlhv",
+          "live": false,
+          "type": "episode_large",
+          "title": "Have I Got News for You",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gjd828.jpg",
+            "inherited_from": "brand"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b006mkw3",
+          "guidance": true,
+          "subtitle": "Have I Got 2023 News for You",
+          "synopses": {
+            "large": "Team captains Paul Merton and Ian Hislop are joined by a variety of guest hosts and panellists from the worlds of comedy, journalism and current affairs for a compilation that looks back at the big news of 2023.",
+            "small": "A variety of guests join Ian Hislop and Paul Merton for the topical news quiz compilation.",
+            "medium": "A compilation of the popular news quiz that looks back at the big news of 2023. With team captains Paul Merton and Ian Hislop and a variety of guest hosts and panellists.",
+            "editorial": "What a year! From culture to politics, celebs to scandals - a recap of 2023's big news"
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001tlhr",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1619,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1565,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1565,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M59.160S"
+              },
+              "guidance": {
+                "id": "L3LA",
+                "text": {
+                  "large": "Contains very strong language and adult humour",
+                  "small": "Has guidance",
+                  "medium": "Contains very strong language and adult humour"
+                }
+              },
+              "availability": {
+                "end": "2024-12-21T21:30:14Z",
+                "start": "2023-12-22T21:30:14Z",
+                "remaining": {
+                  "text": "Available for 11 months"
+                }
+              },
+              "credits_start": 1717,
+              "first_broadcast": "9pm 22 Dec 2023",
+              "first_broadcast_date_time": "2023-12-22T21:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b006mkw3",
+          "tleo_type": "brand",
+          "categories": [
+            "comedy-panel-shows",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "ident_id": "p06g87jc",
+            "attribution": "bbc_one"
+          },
+          "release_date": "22 Dec 2023",
+          "related_links": [],
+          "original_title": "Have I Got 2023 News for You",
+          "programme_type": "self-contained",
+          "audio_described": false,
+          "editorial_title": "Have I Got 2023 News For You",
+          "parent_position": 66,
+          "requires_sign_in": true,
+          "release_date_time": "2023-12-22T00:00:00.000Z",
+          "editorial_subtitle": "What a year!",
+          "lexical_sort_letter": "H",
+          "requires_tv_licence": true
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m001nf5b",
+          "live": false,
+          "type": "episode_large",
+          "title": "Grandfather Rights",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fxjhyh.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m001nf5b",
+          "guidance": false,
+          "synopses": {
+            "large": "Wales, April 2064. Health and safety\u2019s gone quite a bit madder than now, but Calum\u2019s grandad insists his old driving licence allows him to drive all sorts of 'dangerous' vehicles which no-one else can. That\u2019s because he passed his test before 1 January 1997. \n\nCalum doesn\u2019t even want to go out of the house without a defibrillator, so the two of them have very different attitudes to risk. But Calum also wants to buy a new virtual reality snowboarding rig \u2013 and Grandad may just have the money to pay for it.",
+            "small": "Calum and his grandad discover they have more in common than they think.",
+            "medium": "Wales, 2064. Health and safety has everyone in its grip \u2013 apart from Calum\u2019s grandad, who insists he can still drive all sorts of dangerous vehicles on his old driving licence.",
+            "editorial": "No risk's the greatest risk. Everyone's health and safety mad \u2013 except for Calum\u2019s gramps"
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001nf59",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 719,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 755,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 755,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "14 mins",
+                "value": "PT13M59.120S"
+              },
+              "availability": {
+                "end": "2024-06-27T21:58:38Z",
+                "start": "2023-06-27T21:58:38Z",
+                "remaining": {
+                  "text": "Available for 6 months"
+                }
+              },
+              "credits_start": 836,
+              "first_broadcast": "10:40pm 27 Jun 2023",
+              "first_broadcast_date_time": "2023-06-27T21:40:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "tleo_type": "episode",
+          "categories": [
+            "comedy-sitcoms",
+            "comedy",
+            "wales"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one_wales",
+            "titles": {
+              "large": "BBC One Wales",
+              "small": "BBC One",
+              "medium": "BBC One Wales"
+            },
+            "attribution": "bbc_one_wales"
+          },
+          "release_date": "27 Jun 2023",
+          "related_links": [],
+          "original_title": "Grandfather Rights",
+          "programme_type": "one-off",
+          "audio_described": false,
+          "requires_sign_in": true,
+          "release_date_time": "2023-06-27T00:00:00.000Z",
+          "editorial_subtitle": "No risk's the greatest risk",
+          "lexical_sort_letter": "G",
+          "requires_tv_licence": true
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p0067tyd",
+          "live": false,
+          "type": "episode_large",
+          "title": "The Young Ones",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bpfhyq.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bp73yl.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bp74f9.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bpfj0b.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b00glhzn",
+          "guidance": true,
+          "slice_id": "p0066yxx",
+          "subtitle": "Series 1: 1. Demolition",
+          "synopses": {
+            "large": "Rick, Neil, Mike and Vyvyan learn that the council plans to rip down their home. Vyvyan tries to demolish it himself from the inside and Neil wants to commit suicide.",
+            "small": "A demolition order from the council prompts Vyvyan to destroy the house himself.",
+            "medium": "Rick, Neil, Mike and Vyvyan learn that the council plans to rip down their home. Vyvyan tries to demolish it himself from the inside and Neil wants to commit suicide.",
+            "programme_small": "Anarchic sitcom about degenerate north London students in the 80s."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "p0067tyf",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1624,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1570,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1570,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT29M3.957333S"
+              },
+              "guidance": {
+                "id": "W1",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2030-03-03T06:00:00Z",
+                "start": "2022-03-03T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1693,
+              "first_broadcast": "9:05pm 9 Nov 1982",
+              "first_broadcast_date_time": "1982-11-09T21:05:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p0066yxx",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "9 Nov 1982",
+          "related_links": [],
+          "original_title": "Demolition",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Demolition",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "1982-11-09T00:00:00.000Z",
+          "lexical_sort_letter": "Y",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p0dlct64",
+          "live": false,
+          "type": "episode_large",
+          "title": "Give My Head Peace",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dp5s6s.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b006pq94",
+          "guidance": true,
+          "slice_id": "p0dlcqtz",
+          "subtitle": "Series 15: 1. Christmas Special - Murder Most Foul",
+          "synopses": {
+            "large": "It\u2019s going to be a bleak Christmas when the cost-of-living crisis comes to Divis. Da and Ma have a choice. They can heat or eat. Or maybe there is a better way to get some easy cash? One of them could bump the other off! Cal finds an old joint life insurance policy that Da and Ma took out years ago. If one of them dies, the other gets \u00a3250 grand.\n\nMeanwhile Uncle Andy\u2019s worst nightmare comes true. No, it\u2019s not a united Ireland. It\u2019s worse than that. His dole is stopped, and he is forced to take a job as a security guard at Larne Harbour. Ulster\u2019s biggest Brexit supporter now has to implement the Northern Ireland Protocol. He only ever went to Larne to protest. How can he picket himself?",
+            "small": "Da fakes his own death and Uncle Andy gets a new job as a security guard at Larne Harbour.",
+            "medium": "Da fakes his own death to cash in on life insurance. Uncle Andy\u2019s worst nightmare comes true when his dole is stopped, and he gets a new job as a security guard at Larne Harbour.",
+            "editorial": "Murder Most Foul. It\u2019s a bleak Christmas in Divis. Maybe there\u2019s money in murder?",
+            "programme_small": "Satirical sitcom set in Northern Ireland."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "p0dlctmt",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1616,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1562,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1562,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M56.040S"
+              },
+              "guidance": {
+                "id": "LA",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2023-12-26T23:22:48Z",
+                "start": "2022-12-26T23:22:48Z",
+                "remaining": {
+                  "text": "Available until Tue 11:22pm"
+                }
+              },
+              "credits_start": 1702,
+              "first_broadcast": "27 Dec 2022",
+              "first_broadcast_date_time": "2022-12-27T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p0dlcqtz",
+          "tleo_type": "brand",
+          "categories": [
+            "comedy-sitcoms",
+            "comedy",
+            "northern-ireland"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one_northern_ireland",
+            "titles": {
+              "large": "BBC One Northern Ireland",
+              "small": "BBC One",
+              "medium": "BBC One Northern Ireland"
+            },
+            "ident_id": "p00pvbjh",
+            "attribution": "bbc_one_northern_ireland"
+          },
+          "release_date": "27 Dec 2022",
+          "related_links": [],
+          "original_title": "Christmas Special - Murder Most Foul",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Christmas Special - Murder Most Foul",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2022-12-27T00:00:00.000Z",
+          "editorial_subtitle": "Murder Most Foul",
+          "lexical_sort_letter": "G",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "b0074rl4",
+          "live": false,
+          "type": "episode_large",
+          "title": "Yes, Minister",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p097qfj2.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p097qfj2.jpg",
+            "inherited_from": "brand",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gff4ym.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b006xtc3",
+          "guidance": false,
+          "slice_id": "b00ltsml",
+          "subtitle": "Series 3: 2. The Challenge",
+          "synopses": {
+            "small": "Jim Hacker is interrogated on local civil defence by a tenacious television interviewer.",
+            "medium": "Satirical political sitcom. Jim Hacker takes part in a television interview on local civil defence - but his interrogator is extremely tenacious."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "b000gfvz",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1703,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1641,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1641,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "30 mins",
+                "value": "PT30M22.880S"
+              },
+              "availability": {
+                "end": "2023-12-26T00:52:18Z",
+                "start": "2023-11-21T21:06:48Z",
+                "remaining": {
+                  "text": "Available until Tue 12:52am"
+                }
+              },
+              "credits_start": 1786,
+              "first_broadcast": "9pm 18 Nov 1982",
+              "first_broadcast_date_time": "1982-11-18T21:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b00ltsml",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "18 Nov 1982",
+          "related_links": [],
+          "original_title": "The Challenge",
+          "programme_type": "narrative",
+          "slice_subtitle": "2. The Challenge",
+          "audio_described": false,
+          "parent_position": 2,
+          "requires_sign_in": true,
+          "release_date_time": "1982-11-18T00:00:00.000Z",
+          "lexical_sort_letter": "Y",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "b00zhzqw",
+          "live": false,
+          "type": "episode_large",
+          "title": "Twenty Twelve",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dtb8kv.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jj05d.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01l6gn4.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jj0df.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b01f87nh",
+          "guidance": true,
+          "slice_id": "b00yw1t9",
+          "subtitle": "Series 1: Episode 1",
+          "synopses": {
+            "large": "Comedy series following the personal and professional challenges faced by those responsible for delivering the biggest show on earth, as the Olympic Deliverance team try to get through to the end of the day, the end of the week and the end of the year without all the wheels falling off at once. \n\nWith time ticking inexorably downwards, the marketing team come up with a major public event to mark the '1000 days to go' milestone. A huge clock designed by a modern British artist will be installed outside Tate Modern on the banks of the Thames in a ceremony performed by both Seb Coe and Boris Johnson and will count down towards the start of the Olympic Games. The only problem is that the clock has a potentially disastrous design flaw which no-one seems to have noticed until it is too late. \n\nMeanwhile the process of deciding which public figures should be approached to carry the Olympic Torch on its journey around Britain has begun.",
+            "small": "Comedy series. A huge clock is to be installed outside Tate Modern.",
+            "medium": "Comedy series following the challenges faced by those responsible for delivering the 2012 Olympics. A huge clock is to be installed outside Tate Modern.",
+            "editorial": "How hard can it be? All they have to do is stage the world\u2019s biggest sporting event",
+            "programme_small": "Comedy following the team behind the 2012 Olympics with Hugh Bonneville and Jessica Hynes"
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "b00zhzpx",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1550,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1503,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1503,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "28 mins",
+                "value": "PT27M50.040S"
+              },
+              "guidance": {
+                "id": "L1",
+                "text": {
+                  "large": "Contains some strong language.",
+                  "small": "Has guidance",
+                  "medium": "Contains some strong language."
+                }
+              },
+              "availability": {
+                "end": "2030-01-12T06:00:00Z",
+                "start": "2023-01-12T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1643,
+              "first_broadcast": "10pm 14 Mar 2011",
+              "first_broadcast_date_time": "2011-03-14T22:00:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p0ffh3wp",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1550,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1503,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1503,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "28 mins",
+                "value": "PT27M50.040S"
+              },
+              "guidance": {
+                "id": "L1",
+                "text": {
+                  "large": "Contains some strong language.",
+                  "small": "Has guidance",
+                  "medium": "Contains some strong language."
+                }
+              },
+              "availability": {
+                "end": "2030-01-12T06:00:00Z",
+                "start": "2023-01-12T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "14 Mar 2011",
+              "first_broadcast_date_time": "2011-03-14T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b00yw1t9",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "audio-described",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "14 Mar 2011",
+          "related_links": [
+            {
+              "id": "p00fsxfl",
+              "url": "http://www.bbc.co.uk/go/iplayer_bespoke_asset_panel/int/-/programmes/b00yw1t9",
+              "kind": "priority_content",
+              "type": "link",
+              "title": "Twenty Twelve website"
+            },
+            {
+              "id": "p00fsxfn",
+              "url": "http://www.bbc.co.uk/go/iplayer_bespoke_asset_panel/int/-/2012/",
+              "kind": "priority_content",
+              "type": "link",
+              "title": "BBC London 2012"
+            }
+          ],
+          "original_title": "Episode 1",
+          "programme_type": "narrative",
+          "slice_subtitle": "Episode 1",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2011-03-14T00:00:00.000Z",
+          "editorial_subtitle": "How hard can it be?",
+          "lexical_sort_letter": "T",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m00049t7",
+          "live": false,
+          "type": "episode_large",
+          "title": "Ghosts",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09ny4ms.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jzt8x.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p075yrr6.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jztdx.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m00049t9",
+          "guidance": false,
+          "slice_id": "m00049t8",
+          "subtitle": "Series 1: 1. Who Do You Think You Are?",
+          "synopses": {
+            "large": "Alison and Mike, a cash-strapped young couple struggling to buy their first home, think their prayers are answered when a distant relative\nbequeaths them a sprawling country estate. The catch? The old house is haunted by the ghosts of its former inhabitants. The restless spirits,\nhorrified that the new owners plan to turn the peaceful pile into a bustling hotel, make plans to oust the troublesome newcomers. But their bungled efforts have unintended consequences\u2026",
+            "small": "Sitcom about a couple who inherit a haunted country house.",
+            "medium": "A young couple, struggling to buy a first home, think their prayers are answered when a distant relative bequeaths them a vast country house. The catch? It\u2019s riddled with ghosts\u2026\n",
+            "editorial": "A house-share like you\u2019ve never seen... Comedy from the Horrible Histories team",
+            "programme_small": "Sitcom about a couple who inherit a haunted country house."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m00049t6",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1618,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1564,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1564,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M58.200S"
+              },
+              "availability": {
+                "end": "2028-12-31T21:00:00Z",
+                "start": "2020-05-20T20:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "interactions": [
+                {
+                  "type": "skip",
+                  "title": {
+                    "long": "Skip intro",
+                    "short": "Skip"
+                  },
+                  "subtype": "intro",
+                  "interaction_points": {
+                    "skip_to": 232,
+                    "show_from": 214
+                  }
+                }
+              ],
+              "credits_start": 1711,
+              "first_broadcast": "9:30pm 15 Apr 2019",
+              "first_broadcast_date_time": "2019-04-15T20:30:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p076gm50",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1618,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1564,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1564,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M58.200S"
+              },
+              "availability": {
+                "end": "2028-12-31T21:00:00Z",
+                "start": "2020-05-20T20:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "15 Apr 2019",
+              "first_broadcast_date_time": "2019-04-15T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "m00049t8",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u13",
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "ident_id": "p06g87jc",
+            "attribution": "bbc_one"
+          },
+          "release_date": "15 Apr 2019",
+          "related_links": [],
+          "original_title": "Who Do You Think You Are?",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Who Do You Think You Are?",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2019-04-15T00:00:00.000Z",
+          "editorial_subtitle": "A house-share like you\u2019ve never seen...",
+          "lexical_sort_letter": "G",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p07ycdzf",
+          "live": false,
+          "type": "episode_large",
+          "title": "The Tuckers",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p095dhgl.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07yjb37.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07zc6g9.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07zc6km.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m000d4w4",
+          "guidance": true,
+          "slice_id": "m000d4w3",
+          "subtitle": "Series 1: 1. Chateauneuf",
+          "synopses": {
+            "large": "Comedy about a family of chancers, low on cash but high on spirit - determined to survive through any means necessary. They run a catering business, not always successfully, and a few things on the side, not always legit. Peggy rules the roost, with Glyn, her son, next in command. His children, Billy and Bobby, are never far from trouble, and Bobby\u2019s ex-wife Natalie lives next door - with Shaks, a young girl with an appetite for mayhem. The family bicker endlessly amongst themselves, but if you cross one Tucker, you cross them all, and you\u2019ll think twice about crossing them again (especially Grampa Murphy, who spends most of his time in an outside toilet, armed with a gun).\n\nBilly strikes a deal, with Clock, to buy some dodgy wine. While Glyn gets in trouble with a local gangster. And his violent sons.",
+            "small": "Billy and Bobby buy some dodgy wine, and Glyn gets in trouble with a local hard man.",
+            "medium": "Billy strikes a deal with Clock to buy some dodgy wine. Glyn gets in trouble with a local gangster. And his violent sons.",
+            "programme_small": "Character-led comedy about the close-knit Tucker family."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m0019g6t",
+              "uhd": false,
+              "kind": "editorial",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1587,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1536,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1536,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "28 mins",
+                "value": "PT28M26.800S"
+              },
+              "guidance": {
+                "id": "LA",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2024-03-31T04:59:00Z",
+                "start": "2023-05-06T05:00:00Z",
+                "remaining": {
+                  "text": "Available for 3 months"
+                }
+              },
+              "credits_start": 1678,
+              "first_broadcast": "10 Jan 2020",
+              "first_broadcast_date_time": "2020-01-10T00:00:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p0cnd47b",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1587,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1536,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1536,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "28 mins",
+                "value": "PT28M26.800S"
+              },
+              "guidance": {
+                "id": "LA",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2024-03-31T04:59:00Z",
+                "start": "2023-05-06T05:00:00Z",
+                "remaining": {
+                  "text": "Available for 3 months"
+                }
+              },
+              "first_broadcast": "10 Jan 2020",
+              "first_broadcast_date_time": "2020-01-10T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "m000d4w3",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "comedy-sitcoms",
+            "comedy",
+            "wales"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one_wales",
+            "titles": {
+              "large": "BBC One Wales",
+              "small": "BBC One",
+              "medium": "BBC One Wales"
+            },
+            "attribution": "bbc_one_wales"
+          },
+          "release_date": "10 Jan 2020",
+          "related_links": [],
+          "original_title": "Chateauneuf",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. Chateauneuf",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2020-01-10T00:00:00.000Z",
+          "lexical_sort_letter": "T",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m001sx3h",
+          "live": false,
+          "type": "episode_large",
+          "title": "Doctor Who (2023\u2013)",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gtzfm1.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grxjfs.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grxjr0.jpg"
+          },
+          "labels": {
+            "category": "Sci-Fi"
+          },
+          "signed": true,
+          "status": "available",
+          "tleo_id": "p0gglvqn",
+          "guidance": false,
+          "subtitle": "The Star Beast",
+          "synopses": {
+            "small": "The Doctor lands in London to find an old friend, a new enemy and aliens wreaking havoc.",
+            "medium": "The Doctor is caught in a fight to the death as a spaceship crash-lands in London. But as the battle wreaks havoc, destiny is heading for the Doctor\u2019s old friend, Donna.",
+            "editorial": "The Star Beast. The Doctor finds an old friend, a new enemy and aliens wreaking havoc"
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001sx3f",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 3308,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 3086,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 3086,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "57 mins",
+                "value": "PT57M8.480S"
+              },
+              "availability": {
+                "end": "2024-12-09T19:35:45Z",
+                "start": "2023-11-25T19:30:30Z",
+                "remaining": {
+                  "text": "Available for 11 months"
+                }
+              },
+              "credits_start": 3374,
+              "first_broadcast": "6:30pm 25 Nov 2023",
+              "first_broadcast_date_time": "2023-11-25T18:30:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p0gvbqky",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 3308,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 3085,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 3085,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "57 mins",
+                "value": "PT57M8.080S"
+              },
+              "availability": {
+                "end": "2024-12-09T19:35:45Z",
+                "start": "2023-11-25T19:30:30Z",
+                "remaining": {
+                  "text": "Available for 11 months"
+                }
+              },
+              "first_broadcast": "25 Nov 2023",
+              "first_broadcast_date_time": "2023-11-25T00:00:00.000Z"
+            },
+            {
+              "hd": true,
+              "id": "m001t1c7",
+              "uhd": false,
+              "kind": "signed",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 3308,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 3086,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 3086,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "57 mins",
+                "value": "PT57M8.480S"
+              },
+              "availability": {
+                "end": "2024-12-09T19:35:00Z",
+                "start": "2023-11-25T19:30:00Z",
+                "remaining": {
+                  "text": "Available for 11 months"
+                }
+              },
+              "first_broadcast": "25 Nov 2023",
+              "first_broadcast_date_time": "2023-11-25T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p0gglvqn",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "drama-and-soaps",
+            "drama-sci-fi-and-fantasy",
+            "signed"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u13",
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "ident_id": "p06g87jc",
+            "attribution": "bbc_one"
+          },
+          "release_date": "25 Nov 2023",
+          "related_links": [],
+          "original_title": "The Star Beast",
+          "programme_type": "sequential",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2023-11-25T00:00:00.000Z",
+          "editorial_subtitle": "The Star Beast",
+          "lexical_sort_letter": "D",
+          "requires_tv_licence": true
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m000gp8j",
+          "live": false,
+          "type": "episode_large",
+          "title": "Mister Winner",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p095238x.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p086wx20.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p086yg0h.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p086yg2j.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m000gp8q",
+          "guidance": false,
+          "slice_id": "m000gp8m",
+          "subtitle": "Series 1: 1. The Piano",
+          "synopses": {
+            "large": "Leslie finds a piano while on a house clearance job with his father-in-law Chris. Chris thinks they should take it straight to the dump, but Leslie, desperate to make some money to help pay for his upcoming honeymoon, thinks he can sell it to an antique dealer for a small fortune. After an arduous journey pushing the piano around town on foot to various shops proves fruitless, Leslie dumps the piano in an alley \u2013 only to find it starts playing all by itself. On closer inspection, Leslie discovers he has a self-playing piano on his hands! He attempts to sell it to the rather ferocious owner of a local Italian restaurant, who mistakenly thinks Leslie is playing the piano and offers him \u00a3100 a night to play piano in the restaurant. Leslie agrees \u2013 what could possibly go wrong?\n\nFor a while, Leslie is getting away with it, and both Tony the restaurant owner and his punters are lapping it up. Things turn a little awkward when Leslie\u2019s fiancee Jemma and her friend turn up, and Leslie has some explaining to do. And even more awkward when waitress Natalie twigs what Leslie is up to and demands half his money or Tony will find out what\u2019s going on.",
+            "small": "Leslie gets a job as a pianist in an Italian restaurant - but he can\u2019t actually play.",
+            "medium": "Sitcom. Leslie finds a piano while on a house clearance. When it turns out to be self-playing, he takes a job as a pianist in a restaurant and quickly finds himself in over his head.",
+            "editorial": "It might be his name - he's anything but. When will Leslie's fortunes change?",
+            "programme_small": "Despite his best intentions, Leslie Winner always finds himself in disastrous situations."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m000gp8f",
+              "uhd": false,
+              "kind": "editorial",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1625,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1570,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1570,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT29M4.840S"
+              },
+              "availability": {
+                "end": "2030-06-20T05:00:00Z",
+                "start": "2023-06-20T05:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1717,
+              "first_broadcast": "25 Mar 2020",
+              "first_broadcast_date_time": "2020-03-25T00:00:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p087ctdp",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1625,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1570,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1570,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT29M4.840S"
+              },
+              "availability": {
+                "end": "2030-06-20T05:00:00Z",
+                "start": "2023-06-20T05:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "25 Mar 2020",
+              "first_broadcast_date_time": "2020-03-25T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "m000gp8m",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "25 Mar 2020",
+          "related_links": [],
+          "original_title": "The Piano",
+          "programme_type": "narrative",
+          "slice_subtitle": "1. The Piano",
+          "audio_described": true,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2020-03-25T00:00:00.000Z",
+          "editorial_subtitle": "It might be his name - he's anything but",
+          "lexical_sort_letter": "M",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "p006cxm4",
+          "live": false,
+          "type": "episode_large",
+          "title": "The Fast Show",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f93ngt.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f94hhj.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02z7j7s.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d7znny.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b00fn9t2",
+          "guidance": true,
+          "slice_id": "p006cxc6",
+          "subtitle": "Series 1: Episode 1",
+          "synopses": {
+            "small": "The first ever episode of the sketch show.",
+            "medium": "The first ever episode of the sketch show, introducing Ted and Ralph, Unlucky Alf and many more.",
+            "editorial": "The complete series... which is nice. The quickest, quirkiest comedy of all. Brilliant!",
+            "programme_small": "A character based comedy sketch show starring Paul Whitehouse and Charlie Higson."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "p006cxm5",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1619,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1565,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1565,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M58.581333S"
+              },
+              "guidance": {
+                "id": "W1",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2025-03-31T05:00:00Z",
+                "start": "2023-03-20T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1737,
+              "first_broadcast": "10pm 27 Sep 1994",
+              "first_broadcast_date_time": "1994-09-27T21:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "p006cxc6",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy"
+          ],
+          "has_credits": false,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "27 Sep 1994",
+          "related_links": [],
+          "original_title": "Episode 1",
+          "programme_type": "narrative",
+          "slice_subtitle": "Episode 1",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "1994-09-27T00:00:00.000Z",
+          "editorial_subtitle": "The complete series... which is nice",
+          "lexical_sort_letter": "F",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m000vcb8",
+          "live": false,
+          "type": "episode_large",
+          "title": "Don Rodolfo",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09dfxd1.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m000vcb8",
+          "guidance": true,
+          "synopses": {
+            "large": "Don Rodolfo is a shameless libertine, the greatest swordsman the world has ever seen and a total idiot. Now barricaded inside a remote tavern, surrounded by the Catalan army and facing almost certain death, Rodolfo has ten minutes to drink a bottle of Valdepa\u00f1as and tell his epic tale.\n\nBased on the hit live show of the same name.",
+            "small": "Facing certain death, Don Rodolfo tells his epic tale.",
+            "medium": "Facing certain death, Don Rodolfo, the world\u2019s greatest swordsman, lover and idiot tells his epic tale."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m000vcb5",
+              "uhd": false,
+              "kind": "original",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 628,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 673,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 673,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "12 mins",
+                "value": "PT12M27.680S"
+              },
+              "guidance": {
+                "id": "L1",
+                "text": {
+                  "large": "Contains some strong language.",
+                  "small": "Has guidance",
+                  "medium": "Contains some strong language."
+                }
+              },
+              "availability": {
+                "end": "2026-04-22T21:15:00Z",
+                "start": "2022-04-22T21:15:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 744,
+              "first_broadcast": "10pm 22 Apr 2021",
+              "first_broadcast_date_time": "2021-04-22T21:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "tleo_type": "episode",
+          "categories": [
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "22 Apr 2021",
+          "related_links": [],
+          "original_title": "Don Rodolfo",
+          "programme_type": "one-off",
+          "audio_described": false,
+          "requires_sign_in": true,
+          "release_date_time": "2021-04-22T00:00:00.000Z",
+          "lexical_sort_letter": "D",
+          "requires_tv_licence": true
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "b00s0ch0",
+          "live": false,
+          "type": "episode_large",
+          "title": "Extras",
+          "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0955s41.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07s9l88.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07s9lzt.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07s9lzk.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b0070rj8",
+          "guidance": true,
+          "slice_id": "b00s0zx9",
+          "subtitle": "Series 1: Episode 1",
+          "synopses": {
+            "large": "Andy Millman is a desperate man. He's been an actor for five years but he's never done any acting. Instead he's just a lowly film extra, walking around in the background while proper actors do their lines. Andy's only friend in the world is Maggie, a fellow supporting artist and a hopeless romantic. Both are working on a gritty drama about atrocities in the Balkans directed by Hollywood star Ben Stiller. Andy is fed up with being pushed around in the mud for little reward and no lines so while Maggie pursues the man of her dreams, Andy decides he'll do whatever it takes to get himself a line.",
+            "small": "Fed up with having no lines, Andy decides he'll do whatever it takes to get some.",
+            "medium": "Andy Millman is a lowly film extra and, fed up with having no lines, he decides he'll do whatever it takes to get some.",
+            "editorial": "Big stars. Big laughs. Andy Millman is looking for fame... but will he regret it?",
+            "programme_small": "Sitcom set in the world of film and TV extras, starring Ricky Gervais."
+          },
+          "versions": [
+            {
+              "hd": false,
+              "id": "b0b7j51s",
+              "uhd": false,
+              "kind": "editorial",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1618,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1564,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1564,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT28M58.040S"
+              },
+              "guidance": {
+                "id": "LA",
+                "text": {
+                  "large": "Contains adult humour.",
+                  "small": "Has guidance",
+                  "medium": "Contains adult humour."
+                }
+              },
+              "availability": {
+                "end": "2030-11-03T06:00:00Z",
+                "start": "2022-11-03T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "credits_start": 1709,
+              "first_broadcast": "21 Jul 2005",
+              "first_broadcast_date_time": "2005-07-21T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b00s0zx9",
+          "tleo_type": "brand",
+          "categories": [
+            "archive",
+            "comedy-sitcoms",
+            "comedy"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two",
+            "titles": {
+              "large": "BBC Two",
+              "small": "BBC Two",
+              "medium": "BBC Two"
+            },
+            "ident_id": "p06lgy8y",
+            "attribution": "bbc_two"
+          },
+          "release_date": "21 Jul 2005",
+          "related_links": [],
+          "original_title": "Episode 1",
+          "programme_type": "narrative",
+          "slice_subtitle": "Episode 1",
+          "audio_described": false,
+          "parent_position": 1,
+          "requires_sign_in": true,
+          "release_date_time": "2005-07-21T00:00:00.000Z",
+          "editorial_subtitle": "Big stars. Big laughs",
+          "lexical_sort_letter": "E",
+          "requires_tv_licence": true,
+          "numeric_tleo_position": 2
+        }
+      },
+      {
+        "type": "user_recommendation",
+        "algorithm": "irex::recommendations-page::v1.2-total-score::personal",
+        "episode": {
+          "id": "m001hcd9",
+          "live": false,
+          "type": "episode_large",
+          "title": "The i-Word",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dtm0p9.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dtm0p9.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dtm0sz.jpg"
+          },
+          "labels": {
+            "category": "Comedy"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m001hcd9",
+          "guidance": false,
+          "synopses": {
+            "large": "How wannabe influencers Ella and Sam set out to become social media's favourite interabled couple.\n\nAfter stalking Sam on all his socials, Ella plucks up the courage to speak to Sam at the South Wales Accessibility Trailblazer Awards.",
+            "small": "Two ambitious influencers set out to become social media's favourite interabled couple.",
+            "medium": "Sitcom. Two ambitious influencers set out to become social media's favourite interabled couple."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001hcd8",
+              "uhd": false,
+              "kind": "editorial",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 844,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 868,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 868,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "16 mins",
+                "value": "PT16M4.240S"
+              },
+              "availability": {
+                "end": "2024-01-20T23:23:51Z",
+                "start": "2023-01-20T23:23:51Z",
+                "remaining": {
+                  "text": "Available for 28 days"
+                }
+              },
+              "credits_start": 935,
+              "first_broadcast": "20 Jan 2023",
+              "first_broadcast_date_time": "2023-01-20T00:00:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p0dx082v",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version_large",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 844,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 868,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 868,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "16 mins",
+                "value": "PT16M4.240S"
+              },
+              "availability": {
+                "end": "2024-01-20T23:23:51Z",
+                "start": "2023-01-20T23:23:51Z",
+                "remaining": {
+                  "text": "Available for 28 days"
+                }
+              },
+              "first_broadcast": "20 Jan 2023",
+              "first_broadcast_date_time": "2023-01-20T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "tleo_type": "episode",
+          "categories": [
+            "audio-described",
+            "comedy-sitcoms",
+            "comedy",
+            "wales"
+          ],
+          "has_credits": false,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_two_wales_digital",
+            "titles": {
+              "large": "BBC Two Wales",
+              "small": "BBC Two",
+              "medium": "BBC Two Wales"
+            },
+            "attribution": "bbc_two_wales"
+          },
+          "release_date": "20 Jan 2023",
+          "related_links": [],
+          "original_title": "The i-Word",
+          "programme_type": "one-off",
+          "audio_described": true,
+          "requires_sign_in": true,
+          "release_date_time": "2023-01-20T00:00:00.000Z",
+          "lexical_sort_letter": "I",
+          "requires_tv_licence": true
+        }
+      }
+    ]
+  },
+  "recommendations": {
+    "set": "04f4775e-cdc6-403d-b519-c77f43944089",
+    "source": "irex"
+  }
+}

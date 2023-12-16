@@ -59,7 +59,7 @@ def check_version_data(testcase, version, parent_name=''):
     expect_keys(version, 'hd', 'uhd', 'type', 'events', 'download', 'first_broadcast', obj_name=obj_name)
 
     testcase.assertTrue(version['kind'] in ('original', 'audio-described', 'signed', 'technical-replacement', 'editorial'))
-    testcase.assertEqual('version', version['type'])
+    testcase.assertTrue(version['type'] in ('version', 'version_large'))
     testcase.assertIsInstance(version['duration'], dict)
     testcase.assertTrue(is_not_empty(version['duration']['text'], str))
     testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 600)
@@ -69,14 +69,14 @@ def check_version_data(testcase, version, parent_name=''):
 
 def check_episode_data(testcase, episode, parent_name=''):
     obj_name = '.'.join((parent_name, episode['title']))
-    has_keys(episode, 'title', 'images', 'tleo_id', 'synopses', 'original_title', 'programme_type', obj_name=obj_name)
+    has_keys(episode, 'id', 'title', 'images', 'tleo_id', 'synopses', 'original_title', 'programme_type', obj_name=obj_name)
 
-    expect_keys(episode, 'id', 'live', 'type', 'labels', 'signed', 'status', 'guidance', 'versions', 'childrens',       # childrens is not a typo (at least not mine)
+    expect_keys(episode, 'live', 'type', 'labels', 'signed', 'status', 'guidance', 'versions', 'childrens',       # childrens is not a typo (at least not mine)
                 'tleo_type', 'categories', 'has_credits', 'requires_ab', 'master_brand', 'release_date',
                 'audio_described', 'requires_sign_in', 'release_date_time', 'editorial_subtitle', 'lexical_sort_letter',
                 'requires_tv_licence', obj_name=obj_name)
 
-    testcase.assertEqual('episode', episode['type'])    # even films and documentaries appear to be of the episode.
+    testcase.assertTrue(episode['type'] in ('episode', 'episode_large'))    # even films and documentaries appear to be of the episode.
     testcase.assertTrue(episode['tleo_type'] in ('episode', 'brand', 'series'))   # just to flag when other values appear.
     testcase.assertIsInstance(episode['images'], dict)
     testcase.assertTrue(is_url(episode['images']['standard'], ('.jpg', '.png')))
@@ -224,7 +224,6 @@ class Watching(TestCase):
             self.assertTrue(data['id']['signedIn'])
 
 
-
 class RemoveWatching(TestCase):
     def setUp(self):
         self.headers = ipwww_common.headers.copy()
@@ -270,3 +269,18 @@ class TestAdded(TestCase):
                 check_programme_data(self, item['programme'], 'Added.items')
                 self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 
+
+class Recommendations(TestCase):
+    def test_get_recommendations_signed_in(self):
+        resp = requests.get('https://www.bbc.co.uk/iplayer/recommendations',
+                            headers=ipwww_common.headers,
+                            cookies=ipwww_common.cookie_jar,
+                            allow_redirects=False,
+                            timeout=10)
+        self.assertEqual(200, resp.status_code)
+        self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
+        page = resp.text
+        data = ipwww_video.ScrapeJSON(page)
+        # save_json(data, 'html/recommendations.json')
+        for item in data['items']['elements']:
+            check_episode_data(self, item['episode'], 'Recommended')

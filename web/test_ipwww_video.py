@@ -43,6 +43,11 @@ class GenericListings(unittest.TestCase):
             self.assertGreater(p_add_item.call_count, 5)
 
 
+class MyProgrammes(unittest.TestCase):
+    def test_added(self):
+        ipwww_video.ListFavourites()
+
+
 class TvSchedule(unittest.TestCase):
     channel_list = [
         ('bbc_one_hd',                       'BBC One',                  'bbc_one_london'),

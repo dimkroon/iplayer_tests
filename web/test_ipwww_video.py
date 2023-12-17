@@ -26,6 +26,7 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             None,
             '')
 
+
 @patch('resources.lib.ipwww_video.ParseJSON')
 class GenericListings(unittest.TestCase):
     def test_list_most_popular(self, patched_parse):
@@ -33,3 +34,8 @@ class GenericListings(unittest.TestCase):
         patched_parse.assert_called_once()
         data = patched_parse.call_args[0][0]
         self.assertTrue(data['id']['signedIn'])
+
+
+class MyProgrammes(unittest.TestCase):
+    def test_added(self):
+        ipwww_video.ListFavourites()

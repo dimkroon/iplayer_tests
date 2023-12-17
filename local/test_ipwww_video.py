@@ -77,6 +77,16 @@ class TestSelectSynopsis(TestCase):
         self.assertEqual('', ipwww_video.SelectSynopsis(''))
 
 
+class TestParseProgramme(TestCase):
+    def test_parse_programma(self):
+        data = open_json('video_programmes.json')
+        for progr_data in data:
+            result = ipwww_video.ParseProgramme(progr_data)
+            # A mode is to be added by the caller of ParseProgramme, add a fake one to be AddMenuEntry compatible
+            result['mode'] = 0
+            is_li_compatible_dict(self, result)
+
+
 class TestParseEpisode(TestCase):
     def test_parse_episode(self):
         data = open_json('html/watching.json')
@@ -93,3 +103,11 @@ class TestListWatching(TestCase):
         with patch('resources.lib.ipwww_video.AddMenuEntry') as p_AddMenuEntry:
             ipwww_video.ListWatching()
         self.assertEqual(11, p_AddMenuEntry.call_count)
+
+
+@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/added.json'))
+class TestListFavourites(TestCase):
+    def test_list_favourites_authenticated(self, _):
+        with patch('resources.lib.ipwww_video.AddMenuEntry') as p_AddMenuEntry:
+            ipwww_video.ListFavourites()
+        self.assertEqual(16, p_AddMenuEntry.call_count)

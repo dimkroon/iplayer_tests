@@ -133,7 +133,8 @@ def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
                 'aired': (str, type(None)),
                 'resolution': (str, type(None)),
                 'resume_time': str,
-                'total_time': str}
+                'total_time': str,
+                'context_mnu': list}
 
     mandatory_args = ('name', 'mode')
 

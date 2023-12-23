@@ -14,43 +14,53 @@ setUp = fixtures.setup_local_tests()
 
 
 class TestSelectSynopsis(TestCase):
-    synopses = {'editorial': 'editorial plot',
-                'large': 'large plot',
-                'medium': 'medium plot',
-                'small': 'small plot'}
+    def setUp(self):
+        self.synopses = {'editorial': 'editorial plot',
+                        'large': 'large plot',
+                        'medium': 'medium plot',
+                        'small': 'small plot'}
 
-    def test_get_synposis_as_string(self):
-        item_d = {'synopsis': 'my plot', 'synopses': self.synopses}
-        self.assertEqual('my plot', ipwww_video.SelectSynopsis(item_d))
-        item_d = {'synopsis': None, 'synopses': self.synopses}
-        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(item_d))
+    def test_get_synopsis_presence(self):
+        syn = self.synopses
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
+        del syn['editorial']
+        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn))
+        del syn['medium']
+        self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn))
+        del syn['large']
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
+        del syn['small']
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
-    def test_get_synoposis_as_dict(self):
-        item_d = {'synopsis': self.synopses}
-        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(item_d))
+    def test_get_synopsis_empty(self):
+        syn = self.synopses
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
+        syn['editorial'] = ''
+        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn))
+        syn['medium'] = ''
+        self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn))
+        syn['large'] = ''
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
+        syn['small'] = ''
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
-    def test_get_empty_synopsis(self):
-        item_d = {'synopsis': None}
-        self.assertEqual('', ipwww_video.SelectSynopsis(item_d))
-        item_d = {'synopsis': ''}
-        self.assertEqual('', ipwww_video.SelectSynopsis(item_d))
-        item_d = {'synopsis': '', 'synopses': self.synopses}
-        self.assertEqual('', ipwww_video.SelectSynopsis(item_d))
+    def test_get_synopsis_none(self):
+        syn = self.synopses
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
+        syn['editorial'] = None
+        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn))
+        syn['medium'] = None
+        self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn))
+        syn['large'] = None
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
+        syn['small'] = None
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
-    def test_get_synopses(self):
-        synopses = self.synopses.copy()
-        item_d = {'synopses': synopses}
-        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(item_d))
-        del synopses['editorial']
-        self.assertEqual('large plot', ipwww_video.SelectSynopsis(item_d))
-        del synopses['large']
-        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(item_d))
-        del synopses['medium']
-        self.assertEqual('small plot', ipwww_video.SelectSynopsis(item_d))
-        del synopses['small']
-        self.assertEqual('', ipwww_video.SelectSynopsis(item_d))
-        item_d = {'synopses': None}
-        self.assertEqual('', ipwww_video.SelectSynopsis(item_d))
+    def test_empy_dicts(self):
+        self.assertEqual('', ipwww_video.SelectSynopsis(None))
+        self.assertEqual('', ipwww_video.SelectSynopsis({}))
+        self.assertEqual('', ipwww_video.SelectSynopsis(''))
 
 
 class TestParseEpisode(TestCase):

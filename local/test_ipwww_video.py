@@ -4,6 +4,8 @@ fixtures.global_setup()
 from unittest import TestCase
 from unittest.mock import patch, MagicMock
 
+import xbmcplugin
+
 from resources.lib import ipwww_video
 
 from support.testutils import open_json
@@ -11,6 +13,18 @@ from support.object_checks import is_li_compatible_dict
 
 
 setUp = fixtures.setup_local_tests()
+
+
+class SetSortMethod(TestCase):
+    @patch('xbmcplugin.addSortMethod')
+    def test_set_default_sort_method(self,p_addsort):
+        ipwww_video.SetSortMethods()
+        self.assertEqual(3, p_addsort.call_count)
+
+    @patch('xbmcplugin.addSortMethod')
+    def test_set_additional_method(self, p_addsort):
+        ipwww_video.SetSortMethods(xbmcplugin.SORT_METHOD_DATE)
+        self.assertEqual(4, p_addsort.call_count)
 
 
 class TestSelectSynopsis(TestCase):

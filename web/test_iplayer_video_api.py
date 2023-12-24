@@ -45,7 +45,7 @@ def check_programme_data(testcase, programme, parent_name):
     testcase.assertIsInstance(programme['images'], dict)
     testcase.assertTrue(is_url(programme['images']['standard'], ('.jpg', '.png')))
     check_synopses(testcase, programme['synopses'])
-    testcase.assertTrue(programme['programme_type'] in ('one-off', 'self-contained', 'narrative', 'sequential'))  # just to flag when other values appear.
+    testcase.assertTrue(programme['programme_type'] in ('one-off', 'self-contained', 'narrative', 'sequential', 'unclassified', 'strand'))  # just to flag when other values appear.
     testcase.assertTrue(is_not_empty(programme['count'], int))
     testcase.assertIsInstance(programme['initial_children'], list)
     for child in programme['initial_children']:
@@ -58,11 +58,11 @@ def check_version_data(testcase, version, parent_name=''):
 
     expect_keys(version, 'hd', 'uhd', 'type', 'events', 'download', 'first_broadcast', obj_name=obj_name)
 
-    testcase.assertTrue(version['kind'] in ('original', 'audio-described', 'signed', 'technical-replacement', 'editorial'))
+    testcase.assertTrue(version['kind'] in ('original', 'audio-described', 'signed', 'technical-replacement', 'editorial', 'pre-watershed'))
     testcase.assertEqual('version', version['type'])
     testcase.assertIsInstance(version['duration'], dict)
     testcase.assertTrue(is_not_empty(version['duration']['text'], str))
-    testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 600)
+    testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 39)   # Allow for short news clips
     testcase.assertTrue(is_not_empty(version['availability']['remaining']['text'], str))
     testcase.assertTrue(is_iso_utc_time(version['first_broadcast_date_time']))
 

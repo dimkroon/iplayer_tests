@@ -25,10 +25,16 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             None,
             '')
 
-@patch('resources.lib.ipwww_video.ParseJSON')
+
 class GenericListings(unittest.TestCase):
+    @patch('resources.lib.ipwww_video.ParseJSON')
     def test_list_most_popular(self, patched_parse):
         ipwww_video.ListMostPopular()
         patched_parse.assert_called_once()
         data = patched_parse.call_args[0][0]
         self.assertTrue(data['id']['signedIn'])
+
+    def test_list_recommendations(self):
+        with patch('xbmcplugin.addDirectoryItem') as p_add_item:
+            ipwww_video.ListRecommendations()
+            self.assertGreater(p_add_item.call_count, 5)

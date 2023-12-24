@@ -93,3 +93,11 @@ class TestListWatching(TestCase):
         with patch('resources.lib.ipwww_video.AddMenuEntry') as p_AddMenuEntry:
             ipwww_video.ListWatching()
         self.assertEqual(11, p_AddMenuEntry.call_count)
+
+
+class TestListRecommendations(TestCase):
+    @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/recommendations.json'))
+    def test_list_recommendations_authenticated(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations()
+        self.assertEqual(20, p_AddItem.call_count)

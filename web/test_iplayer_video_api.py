@@ -4,6 +4,8 @@ fixtures.global_setup()
 
 import string
 import requests
+from datetime import datetime, timezone, timedelta
+
 from http import cookiejar
 
 from unittest import TestCase
@@ -285,7 +287,7 @@ class Recommendations(TestCase):
         for item in data['items']['elements']:
             check_episode_data(self, item['episode'], 'Recommended')
 
-class Guide(TestCase):
+class SchedulesFromHtml(TestCase):
     def test_get_guide_unauthenticated(self):
         """Produces a schedule of BBC one from 1 day ago upto now"""
         resp = requests.get('https://www.bbc.co.uk/iplayer/guide', allow_redirects=-False)
@@ -335,9 +337,174 @@ class Guide(TestCase):
             'Yorkshire': 'yo'
         }
 
-    def test_guid_bbc_alba(self):
+    def test_guide_bbc_alba(self):
         resp = requests.get('https://www.bbc.co.uk/iplayer/guide/bbcalba', allow_redirects=-False)
         self.assertEqual(200, resp.status_code)
         self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
         data = ipwww_video.ScrapeJSON(resp.text)
         pass
+
+
+class SchedulesByIblAPi(TestCase):
+    def check_broadcast_item(self, bc_data):
+        now = datetime.now(tz=timezone.utc)
+        has_keys(bc_data, 'id', 'scheduled_start', 'scheduled_end', 'duration', 'blanked', 'repeat', 'episode',
+                 'episode_id', 'version_id', 'service_id', 'channel_title', 'type', 'events')
+
+        trans_start = bc_data.get('transmission_start')
+        # Only items that have already started have a field transmission_start
+        if trans_start:
+            trans_t = datetime.strptime(trans_start,'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+            self.assertGreater(now, trans_t)
+
+        self.assertTrue(is_iso_utc_time(bc_data['scheduled_start']))
+        self.assertTrue(is_iso_utc_time(bc_data['scheduled_end']))
+        has_keys(bc_data['duration'], 'text', 'value')
+        self.assertEqual('broadcast', bc_data['type'])                   # Just to flag when another value comes up.
+
+    def test_guide_by_ibl_api(self):
+        t = datetime.now(timezone.utc)
+        url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?per_page=8&from_date=' +
+               t.strftime('%Y-%m-%dT%H:%M'))
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        broadcasts_data = resp.json()
+        schedule = broadcasts_data['broadcasts']['elements']
+        for item in schedule:
+            self.check_broadcast_item(item)
+
+    def test_get_all_available_channels(self):
+        resp = requests.get('https://ibl.api.bbc.co.uk/ibl/v1/channels')
+        self.assertEqual(200, resp.status_code)
+        data = resp.json()
+        for chan in data:
+            pass
+
+    def test_guide_by_ibl_api_channels(self):
+        channels = ('bbc_two_england', 'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
+
+                    'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                    'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
+                    'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
+                    'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
+                    'bbc_one_west_midlands', 'bbc_one_yorks'
+
+                    'bbc_three', 'bbc_four', 'cbbc', 'cbeebies', 'bbc_news24',
+                    'bbc_parliament', 'bbc_alba', 'bbc_scotland', 's4cpbs'
+                    )
+
+        for chan in channels:
+            url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/' + chan + '/broadcasts?per_page=8&from_date=' +
+                   datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M'))
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+
+    def test_guide_by_ibl_api_with_end_time(self):
+        """Query string argument end_date or to_date are ignored.
+        The API just returns the default 20 items.
+        """
+        t = datetime.now(timezone.utc)
+        end_t = t + timedelta(hours=4)
+        url_fmt = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?from_date=' +
+               t.strftime('%Y-%m-%dT%H:%M') + '&{}=' + end_t.strftime('%Y-%m-%dT%H:%M'))
+        for key in ('end_date', 'to_date'):
+            url = url_fmt.format(key)
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+            schedule = resp.json()['broadcasts']['elements']
+            self.assertEqual(20, len(schedule))     # API defaults to 20 items per page when not specified
+            last_programme = datetime.strptime(schedule[-1]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+            self.assertGreater(last_programme, end_t)
+
+    def test_guide_by_ibl_api_page_length(self):
+        now = datetime.now(timezone.utc)
+        url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?per_page=201&from_date=' +
+               now.strftime('%Y-%m-%dT%H:%M'))
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(400, resp.status_code)
+        data = resp.json()
+        self.assertEqual('"per_page" must be less than or equal to 200', data['error']['details'])
+
+    def test_guide_by_ibl_api_from_the_past(self):
+        """Check from how far in the past schedule data can be obtained.
+
+        There seems to be no limit to the allowed from_data, but the actual data returned is never more than
+        8 days old.
+        """
+        now = datetime.now(timezone.utc)
+        start_t = now - timedelta(days=14)
+        url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?per_page=200&from_date=' +
+               start_t.strftime('%Y-%m-%dT%H:%M'))
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        data = resp.json()
+        schedule = data['broadcasts']['elements']
+        first_programme = datetime.strptime(schedule[0]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+        # Check that the first programme in the list is appr. 8 days ago.
+        self.assertGreaterEqual(first_programme, now - timedelta(days=8, hours=3))
+        self.assertLessEqual(first_programme, now - timedelta(days=8))
+        # Check there is more data than the maximum of 200 items on this page.
+        self.assertGreater(data['broadcasts']['count'], 200)
+
+    def test_guide_by_ibl_api_in_the_future(self):
+        """Check from how far in the future schedule data can be obtained.
+
+        There seems to be no limit to the allowed from_data, but the actual data returned is never more than
+        8 days old.
+        """
+        now = datetime.now(timezone.utc)
+        start_t = now + timedelta(days=8)
+        url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?per_page=200&from_date=' +
+               start_t.strftime('%Y-%m-%dT%H:%M'))
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        data = resp.json()
+        schedule = data['broadcasts']['elements']
+        first_programme = datetime.strptime(schedule[0]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+        # Check that the start of the first programme in the list is just before from_date.
+        self.assertLessEqual(first_programme, start_t)
+        self.assertGreater(first_programme, start_t - timedelta(hours=3))
+        # Check that the last programme is roughly 10 days from now.
+        last_programme = datetime.strptime(schedule[-1]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+        self.assertLessEqual(last_programme, now + timedelta(days=10))
+        self.assertGreater(last_programme, now + timedelta(days=9))
+        # Check there is no more data than the maximum of 200 items on this page.
+        self.assertLess(data['broadcasts']['count'], 200)
+
+
+class SchedulesByEssApi(TestCase):
+    def check_ess_programme(self, sc_data, channel_id):
+        has_keys(sc_data, 'id', 'service', 'version', 'episode', 'brand', 'masterbrand', 'published_time')
+        self.assertEqual(sc_data['service']['id'], channel_id)
+        self.assertTrue(is_not_empty(sc_data['episode']['title'], str))
+        if sc_data['brand']:
+            self.assertTrue(is_not_empty(sc_data['brand']['title'], str))
+        self.assertTrue(is_iso_utc_time(sc_data['published_time']['start']))
+        self.assertTrue(is_iso_utc_time(sc_data['published_time']['end']))
+
+    def test_available_channels(self):
+        channels = ('bbc_two_england', 'bbc_two_scotland',
+                    'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
+
+                    'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                    'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_south_east',
+                    'bbc_one_south_west', 'bbc_one_west', 'bbc_one_yorks',
+                    'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
+                    'bbc_one_north_west', 'bbc_one_south', 'bbc_one_west_midlands',
+
+                    'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd', 'bbc_news24', 'bbc_parliament',
+                    'bbc_alba', 'bbc_scotland_hd', 's4cpbs')
+
+        for chan in channels:
+            url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+            data = resp.json()
+            for item in data['items']:
+                self.check_ess_programme(item, chan)
+
+        # for chan in fails:
+        #     url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
+        #     resp = requests.get(url, allow_redirects=False)
+        #     self.assertEqual(404, resp.status_code)
+

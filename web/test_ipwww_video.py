@@ -14,8 +14,7 @@ setUp = fixtures.setup_web_test()
 
 class AuthenticatedPages(unittest.TestCase):
     def test_resume_wathing(self):
-        with patch('resources.lib.ipwww_common.cookie_jar', new=cookiejar.LWPCookieJar()):
-            ipwww_video.ListWatching(logged_in=True)
+        ipwww_video.ListWatching()
 
 
 

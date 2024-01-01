@@ -1,0 +1,24 @@
+from tests.support import fixtures
+fixtures.global_setup()
+
+import unittest
+
+setUpModule = fixtures.setup_local_tests()
+tearDownModule = fixtures.tear_down_local_tests()
+
+
+from resources.lib import ipwww_progress
+
+from tests.support.testutils import open_json
+
+
+class PlayStateEnum(unittest.TestCase):
+    def test_instantiate_playstate(self):
+        with self.assertRaises(NotImplementedError):
+            ps = ipwww_resume.PlayState()
+
+    def test_changes_value(self):
+        with self.assertRaises(NotImplementedError):
+            ipwww_resume.PlayState.PLAYING = 1
+            p = getattr(ipwww_resume.PlayState, 'PLAYING')
+            print(p)

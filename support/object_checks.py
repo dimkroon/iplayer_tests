@@ -101,34 +101,48 @@ def is_iso_utc_time(time_str):
         return False
 
 
-def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
-    """Check if `dict_obj` is a dict that can be passed to codequick's Listitem.from_dict()
+def iso_duration_2_seconds(iso_str: str) -> int | None:
+    """Convert an ISO 8601 duration string into seconds.
+
+    Simple parser to match durations found in films and tv episodes.
+    Handles only hours, minutes and seconds.
 
     """
-    testcase.assertIsInstance(dict_obj, dict)
-    has_keys(dict_obj, 'label', 'params')
-    for item_key, item_value in dict_obj.items():
-        testcase.assertTrue(item_key in ('label', 'art', 'info', 'params'))
-        if item_key == 'label':
-            testcase.assertIsInstance(dict_obj['label'], str)
-            testcase.assertTrue(dict_obj['label'])
-            continue
+    try:
+        if len(iso_str) > 3:
+            import re
+            match = re.match(r'^PT(?:([\d.]+)H)?(?:([\d.]+)M)?(?:([\d.]+)S)?$', iso_str)
+            if match:
+                hours, minutes, seconds = match.groups(default=0)
+                return int(float(hours) * 3600 + float(minutes) * 60 + float(seconds))
+    except (ValueError, AttributeError, TypeError):
+        pass
+    return None
 
-        testcase.assertIsInstance(item_value, dict)
-        # all sub items must be strings or integers.
-        # Is not a requirement for Listitem, but I like to keep it that way.
-        for item_val in item_value.values():
-            testcase.assertIsInstance(item_val, (str, int, type(None)))
 
-        if item_key == 'art':
-            for art_type, art_link in item_value.items():
-                testcase.assertTrue(art_type in ('thumb', 'fanart', 'poster'),
-                                    'Unexpected artType: {}'.format(art_type))
-                testcase.assertTrue(not art_link or is_url(art_link))
-        elif item_key == 'params':
-            for param, param_val in item_value.items():
-                if param == 'url' and param_val:
-                    testcase.assertTrue(is_url(param_val))
+def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
+    """Check if object can be passed as keyword arguments to AddMenuEntry()
+
+    """
+    all_args = {'name': str,
+                'url': str,
+                'mode': int,
+                'iconimage': str,
+                'description': str,
+                'subtitles_url': str,
+                'aired': (str, type(None)),
+                'resolution': (str, type(None)),
+                'resume_time': str,
+                'total_time': str,
+                'context_mnu': list}
+
+    mandatory_args = ('name', 'mode')
+
+    for key, value in dict_obj.items():
+        testcase.assertTrue(key in all_args.keys())
+        testcase.assertIsInstance(value, all_args[key])
+    for arg_name in mandatory_args:
+        testcase.assertTrue(is_not_empty(dict_obj[arg_name], all_args[arg_name]))
     return True
 
 

@@ -136,10 +136,21 @@ class CategoriesAtoZ(TestCase):
             resp = requests.get(url, allow_redirects=False)
             self.assertEqual(resp.status_code, 200)     # Moved permanently
 
+    def test_absence_of_filters(self):
+        """Filters are not used anymore, check if some do still exist.
 
-    def test_channel_az_page(self):
-        for chan in self.categories:
-            check_page_has_json_data(self, 'https://www.bbc.co.uk/{}/a-z'.format(chan))
+        Test if ipwww_video.ListCategoryFilters() can be removed, or should be re-instated.
+        """
+        for cat in self.categories:
+            url = 'https://www.bbc.co.uk/iplayer/categories/%s/a-z' % cat
+            resp = requests.get(url)
+            html = resp.text
+            # Some categories offer filters, we want to provide these filters as options.
+            match1 = re.findall(
+                '<a href="/iplayer/categories/(.+?)/a-z".*?>(.+?)</a>',
+                html,
+                re.DOTALL)
+            self.assertFalse(match1)
 
 
 class ProgrammesAtoZ(TestCase):

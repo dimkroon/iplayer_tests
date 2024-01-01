@@ -2,6 +2,7 @@
 from tests.support import fixtures
 fixtures.global_setup()
 
+import re
 import string
 import requests
 from http import cookiejar
@@ -114,8 +115,27 @@ class ChannelsAtoZ(TestCase):
 
 
 class CategoriesAtoZ(TestCase):
-    categories = ('bbcone', 'bbctwo', 'tv/bbcthree', 'tv/cbbc', 'tv/cbeebies', 'tv/bbcnews', 'tv/bbcparliament',
-                'tv/bbcalba', 'tv/bbcscotland', 'tv/s4c')
+    @classmethod
+    def setUpClass(cls):
+        """Get all available categories just like the addon does."""
+        resp = requests.get('https://www.bbc.co.uk/iplayer')
+        match = re.compile('<a href="/iplayer/categories/(.+?)/featured".*?><span class="lnk__label">(.+?)</span>'
+                           ).findall(resp.text)
+        cls.categories = cats = [url for url, name in match if name not in ("View all","A-Z")]
+        assert len(cats) > 10
+
+    def test_categories_legacy_az_urls(self):
+        for cat in self.categories:
+            url = 'https://www.bbc.co.uk/iplayer/categories/%s/all?sort=atoz' % cat
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(resp.status_code, 301)     # Moved permanently
+
+    def test_categories_az(self):
+        for cat in self.categories:
+            url = 'https://www.bbc.co.uk/iplayer/categories/%s/a-z' % cat
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(resp.status_code, 200)     # Moved permanently
+
 
     def test_channel_az_page(self):
         for chan in self.categories:

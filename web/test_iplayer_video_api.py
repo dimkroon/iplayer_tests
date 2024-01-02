@@ -90,6 +90,20 @@ def check_episode_data(testcase, episode, parent_name=''):
         check_version_data(testcase, version, obj_name)
 
 
+class HtmlPages(TestCase):
+    def test_page_index_not_signed_in(self):
+        data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer')
+        self.assertEqual(12, len(data['bundles']))
+
+    def test_page_index_signed_in(self):
+        resp = requests.get('https://www.bbc.co.uk/iplayer', headers=ipwww_common.headers,
+                            cookies=ipwww_common.cookie_jar, allow_redirects=False)
+        self.assertTrue(200, resp.status_code)
+        data = ipwww_video.ScrapeJSON(resp.text)
+        self.assertIsInstance(data, dict)
+        self.assertEqual(14, len(data['bundles']))
+
+
 class ChannelsAtoZ(TestCase):
     channels = ('bbcone', 'bbctwo', 'tv/bbcthree', 'tv/cbbc', 'tv/cbeebies', 'tv/bbcnews', 'tv/bbcparliament',
                 'tv/bbcalba', 'tv/bbcscotland', 'tv/s4c')

@@ -390,7 +390,7 @@ class SchedulesByIblAPi(TestCase):
                     'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
                     'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
                     'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
-                    'bbc_one_west_midlands', 'bbc_one_yorks'
+                    'bbc_one_west_midlands', 'bbc_one_yorks',
 
                     'bbc_three', 'bbc_four', 'cbbc', 'cbeebies', 'bbc_news24',
                     'bbc_parliament', 'bbc_alba', 'bbc_scotland', 's4cpbs'
@@ -401,6 +401,19 @@ class SchedulesByIblAPi(TestCase):
                    datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M'))
             resp = requests.get(url, allow_redirects=False)
             self.assertEqual(200, resp.status_code)
+
+    def test_guide_by_ibl_api_unavailable_channels(self):
+        """These are all channel ID's used for live streams in the addon, but cannot be used directly to obtain schedules.
+        Apart from bbc_one, all HD type of channels fail, but schedules are available as non-HD channel.
+        """
+        failing_channels = ('bbc_one', 'bbc_two', 'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd',
+                            'bbc_scotland_hd', 'bbc_one_scotland_hd', 'bbc_one_northern_ireland_hd', 'bbc_one_wales_hd')
+
+        for chan in failing_channels:
+            url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/' + chan + '/broadcasts?per_page=8&from_date=' +
+                   datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M'))
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(400, resp.status_code)
 
     def test_guide_by_ibl_api_with_end_time(self):
         """Query string argument end_date or to_date are ignored.

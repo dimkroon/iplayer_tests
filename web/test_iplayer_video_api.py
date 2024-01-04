@@ -266,3 +266,15 @@ class TestAdded(TestCase):
                                 cookies=ipwww_common.cookie_jar,
                                 allow_redirects=False)
             self.assertEqual(404, resp.status_code)
+
+
+        def test_add_to_added_list(self):
+            PGM_ID = 'b006ml0g'      # QI
+            # Check if add succeeds and if adding an already added item succeeds without issues.
+            for _ in range(2):
+                resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                    headers=ipwww_common.headers,
+                                    cookies=ipwww_common.cookie_jar,
+                                    json={"id": PGM_ID},
+                                    allow_redirects=False)
+                self.assertEqual(202, resp.status_code)

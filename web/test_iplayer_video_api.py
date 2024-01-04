@@ -108,6 +108,11 @@ def base_episode_checks(testcase, episode, obj_name=''):
 
     """
     has_keys(episode, 'id', 'title', 'images', 'tleo_id', obj_name=obj_name)
+    # All keys from the previously available long version of episode.
+    misses_keys(episode, 'type', 'programme_type', 'original_title', 'tleo_type', 'signed', 'audio_described',
+                'requires_ab', 'lexical_sort_letter', 'release_date', 'guidance', 'type', 'requires_tv_licence',
+                'editorial_subtitle', 'live', 'childrens', 'categories', 'release_date_time', 'master_brand',   # childrens is not a typo (at least not mine)
+                'has_credits', 'status', 'requires_sign_in', 'labels', 'signed')
     expect_keys(episode, 'versions', 'synopses', 'subtitle', obj_name=obj_name)
 
     check_images(testcase, episode['images'])

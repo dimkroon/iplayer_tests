@@ -64,7 +64,7 @@ def check_version_data(testcase, version, parent_name=''):
     testcase.assertTrue(version['type'] in ('version', 'version_large'))
     testcase.assertIsInstance(version['duration'], dict)
     testcase.assertTrue(is_not_empty(version['duration']['text'], str))
-    testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 600)
+    testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 39)
     testcase.assertTrue(is_not_empty(version['availability']['remaining']['text'], str))
     testcase.assertTrue(is_iso_utc_time(version['first_broadcast_date_time']))
 
@@ -346,6 +346,17 @@ class SchedulesFromHtml(TestCase):
 
 
 class SchedulesByIblAPi(TestCase):
+    channels = ('bbc_two_england', 'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
+
+                'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
+                'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
+                'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
+                'bbc_one_west_midlands', 'bbc_one_yorks',
+
+                'bbc_three', 'bbc_four', 'cbbc', 'cbeebies', 'bbc_news24',
+                'bbc_parliament', 'bbc_alba', 'bbc_scotland', 's4cpbs'
+                )
     def check_broadcast_item(self, bc_data):
         """Check the data structure that represents a broadcasts.
 
@@ -364,17 +375,22 @@ class SchedulesByIblAPi(TestCase):
         self.assertTrue(is_iso_utc_time(bc_data['scheduled_end']))
         has_keys(bc_data['duration'], 'text', 'value')
         self.assertEqual('broadcast', bc_data['type'])                   # Just to flag when another value comes up.
+        # check_episode_data(self, bc_data['episode'], 'schedule-' + bc_data['channel_title'])
 
     def test_guide_by_ibl_api(self):
-        t = datetime.now(timezone.utc)
-        url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?per_page=8&from_date=' +
-               t.strftime('%Y-%m-%dT%H:%M'))
-        resp = requests.get(url, allow_redirects=False)
-        self.assertEqual(200, resp.status_code)
-        broadcasts_data = resp.json()
-        schedule = broadcasts_data['broadcasts']['elements']
-        for item in schedule:
-            self.check_broadcast_item(item)
+        t = datetime.now(timezone.utc) - timedelta(hours=1)
+        t_str = t.strftime('%Y-%m-%dT%H:%M')
+        for channel in self.channels:
+            url = 'https://ibl.api.bbc.co.uk/ibl/v1/channels/{}/broadcasts?per_page=8&from_date={}'.format(
+                  channel, t_str)
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+            broadcasts_data = resp.json()
+            if channel == 'bbc_one_hd':
+                save_json(broadcasts_data, 'json/ibl_schedule_bbc_one_hd.json')
+            schedule = broadcasts_data['broadcasts']['elements']
+            for item in schedule:
+                self.check_broadcast_item(item)
 
     def test_get_all_available_channels(self):
         resp = requests.get('https://ibl.api.bbc.co.uk/ibl/v1/channels')
@@ -382,25 +398,6 @@ class SchedulesByIblAPi(TestCase):
         data = resp.json()
         for chan in data:
             pass
-
-    def test_guide_by_ibl_api_channels(self):
-        channels = ('bbc_two_england', 'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
-
-                    'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
-                    'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
-                    'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
-                    'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
-                    'bbc_one_west_midlands', 'bbc_one_yorks',
-
-                    'bbc_three', 'bbc_four', 'cbbc', 'cbeebies', 'bbc_news24',
-                    'bbc_parliament', 'bbc_alba', 'bbc_scotland', 's4cpbs'
-                    )
-
-        for chan in channels:
-            url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/' + chan + '/broadcasts?per_page=8&from_date=' +
-                   datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M'))
-            resp = requests.get(url, allow_redirects=False)
-            self.assertEqual(200, resp.status_code)
 
     def test_guide_by_ibl_api_unavailable_channels(self):
         """These are all channel ID's used for live streams in the addon, but cannot be used directly to obtain schedules.

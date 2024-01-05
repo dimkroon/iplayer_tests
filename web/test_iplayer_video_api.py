@@ -1,7 +1,7 @@
-
 from tests.support import fixtures
 fixtures.global_setup()
 
+import time
 import string
 import requests
 from http import cookiejar
@@ -271,10 +271,19 @@ class TestAdded(TestCase):
         def test_add_to_added_list(self):
             PGM_ID = 'b006ml0g'      # QI
             # Check if add succeeds and if adding an already added item succeeds without issues.
-            for _ in range(2):
+            for i in range(50):
                 resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
-                                    headers=ipwww_common.headers,
                                     cookies=ipwww_common.cookie_jar,
-                                    json={"id": PGM_ID},
-                                    allow_redirects=False)
+                                    json={"id": PGM_ID})
                 self.assertEqual(202, resp.status_code)
+                if i == 0:
+                    body = resp.content
+                else:
+                    self.assertEqual(body, resp.content)
+                time.sleep(0.05)
+
+        def test_added_server_side_cache(self):
+            resp = requests.get('https://www.bbc.co.uk/iplayer/added',
+                                headers=ipwww_common.headers,
+                                cookies=ipwww_common.cookie_jar,
+                                allow_redirects=False)

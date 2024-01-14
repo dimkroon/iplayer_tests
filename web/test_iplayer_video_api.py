@@ -337,6 +337,34 @@ class TestAdded(TestCase):
                                  {"details": "Missing authorization header", "http_response_code": 401})
             self.assertEqual(0, len(resp.history))      # No redirects to refresh cookies.
 
+        def test_remove_from_added_list(self):
+            PGM_ID = 'b006ml0g'  # QI
+            # ensure the programmes is on the list
+            resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                 cookies=ipwww_common.cookie_jar,
+                                 json={"id": PGM_ID})
+            # now remove from the list
+            for i in range(2):
+                resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
+                                    cookies=ipwww_common.cookie_jar)
+                self.assertEqual(202, resp.status_code)
+                self.assertEqual(resp.text, '{"id":"' + PGM_ID + '"}')
+
+        def test_remove_from_added_not_signed_in(self):
+            PGM_ID = 'b006ml0g'  # QI
+            # Not signed in at all
+            resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID)
+            self.assertEqual(401, resp.status_code)
+            self.assertDictEqual(resp.json()['error'], {"details":"Missing authorization header","http_response_code":401})
+
+        def test_remove_a_non_existing_programme(self):
+            """Totally bogus programme IDs are accepted just as well."""
+            PGM_ID = 'zldkjfghapoer9'
+            resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
+                                cookies=ipwww_common.cookie_jar)
+            self.assertEqual(202, resp.status_code)
+            self.assertEqual(resp.text, '{"id":"' + PGM_ID + '"}')
+
         def test_added_server_side_cache(self):
             resp = requests.get('https://www.bbc.co.uk/iplayer/added',
                                 headers=ipwww_common.headers,

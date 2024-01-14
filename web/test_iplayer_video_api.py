@@ -256,21 +256,37 @@ class TestAdded(TestCase):
                 self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 
         def test_get_added_by_ibl_api(self):
-            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/',
+            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added',
                                 headers= ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
                                 allow_redirects=False)
-            self.assertEqual(404, resp.status_code)
-            resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
-                                headers=ipwww_common.headers,
-                                cookies=ipwww_common.cookie_jar,
-                                allow_redirects=False)
-            self.assertEqual(404, resp.status_code)
+            self.assertEqual(200, resp.status_code)
+            data = resp.json()
+            has_keys(data, 'version', 'schema', 'added', obj_name='iblAdded')
+            has_keys(data['added'], 'count', 'count_all', 'elements')
+            items_list = data['added']['elements']
+            for item in items_list:
+                # Exactly the dame as the data on the HTML page.
+                has_keys(item, 'urn', 'type', 'programme', obj_name='iblAdded.added.elements')
+                self.assertTrue(is_not_empty(item['urn'], str))
+                self.assertEqual('added', item['type'])
+                check_programme_data(self, item['programme'], 'iblAdded.added.elements')
+                self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 
+        def test_compare_html_and_ibl(self):
+            """Somewhat surprisingly, HTML pages seem to complete much faster than API requests."""
+            req_kwargs = {'headers': ipwww_common.headers,'cookies': ipwww_common.cookie_jar, 'allow_redirects':False}
+            resp_html = requests.get('https://www.bbc.co.uk/iplayer/added', **req_kwargs)
+            resp_ibl = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added', **req_kwargs)
+            self.assertLess(resp_html.elapsed, resp_ibl.elapsed)
+            self.assertAlmostEqual(resp_html.elapsed.microseconds, resp_ibl.elapsed.microseconds/2, delta=60000)
 
-        def test_add_to_added_list(self):
+        def test_add_multiple_times(self):
             PGM_ID = 'b006ml0g'      # QI
-            # Check if add succeeds and if adding an already added item succeeds without issues.
+            # Ensure it's not on the Added list.
+            resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
+                                   cookies=ipwww_common.cookie_jar)
+            # Check if add succeeds and that adding an already added item succeeds without issues.
             for i in range(50):
                 resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
                                     cookies=ipwww_common.cookie_jar,

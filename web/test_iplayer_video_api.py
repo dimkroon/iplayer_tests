@@ -9,7 +9,7 @@ from http import cookiejar
 from unittest import TestCase
 from resources.lib import ipwww_common
 from resources.lib import ipwww_video
-from tests.support.testutils import save_json, save_doc, doc_path
+from tests.support.testutils import save_json, save_doc, doc_path, ExpiredCookieJar
 from tests.support.object_checks import (has_keys, expect_keys, is_not_empty, is_url, is_iso_utc_time,
                                          iso_duration_2_seconds)
 
@@ -297,6 +297,45 @@ class TestAdded(TestCase):
                 else:
                     self.assertEqual(body, resp.content)
                 time.sleep(0.05)
+
+        def test_add_episode_id(self):
+            PGM_ID = 'b006ml0g'  # QI
+            EPISODE_ID = 'm001v65j'  # QI, series U, episode 3
+            # ensure QI is not on the list
+            requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
+                            cookies=ipwww_common.cookie_jar)
+            resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                 cookies=ipwww_common.cookie_jar,
+                                 json={"id": EPISODE_ID})
+            self.assertEqual(404, resp.status_code)
+            data = resp.json()
+            self.assertDictEqual(data['error'], {"details":"Not Found","http_response_code":404})
+
+        def test_add_non_existing_programme(self):
+            PGM_ID = 'zkdsfn8esdfc'  # a totally made up programme ID
+            resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                 cookies=ipwww_common.cookie_jar,
+                                 json={"id": PGM_ID})
+            self.assertEqual(404, resp.status_code)
+            data = resp.json()
+            self.assertDictEqual(data['error'], {"details":"Not Found","http_response_code":404})
+
+        def test_add_to_added_not_signed_in(self):
+            PGM_ID = 'b006ml0g'  # QI
+            # Not signed in at all
+            resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                 json={"id": PGM_ID})
+            self.assertEqual(401, resp.status_code)
+            self.assertDictEqual(resp.json()['error'], {"details":"Missing authorization header","http_response_code":401})
+
+            # Expired cookies
+            resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
+                                 cookies=ExpiredCookieJar(),
+                                 json={"id": PGM_ID})
+            self.assertEqual(401, resp.status_code)
+            self.assertDictEqual(resp.json()['error'],
+                                 {"details": "Missing authorization header", "http_response_code": 401})
+            self.assertEqual(0, len(resp.history))      # No redirects to refresh cookies.
 
         def test_added_server_side_cache(self):
             resp = requests.get('https://www.bbc.co.uk/iplayer/added',

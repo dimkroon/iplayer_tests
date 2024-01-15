@@ -39,3 +39,10 @@ class GenericListings(unittest.TestCase):
 class MyProgrammes(unittest.TestCase):
     def test_added(self):
         ipwww_video.ListFavourites()
+
+    def test_remove_from_added(self):
+        PGM_ID = 'b006ml0g'     # QI's ProgrammeID, will probably be available for a very long time.
+        ipwww_video.RemoveFavourite(PGM_ID)
+
+    def test_add_to_added(self):
+        PGM_ID = 'b006ml0g'

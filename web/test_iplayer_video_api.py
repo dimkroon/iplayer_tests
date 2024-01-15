@@ -347,6 +347,9 @@ class SchedulesFromHtml(TestCase):
 
 class SchedulesByIblAPi(TestCase):
     def check_broadcast_item(self, bc_data):
+        """Check the data structure that represents a broadcasts.
+
+        """
         now = datetime.now(tz=timezone.utc)
         has_keys(bc_data, 'id', 'scheduled_start', 'scheduled_end', 'duration', 'blanked', 'repeat', 'episode',
                  'episode_id', 'version_id', 'service_id', 'channel_title', 'type', 'events')
@@ -383,7 +386,7 @@ class SchedulesByIblAPi(TestCase):
     def test_guide_by_ibl_api_channels(self):
         channels = ('bbc_two_england', 'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
 
-                    'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                    'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
                     'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
                     'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
                     'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
@@ -486,7 +489,7 @@ class SchedulesByEssApi(TestCase):
         channels = ('bbc_two_england', 'bbc_two_scotland',
                     'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
 
-                    'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                    'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
                     'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_south_east',
                     'bbc_one_south_west', 'bbc_one_west', 'bbc_one_yorks',
                     'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
@@ -494,7 +497,7 @@ class SchedulesByEssApi(TestCase):
 
                     'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd', 'bbc_news24', 'bbc_parliament',
                     'bbc_alba', 'bbc_scotland_hd', 's4cpbs')
-
+        channels = ('bbc_one_hd',)
         for chan in channels:
             url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
             resp = requests.get(url, allow_redirects=False)

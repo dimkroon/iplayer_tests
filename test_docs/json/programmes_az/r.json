@@ -1,0 +1,2339 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": false,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": false,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": true,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": false,
+        "id": "tv-guide"
+      },
+      {
+        "title": "My Programmes",
+        "href": "/iplayer/watching",
+        "active": false,
+        "id": "my-programmes"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false,
+    "disableDataAttributes": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": false
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": null,
+    "dismissedModal": false
+  },
+  "language": "en",
+  "experiments": {},
+  "currentLetter": "r",
+  "page": {
+    "status": 0
+  },
+  "programmes": {
+    "a": {
+      "count": 244,
+      "entities": []
+    },
+    "b": {
+      "count": 272,
+      "entities": []
+    },
+    "c": {
+      "count": 231,
+      "entities": []
+    },
+    "d": {
+      "count": 192,
+      "entities": []
+    },
+    "e": {
+      "count": 98,
+      "entities": []
+    },
+    "f": {
+      "count": 125,
+      "entities": []
+    },
+    "g": {
+      "count": 140,
+      "entities": []
+    },
+    "h": {
+      "count": 129,
+      "entities": []
+    },
+    "i": {
+      "count": 108,
+      "entities": []
+    },
+    "j": {
+      "count": 52,
+      "entities": []
+    },
+    "k": {
+      "count": 42,
+      "entities": []
+    },
+    "l": {
+      "count": 155,
+      "entities": []
+    },
+    "m": {
+      "count": 225,
+      "entities": []
+    },
+    "n": {
+      "count": 104,
+      "entities": []
+    },
+    "o": {
+      "count": 83,
+      "entities": []
+    },
+    "p": {
+      "count": 195,
+      "entities": []
+    },
+    "q": {
+      "count": 12,
+      "entities": []
+    },
+    "r": {
+      "count": 164,
+      "entities": [
+        {
+          "props": {
+            "href": "/iplayer/episode/b01kvmyh/raa-raa-the-noisy-lion-series-2-26-the-noisiest-house-in-the-jungle",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07ds45h.jpg",
+            "title": "Raa Raa the Noisy Lion",
+            "synopsis": "Hang out with Raa Raa and his animal friends as they solve all sorts of mysteries."
+          },
+          "meta": {
+            "episodesAvailable": 51
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001lt6z/race-across-the-world-series-3-9-the-reunion",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fb81rw.jpg",
+            "title": "Race Across the World",
+            "synopsis": "Travellers race across the world without smartphones, internet access or credit cards."
+          },
+          "meta": {
+            "episodesAvailable": 24
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001jczv/race-to-disaster-the-ards-tt",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f1t6z5.jpg",
+            "title": "Race to Disaster - The Ards TT",
+            "synopsis": "The story of the Ards TT, once one of the world\u2019s greatest motor races."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p085s6kz/racism-in-the-ranks",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08g5y21.jpg",
+            "title": "Racism in the Ranks",
+            "synopsis": "Reporter Callum Tulley investigates complaints of racism in the British Army."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b09jhm45/radan-an-rathaid-mhoirthe-highway-rat",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05qr2nz.jpg",
+            "title": "Radan an Rathaid Mh\u00f2ir/The Highway Rat",
+            "synopsis": "The story of the Highway Rat, a greedy tyrant who scares all animals that cross his path."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p087lx8v/radio1-radio1-calvin-harris",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8trth.jpg",
+            "title": "@Radio1",
+            "synopsis": "Highlights at Radio 1"
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gbs6gx/radio-1-at-reading-and-leeds-festival-2023-reading-and-leeds-a-rite-of-passage",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g64jsn.jpg",
+            "title": "Radio 1 at Reading and Leeds Festival",
+            "synopsis": "Radio 1 presents coverage of the Reading and Leeds Festivals."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0d8q7cx/radio-1-meets-jack-saunders-alex-turner-and-matt-helder",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8trth.jpg",
+            "title": "Radio 1 Meets",
+            "synopsis": "Radio 1 Meets brings you interviews and chat from the biggest stars."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001mfx4/radio-1s-big-weekend-big-weekend-dundee-best-bits",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c5xblv.jpg",
+            "title": "Radio 1\u2019s Big Weekend",
+            "synopsis": "Brand new performances and classic sets at Radio 1's annual live music event."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0g1kkr0/radio-1s-dance-weekend-radio-1-dance-ibiza-fisher",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fzcv7c.jpg",
+            "title": "Radio 1's Dance Weekend",
+            "synopsis": "Dance the weekend away with Radio 1..."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0h3yrmy/radio-1s-live-lounge-teddy-swims",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dmtyhl.jpg",
+            "title": "Radio 1's Live Lounge",
+            "synopsis": "Amazing performances and covers from Radio 1's world famous Live Lounge!"
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0b5xyds/radio-1-stories-sashay-to-hell",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05ktrdh.jpg",
+            "title": "Radio 1 Stories",
+            "synopsis": "Inspiring and thought-provoking stories from young people across the UK, told by Radio 1."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001b0qv/radio-2-in-concert-duran-duran",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f02fqx.jpg",
+            "title": "Radio 2 In Concert",
+            "synopsis": "Exclusive performances, backstage gossip, gig news, interviews and session archives. "
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gbv3vw/radio-2-in-the-park-2023-eras-kylie-minogue-the-interview",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fslz8k.jpg",
+            "title": "Radio 2 in the Park",
+            "synopsis": "Radio 2's flagship live event: Two days of brilliant live sets from Music's biggest stars"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gr7r9q/radio-2s-piano-room-2023-compilation",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dn2byh.jpg",
+            "title": "Radio 2's Piano Room",
+            "synopsis": "Live performances from much-loved music stars, alongside the BBC Concert Orchestra."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0ddx2cp/radio-fama-dyffryn-nantlle",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dbv4ff.jpg",
+            "title": "Radio Fa'ma",
+            "synopsis": "Description Coming Soon..."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001drq1/raiders-of-the-lost-past-with-janina-ramirez-tutankhamuns-secrets",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d9zkj2.jpg",
+            "title": "Raiders of the Lost Past with Janina Ramirez",
+            "synopsis": "Three archaeological finds that changed our understanding of the origins of civilisation."
+          },
+          "meta": {
+            "episodesAvailable": 7
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0f9c8vp/rain-dogs-series-1-8-this-is-not-an-exit",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fcg8cw.jpg",
+            "title": "Rain Dogs",
+            "synopsis": "Comedy drama about a single mother and her ten-year-old daughter."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p011w92v/the-rainhill-story-stephensons-rocket",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01290x1.jpg",
+            "title": "The Rainhill Story: Stephenson's Rocket",
+            "synopsis": "A look at the 1829 competition to find the best steam locomotive in Britain. (1979)"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b00793zq/rain-in-my-heart",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gvfbhn.jpg",
+            "title": "Rain in My Heart",
+            "synopsis": "Paul Watson's documentary on four alcoholics from the Medway towns in Kent. (2006)"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m0003w52/rain-man",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07k36yz.jpg",
+            "title": "Rain Man",
+            "synopsis": "Hustler Charlie Babbitt heads across country with his autistic brother Raymond in tow."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gbhqj7/ralio-ralio-rali-ceredigion",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d27yw7.jpg",
+            "title": "Ralio+",
+            "synopsis": "Holl gyffro'r byd moduro yng nghwmni Emyr, Llinos a Hana.The best from the world of ral..."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0d3dlp8/ralph-katie-series-1-6-the-motherships-have-landed",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d2xzfc.jpg",
+            "title": "Ralph & Katie",
+            "synopsis": "Spin-off from The A Word, following the first year of Ralph and Katie's marriage."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b0074mgn/rancho-notorious",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bhqj29.jpg",
+            "title": "Rancho Notorious",
+            "synopsis": "Unusual western about a young man hunting for the brutal killers of his fiancee."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tlg4/ranger-hamzas-eco-quest-series-2-20-chalk-streams",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d2zjtc.jpg",
+            "title": "Ranger Hamza's Eco Quest",
+            "synopsis": "Join Ranger Hamza and the Ramblers on an eco quest to discover one of nature\u2019s wonders."
+          },
+          "meta": {
+            "episodesAvailable": 65
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b087lw6x/rannan-rapachrevolting-rhymes-episode-2",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04ld1j9.jpg",
+            "title": "Rannan Rapach/Revolting Rhymes",
+            "synopsis": "Animated children's stories with a twist."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tc2w/the-rap-game-uk-series-5-6-the-final",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gqdc0h.jpg",
+            "title": "The Rap Game UK",
+            "synopsis": "Rap legends DJ Target, Krept and Konan hunt for the next big MC to take over the scene."
+          },
+          "meta": {
+            "episodesAvailable": 35
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p07trb8n/rapman-back-of-the-bus",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07tybcn.jpg",
+            "title": "Rapman: Back of the Bus",
+            "synopsis": "Rapman takes a tour around London with Micheal Ward, Stephen, Kadeem, Junior and Karla."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p04zz7rb/the-rapper-who-chopped-his-penis-off",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04zzxy4.jpg",
+            "title": "The Rapper Who Chopped His Penis Off",
+            "synopsis": "Wu-Tang Clan-affiliated rapper Christ Bearer\u2019s drug-induced mental health crisis."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gb58vy/rap-round-table-episode-1",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g9t1zk.jpg",
+            "title": "Rap Round Table",
+            "synopsis": "Trevor Nelson and guests celebrate the culture, impact and legacy of Hip Hop."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p08sw1hw/rap-trip-underground-scenes-uncovered-fos-and-ransom-rap-roadtrip-3-the-rise-of-asian-rap",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08tm95b.jpg",
+            "title": "Rap Trip: Underground Scenes Uncovered",
+            "synopsis": "A rap documentary series with The Rap Game UK contestants FOS and Ransom."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m0014rgv/ratchet-clank",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bpdrwh.jpg",
+            "title": "Ratchet & Clank",
+            "synopsis": "A mechanic and his robot ally must join an elite space squad to save the galaxy."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vn5j/rathad-ramsay-series-1-episode-3",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h086wq.jpg",
+            "title": "Rathad Ramsay",
+            "synopsis": "Ramsay MacMahon takes a hike in the country with guests."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m0010znc/ratharsair-raasay-episode-1",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ftxprz.jpg",
+            "title": "Ratharsair (Raasay) ",
+            "synopsis": "What it\u2019s like to live and work on the Inner Hebridean island of Raasay in summer 2021?"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tx3m/raye-at-the-royal-albert-hall",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h2smzv.jpg",
+            "title": "RAYE at the Royal Albert Hall",
+            "synopsis": "RAYE live at the Royal Albert Hall with the Heritage Orchestra and Flames Collective Choir"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001qnr3/the-read-series-2-a-kestrel-for-a-knave",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0byxrk9.jpg",
+            "title": "The Read",
+            "synopsis": "Creative performance readings of iconic British novels."
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0d5by4g/read-all-about-it-series-2-episode-9",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d6xl9w.jpg",
+            "title": "Read All About It!",
+            "synopsis": "Conversations about books and readings to coincide with Book Week."
+          },
+          "meta": {
+            "episodesAvailable": 22
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0d6jcm0/the-real-line-of-duty",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d6jct4.jpg",
+            "title": "The Real Line of Duty",
+            "synopsis": "The detectives hunting criminals in uniform, to restore trust in the police."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m00031y6/the-real-marigold-on-tour-series-3-4-mexico",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06zy3kj.jpg",
+            "title": "The Real Marigold on Tour",
+            "synopsis": "Four senior citizens try out retirement in other countries around the world."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p031d2fz/the-real-mccoy-series-5-episode-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08k3cqd.jpg",
+            "title": "The Real McCoy",
+            "synopsis": "The groundbreaking sketch show that brought the black British perspective to TV."
+          },
+          "meta": {
+            "episodesAvailable": 30
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001977f/the-real-mo-farah",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ckfc15.jpg",
+            "title": "The Real Mo Farah",
+            "synopsis": "Mo Farah reveals the truth about his journey to the UK and his Olympic successes."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m0015xld/the-real-this-country",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bx7qr4.jpg",
+            "title": "The Real This Country",
+            "synopsis": "Kerry Mucklowe's statue tours the Cotswolds to celebrate the last series of This Country."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0bmp529/rebel-cheer-squad-a-get-even-series-series-1-8-get-even",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bpr932.jpg",
+            "title": "Rebel Cheer Squad - A Get Even Series",
+            "synopsis": "The old DGM might have left Bannerman School, but their spirit remains."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b048wtcn/rebels-of-oz-germaine-clive-barry-and-bob-episode-2",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p021j7h8.jpg",
+            "title": "Rebels of Oz: Germaine, Clive, Barry and Bob",
+            "synopsis": "Howard Jacobson reflects on the cultural impact of four rebellious Australians"
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0g4tvlc/the-reckoning-series-1-episode-4",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gjbbs8.jpg",
+            "title": "The Reckoning",
+            "synopsis": "Factual drama examining the crimes of Jimmy Savile, with testimony from survivors."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000y2xd/reclaiming-amy",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09pt4xm.jpg",
+            "title": "Reclaiming Amy",
+            "synopsis": "The friends and family of Amy Winehouse reveal the truth about the British music icon."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b00ftflp/red-dust",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01g889c.jpg",
+            "title": "Red Dust",
+            "synopsis": "A lawyer returns to South Africa to work as prosecutor on a Truth Commission hearing."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0fq3s31/red-dwarf-special-the-promised-land",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fwp8mb.jpg",
+            "title": "Red Dwarf",
+            "synopsis": "Cult space comedy by Rob Grant and Doug Naylor."
+          },
+          "meta": {
+            "episodesAvailable": 72
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000tzcl/red-joan",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09c8bxp.jpg",
+            "title": "Red Joan",
+            "synopsis": "Octogenarian Joan Stanley is arrested and accused of having worked as a Soviet spy."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0cprbjh/red-rose-series-1-8-the-gardener",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cwn53q.jpg",
+            "title": "Red Rose",
+            "synopsis": "When one of a group of friends downloads the Red Rose app, their lives take a dark turn."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001sxby/reel-stories-take-that",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07xpdhx.jpg",
+            "title": "Reel Stories",
+            "synopsis": "Dermot O'Leary chats to some of the biggest stars in music about their careers to date."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tzbt/reflections-at-the-quay-christmas-reflections-at-the-quay-2023",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p087s7p9.jpg",
+            "title": "Reflections at the Quay",
+            "synopsis": "Religious reflections from Scotland."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0fy6b82/reframed-marilyn-monroe-series-1-episode-4",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0dntp.jpg",
+            "title": "Reframed: Marilyn Monroe",
+            "synopsis": "Series exploring the life and legacy of Marilyn Monroe from a modern perspective."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0492hzr/reggie-yates-life-and-death-in-chicago",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p049f1rd.jpg",
+            "title": "Reggie Yates: Life and Death in Chicago",
+            "synopsis": "Reggie travels to Chicago to investigate gun crime in President Obama's adopted hometown."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p00hhrdb/the-regiment",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01mfty2.jpg",
+            "title": "The Regiment",
+            "synopsis": "Three months with the 1st Battalion of the Royal Green Jackets. (1977)"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b09ksk9b/ad/reindeer-family-and-me",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05r3pjg.jpg",
+            "title": "Reindeer Family and Me",
+            "synopsis": "Gordon Buchanan meets the Sami people and the animals they hold so close - reindeer."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p02wl03x/release-pop-goes-to-the-hayward",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01l9h6j.jpg",
+            "title": "Release",
+            "synopsis": "1960s magazine series delving into the world of films, plays, books, art and music."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b0074924/the-relic",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06586xx.jpg",
+            "title": "The Relic",
+            "synopsis": "Suspense thriller about a deadly creature at large in the Chicago Field Museum."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001q98h/relic",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g9ljm2.jpg",
+            "title": "Relic",
+            "synopsis": "In this slow-burn horror, Kay worries about the disappearance of her elderly mother, Edna."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gjkfw1/the-remarkable-journey-of-bernard-levin",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gr1vk1.jpg",
+            "title": "The Remarkable Journey of Bernard Levin",
+            "synopsis": "The life of Bernard Levin, one of the most famous journalists of the 20th century."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001sh3n/remembrance-sunday-the-cenotaph-2023-highlights",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01lcpjt.jpg",
+            "title": "Remembrance Sunday: The Cenotaph",
+            "synopsis": "Coverage of the Remembrance Day commemorations at the Cenotaph in Whitehall."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p05y93q5/rent-for-sex-ellie-undercover",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05zm4jv.jpg",
+            "title": "Rent for Sex: Ellie Undercover",
+            "synopsis": "Ellie Flynn investigates landlords offering rooms in exchange for 'sexual favours'."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p08tj7zq/rent-like-a-boss-series-1-episode-4",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08v2bjp.jpg",
+            "title": "Rent Like A Boss",
+            "synopsis": "Two lads who know loads about renting take a trip through the UK to help young renters."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001v6mq/the-repair-shop-series-12-episode-14",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fbsby4.jpg",
+            "title": "The Repair Shop",
+            "synopsis": "Shining a light on the wonderful treasures to be found in homes across the country."
+          },
+          "meta": {
+            "episodesAvailable": 145
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001drtj/reported-missing-series-4-4-the-abandoned-car",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04zzf7f.jpg",
+            "title": "Reported Missing",
+            "synopsis": "Documentary series following the search for missing people."
+          },
+          "meta": {
+            "episodesAvailable": 12
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vrsg/reporting-scotland-evening-news-23012024",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fts1hs.jpg",
+            "title": "Reporting Scotland",
+            "synopsis": "Big stories from across the country"
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/l0056hf2/rescuers-search-for-survivors-after-japan-earthquake",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h2j5r7.jpg",
+            "title": "Rescuers Search For Survivors After Japan Earthquake",
+            "synopsis": "Around 1,000 rescuers search for people trapped in rubble after earthquakes in Japan"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tzg1/resolutions-2024",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p03c4jlq.jpg",
+            "title": "Resolutions",
+            "synopsis": "Thoughts and ideas reflecting on today's world."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tvft/respect",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gyfjtf.jpg",
+            "title": "Respect",
+            "synopsis": "A biographical drama about American soul singer Aretha Franklin."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0b627zk/the-responder-series-1-episode-5",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bh7ttn.jpg",
+            "title": "The Responder",
+            "synopsis": "Police response officer Chris is struggling to keep a grip on his mental health."
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0dxjqdq/restoration-rescue-series-1-episode-4",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f06n78.jpg",
+            "title": "Restoration Rescue",
+            "synopsis": "Architect Patrick Bradley meets people converting the buildings of our past into homes."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b06hhlyl/return-to-larkinland",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gg4nsd.jpg",
+            "title": "Return to Larkinland",
+            "synopsis": "Writer and critic AN Wilson revisits the life and work of poet Philip Larkin."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000y2fs/return-to-the-cruise-episode-5",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01l2dnx.jpg",
+            "title": "Return to... The Cruise",
+            "synopsis": "A look back at the series that made a star of Jane McDonald"
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0fd5lyk/reunion-hotel-series-1-episode-5",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fbpwgf.jpg",
+            "title": "Reunion Hotel",
+            "synopsis": "If you could reunite with one person from your past, who would it be?"
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b042qywj/rev-series-3-episode-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01m5w7x.jpg",
+            "title": "Rev.",
+            "synopsis": "Handle with prayer. The tangled life of a sometimes less than virtuous vicar."
+          },
+          "meta": {
+            "episodesAvailable": 19
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001v0qf/review-2023-4-we-remember",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04ksw0j.jpg",
+            "title": "Review",
+            "synopsis": "Programmes looking back at the year."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b0873p0q/revolting-rhymes-2-part-two",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04l3yxx.jpg",
+            "title": "Revolting Rhymes",
+            "synopsis": "Two animated films based on the much-loved rhymes written by Roald Dahl."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000lcnv/rewind-2000s-shortened-versions-1-2000",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08lzjvm.jpg",
+            "title": "Rewind",
+            "synopsis": "Journey through the news, music and TV through the decades."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tzbc/rewind-60-years-of-welsh-pop-series-2-christmas-special",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cshchn.jpg",
+            "title": "Rewind: 60 Years of Welsh Pop",
+            "synopsis": "From the swinging 60s to Cool Cymru, fantastic performances from the BBC Wales archives."
+          },
+          "meta": {
+            "episodesAvailable": 11
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000k8j8/rhod-gilberts-work-experience-series-9-3-road-worker",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08gp4lz.jpg",
+            "title": "Rhod Gilbert's Work Experience",
+            "synopsis": "Following comedian Rhod Gilbert as he tries out different jobs across Wales"
+          },
+          "meta": {
+            "episodesAvailable": 33
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001mfw0/rhs-chelsea-flower-show-2023-episode-14",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01zdykh.jpg",
+            "title": "RHS Chelsea Flower Show",
+            "synopsis": "Gardeners go for gold at the world's most famous flower show."
+          },
+          "meta": {
+            "episodesAvailable": 15
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gysdt8/rhyfeddodau-chwilengoch-a-cath-ddu-rhyfeddodau-chwilengoch-a-cath-ddu-rhyfeddodau-chwilengoch",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b12t7k.jpg",
+            "title": "Rhyfeddodau Chwilengoch a Cath Ddu",
+            "synopsis": "Animeiddiad am ferch gyffredin sy'n byw bywyd cyffredin, ond mae hefyd ganddi bwerau si..."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001n3j6/the-richard-dimbleby-lecture-david-harewood",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01qd443.jpg",
+            "title": "The Richard Dimbleby Lecture",
+            "synopsis": "Annual lecture by an influential speaker, delivered in honour of the veteran broadcaster."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0dltf22/richard-holt-yr-academi-felys-cyfres-2-pennod-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0df97kl.jpg",
+            "title": "Richard Holt: Yr Academi Felys",
+            "synopsis": "Cystadleuaeth pobi dan adain y cogydd crwst, Richard Holt. Patisserie competition with ..."
+          },
+          "meta": {
+            "episodesAvailable": 11
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vp7p/richard-osmans-house-of-games-series-7-week-15-tuesday",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09wkbhr.jpg",
+            "title": "Richard Osman's House of Games",
+            "synopsis": "Each week a group of famous faces test their general knowledge skills in a series of games"
+          },
+          "meta": {
+            "episodesAvailable": 91
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001twvn/rick-astley-rocks-new-years-eve-part-2",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h0pcnr.jpg",
+            "title": "Rick Astley Rocks New Year\u2019s Eve",
+            "synopsis": "Join pop legend Rick Astley and his special guests for a spectacular New Year's Eve party."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001jgsc/rick-steins-cornwall-series-3-episode-10",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p092cl3w.jpg",
+            "title": "Rick Stein's Cornwall",
+            "synopsis": "Rick Stein shares his love and passion for the people and places of his beloved Cornwall."
+          },
+          "meta": {
+            "episodesAvailable": 40
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b00m9ysc/rick-steins-far-eastern-odyssey-episode-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d3p7yq.jpg",
+            "title": "Rick Stein's Far Eastern Odyssey",
+            "synopsis": "Rick Stein explores the Far East's diverse food cultures"
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0dnyhpm/rick-steins-fruits-of-the-sea-episode-8",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dnxhq5.jpg",
+            "title": "Rick Stein's Fruits of the Sea",
+            "synopsis": "Chef Rick Stein celebrates seafood from around the world."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b037mxgf/rick-steins-india-episode-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p099wvsl.jpg",
+            "title": "Rick Stein's India",
+            "synopsis": "Rick Stein explores the different cuisines around India."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000z921/rick-steins-seafood-lovers-guide-episode-8",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09t42t9.jpg",
+            "title": "Rick Stein's Seafood Lovers' Guide",
+            "synopsis": "Rick Stein and his dog go on a journey around the ever-changing coastlines of the UK."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p00v3q16/rick-steins-seafood-odyssey-episode-8",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05rgg4z.jpg",
+            "title": "Rick Stein's Seafood Odyssey",
+            "synopsis": "Series exploring places and flavours that have influenced the cooking of chef Rick Stein."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0dnydrz/rick-steins-taste-of-the-sea-episode-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dnvzp7.jpg",
+            "title": "Rick Stein's Taste of the Sea",
+            "synopsis": "Chef Rick Stein celebrates seafood in his hometown of Padstow."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001swlq/ricky-ralfs-very-northern-road-trip-series-1-6-coming-home-manchester-and-liverpool",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gy5s1w.jpg",
+            "title": "Ricky & Ralf's Very Northern Road Trip",
+            "synopsis": "Ricky Tomlinson and Ralf Little go on staycation in their beloved northern England."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001ty2y/ricky-tomlinson-remembers-the-royle-family",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h15mdb.jpg",
+            "title": "Ricky Tomlinson Remembers... The Royle Family",
+            "synopsis": "Ricky Tomlinson looks back at The Royle Family and its co-creator Caroline Aherne."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000t141/ricky-wilsons-art-jam-series-1-10-nick-grimshaw",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p097p9hs.jpg",
+            "title": "Ricky Wilson's Art Jam",
+            "synopsis": "Ricky meets celebs and wows them with cool art."
+          },
+          "meta": {
+            "episodesAvailable": 10
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b01pnjzh/riders-of-berk-book-of-dragons",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04szyk1.jpg",
+            "title": "Riders of Berk: Book of Dragons",
+            "synopsis": "Hiccup, Astrid, Fishlegs, Toothless and Gobber tell the legend behind the Book of Dragons."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b0861pnj/rillington-place-3-reg",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jb43g.jpg",
+            "title": "Rillington Place",
+            "synopsis": "Three-part drama series based on the true story of serial killer John Christie."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vnfx/rip-off-britain-series-15-40-my-house-is-a-building-site",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ggs5hq.jpg",
+            "title": "Rip Off Britain",
+            "synopsis": "The Rip Off Britain team is ready to tackle the issues you feel affect you the most."
+          },
+          "meta": {
+            "episodesAvailable": 55
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p099df1x/the-rise-of-no-signal-black-radio-here-to-stay",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09chvtx.jpg",
+            "title": "The Rise of No Signal: Black Radio \u2013 Here to Stay",
+            "synopsis": "This is the story of a group of friends coming together to form radio station, No Signal."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000l9yp/the-rise-of-the-murdoch-dynasty-series-1-3-the-comeback",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08k2qp1.jpg",
+            "title": "The Rise of the Murdoch Dynasty",
+            "synopsis": "The incredible story of Rupert Murdoch\u2019s influence on world events."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0gc9djn/rise-of-the-nazis-the-manhunt-3-the-reckoning",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gftqpf.jpg",
+            "title": "Rise of the Nazis",
+            "synopsis": "How Hitler seized, kept and fell from power - and the postwar manhunt for war criminals."
+          },
+          "meta": {
+            "episodesAvailable": 12
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000rgrs/rita-is-crogall-series-1-8-bothan-den",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08w4mhm.jpg",
+            "title": "Rita is Crogall",
+            "synopsis": "The adventures of Rita and her hungry crocodile."
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tz72/river-city-03012024",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08sb1z5.jpg",
+            "title": "River City",
+            "synopsis": "Drama series set in a close-knit Glasgow community."
+          },
+          "meta": {
+            "episodesAvailable": 52
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p060m6qx/r-kelly-sex-girls-videotapes",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07gjfrj.jpg",
+            "title": "R Kelly: Sex, Girls & Videotapes",
+            "synopsis": "A documentary from 2018 where Ben Zand went inside the RnB singer\u2019s inner circle."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p067xbzc/r-kelly-the-sex-scandal-continues",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jrqq2.jpg",
+            "title": "R Kelly: The Sex Scandal Continues",
+            "synopsis": "In this film from May 2018, Ben Zand gets to the heart of the allegations."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001lgdh/the-road-dance",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fjx0cs.jpg",
+            "title": "The Road Dance",
+            "synopsis": "Kirsty MacLeod dreams of a better life away from an isolated small village."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001d9r8/rob-burrow-living-with-mnd",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d633kc.jpg",
+            "title": "Rob Burrow: Living with MND",
+            "synopsis": "A look at the life of rugby player Rob Burrow as he and his family deal with his MND."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b00ldgk8/robin-hood-series-3-13-something-worth-fighting-for-part-2",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01lyjzk.jpg",
+            "title": "Robin Hood",
+            "synopsis": "Drama series which gives a contemporary feel to the classic Robin Hood legend"
+          },
+          "meta": {
+            "episodesAvailable": 39
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tk2p/robson-greens-weekend-escapes-series-2-15-uncle-matheson",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dxk2pj.jpg",
+            "title": "Robson Green's Weekend Escapes",
+            "synopsis": "Robson shares ideas on how to make the most of the weekends by getting into the outdoors."
+          },
+          "meta": {
+            "episodesAvailable": 30
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/l0027tf3/rocket-league-eu-spring-series",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08crb91.jpg",
+            "title": "Rocket League - EU Spring Series",
+            "synopsis": "Eight of Europe\u2019s top Rocket League teams compete for top six in this two day event."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/l0027tff/rocket-league-eu-spring-series",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08crb91.jpg",
+            "title": "Rocket League - EU Spring Series",
+            "synopsis": "Europe\u2019s top Rocket League teams compete in the final day of the EU Spring Series."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001jrfz/rod-woodward-live-in-wales",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f4bfd8.jpg",
+            "title": "Rod Woodward: Live in Wales",
+            "synopsis": "Live stand-up from Welsh comedian Rod Woodward, recorded at Cardiff\u2019s New Theatre."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001qgd4/roise-and-frank",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g9t29p.jpg",
+            "title": "Roise and Frank",
+            "synopsis": "Widow R\u00f3ise is convinced that a stray dog is the reincarnation of her husband."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0cgmylt/the-rolling-stones-licked-live-in-nyc",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cjbl41.jpg",
+            "title": "The Rolling Stones - Licked Live in NYC",
+            "synopsis": "The Rolling Stones captured live in 2003 from New York City's Madison Square Garden."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m0018zwr/the-rolling-stones-live-at-the-fonda",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cjbj92.jpg",
+            "title": "The Rolling Stones - Live at the Fonda",
+            "synopsis": "The Rolling Stones captured live at Hollywood's Fonda Theatre in May 2015."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0cgmzq2/the-rolling-stones-live-at-wiltern-theatre",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cjblvh.jpg",
+            "title": "The Rolling Stones - Live at Wiltern Theatre",
+            "synopsis": "The Stones perform in Los Angeles in 2002, treating fans to a set heavy on rarities."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0cgmzns/the-rolling-stones-some-girls-live-in-texas",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cjbl5b.jpg",
+            "title": "The Rolling Stones: Some Girls Live in Texas",
+            "synopsis": "A classic concert from 1978 - from a tour fans consider to be one of their best."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p098hsv6/roman-kemp-our-silent-emergency",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0991wy4.jpg",
+            "title": "Roman Kemp: Our Silent Emergency",
+            "synopsis": "Roman Kemp explores the mental health and suicide crisis affecting young men."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001s1mm/roman-kemp-the-fight-for-young-lives",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gnzhj9.jpg",
+            "title": "Roman Kemp: The Fight for Young Lives",
+            "synopsis": "Roman Kemp strives to improve support for young people suffering with their mental health."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000tv2n/romeo-and-juliet",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09bz0fr.jpg",
+            "title": "Romeo and Juliet",
+            "synopsis": "A host of CBeebies stars join Rebecca to stage William Shakespeare\u2019s Romeo and Juliet."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p069w2cz/romesh-talking-to-comedians-in-a-pie-and-mash-shop",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06zj1kx.jpg",
+            "title": "Romesh: Talking to Comedians",
+            "synopsis": "Romesh Ranganathan meets some of the UK's most-loved comedians."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000w6xd/ronia-nighean-a-mheirlichronja-the-robbers-daughter-series-1-22-an-samhradh-sonraichte-seo",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p099zmf7.jpg",
+            "title": "Ronia, Nighean a' Mheirlich/Ronja, the Robber's Daughter ",
+            "synopsis": "The adventures of Ronia, the robber\u2019s daughter, who is born on a stormy night."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0cf3pjl/ronja-the-robbers-daughter-series-1-26-the-call-of-spring",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cjcc6c.jpg",
+            "title": "Ronja, the Robber's Daughter",
+            "synopsis": "Emmy Award-winning animated series based on children\u2019s novel by Astrid Lindgren."
+          },
+          "meta": {
+            "episodesAvailable": 26
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0bzj2jn/rookie-cops-series-1-episode-6",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bywyvw.jpg",
+            "title": "Rookie Cops",
+            "synopsis": "Documentary following people who have switched careers to work with Dyfed Powys police."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0fk57zx/rookie-nurses-series-1-episode-5",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmsq9r.jpg",
+            "title": "Rookie Nurses",
+            "synopsis": "Seven Welsh nurses, fresh out of uni, must be ready for whatever comes through the doors."
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0102qfj/room-on-the-broom",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07y5wf4.jpg",
+            "title": "Room on the Broom",
+            "synopsis": "Animation. A kind witch invites a surprising collection of animals to sit on her broom."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vngh/roots-and-fruits-series-2-16-lychee",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d7gbw2.jpg",
+            "title": "Roots and Fruits",
+            "synopsis": "The ultimate five (minutes) a day, starring fruit and veg revealing fascinating facts."
+          },
+          "meta": {
+            "episodesAvailable": 42
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0fkbpqw/ros-atkins-on-whats-going-on-in-sudan",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09tr94d.jpg",
+            "title": "Ros Atkins On...",
+            "synopsis": "Ros Atkins distils one of the big issues in the news into just ten minutes."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001n9sr/rose-aylingellis-signs-for-change",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fw8xh7.jpg",
+            "title": "Rose Ayling-Ellis: Signs for Change",
+            "synopsis": "Join Rose on a personal journey into the deaf experience to see if attitudes are changing."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p09lk76z/rosie",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09m6vpl.jpg",
+            "title": "Rosie",
+            "synopsis": "Mother-of-four Rosie tries to keep her young family afloat as they become homeless."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p00b6c7x/rossetti-sex-drugs-and-oil-paint",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02tgnlf.jpg",
+            "title": "Rossetti - Sex, Drugs and Oil Paint",
+            "synopsis": "Andrew Graham-Dixon considers the work of Dante Gabriel Rossetti. (2003)"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0h3v82l/rownd-a-rownd-cyfres-29-pennod-7",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ft73xl.jpg",
+            "title": "Rownd a Rownd",
+            "synopsis": "Cyfres ddrama boblogaidd wedi'i lleoli yn y gogledd. Popular drama series focusing on t..."
+          },
+          "meta": {
+            "episodesAvailable": 38
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000qpj1/royal-ballet-allstar-gala",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0922pt9.jpg",
+            "title": "Royal Ballet All-Star Gala",
+            "synopsis": "Put on your pointe shoes for some all-star ballet favourites from Covent Garden."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001sjs5/royal-british-legion-festival-of-remembrance-2023-audio-described",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01lz4w7.jpg",
+            "title": "Royal British Legion Festival of Remembrance",
+            "synopsis": "The annual event pays tribute to the armed forces and remembers all victims of conflict."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001q28h/the-royal-edinburgh-military-tattoo-2023",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08p4q29.jpg",
+            "title": "The Royal Edinburgh Military Tattoo",
+            "synopsis": "Spectacular variety performance set against the iconic backdrop of Edinburgh Castle."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000pjt8/royal-historys-biggest-fibs-with-lucy-worsley-series-2-3-the-russian-revolution",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p082zmq8.jpg",
+            "title": "Royal History\u2019s Biggest Fibs with Lucy Worsley",
+            "synopsis": "Lucy Worsley dispels the myths behind some of the key moments in royal history."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001tv91/royal-institution-christmas-lectures-2023-professor-mike-wooldridge-the-truth-about-ai-3-the-future-of-ai-dream-or-a-nightmare",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02dxbj8.jpg",
+            "title": "Royal Institution Christmas Lectures",
+            "synopsis": "Mind-expanding talks and hands-on science, inspiring children and adults alike since 1825."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p00jmszs/the-royal-tournament-1956-part-1",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01m5s3d.jpg",
+            "title": "The Royal Tournament",
+            "synopsis": "Annual coverage of the British Armed Forces' military tattoo."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001p4nq/royal-welsh-show-2023-2023-wales-today-special",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0593h03.jpg",
+            "title": "Royal Welsh Show",
+            "synopsis": "Coverage of the annual festival"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p011dzys/the-royle-family-barbaras-old-ring",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08tfw3z.jpg",
+            "title": "The Royle Family",
+            "synopsis": "Sitcom about a working-class family from Manchester, whose lives revolve around the TV"
+          },
+          "meta": {
+            "episodesAvailable": 25
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b0074q0f/roy-lichtenstein-pop-idol",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01h7msz.jpg",
+            "title": "Roy Lichtenstein: Pop Idol",
+            "synopsis": "Roy Lichtenstein revolutionised art with his cartoon images of American culture. (2004)"
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001hz0s/roy-orbison-at-the-bbc",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f492kr.jpg",
+            "title": "Roy Orbison at the BBC",
+            "synopsis": "A deep-dive into the BBC\u2019s archives to celebrate the great Roy Orbison."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001hz0v/roy-orbison-in-dreams",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f1blm7.jpg",
+            "title": "Roy Orbison: In Dreams",
+            "synopsis": "Chronicling the incredible career of the late Roy Orbison with classic footage."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001rnbg/rucks-and-riches",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gm98ft.jpg",
+            "title": "Rucks and Riches",
+            "synopsis": "Felicity Kvesic investigates the future of professional rugby in England."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0cx5w4y/ruck-stars-series-1-episode-5",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cygztr.jpg",
+            "title": "Ruck Stars",
+            "synopsis": "Documentary following the under-18 teams of Welsh rugby sides Scarlets and Ospreys."
+          },
+          "meta": {
+            "episodesAvailable": 5
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/l0056h9d/rugby-celtic-challenge-cup-rugby-celtic-challenge-cup-glasgow-warriors-v-wolfhounds",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h15svr.jpg",
+            "title": "Rugby - Celtic Challenge Cup",
+            "synopsis": "Live Coverage of Glasgow Warriors and Edinburgh Rugby in the Celtic Challenge Cup"
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vjft/rugby-league-challenge-cup-2024-first-round-royal-air-force-v-royal-navy",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08r2xnt.jpg",
+            "title": "Rugby League: Challenge Cup",
+            "synopsis": "Coverage from Rugby League's most prestigious knock-out competition."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vhvq/ruin-na-bportach-series-1-3-an-fod-a-sheasamh",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h57d8m.jpg",
+            "title": "R\u00fain na bPortach",
+            "synopsis": "Cormac \u00d3 h\u00c1dhmaill explores the world\u2019s peatlands."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001qg7x/rupauls-drag-race-down-under-series-3-8-grand-finale",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0p9b0.jpg",
+            "title": "RuPaul's Drag Race Down Under",
+            "synopsis": "Drag queen contestants compete to see who will be the Down Under Drag Queen Superstar."
+          },
+          "meta": {
+            "episodesAvailable": 24
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001sy8j/rupauls-drag-race-uk-series-5-episode-10",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gbzn3m.jpg",
+            "title": "RuPaul's Drag Race UK",
+            "synopsis": "RuPaul makes the trip across the pond in search of the most charismatic queen in the land."
+          },
+          "meta": {
+            "episodesAvailable": 53
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vn6z/rupauls-drag-race-uk-vs-the-world-meet-the-queens-series-2",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h583zt.jpg",
+            "title": "RuPaul\u2019s Drag Race UK vs the World",
+            "synopsis": "RuPaul hosts as nine international queens compete to be Queen of the Mothertucking World."
+          },
+          "meta": {
+            "episodesAvailable": 8
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m000kr94/rush",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08k2f7f.jpg",
+            "title": "Rush",
+            "synopsis": "The story of the rivalry between 1970s F1 champions Niki Lauda and James Hunt."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001vn3d/russell-maliphants-vortex",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h4g5p7.jpg",
+            "title": "Russell Maliphant's Vortex",
+            "synopsis": "Visually rich dance inspired by the works of Jackson Pollock."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/m001rk4h/russell-t-davies-remembers-a-midsummer-nights-dream",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gkkvbg.jpg",
+            "title": "Russell T Davies Remembers... A Midsummer Night's Dream",
+            "synopsis": "Russell T Davies on how he realised his dream of bringing A Midsummer Night\u2019s Dream to TV."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0d3kv2z/russia-19851999-traumazone-series-1-7-part-seven-1995-to-1999",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d4j9m6.jpg",
+            "title": "Russia 1985-1999: TraumaZone",
+            "synopsis": "What it felt like to live through the collapse of communism and democracy."
+          },
+          "meta": {
+            "episodesAvailable": 7
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/b099127q/russia-with-simon-reeve-series-1-episode-3",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05gmh9b.jpg",
+            "title": "Russia with Simon Reeve",
+            "synopsis": "100 years after the Russian Revolution, Simon Reeve embarks on an extraordinary journey."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p06ptqc0/ryan-tricks-on-the-streets-series-1-5-therapy-for-the-mind",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06qms8j.jpg",
+            "title": "Ryan Tricks on the Streets",
+            "synopsis": "Ryan Tricks gives back to the community in a series of exciting magic performances."
+          },
+          "meta": {
+            "episodesAvailable": 6
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0g9jzs7/rycia-o-ma-pennod-3",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gd9s6w.jpg",
+            "title": "Rycia o 'Ma",
+            "synopsis": "Cyfres yn dilyn hynt a helynt clwb rygbi menywod Caernarfon. A series following the ups..."
+          },
+          "meta": {
+            "episodesAvailable": 3
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0h3d8xb/rygbi-cyfres-2023-rygbi-ewrop-racing-92-v-caerdydd",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05t59ls.jpg",
+            "title": "Rygbi",
+            "synopsis": "Gemau rygbi byw ac uchafbwyntiau. Live rugby and highlights packages."
+          },
+          "meta": {
+            "episodesAvailable": 4
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0dsq8z2/rygbi-cymru-y-gem-yn-y-gwaed-cyfres-1-pennod-2",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dw6ksx.jpg",
+            "title": "Rygbi Cymru: Y G\u00eam yn y Gwaed",
+            "synopsis": "Ar hyd y daith, bydd Carwyn yn cwrdd \u00e2 chast creiddiol i'n stori rygbi ni: chwaraewyr o..."
+          },
+          "meta": {
+            "episodesAvailable": 1
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0h1vmpd/rygbi-indigo-prem-cyfres-2023-indigo-premiership-2324",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gdbsx6.jpg",
+            "title": "Rygbi Indigo Prem",
+            "synopsis": "Gemau rygbi'r Indigo Prem. Rugby games from the Indigo Prem."
+          },
+          "meta": {
+            "episodesAvailable": 13
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0h2x5cw/rygbi-pawb-cyfres-2023-rygbi-pawb-uchafbwyntiau",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d548x5.jpg",
+            "title": "Rygbi Pawb",
+            "synopsis": "Cyfres sy'n canolbwyntio ar rygbi ieuenctid yng Nghymru. Series focusing on youth rugby..."
+          },
+          "meta": {
+            "episodesAvailable": 19
+          }
+        },
+        {
+          "props": {
+            "href": "/iplayer/episode/p0h35nxt/rygbi-pawb-stwnsh-rygbi-pawb-pennod-10",
+            "imageTemplate": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0d548x5.jpg",
+            "title": "Rygbi Pawb Stwnsh",
+            "synopsis": "Yr uchafbwyntiau a'r newyddion diweddaraf o'r byd rygbi ieuenctid yng Nghymru. Weekly r..."
+          },
+          "meta": {
+            "episodesAvailable": 2
+          }
+        }
+      ]
+    },
+    "s": {
+      "count": 329,
+      "entities": []
+    },
+    "t": {
+      "count": 199,
+      "entities": []
+    },
+    "u": {
+      "count": 33,
+      "entities": []
+    },
+    "v": {
+      "count": 20,
+      "entities": []
+    },
+    "w": {
+      "count": 145,
+      "entities": []
+    },
+    "x": {
+      "count": 0,
+      "entities": []
+    },
+    "y": {
+      "count": 43,
+      "entities": []
+    },
+    "z": {
+      "count": 8,
+      "entities": []
+    },
+    "0-9": {
+      "count": 28,
+      "entities": []
+    }
+  },
+  "translations": {
+    "pageTitle": "A to Z - %s",
+    "metaKeywords": "Programmes",
+    "metaDescription": "A to Z listing for TV programmes starting with %s on BBC iPlayer.",
+    "headerTitle": "A-Z",
+    "headerAriaTitle": "A to Z",
+    "episodeAvailable": "%s episode available",
+    "episodesAvailable": "%s episodes available",
+    "pagination_previous": "Previous",
+    "pagination_next": "Next",
+    "pagination_next_aria": "Next Page",
+    "pagination_previous_aria": "Previous Page",
+    "pagination_go_to_page_aria": "Page %s of %s",
+    "pagination_aria": "Pagination controls"
+  },
+  "id": {},
+  "pagination": {
+    "currentPage": 1,
+    "totalPages": 1,
+    "perPage": 200
+  }
+}

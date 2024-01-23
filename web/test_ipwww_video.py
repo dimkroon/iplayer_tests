@@ -27,13 +27,19 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             '')
 
 
-@patch('resources.lib.ipwww_video.ParseJSON')
 class GenericListings(unittest.TestCase):
-    def test_list_most_popular(self, patched_parse):
+    def test_list_most_popular(self, ):
         ipwww_video.ListMostPopular()
-        patched_parse.assert_called_once()
-        data = patched_parse.call_args[0][0]
-        self.assertTrue(data['id']['signedIn'])
+
+        with patch('resources.lib.ipwww_video.ParseJSON') as patched_parse:
+            ipwww_video.ListMostPopular()
+            patched_parse.assert_called_once()
+            data = patched_parse.call_args[0][0]
+            self.assertTrue(data['id']['signedIn'])
+
+    def test_programmes_az(self):
+        ipwww_video.GetAtoZPage('a')
+
 
 
 class MyProgrammes(unittest.TestCase):

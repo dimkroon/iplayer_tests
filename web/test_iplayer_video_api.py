@@ -10,8 +10,8 @@ from unittest import TestCase
 from resources.lib import ipwww_common
 from resources.lib import ipwww_video
 from tests.support.testutils import save_json, save_doc, doc_path
-from tests.support.object_checks import (has_keys, expect_keys, is_not_empty, is_url, is_iso_utc_time,
-                                         iso_duration_2_seconds)
+from tests.support.object_checks import (has_keys, expect_keys, misses_keys, expect_misses_keys, is_not_empty, is_url,
+                                         is_iso_utc_time, iso_duration_2_seconds)
 
 setUpModule = fixtures.setup_web_test()
 
@@ -28,6 +28,20 @@ def check_page_has_json_data(testcase, url):
 def check_synopses(testcase, synopses):
     testcase.assertIsInstance(synopses, dict)
     testcase.assertTrue(any(key in synopses.keys() for key in ('large', 'small', 'medium', 'editorial')))
+
+
+def check_images(testcase, images):
+    testcase.assertIsInstance(images, dict)
+    img_types = ('portrait', 'standard', 'promotional', 'promotional_with_logo')
+    for key in images.keys():
+        # Just to flag if an unknown image type comes up.
+        assert(key=='type' or key in img_types)
+    testcase.assertTrue(any(key in images.keys() for key in img_types))
+    for key, value in images.items():
+        if key == 'type':
+            testcase.assertEqual(value, 'image')
+        else:
+            testcase.assertTrue(is_url(value, ('.jpg', '.png')))
 
 
 def check_programme_data(testcase, programme, parent_name):
@@ -69,25 +83,27 @@ def check_version_data(testcase, version, parent_name=''):
 
 def check_episode_data(testcase, episode, parent_name=''):
     obj_name = '.'.join((parent_name, episode['title']))
-    has_keys(episode, 'id', 'title', 'images', 'tleo_id', 'synopses', 'original_title', 'programme_type', obj_name=obj_name)
+    has_keys(episode, 'id', 'title', 'images', 'tleo_id', obj_name=obj_name)
+    # All keys from the previously available long version of episode.
+    misses_keys(episode, 'type', 'programme_type', 'original_title', 'tleo_type', 'signed', 'audio_described',
+                'requires_ab', 'lexical_sort_letter', 'release_date', 'guidance', 'type', 'requires_tv_licence',
+                'editorial_subtitle', 'live', 'childrens', 'categories', 'release_date_time', 'master_brand',   # childrens is not a typo (at least not mine)
+                'has_credits', 'status', 'requires_sign_in', 'labels', 'signed')
+    expect_keys(episode, 'versions', 'synopses', 'subtitle', obj_name=obj_name)
 
-    expect_keys(episode, 'live', 'type', 'labels', 'signed', 'status', 'guidance', 'versions', 'childrens',       # childrens is not a typo (at least not mine)
-                'tleo_type', 'categories', 'has_credits', 'requires_ab', 'master_brand', 'release_date',
-                'audio_described', 'requires_sign_in', 'release_date_time', 'editorial_subtitle', 'lexical_sort_letter',
-                'requires_tv_licence', obj_name=obj_name)
-
-    testcase.assertTrue(episode['type'] in ('episode', 'episode_large'))    # even films and documentaries appear to be of the episode.
-    testcase.assertTrue(episode['tleo_type'] in ('episode', 'brand', 'series'))   # just to flag when other values appear.
     testcase.assertIsInstance(episode['images'], dict)
-    testcase.assertTrue(is_url(episode['images']['standard'], ('.jpg', '.png')))
-    testcase.assertIsInstance(episode['signed'], bool)
-    testcase.assertIsInstance(episode['audio_described'], bool)
+    check_images(testcase, episode['images'])
     testcase.assertTrue(is_not_empty(episode['tleo_id'], str))  # not always the same is 'id'.
-    check_synopses(testcase, episode['synopses'])
-    testcase.assertTrue(is_not_empty(episode['release_date'], str))     # format varies from '2007' to '21 May 2018'
-    testcase.assertTrue(is_iso_utc_time(episode['release_date_time']))
+    if 'synopses' in episode.keys():
+        # Field 'synopses' is optional, e.g. items from 'Watching' lack synopses.
+        check_synopses(testcase, episode['synopses'])
+    if 'subtitle' in episode.keys():
+        # Field 'subtitles' is optional, in particular films and single episode documentaries may lack a subtitle.
+        testcase.assertTrue(is_not_empty(episode['subtitle'], str))
+    testcase.assertGreaterEqual(len(episode['versions']), 1)
     for version in episode['versions']:
-        check_version_data(testcase, version, obj_name)
+        # Check that a version from episode does not parse as full version
+        testcase.assertRaises(AssertionError, check_version_data, testcase, version, obj_name)
 
 
 class HtmlPages(TestCase):
@@ -167,25 +183,22 @@ class Watching(TestCase):
         self.assertTrue(data['id']['signedIn'])
         items_list = data['items']['elements']
         for item in items_list:
-            has_keys(item, 'type', 'urn', 'status', 'episode', 'programme', 'has_next', 'version', obj_name='Watching')
+            has_keys(item, 'status', 'episode', 'programme', obj_name='Watching')
+            misses_keys(item, 'version')
             self.assertTrue(item['status'] in ('current', 'next'))
             if item['status'] == 'current':
-                has_keys(item, 'offset', 'remaining', 'progress', obj_name='Watching')
+                has_keys(item, 'remaining', 'progress', obj_name='Watching')
+            else:
+                misses_keys(item, 'remaining', 'progress', obj_name='Watching')
 
             # This is the data of the episode (Next, or Watching)
             check_episode_data(self, item['episode'], 'Watching.episode')
-            check_version_data(self, item['version'], 'Watching.version')
 
             programme = item['programme']
-            check_programme_data(self, programme, 'Watching.programme')
-            if programme['programme_type'] == 'one-off':
-                self.assertEqual(programme['count'], 1)
-            else:
-                self.assertGreater(programme['count'], 1)
-            # Just a quick check on consistency
-            # Children of programme are not used by the parser for Watching; it's not always the same as field
-            # episode and episode contains the data needed for Watching.
-            self.assertEqual(1, len(programme['initial_children']))
+            # Programme data in watching now only contains the programmeID
+            self.assertEqual(1, len(programme))
+            self.assertTrue(is_not_empty(programme['id'], str))
+
 
     def test_get_watching_without_signed_in(self):
         """This just return a normal HTML page with a button to sign in or register."""

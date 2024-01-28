@@ -66,7 +66,10 @@ def check_programme_data(testcase, programme, parent_name):
         check_episode_data(testcase, child, '.'.join((obj_name, 'children')))
 
 
-def check_version_data(testcase, version, parent_name=''):
+def check_large_version_data(testcase, version, parent_name=''):
+    """A more comprehensive version on Version data, formally observed in data from Watching and Recommendations.
+     Now not used, but kept here for future reference.
+     """
     obj_name = '.'.join((parent_name, 'version'))
     has_keys(version, 'id', 'kind', 'duration', 'availability', 'first_broadcast_date_time', obj_name=obj_name)
 
@@ -79,6 +82,18 @@ def check_version_data(testcase, version, parent_name=''):
     testcase.assertGreater(iso_duration_2_seconds(version['duration']['value']), 600)
     testcase.assertTrue(is_not_empty(version['availability']['remaining']['text'], str))
     testcase.assertTrue(is_iso_utc_time(version['first_broadcast_date_time']))
+
+def check_version_data(testcase, version, parent_name=''):
+    obj_name = '.'.join((parent_name, 'version'))
+    has_keys(version, 'kind', 'duration', obj_name=obj_name)
+    misses_keys(version, 'availability', 'first_broadcast_date_time', 'hd', 'uhd', 'type', 'events', 'download',
+                'first_broadcast', obj_name=obj_name)
+
+    testcase.assertTrue(version['kind'] in ('original', 'audio-described', 'signed', 'technical-replacement', 'editorial'))
+    testcase.assertIsInstance(version['duration'], dict)
+    testcase.assertTrue(is_not_empty(version['duration']['text'], str))
+    # Assert iso duration is absent.
+    misses_keys(version['duration'], 'value', obj_name=obj_name + '.duration')
 
 
 def check_episode_data(testcase, episode, parent_name=''):

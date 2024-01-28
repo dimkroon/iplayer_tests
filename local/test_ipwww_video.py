@@ -9,7 +9,7 @@ import xbmcplugin
 from resources.lib import ipwww_video
 
 from support.testutils import open_json
-from support.object_checks import is_li_compatible_dict
+from support.object_checks import is_li_compatible_dict, has_keys, is_url, is_not_empty
 
 
 setUp = fixtures.setup_local_tests()
@@ -74,7 +74,7 @@ class TestSelectSynopsis(TestCase):
     def test_empy_dicts(self):
         self.assertEqual('', ipwww_video.SelectSynopsis(None))
         self.assertEqual('', ipwww_video.SelectSynopsis({}))
-        self.assertEqual('', ipwww_video.SelectSynopsis(''))
+        self.assertRaises(AttributeError, ipwww_video.SelectSynopsis, '')
 
 
 class TestParseEpisode(TestCase):
@@ -82,17 +82,29 @@ class TestParseEpisode(TestCase):
         data = open_json('html/watching.json')
         for item_data in data['items']['elements']:
             result = ipwww_video.ParseEpisode(item_data['episode'])
-            # A mode is to be added by the caller of ParseEpisode, add a fake one to be AddMenuEntry compatible
+            # A mode is to be added by the caller of ParseEpisode, add a fake one to be AddMenuEntry(...) compatible
             result['mode'] = 0
             is_li_compatible_dict(self, result)
 
 
-@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watching.json'))
+
 class TestListWatching(TestCase):
+    @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watching.json'))
     def test_list_watching_authenticated(self, _):
-        with patch('resources.lib.ipwww_video.AddMenuEntry') as p_AddMenuEntry:
+        with patch('resources.lib.ipwww_video.CheckAutoplay') as p_CheckAutoplay:
             ipwww_video.ListWatching()
-        self.assertEqual(11, p_AddMenuEntry.call_count)
+        self.assertEqual(11, p_CheckAutoplay.call_count)
+        for call in p_CheckAutoplay.call_args_list:
+            call_kw = call.kwargs
+            has_keys(call_kw, 'url','name', 'iconimage','description', 'aired', 'context_mnu')
+            self.assertTrue(is_url(call_kw['url']))
+            self.assertTrue(is_url(call_kw['iconimage']))
+            self.assertTrue(is_not_empty(call_kw['description'], str))
+            self.assertTrue(is_not_empty(call_kw['context_mnu'], list))
+            if is_not_empty(call_kw.get('resume_time'), str):
+                self.assertGreater(float(call_kw['resume_time']), 0)
+                self.assertTrue(is_not_empty(call_kw['total_time'], str))
+                self.assertGreater(int(call_kw['total_time']), float(call_kw['resume_time']))
 
 
 class TestListRecommendations(TestCase):

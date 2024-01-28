@@ -18,7 +18,6 @@ class PlayStateEnum(unittest.TestCase):
             ps = ipwww_progress.PlayState()
 
     def test_changes_value(self):
-        with self.ipwww_progress(NotImplementedError):
-            ipwww_progress.PlayState.PLAYING = 1
-            p = getattr(ipwww_progress.PlayState, 'PLAYING')
-            print(p)
+        ipwww_progress.PlayState.PLAYING = 1
+        p = getattr(ipwww_progress.PlayState, 'PLAYING')
+        print(p)

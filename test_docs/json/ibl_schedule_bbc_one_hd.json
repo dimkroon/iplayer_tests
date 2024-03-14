@@ -1,0 +1,1085 @@
+{
+  "version": "1.0",
+  "schema": "/ibl/v1/schema/ibl.json",
+  "broadcasts": {
+    "count": 250,
+    "page": 1,
+    "per_page": 8,
+    "channel": {
+      "id": "bbc_one_hd",
+      "type": "channel",
+      "title": "BBC One",
+      "has_schedule": true,
+      "master_brand_id": "bbc_one",
+      "master_brand_title": "BBC One",
+      "on_air": true
+    },
+    "elements": [
+      {
+        "id": "p0hfmxg3",
+        "scheduled_start": "2024-03-14T15:45:00.000Z",
+        "scheduled_end": "2024-03-14T16:30:00.000Z",
+        "duration": {
+          "value": "PT45M",
+          "text": "45 mins"
+        },
+        "transmission_start": "2024-03-14T15:45:08.000Z",
+        "transmission_end": "2024-03-14T16:28:38.000Z",
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m001x84z",
+          "live": false,
+          "type": "episode",
+          "title": "The Bidding Room",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hhcw24.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hfr0lc.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hfr0nh.jpg"
+          },
+          "labels": {
+            "category": "Lifestyle"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "m000jygn",
+          "guidance": false,
+          "subtitle": "Series 5: 4. Skeleton Statue",
+          "synopses": {
+            "large": "Nigel Havers welcomes sellers of collectibles and curiosities to the Bidding Room's new home in Edinburgh, where they ply their wares to five dealers.\n\nFirst through the doors is small business owner Charlotte. She\u2019s selling a vintage sign that she bought at auction for a nominal sum. Often seen at village fetes, Charlotte hopes her retro piece will charm the dealers to dip into their own pockets to give her the money she hopes to raise for a charity close to her heart. \n\nNext through the doors is a familiar face, Mark, who has returned with a field telescope that hasn\u2019t seen further than the inside of a drawer for many years. Will he encourage the dealers to focus in on his ocular apparatus and secure another sterling sale? \n\nThird to step into the Edinburgh HQ is Julie, who\u2019s selling a Martaban jar that\u2019s been in her family for generations. She seeks a high price if she\u2019s to be persuaded to part with it.  \n\nNext to face the dealers is Colin, who has a skeleton statue he hopes will entice the dealers. Once used to hold serving platters, Colin\u2019s macabre mannequin will need the dealers to offer up some healthy bids for his worthy cause.  \n\nLast in is retired bird keeper David, selling an automaton he\u2019s sure will enrapture the Bidding Room with its enchanting bird song. Hoping to raise enough money for an appropriately themed bird-watching holiday, can David encourage the dealers to pipe up for his Victorian music maker? \n \nThe dealers today are Ian, Jacqui, Adi, Jo, James and a new dealer local to Edinburgh, Viki.",
+            "small": "How much would you pay for a vintage village fete sign, bird automaton or skeleton statue?",
+            "medium": "Nigel Havers presides as five sellers aim to get the best price for their items, including a village fete sign, a telescope, a Martaban jar, a skeleton statue and a bird automaton."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001x84x",
+              "uhd": false,
+              "kind": "original",
+              "type": "version",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 2490,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 2349,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 2349,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "44 mins",
+                "value": "PT43M30.040S"
+              },
+              "availability": {
+                "end": "2025-04-24T15:28:36Z",
+                "start": "2024-03-14T16:29:49Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "3:45pm 14 Mar 2024",
+              "first_broadcast_date_time": "2024-03-14T15:45:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "m001x0vr",
+          "tleo_type": "brand",
+          "categories": [
+            "lifestyle"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "release_date": "14 Mar 2024",
+          "related_links": [],
+          "original_title": "Skeleton Statue",
+          "programme_type": "self-contained",
+          "slice_subtitle": "4. Skeleton Statue",
+          "audio_described": false,
+          "parent_position": 4,
+          "requires_sign_in": true,
+          "release_date_time": "2024-03-14T00:00:00.000Z",
+          "lexical_sort_letter": "B",
+          "requires_tv_licence": true
+        },
+        "episode_id": "m001x84z",
+        "version_id": "m001x84x",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T15:55:08.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T16:17:45.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T15:45:38.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T16:17:45.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T15:45:38.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T16:17:45.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxg5",
+        "scheduled_start": "2024-03-14T16:30:00.000Z",
+        "scheduled_end": "2024-03-14T17:15:00.000Z",
+        "duration": {
+          "value": "PT45M",
+          "text": "45 mins"
+        },
+        "transmission_start": "2024-03-14T16:29:48.000Z",
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m001x853",
+          "type": "episode",
+          "title": "Bridge of Lies",
+          "original_title": "Episode 4",
+          "lexical_sort_letter": "B",
+          "synopses": {
+            "small": "Family and friends Frankie, James, Susanne and Jason take on the Bridge of Lies.",
+            "medium": "A team of four friends and family, Frankie, James, Susanne and Jason, take on the Bridge of Lies. One by one, they must cross the Bridge, stepping on the truths and avoiding the lies.",
+            "large": "Ross Kemp presents the quiz show where a team of four \u2013 in this episode, family and friends Frankie, James, Susanne and Jason \u2013 take on the Bridge of Lies.\n\nOne by one, they all face the Bridge, choosing who faces each crossing depending on the question category. Each crossing has 32 potential steps, including 22 truths and ten lies.\n \nThey must cross the Bridge by stepping on the truths and avoiding the lies, earning money for each correct answer. Step on a lie and the Bridge will halve their money, step on three lies and they are out of the game. \n\nThere is always a safe path across the Bridge. They just have to find it. Once they have each faced the Bridge on their own, those who have been successful will join forces to face the final crossing for a chance to take home the cash."
+          },
+          "tleo_id": "m0015fn5",
+          "tleo_type": "brand",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgs1x4.jpg",
+            "type": "image"
+          },
+          "related_links": [],
+          "has_credits": false,
+          "live": false,
+          "requires_sign_in": true,
+          "childrens": false,
+          "subtitle": "Series 3: Episode 4",
+          "release_date": "14 Mar 2024",
+          "release_date_time": "2024-03-14T00:00:00.000Z",
+          "parent_id": "m001x7p2",
+          "parent_position": 4,
+          "slice_subtitle": "Episode 4",
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "small": "BBC One",
+              "medium": "BBC One",
+              "large": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "versions": [],
+          "status": "unavailable",
+          "requires_tv_licence": true,
+          "signed": false,
+          "audio_described": false,
+          "guidance": false,
+          "categories": [
+            "entertainment"
+          ],
+          "labels": {
+            "category": "Entertainment"
+          },
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ]
+        },
+        "episode_id": "m001x853",
+        "version_id": "m001x851",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T16:39:48.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T17:03:42.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T16:30:18.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T17:03:42.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T16:30:18.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T17:03:42.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxg9",
+        "scheduled_start": "2024-03-14T17:15:00.000Z",
+        "scheduled_end": "2024-03-14T18:00:00.000Z",
+        "duration": {
+          "value": "PT45M",
+          "text": "45 mins"
+        },
+        "blanked": false,
+        "repeat": true,
+        "episode": {
+          "id": "m001ld2t",
+          "live": false,
+          "type": "episode",
+          "title": "Pointless",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fg0ddh.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g8jq9p.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09kgc2x.jpg"
+          },
+          "labels": {
+            "category": "Entertainment"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b00rhg2r",
+          "guidance": false,
+          "subtitle": "Series 29: Episode 16",
+          "synopses": {
+            "large": "The brainy quiz returns, but this time host Alexander Armstrong is joined by co-host Rose Matafeo. As always, contestants try to score as few points as possible by plumbing the depths of their general knowledge to come up with the answers no-one else could think of.",
+            "small": "Contestants score points by coming up with the answers no-one else could think of.",
+            "medium": "The quiz in which contestants try to score as few points as possible by plumbing the depths of their general knowledge to come up with the answers no-one else could think of."
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001ld2r",
+              "uhd": false,
+              "kind": "original",
+              "type": "version",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 2503,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 2361,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 2361,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "44 mins",
+                "value": "PT43M43.040S"
+              },
+              "availability": {
+                "end": "2024-04-23T17:00:00Z",
+                "start": "2023-04-24T17:00:00Z",
+                "remaining": {
+                  "text": "Available for 1 month"
+                }
+              },
+              "credits_start": 2601,
+              "first_broadcast": "5:15pm 24 Apr 2023",
+              "first_broadcast_date_time": "2023-04-24T16:15:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "m001krpv",
+          "tleo_type": "brand",
+          "categories": [
+            "entertainment"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u13",
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "release_date": "24 Apr 2023",
+          "related_links": [],
+          "original_title": "Episode 16",
+          "programme_type": "self-contained",
+          "slice_subtitle": "Episode 16",
+          "audio_described": false,
+          "parent_position": 16,
+          "requires_sign_in": true,
+          "release_date_time": "2023-04-24T00:00:00.000Z",
+          "lexical_sort_letter": "P",
+          "requires_tv_licence": true
+        },
+        "episode_id": "m001ld2t",
+        "version_id": "m001ld2r",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T17:25:00.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T17:48:45.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T17:15:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T17:48:45.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T17:15:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T17:48:45.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxgf",
+        "scheduled_start": "2024-03-14T18:00:00.000Z",
+        "scheduled_end": "2024-03-14T18:30:00.000Z",
+        "duration": {
+          "value": "PT30M",
+          "text": "30 mins"
+        },
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m001x859",
+          "type": "episode",
+          "title": "BBC News at Six",
+          "original_title": "14/03/2024",
+          "lexical_sort_letter": "B",
+          "synopses": {
+            "small": "The latest national and international news from the BBC."
+          },
+          "tleo_id": "b007mpkn",
+          "tleo_type": "brand",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fj0hp3.jpg",
+            "type": "image",
+            "inherited_from": "brand"
+          },
+          "related_links": [],
+          "has_credits": false,
+          "live": false,
+          "requires_sign_in": true,
+          "childrens": false,
+          "subtitle": "14/03/2024",
+          "release_date": "14 Mar 2024",
+          "release_date_time": "2024-03-14T00:00:00.000Z",
+          "parent_id": "b007mpkn",
+          "parent_position": 249,
+          "master_brand": {
+            "id": "bbc_news",
+            "titles": {
+              "small": "BBC News",
+              "medium": "BBC News",
+              "large": "BBC News"
+            },
+            "attribution": "bbc_news"
+          },
+          "versions": [],
+          "status": "unavailable",
+          "requires_tv_licence": true,
+          "signed": false,
+          "audio_described": false,
+          "guidance": false,
+          "categories": [
+            "news"
+          ],
+          "labels": {
+            "category": "News"
+          },
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ]
+        },
+        "episode_id": "m001x859",
+        "version_id": "m001x857",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T18:07:30.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T18:22:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T18:00:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T18:22:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T18:00:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T18:22:30.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxgk",
+        "scheduled_start": "2024-03-14T18:30:00.000Z",
+        "scheduled_end": "2024-03-14T19:00:00.000Z",
+        "duration": {
+          "value": "PT30M",
+          "text": "30 mins"
+        },
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m0002vxj",
+          "type": "episode",
+          "title": "This Is BBC One HD",
+          "original_title": "This is BBC One HD",
+          "lexical_sort_letter": "T",
+          "synopses": {
+            "small": "Please switch over to BBC One for the latest news from your area.",
+            "medium": "Please switch over to BBC One for the latest news from your area. Programming will resume on BBC One HD after the bulletin."
+          },
+          "tleo_id": "b00w456j",
+          "tleo_type": "brand",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bvs64x.jpg",
+            "type": "image",
+            "inherited_from": "master_brand"
+          },
+          "related_links": [],
+          "has_credits": false,
+          "live": false,
+          "requires_sign_in": true,
+          "childrens": false,
+          "subtitle": "This is BBC One HD",
+          "release_date": "23 Feb 2019",
+          "release_date_time": "2019-02-23T00:00:00.000Z",
+          "parent_id": "b00w456j",
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "small": "BBC One",
+              "medium": "BBC One",
+              "large": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "versions": [],
+          "status": "unavailable",
+          "requires_tv_licence": true,
+          "signed": false,
+          "audio_described": false,
+          "guidance": false,
+          "categories": [
+            "news"
+          ],
+          "labels": {
+            "category": "News"
+          },
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ]
+        },
+        "episode_id": "m0002vxj",
+        "version_id": "m0002vxh",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T18:37:30.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T18:52:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T18:30:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T18:52:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T18:30:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T18:52:30.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxgm",
+        "scheduled_start": "2024-03-14T19:00:00.000Z",
+        "scheduled_end": "2024-03-14T19:30:00.000Z",
+        "duration": {
+          "value": "PT30M",
+          "text": "30 mins"
+        },
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m001x85k",
+          "type": "episode",
+          "title": "The One Show",
+          "original_title": "14/03/2024",
+          "lexical_sort_letter": "O",
+          "synopses": {
+            "small": "Actor Jason Watkins and broadcaster Gabby Logan join Alex Jones and Roman Kemp.",
+            "medium": "BAFTA-winning actor Jason Watkins joins broadcaster Gabby Logan alongside Alex Jones and Roman Kemp."
+          },
+          "tleo_id": "b007tcw7",
+          "tleo_type": "brand",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g8slx0.jpg",
+            "type": "image",
+            "inherited_from": "brand"
+          },
+          "related_links": [],
+          "has_credits": false,
+          "live": false,
+          "requires_sign_in": true,
+          "childrens": false,
+          "subtitle": "14/03/2024",
+          "release_date": "14 Mar 2024",
+          "release_date_time": "2024-03-14T00:00:00.000Z",
+          "parent_id": "b007tcw7",
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "small": "BBC One",
+              "medium": "BBC One",
+              "large": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "versions": [],
+          "status": "unavailable",
+          "requires_tv_licence": true,
+          "signed": false,
+          "audio_described": false,
+          "guidance": false,
+          "categories": [
+            "entertainment"
+          ],
+          "labels": {
+            "category": "Entertainment"
+          },
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ]
+        },
+        "episode_id": "m001x85k",
+        "version_id": "m001x85h",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T19:07:30.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T19:22:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T19:00:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T19:22:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T19:00:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T19:22:30.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxgp",
+        "scheduled_start": "2024-03-14T19:30:00.000Z",
+        "scheduled_end": "2024-03-14T20:00:00.000Z",
+        "duration": {
+          "value": "PT30M",
+          "text": "30 mins"
+        },
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m001x85p",
+          "live": false,
+          "type": "episode",
+          "title": "EastEnders",
+          "images": {
+            "type": "image",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgx8qk.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hj3684.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hj3695.jpg"
+          },
+          "labels": {
+            "category": "Drama"
+          },
+          "signed": false,
+          "status": "available",
+          "tleo_id": "b006m86d",
+          "guidance": false,
+          "subtitle": "14/03/2024",
+          "synopses": {
+            "small": "Denise faces the future, and Phil covers for a friend in need.",
+            "medium": "Denise faces the future, Phil covers for a friend in need, and Eve and Suki take a big step forward.",
+            "editorial": "14/03/2024: Denise faces the future, and Phil covers for a friend in need"
+          },
+          "versions": [
+            {
+              "hd": true,
+              "id": "m001x85m",
+              "uhd": false,
+              "kind": "original",
+              "type": "version",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1634,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1579,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1579,
+                  "system": "dax"
+                }
+              ],
+              "download": true,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT29M14.040S"
+              },
+              "availability": {
+                "end": "2027-03-31T05:00:00Z",
+                "start": "2024-03-14T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "interactions": [
+                {
+                  "type": "skip",
+                  "title": {
+                    "long": "Skip intro",
+                    "short": "Skip"
+                  },
+                  "subtype": "intro",
+                  "interaction_points": {
+                    "skip_to": 24,
+                    "show_from": 1
+                  }
+                }
+              ],
+              "credits_start": 1722,
+              "first_broadcast": "7:30pm 14 Mar 2024",
+              "first_broadcast_date_time": "2024-03-14T19:30:00.000Z"
+            },
+            {
+              "hd": false,
+              "id": "p0hjdrk3",
+              "uhd": false,
+              "kind": "audio-described",
+              "type": "version",
+              "events": [
+                {
+                  "name": "started",
+                  "offset": 30,
+                  "system": "uas"
+                },
+                {
+                  "name": "ended",
+                  "offset": 1634,
+                  "system": "uas"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1579,
+                  "system": "optimizely"
+                },
+                {
+                  "name": "iplxp-ep-started",
+                  "offset": 30,
+                  "system": "dax"
+                },
+                {
+                  "name": "iplxp-ep-watched",
+                  "offset": 1579,
+                  "system": "dax"
+                }
+              ],
+              "download": false,
+              "duration": {
+                "text": "29 mins",
+                "value": "PT29M14.040S"
+              },
+              "availability": {
+                "end": "2027-03-31T05:00:00Z",
+                "start": "2024-03-14T06:00:00Z",
+                "remaining": {
+                  "text": "Available for over a year"
+                }
+              },
+              "first_broadcast": "14 Mar 2024",
+              "first_broadcast_date_time": "2024-03-14T00:00:00.000Z"
+            }
+          ],
+          "childrens": false,
+          "parent_id": "b006m86d",
+          "tleo_type": "brand",
+          "categories": [
+            "audio-described",
+            "drama-and-soaps",
+            "soaps"
+          ],
+          "has_credits": true,
+          "requires_ab": [
+            "u13",
+            "u16",
+            "u18",
+            "o18"
+          ],
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "large": "BBC One",
+              "small": "BBC One",
+              "medium": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "release_date": "14 Mar 2024",
+          "related_links": [],
+          "original_title": "14/03/2024",
+          "programme_type": "sequential",
+          "audio_described": true,
+          "parent_position": 6874,
+          "requires_sign_in": true,
+          "release_date_time": "2024-03-14T00:00:00.000Z",
+          "editorial_subtitle": "14/03/2024: Denise faces the future",
+          "lexical_sort_letter": "E",
+          "requires_tv_licence": true
+        },
+        "episode_id": "m001x85p",
+        "version_id": "m001x85m",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T19:37:30.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T19:52:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T19:30:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T19:52:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T19:30:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T19:52:30.000Z"
+          }
+        ]
+      },
+      {
+        "id": "p0hfmxgr",
+        "scheduled_start": "2024-03-14T20:00:00.000Z",
+        "scheduled_end": "2024-03-14T21:00:00.000Z",
+        "duration": {
+          "value": "PT1H",
+          "text": "60 mins"
+        },
+        "blanked": false,
+        "repeat": false,
+        "episode": {
+          "id": "m001x85t",
+          "type": "episode",
+          "title": "Dragons' Den",
+          "original_title": "Episode 11",
+          "lexical_sort_letter": "D",
+          "synopses": {
+            "small": "It\u2019s time for a fresh set of entrepreneurs to attempt to impress the fierce five.",
+            "medium": "A thermostat for rental properties, snackable granola, a natural range of play make-up for children and a dispenser for eye drops are the investment opportunities for the Dragons.",
+            "large": "The entrepreneurs bidding for the Dragons' investment in this episode are a landlord who has invented a thermostat for rental properties, a 'free-from' businesswoman offering a snackable granola, a mum who has developed a natural range of play make-up for children, and a founder who thinks he\u2019s discovered a way to dispense eye and ear drops easily."
+          },
+          "tleo_id": "b006vq92",
+          "tleo_type": "brand",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgxp46.jpg",
+            "type": "image"
+          },
+          "related_links": [],
+          "has_credits": false,
+          "live": false,
+          "requires_sign_in": true,
+          "childrens": false,
+          "subtitle": "Series 21: Episode 11",
+          "release_date": "14 Mar 2024",
+          "release_date_time": "2024-03-14T00:00:00.000Z",
+          "parent_id": "m001txgl",
+          "parent_position": 11,
+          "slice_subtitle": "Episode 11",
+          "master_brand": {
+            "id": "bbc_one",
+            "titles": {
+              "small": "BBC One",
+              "medium": "BBC One",
+              "large": "BBC One"
+            },
+            "attribution": "bbc_one"
+          },
+          "versions": [],
+          "status": "unavailable",
+          "requires_tv_licence": true,
+          "signed": false,
+          "audio_described": false,
+          "guidance": false,
+          "categories": [
+            "entertainment"
+          ],
+          "labels": {
+            "category": "Entertainment"
+          },
+          "requires_ab": [
+            "u16",
+            "u18",
+            "o18"
+          ]
+        },
+        "episode_id": "m001x85t",
+        "version_id": "m001x85r",
+        "service_id": "bbc_one_hd",
+        "channel_title": "BBC One HD",
+        "type": "broadcast",
+        "events": [
+          {
+            "name": "started",
+            "system": "uas",
+            "time": "2024-03-14T20:10:00.000Z"
+          },
+          {
+            "name": "ended",
+            "system": "uas",
+            "time": "2024-03-14T20:45:00.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "optimizely",
+            "time": "2024-03-14T20:00:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "optimizely",
+            "time": "2024-03-14T20:45:00.000Z"
+          },
+          {
+            "name": "iplxp-ep-started",
+            "system": "dax",
+            "time": "2024-03-14T20:00:30.000Z"
+          },
+          {
+            "name": "iplxp-ep-watched",
+            "system": "dax",
+            "time": "2024-03-14T20:45:00.000Z"
+          }
+        ]
+      }
+    ]
+  }
+}

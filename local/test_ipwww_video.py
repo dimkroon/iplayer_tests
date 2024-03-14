@@ -305,3 +305,29 @@ class TestScrapeAvailableStream(TestCase):
     def test_scrape_red_button_item(self):
         strm_ids = ipwww_video.ScrapeAvailableStreams('some url')
         self.assertEqual(strm_ids['stream_id_st'], 'red_button_one')
+
+    def test_list_if_you_liked_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('if-you-liked')
+        self.assertEqual(12, p_AddItem.call_count)
+
+    def test_recommended_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('recommendations')
+        self.assertEqual(12, p_AddItem.call_count)
+
+
+class TestEpg(TestCase):
+    @patch('resources.lib.ipwww_video.OpenRequest', return_value=open_doc('json/ibl_schedule_bbc_one_hd.json')())
+    def test_get_epg_default_channels(self, _):
+        epg = ipwww_video.get_epg()
+        self.assertIsInstance(epg, dict)
+        self.assertEqual(1, epg['version'])
+        self.assertIsInstance(epg['epg'], dict)
+        for chan, schedule in epg['epg'].items():
+            self.assertIsInstance(schedule, list)
+            for item in schedule:
+                self.assertIsInstance(item, dict)
+                if item['image']:
+                    self.assertTrue(is_url(item['image']))
+                    self.assertFalse('recipe' in item['image'])

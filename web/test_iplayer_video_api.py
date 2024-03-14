@@ -5,6 +5,7 @@ fixtures.global_setup()
 import time
 import string
 import requests
+import math
 from datetime import datetime, timezone, timedelta
 
 from http import cookiejar
@@ -601,6 +602,18 @@ class SchedulesByIblAPi(TestCase):
         has_keys(bc_data['duration'], 'text', 'value')
         self.assertEqual('broadcast', bc_data['type'])                   # Just to flag when another value comes up.
         # check_episode_data(self, bc_data['episode'], 'schedule-' + bc_data['channel_title'])
+        #Episode data differs slighte from episodes in listings
+        episode = bc_data['episode']
+        has_keys(episode, 'id', 'live', 'type', 'title', 'images', 'signed', 'status', 'tleo_id', 'guidance',
+                 'synopses', 'versions', 'childrens', 'tleo_type', 'categories', 'has_credits', 'requires_ab',
+                 'master_brand', 'release_date', 'related_links', 'original_title', 'audio_described',
+                 'requires_sign_in', 'release_date_time', 'lexical_sort_letter', 'requires_tv_licence')
+        self.assertIsInstance(episode['categories'], list)
+        self.assertIsInstance(episode['synopses'], dict)
+        self.assertIsInstance(episode['images'], dict)
+        self.assertTrue('standard' in episode['images'])
+        self.assertTrue(is_not_empty(episode['title'], str))
+        self.assertTrue(is_iso_utc_time(episode['release_date_time']))
 
     def test_guide_by_ibl_api(self):
         t = datetime.now(timezone.utc) - timedelta(hours=1)
@@ -710,6 +723,35 @@ class SchedulesByIblAPi(TestCase):
         # Check there is no more data than the maximum of 200 items on this page.
         self.assertLess(data['broadcasts']['count'], 200)
 
+    def test_guide_by_ibl_api_pages(self):
+        """Test obtaining consecutive pages by defining page in the querystring"""
+        now = datetime.now(timezone.utc)
+        start_t = now - timedelta(days=8)
+        last_programme_start = start_t
+        pagenr = 0
+        while True:
+            pagenr += 1
+            url = ''.join((
+                    'https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?per_page=200&page=',
+                    str(pagenr),
+                    '&from_date=',
+                    start_t.strftime('%Y-%m-%dT%H:%M')
+            ))
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(200, resp.status_code)
+            data = resp.json()
+            self.assertEqual(pagenr, data['broadcasts']['page'])
+            schedule = data['broadcasts']['elements']
+            first_programme_end = datetime.strptime(schedule[0]['scheduled_end'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(
+                tzinfo=timezone.utc)
+            self.assertGreater(first_programme_end, last_programme_start)
+            last_programme_start = datetime.strptime(schedule[-1]['scheduled_end'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(
+                tzinfo=timezone.utc)
+            total_num_programmes = data['broadcasts']['count']
+            if pagenr >= math.ceil(total_num_programmes / 200):
+                return
+
+
 
 class SchedulesByEssApi(TestCase):
     def check_ess_programme(self, sc_data, channel_id):
@@ -746,6 +788,15 @@ class SchedulesByEssApi(TestCase):
         #     url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
         #     resp = requests.get(url, allow_redirects=False)
         #     self.assertEqual(404, resp.status_code)
+
+    def test_get_all_channels_in_one_go(self):
+        """Cannot get all channels in one go
+        Filter by querystring seems to be a requirement
+
+        """
+        url = 'https://ess.api.bbci.co.uk/schedules'
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(404, resp.status_code)
 
 
 @skip("Run only when the live event is being broadcast and url's are properly set.")

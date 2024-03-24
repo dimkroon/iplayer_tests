@@ -100,12 +100,33 @@ class ChannelsAtoZ(TestCase):
 
 
 class CategoriesAtoZ(TestCase):
-    categories = ('bbcone', 'bbctwo', 'tv/bbcthree', 'tv/cbbc', 'tv/cbeebies', 'tv/bbcnews', 'tv/bbcparliament',
-                'tv/bbcalba', 'tv/bbcscotland', 'tv/s4c')
+    categories = ('drama-and-soaps', 'films', 'comedy', 'documentaries', 'sport', 'news', 'entertainment',
+                  'music', 'food', 'lifestyle', 'history', 'science-and-nature', 'arts', 'archive',
+                  'audio-described', 'signed', 'northern-ireland', 'scotland', 'wales', 'cbeebies', 'cbbc')
 
-    def test_channel_az_page(self):
-        for chan in self.categories:
-            check_page_has_json_data(self, 'https://www.bbc.co.uk/{}/a-z'.format(chan))
+    def test_categories_az_page(self):
+        for cat in self.categories:
+            page_data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/categories/{}/a-z'.format(cat))
+            # save_json(page_data, 'html/ip_categories/{}.json'.format(cat))
+
+    def test_category_default_page_size(self):
+        # Default page size
+        page_data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/categories/documentaries/a-z')
+        self.assertEqual(1, page_data['pagination']['currentPage'])
+        self.assertEqual(36, page_data['pagination']['perPage'])
+        self.assertGreater(page_data['pagination']['totalPages'], 10)
+
+    def test_category_other_page_size(self):
+        """There seems to be no way to specify the page size for categories.
+        """
+        queryfields = ('perPage', 'perpage', 'per_page',
+                       'size', 'page_size', 'pagesize', 'pageSize',
+                       'len', 'page_len', 'pagelen', 'pageLen',
+                       'length', 'page_length', 'pagelength', 'pageLength')
+        for field in queryfields:
+            url = ''.join(('https://www.bbc.co.uk/iplayer/categories/documentaries/a-z?page=2&', field, '=50'))
+            page_data = check_page_has_json_data(self, url)
+            self.assertEqual(36, page_data['pagination']['perPage'])
 
 
 class ProgrammesAtoZ(TestCase):

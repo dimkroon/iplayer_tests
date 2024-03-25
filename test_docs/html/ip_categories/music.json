@@ -1,0 +1,1933 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": true,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": true,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": false,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": false,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": false,
+        "id": "tv-guide"
+      },
+      {
+        "title": "Watchlist",
+        "href": "/iplayer/watchlist",
+        "active": false,
+        "id": "watchlist"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": false
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": null,
+    "dismissedModal": false
+  },
+  "language": "en",
+  "experiments": {},
+  "config": {
+    "host": null,
+    "staticHost": null,
+    "iblBaseUrl": null,
+    "graphBaseUrl": null,
+    "graphFallbackBaseUrl": null,
+    "iblUserBaseUrl": null,
+    "enablePersonalisation": null
+  },
+  "dials": {},
+  "entities": {
+    "elements": [
+      {
+        "id": "p07w3gfd",
+        "title": "1Xtra",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09sftcx.jpg"
+        },
+        "synopses": {
+          "small": "1Xtra brings you interviews and chat from the biggest stars"
+        },
+        "initial_children": [
+          {
+            "id": "p0d9ncqq",
+            "title": "1Xtra",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dz9cmw.jpg"
+            },
+            "labels": {
+              "category": "Entertainment"
+            },
+            "live": false,
+            "subtitle": "Family Face-off",
+            "synopses": {
+              "small": "Nadia Jae hosts Family Face-off with two teams of 1Xtra presenters going head-to-head."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "39 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gyxjfx",
+        "title": "1Xtra\u2019s \u2018Hot For 2024\u2019",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzc2zk.jpg"
+        },
+        "synopses": {
+          "small": "DJ Target presents the 1Xtra\u2019s Hot For 2024 list."
+        },
+        "initial_children": [
+          {
+            "id": "p0gyxjfx",
+            "title": "1Xtra\u2019s \u2018Hot For 2024\u2019",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzc2zk.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "DJ Target presents the 1Xtra\u2019s Hot For 2024 list."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "30 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "30 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0fvkv0s",
+        "title": "50 Years of Hip-Hop Mixtape",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g08sd2.jpg"
+        },
+        "synopses": {
+          "small": "The definitive video mix of 50 years of hip-hop with nearly 500 tracks in under an hour!"
+        },
+        "initial_children": [
+          {
+            "id": "p0fvkv0s",
+            "title": "50 Years of Hip-Hop Mixtape",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g08sd2.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "The definitive video mix of 50 years of hip-hop with nearly 500 tracks in under an hour!"
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "57 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0d96gq9",
+        "title": "6 Music Artist in Residence: AAA",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8trth.jpg"
+        },
+        "synopses": {
+          "small": "6 Music's Artist In Residence will be a journey into the musical soul of an artist."
+        },
+        "initial_children": [
+          {
+            "id": "p0gl3cpk",
+            "title": "6 Music Artist in Residence: AAA",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gsn8l0.jpg"
+            },
+            "labels": {
+              "category": "Entertainment"
+            },
+            "live": false,
+            "subtitle": "Mitksi",
+            "synopses": {
+              "small": "Mitski sits down with her producer to provide an insight into her creative process."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "38 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b03nj13d",
+        "title": "6 Music Festival",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fc0tv5.jpg"
+        },
+        "synopses": {
+          "small": "Celebrating live music with new and classic performances from 6 Music."
+        },
+        "initial_children": [
+          {
+            "id": "m001x8f1",
+            "title": "6 Music Festival",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hhxmq9.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hhpzpg.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hhpzpg.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2024: The Smile, Young Fathers & Gossip",
+            "synopses": {
+              "small": "Featuring Thom Yorke and Jonny Greenwood in The Smile, plus Young Fathers and Gossip"
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m00110rq",
+        "title": "The 80s - Music\u2019s Greatest Decade?",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09z7ms9.jpg"
+        },
+        "synopses": {
+          "small": "Dylan Jones argues that the 1980s was the greatest decade in the history of pop."
+        },
+        "initial_children": [
+          {
+            "id": "m0011gkh",
+            "title": "The 80s - Music\u2019s Greatest Decade?",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09z8fjg.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09z8fb0.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b29njp.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Series 1: 4. Hip-Hop to House",
+            "synopses": {
+              "small": "Dylan Jones compiles some of the key hip-hop and house performances of the 80s."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "58 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b03lyzpr",
+        "title": "ABBA at the BBC",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b2y3bb.jpg"
+        },
+        "synopses": {
+          "small": "With Waterloo, Dancing Queen, Does Your Mother Know, SOS, Fernando, Chiquitita and more."
+        },
+        "initial_children": [
+          {
+            "id": "b03lyzpr",
+            "title": "ABBA at the BBC",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b35hy6.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b2y3bb.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b2y3bb.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "With Waterloo, Dancing Queen, Does Your Mother Know, SOS, Fernando, Chiquitita and more."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p04fj2t0",
+        "title": "A.Dot's Story of Grime",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04g9w5n.jpg"
+        },
+        "synopses": {
+          "small": "1Xtra\u2019s A.Dot gets under the skin of the grime scene and sets up the ultimate Clash."
+        },
+        "initial_children": [
+          {
+            "id": "p04fj2t0",
+            "title": "A.Dot's Story of Grime",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04g9w5n.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "small": "1Xtra\u2019s A.Dot gets under the skin of the grime scene and sets up the ultimate Clash."
+            },
+            "versions": [
+              {
+                "kind": "editorial",
+                "duration": {
+                  "text": "37 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0frmw1y",
+        "title": "Afro Sounds",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fryw06.png"
+        },
+        "synopses": {
+          "small": "A look back at some of the best Afro Sounds performances on 1Xtra in recent years."
+        },
+        "initial_children": [
+          {
+            "id": "p0frmw1y",
+            "title": "Afro Sounds",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fryw06.png"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "A look back at some of the best Afro Sounds performances on 1Xtra in recent years."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "35 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001lcvt",
+        "title": "The Alehouse Sessions",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fh5ltd.jpg"
+        },
+        "synopses": {
+          "small": "A joyful celebration of 17th-century music by virtuosos Bjarte Eike and Barokksolistene."
+        },
+        "initial_children": [
+          {
+            "id": "m001lcvt",
+            "title": "The Alehouse Sessions",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "The sound of 17th century London",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fh5lvt.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fh5ltd.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fh5ltd.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "The sound of 17th century London \u2013 brought vividly to life with beauty and bawdiness",
+              "small": "A joyful celebration of 17th-century music by virtuosos Bjarte Eike and Barokksolistene."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b00vhhh0",
+        "title": "Alleluia!",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08cv6gp.jpg"
+        },
+        "synopses": {
+          "small": "Spiritual music and verse"
+        },
+        "initial_children": [
+          {
+            "id": "m001fpr6",
+            "title": "Alleluia!",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dg36d5.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "Series 8: Episode 6",
+            "synopses": {
+              "small": "Iain MacKinnon presents a mix of hymns, psalms and readings from Coats in Paisley."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "27 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0002pdw",
+        "title": "ALT",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p088fmhm.jpg"
+        },
+        "synopses": {
+          "small": "Music show."
+        },
+        "initial_children": [
+          {
+            "id": "m000h9yw",
+            "title": "ALT",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p088fm5b.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "Series 2: Episode 1",
+            "synopses": {
+              "small": "Pr\u00f2gram ci\u00f9il le Idlewild agus Sacred Paws. Music show with Idlewild and Sacred Paws."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0015xfp",
+        "title": "American Rapstar",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bx149d.jpg"
+        },
+        "synopses": {
+          "small": "Documentary chronicling the rise of SoundCloud rappers."
+        },
+        "initial_children": [
+          {
+            "id": "m0015xfp",
+            "title": "American Rapstar",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "A movement of maverick musicians",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bx1ln3.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bx149d.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bx149d.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "A movement of maverick musicians. Exploring the talent and tragedy of rap's online stars",
+              "small": "Documentary chronicling the rise of SoundCloud rappers."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "67 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001kl8s",
+        "title": "Andrew Lloyd Webber at the BBC",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fbk68d.jpg"
+        },
+        "synopses": {
+          "small": "To mark his 75th birthday, Andrew Lloyd Webber takes a journey through the BBC archives."
+        },
+        "initial_children": [
+          {
+            "id": "m001kl8s",
+            "title": "Andrew Lloyd Webber at the BBC",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "The musicals maestro",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fbk6dl.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fbk68d.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fbk68d.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "The musical maestro's biggest and best-loved songs\u00a0with Elaine Paige, Diana Ross and more",
+              "small": "To mark his 75th birthday, Andrew Lloyd Webber takes a journey through the BBC archives."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "89 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0012y8y",
+        "title": "Anything Goes: The Musical",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8xjsj.jpg"
+        },
+        "synopses": {
+          "small": "A major new production of the classic musical comedy filmed live at the Barbican."
+        },
+        "initial_children": [
+          {
+            "id": "m0012y8y",
+            "title": "Anything Goes: The Musical",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8xjv4.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8xjsj.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8xjsj.jpg"
+            },
+            "labels": {
+              "category": "Arts"
+            },
+            "live": false,
+            "synopses": {
+              "small": "A major new production of the classic musical comedy filmed live at the Barbican."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "137 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001wdpw",
+        "title": "Aonaracht",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9n8.jpg"
+        },
+        "synopses": {
+          "small": "Composer \u00dana Monaghan embarks on an ambitious suite of solo performances with electronics."
+        },
+        "initial_children": [
+          {
+            "id": "m001wdpw",
+            "title": "Aonaracht",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9wk.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9n8.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9n8.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Composer \u00dana Monaghan embarks on an ambitious suite of solo performances with electronics."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "76 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b0b61qfz",
+        "title": "Arctic Monkeys Live at the BBC",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p069cqfz.jpg"
+        },
+        "synopses": {
+          "small": "Arctic Monkeys perform live for BBC Radio 1 at the legendary Maida Vale studios."
+        },
+        "initial_children": [
+          {
+            "id": "b0b61qfz",
+            "title": "Arctic Monkeys Live at the BBC",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "An incredible, intimate set",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bdh0df.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p069cqfz.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p069cqfz.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "An incredible, intimate set from the Sheffield legends recorded at Maida Vale",
+              "small": "Arctic Monkeys perform live for BBC Radio 1 at the legendary Maida Vale studios."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "31 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001tx7p",
+        "title": "Aretha Franklin in Amsterdam 1968",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h15r1r.jpg"
+        },
+        "synopses": {
+          "small": "Aretha Franklin live at the Royal Concertgebouw in 1968."
+        },
+        "initial_children": [
+          {
+            "id": "m001tx7p",
+            "title": "Aretha Franklin in Amsterdam 1968",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h15r4s.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h15r1r.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h15r1r.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Aretha Franklin live at the Royal Concertgebouw in 1968."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "35 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p094ctd2",
+        "title": "Arlo Parks: A Popstar in a Pandemic",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p094nssf.jpg"
+        },
+        "synopses": {
+          "small": "How does an up and coming artist survive a global pandemic and release a debut album?"
+        },
+        "initial_children": [
+          {
+            "id": "p094ctd2",
+            "title": "Arlo Parks: A Popstar in a Pandemic",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p094nssf.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "How does an up and coming artist survive a global pandemic and release a debut album?"
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "31 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p08kv6by",
+        "title": "Asian Network",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0db9j9b.jpg"
+        },
+        "synopses": {
+          "small": "The best content from Asian Network"
+        },
+        "initial_children": [
+          {
+            "id": "p0fz2srq",
+            "title": "Asian Network",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g7gj4f.jpg"
+            },
+            "labels": {
+              "category": "Entertainment"
+            },
+            "live": false,
+            "subtitle": "Can Bollywood Survive?",
+            "synopses": {
+              "small": "Haroon Rashid goes to Abu Dhabi to discuss what needs to happen for Bollywood to survive."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "36 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0g1hk3v",
+        "title": "Asian Network in Bangladesh",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0xz46.jpg"
+        },
+        "synopses": {
+          "small": "Asian Network in Bangladesh."
+        },
+        "initial_children": [
+          {
+            "id": "p0g08nw1",
+            "title": "Asian Network in Bangladesh",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0xz46.jpg"
+            },
+            "labels": {
+              "category": "Entertainment"
+            },
+            "live": false,
+            "subtitle": "Asian Network Celebrates Bangladesh",
+            "synopses": {
+              "small": "Nadia Ali explores Bangladesh with the help of the Asian Network listeners."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "17 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b00rw6ct",
+        "title": "Astaire and Rogers Sing George and Ira Gershwin",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08zsyy3.jpg"
+        },
+        "synopses": {
+          "small": "Songs written by brothers George and Ira Gershwin for Fred Astaire and Ginger Rogers."
+        },
+        "initial_children": [
+          {
+            "id": "b00rw6ct",
+            "title": "Astaire and Rogers Sing George and Ira Gershwin",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cp83gw.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08zsyy3.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08zsyy3.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Songs written by brothers George and Ira Gershwin for Fred Astaire and Ginger Rogers."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "11 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b00rzkyn",
+        "title": "Astaire and Rogers Sing the Great American Songbook",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01h6vbb.jpg"
+        },
+        "synopses": {
+          "small": "Compilation of memorable songs from the Great American Songbook."
+        },
+        "initial_children": [
+          {
+            "id": "b00rzkyn",
+            "title": "Astaire and Rogers Sing the Great American Songbook",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "Let's face the music and dance",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08d8cgl.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01h6vbb.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01h6vbb.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "A compilation of songs from the Golden Age of Hollywood, performed by the dance icons.",
+              "small": "Compilation of memorable songs from the Great American Songbook."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b007qn4b",
+        "title": "BBC Cardiff Singer of the World",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p052qlgs.jpg"
+        },
+        "synopses": {
+          "small": "International classical singers compete in the world-renowned singing contest."
+        },
+        "initial_children": [
+          {
+            "id": "m001n367",
+            "title": "BBC Cardiff Singer of the World",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "editorial_subtitle": "Grand Final",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ft9l0f.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ft9kxg.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ft9kxg.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2023: Grand Final",
+            "synopses": {
+              "editorial": "Grand Final. Five phenomenal singers aim for one of the most prestigious prizes in opera",
+              "small": "Petroc Trelawny and Josie d\u2019Arby present the final of BBC Cardiff Singer of the World. "
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "151 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000n622",
+        "title": "BBC Introducing in Scotland",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fz1ph6.jpg"
+        },
+        "synopses": {
+          "small": "The best unsigned, undiscovered and under-the-radar music Scotland has to offer."
+        },
+        "initial_children": [
+          {
+            "id": "p0fbqc7h",
+            "title": "BBC Introducing in Scotland",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ff3mvs.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ff3mf3.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ff3mf3.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "Scottish Act of the Year 2023",
+            "synopses": {
+              "small": "Shereen Cutkelvin and Phoebe IH crown the 2023 Scottish Act of the Year."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p010j8y5",
+        "title": "BBC Music Introducing",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08y2zkm.jpg"
+        },
+        "synopses": {
+          "small": "Bringing together all of the BBC's supporters of unsigned music. Upload your music here."
+        },
+        "initial_children": [
+          {
+            "id": "p09xztrk",
+            "title": "BBC Music Introducing",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09z04pf.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "Live 2021: Thomas Headon in session",
+            "synopses": {
+              "small": "Thomas Headon performs Nobody Has To Know, Clean Me Up & UrbanAngel1999."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "10 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p00dlr85",
+        "title": "BBC Philharmonic",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cmwqm0.jpg"
+        },
+        "synopses": {
+          "small": "Based in Salford, the BBC Philharmonic is one of the UK's finest orchestras."
+        },
+        "initial_children": [
+          {
+            "id": "p0bncrrp",
+            "title": "BBC Philharmonic",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bp9msw.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "The Musical Story of the Gingerbread Man",
+            "synopses": {
+              "small": "A musical re-telling of classic children's tale, narrated by Nihal Arthanayake."
+            },
+            "versions": [
+              {
+                "kind": "legal",
+                "duration": {
+                  "text": "13 mins"
+                }
+              },
+              {
+                "kind": "editorial",
+                "duration": {
+                  "text": "13 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m00158jj",
+        "title": "BBC Philharmonic: The Musical Story of the Gingerbread Man",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0brsyj2.jpg"
+        },
+        "synopses": {
+          "small": "A musical re-telling of a classic children's tale by the BBC Philharmonic."
+        },
+        "initial_children": [
+          {
+            "id": "m00158jj",
+            "title": "BBC Philharmonic: The Musical Story of the Gingerbread Man",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "Join in with the action!",
+            "editorial_title": "The Musical Story of the Gingerbread Man",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0brsymc.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0brsyj2.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0brsyj2.jpg"
+            },
+            "labels": {
+              "category": "CBeebies"
+            },
+            "live": false,
+            "synopses": {
+              "small": "A musical re-telling of a classic children's tale by the BBC Philharmonic."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "13 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b007v097",
+        "title": "BBC Proms",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0wxd3.jpg"
+        },
+        "synopses": {
+          "small": "The world's greatest classical music festival - stunning performances and collaborations."
+        },
+        "initial_children": [
+          {
+            "id": "m001qg9k",
+            "title": "BBC Proms",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "editorial_subtitle": "Unmissable Moments",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gck1xy.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2023: Unmissable Moments",
+            "synopses": {
+              "editorial": "Unmissable Moments. The biggest tunes, the greatest talents \u2013 and another amazing summer",
+              "small": "A whistlestop tour through some of the very best music from the 2023 Proms season."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "119 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0fslgdp",
+        "title": "BBC Radio Scotland Young Jazz Musician",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fsqgbf.jpg"
+        },
+        "synopses": {
+          "small": "Scotland's finest young jazz musicians compete for the title."
+        },
+        "initial_children": [
+          {
+            "id": "m001x05p",
+            "title": "BBC Radio Scotland Young Jazz Musician",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hfqjxl.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hfjvq4.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hfjvq4.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2023: Ben Shankland: BBC Radio Scotland\u2019s Young Jazz Musician of the Year Winner",
+            "synopses": {
+              "small": "Nineteen-year-old award-winning pianist performs live in session."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "9 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p008vbkj",
+        "title": "BBC Scottish Symphony Orchestra",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hd5zsb.jpg"
+        },
+        "synopses": {
+          "small": "Exclusive interviews and performances featuring The BBC Scottish Symphony Orchestra."
+        },
+        "initial_children": [
+          {
+            "id": "p0gyfyv5",
+            "title": "BBC Scottish Symphony Orchestra",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzr44h.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "Ryan Wigglesworth - Piano Concerto",
+            "synopses": {
+              "small": "Steven Osborne performs Ryan Wigglesworth's Piano Concerto with the BBC SSO in Glasgow."
+            },
+            "versions": [
+              {
+                "kind": "editorial",
+                "duration": {
+                  "text": "27 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001fsvy",
+        "title": "Beart Bunting",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dj9srz.jpg"
+        },
+        "synopses": {
+          "small": "Traditional musicians and Strabane Brass Band perform tunes from the Bunting collection."
+        },
+        "initial_children": [
+          {
+            "id": "m001fsvy",
+            "title": "Beart Bunting",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0djg7cb.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dj9srz.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dj9srz.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Traditional musicians and Strabane Brass Band perform tunes from the Bunting collection."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000kqq4",
+        "title": "Being Beethoven",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08jffps.jpg"
+        },
+        "synopses": {
+          "small": "Beethoven's life story. Documentary series that focuses on the man behind the composer."
+        },
+        "initial_children": [
+          {
+            "id": "m000l41g",
+            "title": "Being Beethoven",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cxg9q0.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08jffps.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08kzjgv.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Series 1: Episode 3",
+            "synopses": {
+              "small": "As Beethoven begins his late masterpieces, his desire for a family becomes an obsession."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              },
+              {
+                "kind": "audio-described",
+                "duration": {
+                  "text": "59 mins"
+                }
+              },
+              {
+                "kind": "signed",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000793v",
+        "title": "Belladrum",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g4kqgt.jpg"
+        },
+        "synopses": {
+          "small": "Coverage of the Belladrum Tartan Heart Festival."
+        },
+        "initial_children": [
+          {
+            "id": "m001pc51",
+            "title": "Belladrum",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "editorial_subtitle": "More festival favourites",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g4kqgt.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2023: Episode 2",
+            "synopses": {
+              "editorial": "More festival favourites, featuring The Zutons, Peat and Diesel and Travis",
+              "small": "Live highlights from Belladrum 2023, featuring The Zutons, Peat and Diesel, and Travis."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "62 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b01ldk4x",
+        "title": "Belladrum",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cpswmb.jpg"
+        },
+        "synopses": {
+          "small": "Coverage of the Belladrum Tartan Heart Festival."
+        },
+        "initial_children": [
+          {
+            "id": "m001tv4d",
+            "title": "Belladrum",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gz8vzj.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2023 Highlights: Episode 2",
+            "synopses": {
+              "small": "Concert highlights from Belladrum, 2023. A\u2019 chuid as fhearr bho Belladrum, 2023."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001kjm5",
+        "title": "Big Night of Musicals by the National Lottery",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7d2gb.jpg"
+        },
+        "synopses": {
+          "small": "A celebration of musical theatre, full of showstoppers from the nation\u2019s best-loved shows."
+        },
+        "initial_children": [
+          {
+            "id": "m001vw23",
+            "title": "Big Night of Musicals by the National Lottery",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "editorial_subtitle": "Showstoppers and surprises",
+            "editorial_title": "Big Night of Musicals",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7cyxz.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7cy7h.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7cy7h.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "subtitle": "2024",
+            "synopses": {
+              "editorial": "Showstoppers and surprises. Alfie Boe and Beverley Knight help celebrate musical magic",
+              "small": "Jason Manford hosts a glittering musical celebration, with spectacular performances."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "89 mins"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "category": {
+      "id": "music"
+    },
+    "pageName": "category"
+  },
+  "header": {
+    "title": "Music"
+  },
+  "id": {
+    "status": "red",
+    "cdnFailover": false,
+    "ctaMarkup": null,
+    "signedIn": false,
+    "auth": null,
+    "personalisationEnabled": false,
+    "ageBracket": "unknown",
+    "addAfterSignIn": null
+  },
+  "page": {
+    "status": 1,
+    "id": "music",
+    "title": "Music",
+    "sortType": "a-z"
+  },
+  "pagination": {
+    "currentPage": 1,
+    "totalEpisodes": 234,
+    "totalPages": 7,
+    "perPage": 36
+  },
+  "searchSuggest": {},
+  "translations": {
+    "categories_description": "Browse the %s category for available TV programmes to watch on BBC iPlayer.",
+    "categories_sort_label": "Sort by",
+    "categories_featured": "Featured",
+    "categories_a-z": "A-Z",
+    "categories_most-recent": "Most recent",
+    "categories_atoz_title": "%s - A to Z",
+    "categories_most-recent_title": "%s - Most recent",
+    "pagination_previous": "Previous",
+    "pagination_next": "Next",
+    "pagination_next_aria": "Next Page",
+    "pagination_previous_aria": "Previous Page",
+    "pagination_go_to_page_aria": "Page %s of %s",
+    "pagination_aria": "Pagination controls",
+    "categories_view_all": "View all",
+    "categories_view_all_aria_label": "View all programmes from the %s group",
+    "view_all_episodes": "View all episodes"
+  },
+  "msiModal": {
+    "visible": false
+  }
+}

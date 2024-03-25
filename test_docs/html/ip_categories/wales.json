@@ -1,0 +1,1962 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": true,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": true,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": false,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": false,
+        "id": "tv-guide"
+      },
+      {
+        "title": "Watchlist",
+        "href": "/iplayer/watchlist",
+        "active": false,
+        "id": "watchlist"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": false
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": null,
+    "dismissedModal": false
+  },
+  "language": "en",
+  "experiments": {},
+  "config": {
+    "host": null,
+    "staticHost": null,
+    "iblBaseUrl": null,
+    "graphBaseUrl": null,
+    "graphFallbackBaseUrl": null,
+    "iblUserBaseUrl": null,
+    "enablePersonalisation": null
+  },
+  "dials": {},
+  "entities": {
+    "elements": [
+      {
+        "id": "p02b4mks",
+        "title": "3 Lle",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p054j3ls.jpg"
+        },
+        "synopses": {
+          "small": "Pobl adnabyddus sy'n ein cyflwyno i dri lle sydd, neu fu'n chwarae, rhan bwysig yn eu b..."
+        },
+        "initial_children": [
+          {
+            "id": "p02b4ml0",
+            "title": "3 Lle",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p053rq4y.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 3: Gillian Elisa",
+            "synopses": {
+              "small": "Gillian Elisa Thomas sy'n ein tywys i dri lle sydd wedi chwarae rhan bwysig yn ei bywyd..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "24 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "24 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gd4cc8",
+        "title": "Abadas",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gd8583.jpg"
+        },
+        "synopses": {
+          "small": "Abadas"
+        },
+        "initial_children": [
+          {
+            "id": "p02b4y28",
+            "title": "Abadas",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02c72z7.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 2011: Hwyl Fwrdd",
+            "synopses": {
+              "small": "Mae'n ddiwrnod llawn hwyl ar ynys yr Abadas heddiw ac mae digon o hwyl i'w gael. It's t..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "11 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "11 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p02b4k3q",
+        "title": "Adam Price a Streic y Glowyr",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02cjvrp.jpg"
+        },
+        "synopses": {
+          "small": "Adam Price sy'n teithio yn \u00f4l mewn hanes i ddarganfod mwy am ddigwyddiadau dramatig Str..."
+        },
+        "initial_children": [
+          {
+            "id": "p02b4k3v",
+            "title": "Adam Price a Streic y Glowyr",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02k4s0v.jpg"
+            },
+            "live": false,
+            "subtitle": "Pennod 3",
+            "synopses": {
+              "small": "Daw Adam Price i gasgliadau syfrdanol am un o'r digwyddiadau pwysicaf yn hanes diwydian..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "48 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "48 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0h0n8fb",
+        "title": "Adeiladu'r Freuddwyd: Camp Out West",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h1y3sd.jpg"
+        },
+        "synopses": {
+          "small": "Ni'n dilyn siwrnai gwr a gwraig, Jon ac Emilie, a'u ci, Maggie, wrth i nhw adeiladu'r f..."
+        },
+        "initial_children": [
+          {
+            "id": "p0h0n98j",
+            "title": "Adeiladu'r Freuddwyd: Camp Out West",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h2t1dy.jpg"
+            },
+            "live": false,
+            "subtitle": "Adeiladu'r Freuddwyd - Digidol",
+            "synopses": {
+              "small": "Ni'n dilyn siwrnai gwr a gwraig, Jon ac Emilie, a'u ci, Maggie, wrth i nhw adeiladu'r f..."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "13 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p05bc522",
+        "title": "Adre",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07w6r7p.jpg"
+        },
+        "synopses": {
+          "small": "Nia Parry sy'n cael y pleser o fusnesa yng nhartrefi rhai o enwogion Cymru. Nia Parry t..."
+        },
+        "initial_children": [
+          {
+            "id": "p0bbzbwk",
+            "title": "Adre",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bc3qn2.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 6: Brett Johns",
+            "synopses": {
+              "small": "Yr wythnos hon, byddwn yn ymweld \u00e2 chartref yr ymladdwr cymysg proffesiynol, Brett John..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "24 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "24 mins"
+                }
+              },
+              {
+                "kind": "signed",
+                "duration": {
+                  "text": "24 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0015zp7",
+        "title": "Affairs of the Art",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bwwmtl.jpg"
+        },
+        "synopses": {
+          "small": "Oscar-nominated animated comedy short showcasing one family's eccentric obsessions."
+        },
+        "initial_children": [
+          {
+            "id": "m0015zp7",
+            "title": "Affairs of the Art",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bwwmws.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bwwmtl.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0bwwmtl.jpg"
+            },
+            "labels": {
+              "category": "Comedy"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Oscar-nominated animated comedy short showcasing one family's eccentric obsessions."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "16 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p05rkd18",
+        "title": "Ahoi!",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05s641v.jpg"
+        },
+        "synopses": {
+          "small": "Cyfres hwyliog ar gyfer plant meithrin yng nghwmni y m\u00f4r-ladron Ben Dant a Cadi. Fun se..."
+        },
+        "initial_children": [
+          {
+            "id": "p0cxrxtr",
+            "title": "Ahoi!",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05s641v.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 2022: Ysgol Gwenllian #2",
+            "synopses": {
+              "small": "A fydd morladron Ysgol Gwenllian yn llwyddo i helpu Ben Dant a Cadi i drechu Capten Cne..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "16 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "16 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000zhgf",
+        "title": "A Killing in Tiger Bay",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09tddmz.jpg"
+        },
+        "synopses": {
+          "small": "The story of one of Britain's most notorious and astonishing miscarriages of justice."
+        },
+        "initial_children": [
+          {
+            "id": "p09tqt7x",
+            "title": "A Killing in Tiger Bay",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09txb3m.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09txb1h.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09tz4bz.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Series 1: 3. The Reckoning",
+            "synopses": {
+              "small": "The families begin a campaign to have the convictions of the Cardiff Five overturned."
+            },
+            "versions": [
+              {
+                "kind": "editorial",
+                "duration": {
+                  "text": "60 mins"
+                }
+              },
+              {
+                "kind": "audio-described",
+                "duration": {
+                  "text": "59 mins"
+                }
+              },
+              {
+                "kind": "signed",
+                "duration": {
+                  "text": "60 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p04l1zrz",
+        "title": "Albi a Noa yn Achub yr Iwnifyrs",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04lwvzc.jpg"
+        },
+        "synopses": {
+          "small": "Ffilm gerdd i'r teulu cyfan sy'n olrhain bywyd bachgen ifanc o'r enw Noa sydd \u00e2 ffrindi..."
+        },
+        "initial_children": [
+          {
+            "id": "p04l1zrz",
+            "title": "Albi a Noa yn Achub yr Iwnifyrs",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04lwvzc.jpg"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Ffilm gerdd i'r teulu cyfan sy'n olrhain bywyd bachgen ifanc o'r enw Noa sydd \u00e2 ffrindi..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "75 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "75 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0fdcpl7",
+        "title": "Alex Humphreys: Epilepsi a Fi",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fdmb3t.jpg"
+        },
+        "synopses": {
+          "small": "Mae Alex Humphreys yn wyneb cyfarwydd ar S4C; mae hefyd yn diodde o epilepsy ac am ddar..."
+        },
+        "initial_children": [
+          {
+            "id": "p0fdcpl7",
+            "title": "Alex Humphreys: Epilepsi a Fi",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fdmb3t.jpg"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Mae Alex Humphreys yn wyneb cyfarwydd ar S4C; mae hefyd yn diodde o epilepsy ac am ddar..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "48 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "48 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p08q2y39",
+        "title": "Am Dro",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08r6935.jpg"
+        },
+        "synopses": {
+          "small": "Yn y gyfres hon byddwn yn darganfod llwybrau a lleoliadau gorau Cymru - gan wahodd y bo..."
+        },
+        "initial_children": [
+          {
+            "id": "p0hgb6z5",
+            "title": "Am Dro",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hh49tg.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 7: Pennod 8",
+            "synopses": {
+              "small": "Aiff Sara, Mohima, Liam a Huw \u00e2 ni ar daith i Langollen, Llyn Ogwen, Machynlleth ac ard..."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "48 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p06s9yxr",
+        "title": "Amser Maith Maith yn \u00d4l",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06sjjvg.jpg"
+        },
+        "synopses": {
+          "small": "Amser Maith Maith yn \u00d4l"
+        },
+        "initial_children": [
+          {
+            "id": "p0bvdmwj",
+            "title": "Amser Maith Maith yn \u00d4l",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06sjjvg.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 3: Eistedd",
+            "synopses": {
+              "small": "Mae rhywbeth mawr yn digwydd yn Llys Llywelyn heddiw - rhywbeth o'r enw Eisteddfod! The..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "15 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "15 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001hcnx",
+        "title": "Amy Dowden's Dare to Dance",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hcz0w5.jpg"
+        },
+        "synopses": {
+          "small": "Amy Dowden gives people the chance to learn a spectacular dance routine."
+        },
+        "initial_children": [
+          {
+            "id": "m001wjx4",
+            "title": "Amy Dowden's Dare to Dance",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "editorial_subtitle": "4/4 Football \u2013 and footwork",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hcz0wt.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hcz0vn.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hdghc5.jpg"
+            },
+            "labels": {
+              "category": "Entertainment"
+            },
+            "live": false,
+            "subtitle": "Series 2: Episode 4",
+            "synopses": {
+              "editorial": "4/4 Football \u2013 and footwork. Two huge Wrexham fans are after a fantastic first dance",
+              "small": "Amy helps a football-mad bride and groom with a first dance with extra special meaning.  "
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              },
+              {
+                "kind": "audio-described",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gd4blx",
+        "title": "Anifeiliaid Bach y Byd",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gd8604.jpg"
+        },
+        "synopses": {
+          "small": "Anifeiliaid Bach y Byd"
+        },
+        "initial_children": [
+          {
+            "id": "p09c6fq9",
+            "title": "Anifeiliaid Bach y Byd",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08v5475.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 1: Pennod 51",
+            "synopses": {
+              "small": "Awn i oerfel gogledd Rwsia i gwrdd \u00e2'r Walrws ac i wres anialwch yr Aifft i gwrdd \u00e2'r S..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "8 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "8 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p02gywfc",
+        "title": "Arctig Gwyllt Iolo Williams",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05d3k5g.jpg"
+        },
+        "synopses": {
+          "small": "Iolo Williams sy'n lleisio cyfres o bedair rhaglen yn edrych ar fyd natur yr Arctig. Io..."
+        },
+        "initial_children": [
+          {
+            "id": "p02gywff",
+            "title": "Arctig Gwyllt Iolo Williams",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p02hf64w.jpg"
+            },
+            "live": false,
+            "subtitle": "Byw o'r Newydd",
+            "synopses": {
+              "small": "Iolo Williams sy'n datgelu mwy am fywyd gwyllt rhai o ardaloedd mwyaf gogleddol y byd. ..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "48 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "48 mins"
+                }
+              },
+              {
+                "kind": "signed",
+                "duration": {
+                  "text": "48 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p036y4dm",
+        "title": "Arfordir Cymru",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p037s429.jpg"
+        },
+        "synopses": {
+          "small": "Teithiau ar hyd arfordir Cymru. Journeys along the Welsh coastline."
+        },
+        "initial_children": [
+          {
+            "id": "p02b4mr7",
+            "title": "Arfordir Cymru",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09nlfp7.jpg"
+            },
+            "live": false,
+            "subtitle": "Sir Benfro: Porthgain i Solfach",
+            "synopses": {
+              "small": "Mae'r daith yn mynd \u00e2 ni o Borthgain i Solfach. Byddwn yn ymweld ag Ynys Ddewi a chael ..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "24 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "24 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p08vfvr7",
+        "title": "Ar Goll yn Oz",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08vpn6p.jpg"
+        },
+        "synopses": {
+          "small": "Description Coming Soon..."
+        },
+        "initial_children": [
+          {
+            "id": "p093bwc8",
+            "title": "Ar Goll yn Oz",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08vpn6p.jpg"
+            },
+            "live": false,
+            "subtitle": "Cer am Kansas!",
+            "synopses": {
+              "small": "Mae Langwidere wedi meddiannu Castell Glenda, a rhaid i Dorothy a'r criw fynd mewn i or..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "22 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "22 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p07cw8dg",
+        "title": "Arthur a Chriw y Ford Gron",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07dg6wp.jpg"
+        },
+        "synopses": {
+          "small": "An epic animated comedy about the childhood of King Arthur."
+        },
+        "initial_children": [
+          {
+            "id": "p07mzwt1",
+            "title": "Arthur a Chriw y Ford Gron",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07dg6wp.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 1: Yn Ol i'r Tir",
+            "synopses": {
+              "small": "Mae'r Brenin Uther yn amau ei gymdogion o fod wedi dwyn ei gronfeydd bwyd ac yn penderf..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "11 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "11 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p05xdsnm",
+        "title": "Ar Werth",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p075m0sl.jpg"
+        },
+        "synopses": {
+          "small": "Dilynwn rai o werthwyr tai Cymru gan brofi'r emosiwn a'r ddrama sy'n dod gyda rhoi ty a..."
+        },
+        "initial_children": [
+          {
+            "id": "p062l75v",
+            "title": "Ar Werth",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p063vqfb.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 2018: Pennod 8",
+            "synopses": {
+              "small": "Adeilad eiconig yng Nghaernarfon; arwerthiant yng Nghaerdydd a chartref 9 ystafell wely..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "24 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "24 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p05cf7jt",
+        "title": "Asra",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05d13p4.jpg"
+        },
+        "synopses": {
+          "small": "Plant o ysgolion cynradd sy'n cystadlu yn y gyfres hon lle mae ennill s\u00ear yn golygu enn..."
+        },
+        "initial_children": [
+          {
+            "id": "p0656ft5",
+            "title": "Asra",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06j3zzy.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 2: Ysgol Bro Gwydir, Llanrwst",
+            "synopses": {
+              "small": "Bydd plant o Ysgol Bro Gwydir, Llanrwst yn ymweld ag Asra yr wythnos hon. Children from..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "14 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "14 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gd4btk",
+        "title": "Awyr Iach",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gd9v0r.jpg"
+        },
+        "synopses": {
+          "small": "Awyr Iach"
+        },
+        "initial_children": [
+          {
+            "id": "p0hgmz4j",
+            "title": "Awyr Iach",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gd9v0r.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 2: Pennod 11",
+            "synopses": {
+              "small": "Mae Meleri yn cwrdd a theulu sy'n mwynhau Geocashio, ac mae Jeno a'i theulu yn ymweld a..."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "16 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gz4y29",
+        "title": "Bariau",
+        "type": "programme_large",
+        "programme_type": "narrative",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h0h1ts.jpg"
+        },
+        "synopses": {
+          "small": "Drama gyffrous newydd wedi ei lleoli mewn carchar. Exciting new drama set in a prison."
+        },
+        "initial_children": [
+          {
+            "id": "p0h0dctp",
+            "title": "Bariau",
+            "type": "episode",
+            "programme_type": "narrative",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h2jt8q.jpg"
+            },
+            "live": false,
+            "subtitle": "Pennod 6",
+            "synopses": {
+              "small": "Wrth i Elin gyrraedd y carchar yn cario cyffuriau i Kit, mae hi'n cael sioc wrth glywed..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "31 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "31 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0hdlqw6",
+        "title": "Barry John: Cofio'r Brenin",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgkmqp.jpg"
+        },
+        "synopses": {
+          "small": "Rhaglen deyrnged i gofio am un o fawrion y byd rygbi yng Nghymru fu farw yn ddiweddar -..."
+        },
+        "initial_children": [
+          {
+            "id": "p0hdlqw6",
+            "title": "Barry John: Cofio'r Brenin",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgkmqp.jpg"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Rhaglen deyrnged i gofio am un o fawrion y byd rygbi yng Nghymru fu farw yn ddiweddar -..."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "47 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b09kk17g",
+        "title": "BBC Wales Investigates",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gnpgr2.jpg"
+        },
+        "synopses": {
+          "small": "Investigative series examining subjects affecting the lives of people in Wales"
+        },
+        "initial_children": [
+          {
+            "id": "m001tfb8",
+            "title": "BBC Wales Investigates",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gxgnj2.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gxgngv.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gxgngv.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "I\u2019m Homeless - How Will Santa Find Me?",
+            "synopses": {
+              "small": "Why will thousands of children wake up this Christmas with nowhere to call home? "
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b09fh32m",
+        "title": "BBC Wales Live",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9r36d.jpg"
+        },
+        "synopses": {
+          "small": "Hard-hitting stories and in-depth interviews about what is happening in Wales."
+        },
+        "initial_children": [
+          {
+            "id": "m001xkhm",
+            "title": "BBC Wales Live",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9r36d.jpg"
+            },
+            "labels": {
+              "category": "News"
+            },
+            "live": false,
+            "subtitle": "20/03/2024",
+            "synopses": {
+              "small": "Discussion on the day the Senedd votes on Vaughan Gething becoming next first minister."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b006mj49",
+        "title": "BBC Wales Today",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7xpv7.jpg"
+        },
+        "synopses": {
+          "small": "The latest news, sport, weather and features from Wales."
+        },
+        "initial_children": [
+          {
+            "id": "m001xry9",
+            "title": "BBC Wales Today",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7xpv7.jpg"
+            },
+            "labels": {
+              "category": "News"
+            },
+            "live": false,
+            "subtitle": "Evening News: 23/03/2024",
+            "synopses": {
+              "small": "News and weather from BBC Wales."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "5 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000m9l2",
+        "title": "Beacons: Short Films from Wales",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08pht6m.jpg"
+        },
+        "synopses": {
+          "small": "Short films produced through Ffilm Cymru and BFI Network's Beacons scheme."
+        },
+        "initial_children": [
+          {
+            "id": "m001rw2y",
+            "title": "Beacons: Short Films from Wales",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gl3jx3.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gl3js9.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gl3js9.jpg"
+            },
+            "labels": {
+              "category": "Arts"
+            },
+            "live": false,
+            "subtitle": "Series 3: Geronimo",
+            "synopses": {
+              "small": "An arcade owner descends into a hellish nightmare after being prescribed a sleeping app.\n\n"
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "14 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001qb3c",
+        "title": "Being Louis Rees-Zammit",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gbyth3.jpg"
+        },
+        "synopses": {
+          "small": "Unfiltered access to rugby\u2019s new superstar, on and off the pitch."
+        },
+        "initial_children": [
+          {
+            "id": "m001qb3c",
+            "title": "Being Louis Rees-Zammit",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "A Welsh sporting icon",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gbytfk.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gbyth3.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gbyth3.jpg"
+            },
+            "labels": {
+              "category": "Sport"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "A Welsh sporting icon. Before his move to the NFL, he was a potential rugby superstar",
+              "small": "Unfiltered access to rugby\u2019s new superstar, on and off the pitch."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              },
+              {
+                "kind": "audio-described",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p02b4jr0",
+        "title": "Ben a Mali a'u byd bach o hud",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05p2pts.jpg"
+        },
+        "synopses": {
+          "small": "Rhaglen animeiddiedig am fyd hud y tylwyth teg. Cartoon about the magical world of the ..."
+        },
+        "initial_children": [
+          {
+            "id": "p02b54qf",
+            "title": "Ben a Mali a'u byd bach o hud",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p03q6cfr.jpg"
+            },
+            "live": false,
+            "subtitle": "Anifail Anwes Mari a Mair",
+            "synopses": {
+              "small": "Mae'r efeilliaid yn awyddus i gael anifail anwes felly mae Magi Hud yn creu bochdew idd..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "11 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "11 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0h0dcns",
+        "title": "Bendibwmbwls",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h225zn.jpg"
+        },
+        "synopses": {
+          "small": "Description Coming Soon..."
+        },
+        "initial_children": [
+          {
+            "id": "p0hh2mjw",
+            "title": "Bendibwmbwls",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h225zn.jpg"
+            },
+            "live": false,
+            "subtitle": "Ysgol Dyffryn Trannon",
+            "synopses": {
+              "small": "Mae Ben Dant ar antur newydd i ailgylchu - i droi sbwriel yn sbeshal a gwastraff yn gam..."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "10 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p088s6jc",
+        "title": "Bethesda: Pobol y Chwarel",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p088vgyj.jpg"
+        },
+        "synopses": {
+          "small": "Cyfres sy'n clustfeinio ar fywydau cymeriadau yng nghymuned chwarelyddol glos Bethesda...."
+        },
+        "initial_children": [
+          {
+            "id": "p08747gr",
+            "title": "Bethesda: Pobol y Chwarel",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p087qyt6.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 1: Pennod 3",
+            "synopses": {
+              "small": "Cyfres sy'n clustfeinio ar fywydau cymeriadau yng nghymuned chwarelyddol glos Bethesda...."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "23 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "23 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gmp94m",
+        "title": "Bex",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gpn9d0.jpg"
+        },
+        "synopses": {
+          "small": "Dramau ugain munud arloesol a phwysig am anhwylderau meddwl pobol rhwng wyth a deuddeg ..."
+        },
+        "initial_children": [
+          {
+            "id": "p0gmp98c",
+            "title": "Bex",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gpncng.jpg"
+            },
+            "live": false,
+            "subtitle": "Bex: Stori Steffan",
+            "synopses": {
+              "small": "Wrth drio plesio pawb, daw Steff i drafferth yn trefnu digwyddiadau i deulu a ffrindiau..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "19 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "19 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001rmkm",
+        "title": "Black Music Wales",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gkcj31.jpg"
+        },
+        "synopses": {
+          "small": "Newport rapper L E M F R E C K explores the often-overlooked history of Welsh black music."
+        },
+        "initial_children": [
+          {
+            "id": "m001rmkm",
+            "title": "Black Music Wales",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "From pioneers to new artists",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gkd3l8.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gkcj31.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gkcj31.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "From pioneers to new artists, L E M F R E C K shines a light on Wales' black music icons",
+              "small": "Newport rapper L E M F R E C K explores the often-overlooked history of Welsh black music."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "60 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0455bvb",
+        "title": "Blero'n Mynd i Ocido",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06x2n9w.jpg"
+        },
+        "synopses": {
+          "small": "Cyfres animeiddiedig i blant ifanc. Animated series for youngsters."
+        },
+        "initial_children": [
+          {
+            "id": "p0hgvgqt",
+            "title": "Blero'n Mynd i Ocido",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06x2n9w.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 3: Ffwrdd a Fo Blero",
+            "synopses": {
+              "small": "Beth sy'n digwydd yn myd Blero heddiw tybed? What's happening in the world of Blero today?"
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "11 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0gk8xks",
+        "title": "Blociau Lliw",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gnj1q5.jpg"
+        },
+        "synopses": {
+          "small": "Blociau Lliw"
+        },
+        "initial_children": [
+          {
+            "id": "p0gxfmtc",
+            "title": "Blociau Lliw",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gnj1q5.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 1: Dewiswch Bartner",
+            "synopses": {
+              "small": "Mae'r Blociau Lliw yn mwynhau dawnsio ond pa liwiau sy'n gwneud y partneriaid gorau? Th..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "5 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "5 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p07w0f6x",
+        "title": "Blociau Rhif",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08nfbsn.jpg"
+        },
+        "synopses": {
+          "small": "Hwyl a sbri i blant ifanc gyda'r blociau rhif. Fun and games for young children with th..."
+        },
+        "initial_children": [
+          {
+            "id": "p094dvp5",
+            "title": "Blociau Rhif",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07qk37x.jpg"
+            },
+            "live": false,
+            "subtitle": "Cyfres 1: Pennod 82",
+            "synopses": {
+              "small": "Hwyl a sbri i blant ifanc gyda'r blociau rhif. Fun and games for young children with th..."
+            },
+            "versions": [
+              {
+                "kind": "technical-replacement",
+                "duration": {
+                  "text": "5 mins"
+                }
+              },
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "5 mins"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "category": {
+      "id": "wales"
+    },
+    "pageName": "category"
+  },
+  "header": {
+    "title": "Wales"
+  },
+  "id": {
+    "status": "red",
+    "cdnFailover": false,
+    "ctaMarkup": null,
+    "signedIn": false,
+    "auth": null,
+    "personalisationEnabled": false,
+    "ageBracket": "unknown",
+    "addAfterSignIn": null
+  },
+  "page": {
+    "status": 1,
+    "id": "wales",
+    "title": "Wales",
+    "sortType": "a-z"
+  },
+  "pagination": {
+    "currentPage": 1,
+    "totalEpisodes": 295,
+    "totalPages": 9,
+    "perPage": 36
+  },
+  "searchSuggest": {},
+  "translations": {
+    "categories_description": "Browse the %s category for available TV programmes to watch on BBC iPlayer.",
+    "categories_sort_label": "Sort by",
+    "categories_featured": "Featured",
+    "categories_a-z": "A-Z",
+    "categories_most-recent": "Most recent",
+    "categories_atoz_title": "%s - A to Z",
+    "categories_most-recent_title": "%s - Most recent",
+    "pagination_previous": "Previous",
+    "pagination_next": "Next",
+    "pagination_next_aria": "Next Page",
+    "pagination_previous_aria": "Previous Page",
+    "pagination_go_to_page_aria": "Page %s of %s",
+    "pagination_aria": "Pagination controls",
+    "categories_view_all": "View all",
+    "categories_view_all_aria_label": "View all programmes from the %s group",
+    "view_all_episodes": "View all episodes"
+  },
+  "msiModal": {
+    "visible": false
+  }
+}

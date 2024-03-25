@@ -1,0 +1,1922 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": true,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": true,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": false,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": false,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": false,
+        "id": "tv-guide"
+      },
+      {
+        "title": "Watchlist",
+        "href": "/iplayer/watchlist",
+        "active": false,
+        "id": "watchlist"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": false
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": null,
+    "dismissedModal": false
+  },
+  "language": "en",
+  "experiments": {},
+  "config": {
+    "host": null,
+    "staticHost": null,
+    "iblBaseUrl": null,
+    "graphBaseUrl": null,
+    "graphFallbackBaseUrl": null,
+    "iblUserBaseUrl": null,
+    "enablePersonalisation": null
+  },
+  "dials": {},
+  "entities": {
+    "elements": [
+      {
+        "id": "p0fndgl1",
+        "title": "999 Faoi Oili\u00faint",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fq4qws.jpg"
+        },
+        "synopses": {
+          "small": "Documentary following Northern Ireland's next generation of emergency workers."
+        },
+        "initial_children": [
+          {
+            "id": "p0fndljc",
+            "title": "999 Faoi Oili\u00faint",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fq4r0j.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fq4qyq.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fqnn7z.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Series 1: Episode 4",
+            "synopses": {
+              "small": "Daire is training with Lough Neagh Rescue."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "28 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001l1kw",
+        "title": "The Agreement",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fg1bl6.jpg"
+        },
+        "synopses": {
+          "small": "The inside story of negotiating the Good Friday Agreement and the subsequent referendum."
+        },
+        "initial_children": [
+          {
+            "id": "m001l1kw",
+            "title": "The Agreement",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "Prisoners, pain and the price of peace",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fg1bmw.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fg1bl6.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fg1bl6.jpg"
+            },
+            "labels": {
+              "category": "History"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "Prisoners, pain and the price of peace. The inside story of the Good Friday Agreement",
+              "small": "The inside story of negotiating the Good Friday Agreement and the subsequent referendum."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "85 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001wdpw",
+        "title": "Aonaracht",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9n8.jpg"
+        },
+        "synopses": {
+          "small": "Composer \u00dana Monaghan embarks on an ambitious suite of solo performances with electronics."
+        },
+        "initial_children": [
+          {
+            "id": "m001wdpw",
+            "title": "Aonaracht",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9wk.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9n8.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h9h9n8.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Composer \u00dana Monaghan embarks on an ambitious suite of solo performances with electronics."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "76 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b070n8j8",
+        "title": "Ar Mo Bhealach F\u00e9in",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p03h7b6y.jpg"
+        },
+        "synopses": {
+          "small": "Three-part series retracing Seosamh Mac Grianna's epic 300-mile hike through Wales in 1934"
+        },
+        "initial_children": [
+          {
+            "id": "b0721f1t",
+            "title": "Ar Mo Bhealach F\u00e9in",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p03h7b6y.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Episode 3",
+            "synopses": {
+              "small": "Se\u00e1n Mac Labhra\u00ed experiences the massive cultural event that is the Eisteddfod."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b01rxck9",
+        "title": "Art agus Toma\u00ed san Eoraip",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01l9f6k.jpg"
+        },
+        "synopses": {
+          "small": "Art and Toma\u00ed go in search of Celtic festivals across Europe."
+        },
+        "initial_children": [
+          {
+            "id": "b01s5fcx",
+            "title": "Art agus Toma\u00ed san Eoraip",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01l9f6k.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "3. An Chatal\u00f3in/Catalonia",
+            "synopses": {
+              "small": "Art Hughes and Toma\u00ed \u00d3 Conghaile visit the annual Festa Major in Vilafranca in Catalonia."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0010j1n",
+        "title": "A Stitch through Time",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0grrn.jpg"
+        },
+        "synopses": {
+          "small": "Four aspiring designers take on fashion challenges inspired by heritage and history."
+        },
+        "initial_children": [
+          {
+            "id": "p0fxsscg",
+            "title": "A Stitch through Time",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "editorial_subtitle": "4/4 The Final",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g19lbq.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0grrn.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g0m3hm.jpg"
+            },
+            "labels": {
+              "category": "Lifestyle"
+            },
+            "live": false,
+            "subtitle": "Series 2: Episode 4",
+            "synopses": {
+              "editorial": "4/4 The Final, with the last two creating garments inspired by the Rhyming Weavers",
+              "small": "The two finalists create woven garments inspired by the story of the Rhyming Weavers."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0002tv3",
+        "title": "The Band",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p071x5bj.jpg"
+        },
+        "synopses": {
+          "small": "Documentary series exploring the world of marching bands."
+        },
+        "initial_children": [
+          {
+            "id": "m001vc1y",
+            "title": "The Band",
+            "type": "episode",
+            "programme_type": "sequential",
+            "editorial_subtitle": "3/3 Tullylagan\u2019s pipers take on the world",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c82f66.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p071x5bj.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h45flr.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Series 3: Episode 3",
+            "synopses": {
+              "editorial": "3/3 Tullylagan\u2019s pipers take on the world in the World Pipe Band Championships",
+              "small": "Margaret and Andrew compete at the World Pipe Band Championships in Glasgow."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000bcb2",
+        "title": "Barra on the Bann",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07tr09m.jpg"
+        },
+        "synopses": {
+          "small": "Barra Best makes his way along the River Bann"
+        },
+        "initial_children": [
+          {
+            "id": "m000fcqk",
+            "title": "Barra on the Bann",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07tr09m.jpg"
+            },
+            "live": false,
+            "subtitle": "Shorts: Episode 8",
+            "synopses": {
+              "small": "Barra Best swaps his job as a weather presenter to make the journey along the River Bann."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "9 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000sxhy",
+        "title": "Barra on the Foyle",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p097tkm1.jpg"
+        },
+        "synopses": {
+          "small": "Barra Best makes his way along the River Foyle."
+        },
+        "initial_children": [
+          {
+            "id": "m0014d50",
+            "title": "Barra on the Foyle",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p097tkm1.jpg"
+            },
+            "labels": {
+              "category": "Nature"
+            },
+            "live": false,
+            "subtitle": "Series 1 (Shorts): Episode 9",
+            "synopses": {
+              "small": "Barra Best makes his journey across the great Foyle river network."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "9 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000wj4c",
+        "title": "Barra's Return of the Wild",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g07tww.jpg"
+        },
+        "synopses": {
+          "small": "Barra Best reveals how endangered animals across UK and Europe could be making a return."
+        },
+        "initial_children": [
+          {
+            "id": "p0fz1hzp",
+            "title": "Barra's Return of the Wild",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "editorial_subtitle": "3/3 A spectacular journey",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g07tyc.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g07tww.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g07b3z.jpg"
+            },
+            "labels": {
+              "category": "Nature"
+            },
+            "live": false,
+            "subtitle": "Series 2: Episode 3",
+            "synopses": {
+              "editorial": "3/3 A spectacular journey over the Alps and how super-sized oysters could save our oceans",
+              "small": "Mountain bikers\u2019 behaviour in the Scottish Highlands is helping the capercaillie."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b006mvxy",
+        "title": "BBC Newsline",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dg3rsq.jpg"
+        },
+        "synopses": {
+          "small": "The latest news for Northern Ireland."
+        },
+        "initial_children": [
+          {
+            "id": "m001xryf",
+            "title": "BBC Newsline",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dg3rsq.jpg"
+            },
+            "labels": {
+              "category": "News"
+            },
+            "live": false,
+            "subtitle": "Evening News: 23/03/2024",
+            "synopses": {
+              "small": "Local news from across Northern Ireland with Tara Mills and Declan Harvey."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "7 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001fsvy",
+        "title": "Beart Bunting",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dj9srz.jpg"
+        },
+        "synopses": {
+          "small": "Traditional musicians and Strabane Brass Band perform tunes from the Bunting collection."
+        },
+        "initial_children": [
+          {
+            "id": "m001fsvy",
+            "title": "Beart Bunting",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0djg7cb.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dj9srz.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dj9srz.jpg"
+            },
+            "labels": {
+              "category": "Music"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Traditional musicians and Strabane Brass Band perform tunes from the Bunting collection."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b08mj355",
+        "title": "Beart is Briathar",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04zcv5b.jpg"
+        },
+        "synopses": {
+          "small": "Eamonn Mallie interviews high-profile, Irish-speaking personalities."
+        },
+        "initial_children": [
+          {
+            "id": "b08qdryy",
+            "title": "Beart is Briathar",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p051tv33.jpg"
+            },
+            "live": false,
+            "subtitle": "Series 1: Episode 4",
+            "synopses": {
+              "small": "Eamonn Mallie talks to Barra McGrory, director of public prosecutions for Northern Ireland"
+            },
+            "versions": [
+              {
+                "kind": "iplayer-version",
+                "duration": {
+                  "text": "28 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m00172p8",
+        "title": "Belfast's Victory in Vienna: A Footballing Odyssey",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c33ys2.jpg"
+        },
+        "synopses": {
+          "small": "Holly Hamilton tells the story of Glentoran\u2019s historic triumph in the first European cup."
+        },
+        "initial_children": [
+          {
+            "id": "m00172p8",
+            "title": "Belfast's Victory in Vienna: A Footballing Odyssey",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c3b8sj.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c33ys2.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c33ys2.jpg"
+            },
+            "labels": {
+              "category": "History"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Holly Hamilton tells the story of Glentoran\u2019s historic triumph in the first European cup."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b00kj9xh",
+        "title": "Bikes!",
+        "type": "programme_large",
+        "programme_type": "unclassified",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01lypft.jpg"
+        },
+        "synopses": {
+          "small": "Coverage of Northern Ireland's motorcycle racing scene"
+        },
+        "initial_children": [
+          {
+            "id": "m001pn6w",
+            "title": "Bikes!",
+            "type": "episode",
+            "programme_type": "unclassified",
+            "editorial_subtitle": "Armoy Road Races",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fjxmtp.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fjxmq6.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fjxmq6.jpg"
+            },
+            "labels": {
+              "category": "Sport"
+            },
+            "live": false,
+            "subtitle": "2023: 5. Armoy Road Races",
+            "synopses": {
+              "editorial": "Armoy Road Races. Biking\u2019s biggest names hit the road for the Race of Legends",
+              "small": "Stephen Watson presents the third stop on the calendar, the Armoy Race of Legends."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "39 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b006p76t",
+        "title": "The Blame Game",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gryd9c.jpg"
+        },
+        "synopses": {
+          "small": "Topical comedy panel show with an irreverent view of the news"
+        },
+        "initial_children": [
+          {
+            "id": "m001tmx1",
+            "title": "The Blame Game",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "editorial_subtitle": "The best bits with Ardal O\u2019Hanlon",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grydf5.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gryd9c.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gryd9c.jpg"
+            },
+            "labels": {
+              "category": "Comedy"
+            },
+            "live": false,
+            "subtitle": "Series 21: 7. The Blame Game Best Bits",
+            "synopses": {
+              "editorial": "The best bits with Ardal O\u2019Hanlon, Angela Barnes, William Thompson and more",
+              "small": "Comedy and laughs from the recent series featuring the regular cast and guests."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001qz29",
+        "title": "Bog Amach",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gg5qp0.jpg"
+        },
+        "synopses": {
+          "small": "Series helping people who want to create a better life and find a new home."
+        },
+        "initial_children": [
+          {
+            "id": "m001s2vm",
+            "title": "Bog Amach",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gh0wgn.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gg5qp0.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gp6bxm.jpg"
+            },
+            "labels": {
+              "category": "Lifestyle"
+            },
+            "live": false,
+            "subtitle": "Series 1: Episode 6",
+            "synopses": {
+              "small": "Is a move to Connemara on the cards for the Mac Eoin family?"
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "28 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b06ktlf0",
+        "title": "Brave New World",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p04d7gp2.jpg"
+        },
+        "synopses": {
+          "small": "Documentary series"
+        },
+        "initial_children": [
+          {
+            "id": "b09c5622",
+            "title": "Brave New World",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0c82dzw.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05k5r7n.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p05k5r7n.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "subtitle": "Back Home",
+            "synopses": {
+              "small": "William Crawley explains how emigration is part of the Ulster-Scots story."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "44 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b07w92d9",
+        "title": "The Call of the Pipes",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p047tntd.jpg"
+        },
+        "synopses": {
+          "small": "An inside story of two pipe bands, Thiepval Memorial and McDonald Memorial."
+        },
+        "initial_children": [
+          {
+            "id": "b07w92d9",
+            "title": "The Call of the Pipes",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p047tntd.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "small": "An inside story of two pipe bands, Thiepval Memorial and McDonald Memorial."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001lw9z",
+        "title": "Carl Frampton: Men in Crisis",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0flg863.jpg"
+        },
+        "synopses": {
+          "small": "Carl Frampton meets young men impacted by poor mental health."
+        },
+        "initial_children": [
+          {
+            "id": "m001lw9z",
+            "title": "Carl Frampton: Men in Crisis",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "Break the silence",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0flg86m.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0flg863.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0flg863.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "Break the silence. How to find support and self-help in the fight against mental illness",
+              "small": "Carl Frampton meets young men impacted by poor mental health."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "58 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001vxy8",
+        "title": "Chinook: Zulu Delta 576",
+        "type": "programme_large",
+        "programme_type": "narrative",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h71c1k.jpg"
+        },
+        "synopses": {
+          "small": "Two-part documentary series examining the 1994 Mull of Kintyre Chinook helicopter crash."
+        },
+        "initial_children": [
+          {
+            "id": "m001vybz",
+            "title": "Chinook: Zulu Delta 576",
+            "type": "episode",
+            "programme_type": "narrative",
+            "editorial_subtitle": "2/2 Dead Men Don\u2019t Talk",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h71c5r.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h71c3h.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h6s80c.jpg"
+            },
+            "labels": {
+              "category": "History"
+            },
+            "live": false,
+            "subtitle": "Series 1: 2. Dead Men Don\u2019t Talk",
+            "synopses": {
+              "editorial": "2/2 Dead Men Don\u2019t Talk. Evidence challenges the MoD's claims that pilots were to blame",
+              "small": "The RAF blames the pilots, leading to a 14-year campaign to clear their names."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001wk5w",
+        "title": "The Chronicles of Armagh",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hbtbzq.jpg"
+        },
+        "synopses": {
+          "small": "Series following a year in the less urban parts of an ancient city."
+        },
+        "initial_children": [
+          {
+            "id": "m001wk68",
+            "title": "The Chronicles of Armagh",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "editorial_subtitle": "4/4 Winter",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hbtbrt.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hbtbq8.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hbtfwn.jpg"
+            },
+            "labels": {
+              "category": "Nature"
+            },
+            "live": false,
+            "subtitle": "Series 1: 4. Chapter Four: Winter",
+            "synopses": {
+              "editorial": "4/4 Winter. Ice swimming, Christmas traditions and a new focus to the Conroy\u2019s garden",
+              "small": "It\u2019s winter in Armagh, and Cathedral City and Orchard County become a winter wonderland."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0dwqdxy",
+        "title": "The Chronicles of Belfast",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dyn33h.jpg"
+        },
+        "synopses": {
+          "small": "Following a year in the wilder, less urban areas of Belfast."
+        },
+        "initial_children": [
+          {
+            "id": "m001tfdx",
+            "title": "The Chronicles of Belfast",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dyn351.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dyn33h.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dyn33h.jpg"
+            },
+            "labels": {
+              "category": "Nature"
+            },
+            "live": false,
+            "subtitle": "Shorts: 16. Winter",
+            "synopses": {
+              "small": "As the weather gets colder, animals at St James\u2019s community farm get extra bedding."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "4 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b0bqrzv1",
+        "title": "The Chronicles of Mourne",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06pknht.jpg"
+        },
+        "synopses": {
+          "small": "Series charing a year in Mourne, the celebrated area of outstanding natural beauty"
+        },
+        "initial_children": [
+          {
+            "id": "m001m8vj",
+            "title": "The Chronicles of Mourne",
+            "type": "episode",
+            "programme_type": "sequential",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06pknht.jpg"
+            },
+            "labels": {
+              "category": "Nature"
+            },
+            "live": false,
+            "subtitle": "Series 1 - Shorts: 7. Winter",
+            "synopses": {
+              "small": "The stonemason team lift stones from the quarries up to the Mourne Wall."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "14 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001jqjx",
+        "title": "CIOT\u00d3G",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f3qhrj.jpg"
+        },
+        "synopses": {
+          "small": "Southpaw boxer Se\u00e1n McComb sets out on his search for a professional title."
+        },
+        "initial_children": [
+          {
+            "id": "m001jqjx",
+            "title": "CIOT\u00d3G",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f3qhs1.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f3qhrj.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0f3qhrj.jpg"
+            },
+            "labels": {
+              "category": "Sport"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Southpaw boxer Se\u00e1n McComb sets out on his search for a professional title."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "58 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001vn1n",
+        "title": "Comedians in Chippies Getting Fatter",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h6dnpn.jpg"
+        },
+        "synopses": {
+          "small": "Belfast, banter and batter. "
+        },
+        "initial_children": [
+          {
+            "id": "m001vn6f",
+            "title": "Comedians in Chippies Getting Fatter",
+            "type": "episode",
+            "programme_type": "sequential",
+            "editorial_subtitle": "4/4 William Thompson",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h6dnsf.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h6dnpn.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h6d9j4.jpg"
+            },
+            "labels": {
+              "category": "Comedy"
+            },
+            "live": false,
+            "subtitle": "Series 1: 4. William Thompson",
+            "synopses": {
+              "editorial": "4/4 William Thompson and Ciar\u00e1n Bartlett get nostalgic over lunch in the heart of Belfast",
+              "small": "Comedians Ciar\u00e1n Bartlett and William Thompson go for lunch in Belfast."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "13 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001mw2b",
+        "title": "Community Life",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fsdm7p.jpg"
+        },
+        "synopses": {
+          "small": "A series dedicated to people doing good and those with a passion for the unusual."
+        },
+        "initial_children": [
+          {
+            "id": "m001r00b",
+            "title": "Community Life",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fsdmk3.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fsdm7p.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gg5tck.jpg"
+            },
+            "live": false,
+            "subtitle": "Series 1: Compass Advocacy Network",
+            "synopses": {
+              "small": "Vinny Hurrell presents a charity appeal on behalf of Compass Advocacy Network.  "
+            },
+            "versions": [
+              {
+                "kind": "editorial",
+                "duration": {
+                  "text": "4 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001sflq",
+        "title": "The Crime I Can't Forget",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grwmjp.jpg"
+        },
+        "synopses": {
+          "small": "Top detectives recall the stand-out case that shaped their career."
+        },
+        "initial_children": [
+          {
+            "id": "p0gpx97y",
+            "title": "The Crime I Can't Forget",
+            "type": "episode",
+            "programme_type": "sequential",
+            "editorial_subtitle": "6/6 The Plot to Kill the Queen",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grwmts.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grwmnf.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0grwkt2.jpg"
+            },
+            "live": false,
+            "subtitle": "Series 1: 6. The Plot to Kill the Queen",
+            "synopses": {
+              "editorial": "6/6 The Plot to Kill the Queen. Amidst an historic visit, Gardai race to stop a bomb plot",
+              "small": "During Queen Elizabeth II\u2019s historic visit to Ireland, police race to stop a bomb plot."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "49 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0012lkw",
+        "title": "Cr\u00edochdheighilt: Partition",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8v1sr.jpg"
+        },
+        "synopses": {
+          "small": "Journalist and author, Ian Malcolm, explores the impact of the Partition of Ireland."
+        },
+        "initial_children": [
+          {
+            "id": "m0012lkw",
+            "title": "Cr\u00edochdheighilt: Partition",
+            "type": "episode",
+            "programme_type": "one-off",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b9nntg.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8v1sr.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b8v1sr.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "small": "Journalist and author, Ian Malcolm, explores the impact of the Partition of Ireland."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m0012zf8",
+        "title": "Daniel O\u2019Donnell - The Boy from Donegal",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b9rbg6.jpg"
+        },
+        "synopses": {
+          "small": "Documentary marking Daniel O\u2019Donnell\u2019s 60th birthday, with access to his recent tours."
+        },
+        "initial_children": [
+          {
+            "id": "m0012zf8",
+            "title": "Daniel O\u2019Donnell - The Boy from Donegal",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "A trip down memory lane",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hfjcly.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b9rbg6.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0b9rbg6.jpg"
+            },
+            "labels": {
+              "category": "Documentary"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "A trip down memory lane with family and friends to mark the singing star\u2019s sixtieth",
+              "small": "Documentary marking Daniel O\u2019Donnell\u2019s 60th birthday, with access to his recent tours."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "59 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m000zjtq",
+        "title": "\u00c9ada\u00ed SOS",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09trqwh.jpg"
+        },
+        "synopses": {
+          "small": "Clothing-obsessed fashionistas are challenged to change their shopping habits."
+        },
+        "initial_children": [
+          {
+            "id": "p0ft7c64",
+            "title": "\u00c9ada\u00ed SOS",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fxdp1w.jpg"
+            },
+            "labels": {
+              "category": "Lifestyle"
+            },
+            "live": false,
+            "subtitle": "Series 2: 4. Emma",
+            "synopses": {
+              "small": "Air hostess Emma owns the largest collection of clothes ever seen by the team."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001m2yl",
+        "title": "Elections 2023: Northern Ireland",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmndnb.jpg"
+        },
+        "synopses": {
+          "small": "Coverage and analysis of local elections in Northern Ireland."
+        },
+        "initial_children": [
+          {
+            "id": "m001m9r7",
+            "title": "Elections 2023: Northern Ireland",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmndnb.jpg"
+            },
+            "labels": {
+              "category": "News"
+            },
+            "live": false,
+            "subtitle": "Part 3",
+            "synopses": {
+              "small": "Mark Carruthers, Tara Mills and Mark Simpson with the results of the 2023 local election. "
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "179 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m001tyv8",
+        "title": "Face Down: The Killing of Thomas Niedermayer",
+        "type": "programme_large",
+        "programme_type": "one-off",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzvjjz.jpg"
+        },
+        "synopses": {
+          "small": "Granddaughters of a businessman abducted 50 years ago uncover the truth about his killing."
+        },
+        "initial_children": [
+          {
+            "id": "m001tyv8",
+            "title": "Face Down: The Killing of Thomas Niedermayer",
+            "type": "episode",
+            "programme_type": "one-off",
+            "editorial_subtitle": "Tracing trauma",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzvjn2.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzvjjz.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gzvjjz.jpg"
+            },
+            "labels": {
+              "category": "History"
+            },
+            "live": false,
+            "synopses": {
+              "editorial": "Tracing trauma. How a man murdered in the Troubles devastated a family for\u00a0generations",
+              "small": "Granddaughters of a businessman abducted 50 years ago uncover the truth about his killing."
+            },
+            "versions": [
+              {
+                "kind": "editorial",
+                "duration": {
+                  "text": "82 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b0bmfqwb",
+        "title": "Family Footsteps",
+        "type": "programme_large",
+        "programme_type": "sequential",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p06m0nll.jpg"
+        },
+        "synopses": {
+          "small": "A family learn what life was like for their ancestors at the turn of the 19th century"
+        },
+        "initial_children": [
+          {
+            "id": "p0fhzvcc",
+            "title": "Family Footsteps",
+            "type": "episode",
+            "programme_type": "sequential",
+            "editorial_subtitle": "3/3 A Victorian maritime mystery",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmrk9t.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmrk4l.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmxryg.jpg"
+            },
+            "labels": {
+              "category": "History"
+            },
+            "live": false,
+            "subtitle": "Series 3: Episode 3",
+            "synopses": {
+              "editorial": "3/3 A Victorian maritime mystery reveals an ancestor whose story is the stuff of legend",
+              "small": "The family\u2019s famous ancestor is finally revealed but the mystery around his death remains."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p0fkbm41",
+        "title": "Feed Yourself Fitter with Stephen Nolan",
+        "type": "programme_large",
+        "programme_type": "self-contained",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmz2jj.jpg"
+        },
+        "synopses": {
+          "small": "Stephen Nolan learns the secret of cooking healthy, low-calorie, yet delicious food."
+        },
+        "initial_children": [
+          {
+            "id": "p0fl56n8",
+            "title": "Feed Yourself Fitter with Stephen Nolan",
+            "type": "episode",
+            "programme_type": "self-contained",
+            "editorial_subtitle": "6/6 Mindless eating",
+            "images": {
+              "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmz2xn.jpg",
+              "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmz2vb.jpg",
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0fmp9f3.jpg"
+            },
+            "labels": {
+              "category": "Food"
+            },
+            "live": false,
+            "subtitle": "Series 1: Episode 6",
+            "synopses": {
+              "editorial": "6/6 Mindless eating. Chef Paula McIntyre helps a nurse turn her back on binge snacking",
+              "small": "Chef Paula McIntyre wants to help Jennifer tackle her binge snacking."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b03ygf6x",
+        "title": "Five Fables",
+        "type": "programme_large",
+        "programme_type": "narrative",
+        "images": {
+          "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01tl8tw.jpg"
+        },
+        "synopses": {
+          "small": "Aesop's classic fables in a modern translation, narrated by Billy Connolly."
+        },
+        "initial_children": [
+          {
+            "id": "b040r9g9",
+            "title": "Five Fables",
+            "type": "episode",
+            "programme_type": "narrative",
+            "images": {
+              "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01wjyph.jpg"
+            },
+            "live": false,
+            "subtitle": "5. The Fox, the Wolf and the Farmer",
+            "synopses": {
+              "small": "In a fit of bad temper, a farmer shouts at his misfiring oxen."
+            },
+            "versions": [
+              {
+                "kind": "original",
+                "duration": {
+                  "text": "29 mins"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "category": {
+      "id": "northern-ireland"
+    },
+    "pageName": "category"
+  },
+  "header": {
+    "title": "Northern Ireland"
+  },
+  "id": {
+    "status": "red",
+    "cdnFailover": false,
+    "ctaMarkup": null,
+    "signedIn": false,
+    "auth": null,
+    "personalisationEnabled": false,
+    "ageBracket": "unknown",
+    "addAfterSignIn": null
+  },
+  "page": {
+    "status": 1,
+    "id": "northern-ireland",
+    "title": "Northern Ireland",
+    "sortType": "a-z"
+  },
+  "pagination": {
+    "currentPage": 1,
+    "totalEpisodes": 105,
+    "totalPages": 3,
+    "perPage": 36
+  },
+  "searchSuggest": {},
+  "translations": {
+    "categories_description": "Browse the %s category for available TV programmes to watch on BBC iPlayer.",
+    "categories_sort_label": "Sort by",
+    "categories_featured": "Featured",
+    "categories_a-z": "A-Z",
+    "categories_most-recent": "Most recent",
+    "categories_atoz_title": "%s - A to Z",
+    "categories_most-recent_title": "%s - Most recent",
+    "pagination_previous": "Previous",
+    "pagination_next": "Next",
+    "pagination_next_aria": "Next Page",
+    "pagination_previous_aria": "Previous Page",
+    "pagination_go_to_page_aria": "Page %s of %s",
+    "pagination_aria": "Pagination controls",
+    "categories_view_all": "View all",
+    "categories_view_all_aria_label": "View all programmes from the %s group",
+    "view_all_episodes": "View all episodes"
+  },
+  "msiModal": {
+    "visible": false
+  }
+}

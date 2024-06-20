@@ -282,7 +282,7 @@ class RemoveWatching(TestCase):
 class TestAdded(TestCase):
         """User's own favourites"""
         def test_get_added_signed_in(self):
-            resp = requests.get('https://www.bbc.co.uk/iplayer/added',
+            resp = requests.get('https://www.bbc.co.uk/iplayer/watchlist',
                                 headers=ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
                                 allow_redirects=False)
@@ -290,7 +290,7 @@ class TestAdded(TestCase):
             self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
             page = resp.text
             data = ipwww_video.ScrapeJSON(page)
-            # save_json(data, 'html/added.json')
+            # save_json(data, 'html/watchlist.json')
             self.assertTrue(data['id']['signedIn'])
             items_list = data['items']['elements']
             for item in items_list:
@@ -304,7 +304,8 @@ class TestAdded(TestCase):
             resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added',
                                 headers= ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
-                                allow_redirects=False)
+                                # allow_redirects=False
+                                )
             self.assertEqual(200, resp.status_code)
             data = resp.json()
             has_keys(data, 'version', 'schema', 'added', obj_name='iblAdded')

@@ -13,9 +13,10 @@ setUpModule = fixtures.setup_web_test()
 
 class Watching(TestCase):
     def test_get_watching_data(self):
-        page = ipwww_common.OpenURL(url = "https://www.bbc.co.uk/iplayer/watching")
+        page = ipwww_common.OpenURL(url = "https://www.bbc.co.uk/iplayer/continue-watching")
         data = ipwww_video.ScrapeJSON(page)
         # save_json(data, 'html/watching.json')
+        pass
 
     def test_watching_plain(self):
         r = ipwww_video.ListWatching()

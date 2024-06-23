@@ -112,7 +112,7 @@ class TestListWatching(TestCase):
             self.assertTrue(is_not_empty(call_kw['description'], str))
             self.assertTrue(is_not_empty(call_kw['context_mnu'], list))
             if is_not_empty(call_kw.get('resume_time'), str):
-                self.assertGreater(float(call_kw['resume_time']), 0)
+                self.assertGreaterEqual(float(call_kw['resume_time']), 0)
                 self.assertTrue(is_not_empty(call_kw['total_time'], str))
                 self.assertGreater(int(call_kw['total_time']), float(call_kw['resume_time']))
 

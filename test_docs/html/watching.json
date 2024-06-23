@@ -457,14 +457,13 @@
     "viewAllEpisodesAriaLabel": "View all episodes for %s."
   },
   "items": {
-    "pageType": "watching",
+    "pageType": "continueWatching",
     "elements": [
       {
         "status": "current",
         "programme": {
           "id": "m001vkhl"
         },
-        "progress": 49.161,
         "remaining": 880.04,
         "episode": {
           "id": "m001vkhp",

@@ -2,17 +2,68 @@ from support import fixtures
 fixtures.global_setup()
 
 from unittest import TestCase
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, call
 
 import xbmcplugin
 
 from resources.lib import ipwww_video
 
-from support.testutils import open_json
+from support.testutils import open_json, open_doc
 from support.object_checks import is_li_compatible_dict, has_keys, is_url, is_not_empty
 
 
 setUp = fixtures.setup_local_tests()
+
+
+class TestGetAtoZPage_ProgressDialog(TestCase):
+    def setUp(self):
+        self.mocked_dialog = MagicMock()
+        self.mocked_close = self.mocked_dialog.close = MagicMock()
+
+    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/a_to_z_page_D.html'))
+    def test_close_progress_dialog(self):
+        with patch('xbmcgui.DialogProgressBG.close') as p_close:
+            ipwww_video.GetAtoZPage('d')
+        p_close.assert_called_once()
+
+    @patch('resources.lib.ipwww_common.OpenRequest', side_effect=SystemExit)
+    def test_close_progress_dialog_on_network_error(self, _):
+        with patch('xbmcgui.DialogProgressBG.close') as p_close:
+            self.assertRaises(SystemExit, ipwww_video.GetAtoZPage, 'd')
+        p_close.assert_called_once()
+
+    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/a_to_z_page_D.html'))
+    @patch('resources.lib.ipwww_video.ParseJSON', side_effect=TypeError)
+    def test_close_progress_dialog_on_parse_error(self, _):
+        with patch('xbmcgui.DialogProgressBG.close') as p_close:
+            self.assertRaises(TypeError, ipwww_video.GetAtoZPage, 'd')
+        p_close.assert_called_once()
+
+
+@patch.object(ipwww_video.ADDON, 'getSetting', new=lambda x: 1 if x == 'paginate_episodes' else None)
+class TestScrapeAtoZEpisodes_ProgressDialog(TestCase):
+    def setUp(self):
+        self.mocked_dialog = MagicMock()
+        self.mocked_close = self.mocked_dialog.close = MagicMock()
+
+    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/bbc_two_az.html'))
+    def test_close_progress_dialog(self,):
+        with patch('xbmcgui.DialogProgressBG.close') as p_close:
+            ipwww_video.ScrapeAtoZEpisodes('bbctwo')
+        p_close.assert_called_once()
+
+    @patch('resources.lib.ipwww_common.OpenRequest', side_effect=SystemExit)
+    def test_close_progress_dialog_on_network_error(self, _):
+        with patch('xbmcgui.DialogProgressBG.close') as p_close:
+            self.assertRaises(SystemExit, ipwww_video.ScrapeAtoZEpisodes, 'bbctwo')
+        p_close.assert_called_once()
+
+    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/bbc_two_az.html'))
+    @patch('resources.lib.ipwww_video.ParseJSON', side_effect=TypeError)
+    def test_close_progress_dialog_on_parse_error(self, _):
+        with patch('xbmcgui.DialogProgressBG.close')as p_close:
+            self.assertRaises(TypeError, ipwww_video.ScrapeAtoZEpisodes, 'bbctwo')
+        p_close.assert_called_once()
 
 
 class SetSortMethod(TestCase):
@@ -95,7 +146,6 @@ class TestParseEpisode(TestCase):
             # A mode is to be added by the caller of ParseEpisode, add a fake one to be AddMenuEntry(...) compatible
             result['mode'] = 0
             is_li_compatible_dict(self, result)
-
 
 
 class TestListWatching(TestCase):

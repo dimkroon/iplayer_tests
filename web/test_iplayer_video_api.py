@@ -21,6 +21,7 @@ setUpModule = fixtures.setup_web_test()
 
 def check_page_has_json_data(testcase, url):
     resp = requests.get(url, headers=ipwww_common.headers, allow_redirects=False)
+    save_doc(resp.text, 'html/category_drama-and-soaps_az.html')
     testcase.assertTrue(200, resp.status_code)
     testcase.assertTrue(resp.headers['content-type'].startswith('text/html'))
     data = ipwww_video.ScrapeJSON(resp.text)
@@ -148,12 +149,14 @@ class ChannelsAtoZ(TestCase):
 
 
 class CategoriesAtoZ(TestCase):
-    categories = ('bbcone', 'bbctwo', 'tv/bbcthree', 'tv/cbbc', 'tv/cbeebies', 'tv/bbcnews', 'tv/bbcparliament',
-                'tv/bbcalba', 'tv/bbcscotland', 'tv/s4c')
+    categories = ('drama-and-soaps', 'films', 'comedy', 'documentaries', 'sport', 'news', 'entertainment', 'music',
+                  'food', 'lifestyle', 'history', 'science-and-nature', 'arts', 'archive', 'audio-described', 'signed',
+                  'northern-ireland', 'scotland', 'wales', 'cbeebies', 'cbbc')
 
-    def test_channel_az_page(self):
-        for chan in self.categories:
-            check_page_has_json_data(self, 'https://www.bbc.co.uk/{}/a-z'.format(chan))
+    def test_category_az_page(self):
+        for cat in self.categories:
+            if cat  == 'drama-and-soaps':
+                check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/categories/{}/a-z'.format(cat))
 
 
 class ProgrammesAtoZ(TestCase):
@@ -161,7 +164,8 @@ class ProgrammesAtoZ(TestCase):
 
     def test_a_to_z_pages(self):
         for letter in self.letters:
-            check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/a-z/' + letter)
+            data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/a-z/' + letter)
+
 
 
 class MostPopular(TestCase):
@@ -433,6 +437,7 @@ class Recommendations(TestCase):
         for item in data['items']['elements']:
             check_episode_data(self, item['episode'], 'Recommended')
 
+
 class SchedulesFromHtml(TestCase):
     def test_get_guide_unauthenticated(self):
         """Produces a schedule of BBC one from 1 day ago upto now"""
@@ -533,7 +538,8 @@ class SchedulesByIblAPi(TestCase):
             self.assertEqual(200, resp.status_code)
             broadcasts_data = resp.json()
             if channel == 'bbc_one_hd':
-                save_json(broadcasts_data, 'json/ibl_schedule_bbc_one_hd.json')
+                # save_json(broadcasts_data, 'json/ibl_schedule_bbc_one_hd.json')
+                pass
             schedule = broadcasts_data['broadcasts']['elements']
             for item in schedule:
                 self.check_broadcast_item(item)

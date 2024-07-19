@@ -31,6 +31,11 @@ class GenericListings(unittest.TestCase):
     def test_list_live(self, _):
         ipwww_video.ListLive()
 
+    def test_list_available_categories(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_add_item:
+            ipwww_video.ListCategories()
+        self.assertGreater(p_add_item.call_count, 5)
+
     def test_list_most_popular(self, patched_parse):
         ipwww_video.ListMostPopular()
         patched_parse.assert_called_once()
@@ -95,3 +100,10 @@ class TvSchedule(unittest.TestCase):
         schedules = ipwww_video.GetSchedules(self.channel_list)
         # bbc_two_england occurs both as BBC Two and BBC TWo England
         self.assertEqual(len(self.channel_list) - 1, len(schedules))
+
+
+class ScrapeAtoZPage(unittest.TestCase):
+    @patch('resources.lib.ipwww_video.AddMenuEntry')
+    def test_scrape_page_d(self, p_add):
+        result = ipwww_video.GetAtoZPage('d')
+        self.assertGreater(p_add.call_count, 10)

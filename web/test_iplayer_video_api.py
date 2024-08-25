@@ -161,7 +161,8 @@ class ProgrammesAtoZ(TestCase):
 
     def test_a_to_z_pages(self):
         for letter in self.letters:
-            check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/a-z/' + letter)
+            data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/a-z/' + letter)
+            pass
 
 
 class MostPopular(TestCase):

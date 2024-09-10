@@ -21,7 +21,7 @@ setUpModule = fixtures.setup_web_test()
 
 def check_page_has_json_data(testcase, url):
     resp = requests.get(url, headers=ipwww_common.headers, allow_redirects=False)
-    save_doc(resp.text, 'html/category_drama-and-soaps_az.html')
+    # save_doc(resp.text, 'html/category_drama-and-soaps_az.html')
     testcase.assertTrue(200, resp.status_code)
     testcase.assertTrue(resp.headers['content-type'].startswith('text/html'))
     data = ipwww_video.ScrapeJSON(resp.text)
@@ -165,7 +165,7 @@ class ProgrammesAtoZ(TestCase):
     def test_a_to_z_pages(self):
         for letter in self.letters:
             data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/a-z/' + letter)
-
+            pass
 
 
 class MostPopular(TestCase):

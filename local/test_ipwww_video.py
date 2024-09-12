@@ -167,12 +167,12 @@ class TestListWatching(TestCase):
                 self.assertGreater(int(call_kw['total_time']), float(call_kw['resume_time']))
 
 
-@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/added.json'))
+@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watchlist.json'))
 class TestListFavourites(TestCase):
     def test_list_favourites_authenticated(self, _):
         with patch('resources.lib.ipwww_video.AddMenuEntry') as p_AddMenuEntry:
             ipwww_video.ListFavourites()
-        self.assertEqual(16, p_AddMenuEntry.call_count)
+        self.assertEqual(10, p_AddMenuEntry.call_count)
 
 
 class TestListRecommendations(TestCase):

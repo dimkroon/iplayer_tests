@@ -181,3 +181,36 @@ class TestListRecommendations(TestCase):
         with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
             ipwww_video.ListRecommendations()
         self.assertEqual(20, p_AddItem.call_count)
+
+
+class TestScrapeAvailableStream(TestCase):
+    """Play am item from a listing
+
+    """
+    @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/snooker_uk_sportstream_item.html'))
+    def test_scrape_webcast_item(self):
+        strm_ids = ipwww_video.ScrapeAvailableStreams('some url')
+        self.assertEqual(strm_ids['stream_id_st'], 'l0056v5z')
+
+    @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/snooker_uk_live_item.html'))
+    def test_scrape_bbc_two_item(self):
+        strm_ids = ipwww_video.ScrapeAvailableStreams('some url')
+        self.assertEqual(strm_ids['stream_id_st'], 'bbc_two_hd')
+
+
+    @patch('resources.lib.ipwww_video.OpenURL', side_effect=(open_doc('html/snooker_uk_live_item.html')(),
+                                                             open_doc('json/media_selector_snooker_uk_live.json')()))
+    def test_play_bbc_two_item(self, _):
+        with patch('resources.lib.ipwww_video.PlayStream') as p_play_stream:
+            ipwww_video.AddAvailableStreamItem('bbc two', 'some url', '', '')
+        p_play_stream.assert_called_once()
+        name, url, iconimage, description, subtitles_url, *other_args = p_play_stream.call_args.args
+        self.assertEqual('Snooker: UK Championship', name)     # Check that we have in fact parsed the item
+        self.assertTrue(url.endswith('.mpd'))
+        self.assertEqual('', subtitles_url)                    # Live subtitles must have been disregarded.
+
+
+    @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/snooker_uk_rb_item.html'))
+    def test_scrape_red_button_item(self):
+        strm_ids = ipwww_video.ScrapeAvailableStreams('some url')
+        self.assertEqual(strm_ids['stream_id_st'], 'red_button_one')

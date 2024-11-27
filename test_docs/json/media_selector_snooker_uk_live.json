@@ -1,0 +1,202 @@
+{
+  "media": [
+    {
+      "service": "[deprecated]",
+      "connection": [
+        {
+          "priority": "10",
+          "dpw": "42",
+          "protocol": "http",
+          "supplier": "akamai_live_uk",
+          "href": "http://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/t=3840/s=caption1/b=64000/$Number$.m4s",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "10",
+          "dpw": "42",
+          "protocol": "https",
+          "supplier": "akamai_live_uk",
+          "href": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/t=3840/s=caption1/b=64000/$Number$.m4s",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "20",
+          "dpw": "32",
+          "protocol": "http",
+          "supplier": "cloudfront_live_uk",
+          "href": "http://vs-cmaf-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/t=3840/s=caption1/b=64000/$Number$.m4s",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "20",
+          "dpw": "32",
+          "protocol": "https",
+          "supplier": "cloudfront_live_uk",
+          "href": "https://vs-cmaf-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/t=3840/s=caption1/b=64000/$Number$.m4s",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "30",
+          "dpw": "16",
+          "protocol": "http",
+          "supplier": "fastly_live_uk",
+          "href": "http://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/t=3840/s=caption1/b=64000/$Number$.m4s",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "30",
+          "dpw": "16",
+          "protocol": "https",
+          "supplier": "fastly_live_uk",
+          "href": "https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/t=3840/s=caption1/b=64000/$Number$.m4s",
+          "transferFormat": "dash"
+        }
+      ],
+      "kind": "captions",
+      "type": "application/ttml+xml;codecs=etd2|im1t",
+      "encoding": "",
+      "expires": "2099-01-01T00:00:00Z"
+    },
+    {
+      "width": "1280",
+      "bitrate": "3000",
+      "height": "720",
+      "service": "[deprecated]",
+      "connection": [
+        {
+          "priority": "10",
+          "dpw": "42",
+          "protocol": "https",
+          "supplier": "akamai_live_uk",
+          "href": "https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "10",
+          "dpw": "42",
+          "protocol": "http",
+          "supplier": "akamai_live_uk",
+          "href": "http://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "20",
+          "dpw": "32",
+          "protocol": "https",
+          "supplier": "cloudfront_live_uk",
+          "href": "https://vs-hls-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "20",
+          "dpw": "32",
+          "protocol": "http",
+          "supplier": "cloudfront_live_uk",
+          "href": "http://vs-hls-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "30",
+          "dpw": "16",
+          "protocol": "https",
+          "supplier": "fastly_live_uk",
+          "href": "https://vs-hls-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "30",
+          "dpw": "16",
+          "protocol": "http",
+          "supplier": "fastly_live_uk",
+          "href": "http://vs-hls-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "40",
+          "dpw": "10",
+          "protocol": "https",
+          "supplier": "bbc_bidi_live_uk",
+          "href": "https://matchmaker.live.bidi.net.uk/vs-hls-pushb-uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "40",
+          "dpw": "10",
+          "protocol": "http",
+          "supplier": "bbc_bidi_live_uk",
+          "href": "http://matchmaker.live.bidi.net.uk/vs-hls-pushb-uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.m3u8",
+          "transferFormat": "hls"
+        },
+        {
+          "priority": "10",
+          "dpw": "42",
+          "protocol": "http",
+          "supplier": "akamai_live_uk",
+          "href": "http://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2_http.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "10",
+          "dpw": "42",
+          "protocol": "https",
+          "supplier": "akamai_live_uk",
+          "href": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "20",
+          "dpw": "32",
+          "protocol": "http",
+          "supplier": "cloudfront_live_uk",
+          "href": "http://vs-cmaf-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2_http.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "20",
+          "dpw": "32",
+          "protocol": "https",
+          "supplier": "cloudfront_live_uk",
+          "href": "https://vs-cmaf-pushb-uk.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "30",
+          "dpw": "16",
+          "protocol": "http",
+          "supplier": "fastly_live_uk",
+          "href": "http://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2_http.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "30",
+          "dpw": "16",
+          "protocol": "https",
+          "supplier": "fastly_live_uk",
+          "href": "https://vs-cmaf-pushb-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "40",
+          "dpw": "10",
+          "protocol": "http",
+          "supplier": "bbc_bidi_live_uk",
+          "href": "http://matchmaker.live.bidi.net.uk/vs-cmaf-pushb-uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2_http.mpd",
+          "transferFormat": "dash"
+        },
+        {
+          "priority": "40",
+          "dpw": "10",
+          "protocol": "https",
+          "supplier": "bbc_bidi_live_uk",
+          "href": "https://matchmaker.live.bidi.net.uk/vs-cmaf-pushb-uk/x=4/i=urn:bbc:pips:service:bbc_four_hd/pc_hd_abr_v2.mpd",
+          "transferFormat": "dash"
+        }
+      ],
+      "kind": "video",
+      "type": "video/mp4",
+      "encoding": "h264",
+      "expires": "2099-01-01T00:00:00Z"
+    }
+  ],
+  "disclaimer": "This code and data form part of the BBC iPlayer content protection system. Tampering with, removal of, misuse of, or unauthorised use of this code or data constitutes circumvention of the BBC's content protection measures and may result in legal action. BBC (C) 2024."
+}

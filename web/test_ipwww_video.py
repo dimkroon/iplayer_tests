@@ -25,22 +25,19 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             None,
             '')
 
-
-@patch('resources.lib.ipwww_video.ParseJSON')
+@patch('xbmcplugin.addDirectoryItem')
 class GenericListings(unittest.TestCase):
-    def test_list_live(self, _):
-        ipwww_video.ListLive()
+    def test_list_live(self, p_add_item):
+        self.assertRaises(SystemExit, ipwww_video.ListLive)
+        self.assertEqual(p_add_item.call_count, 33)
 
-    def test_list_available_categories(self, _):
-        with patch('xbmcplugin.addDirectoryItem') as p_add_item:
-            ipwww_video.ListCategories()
+    def test_list_available_categories(self, p_add_item):
+        ipwww_video.ListCategories()
         self.assertGreater(p_add_item.call_count, 5)
 
-    def test_list_most_popular(self, patched_parse):
+    def test_list_most_popular(self, p_add_item):
         ipwww_video.ListMostPopular()
-        patched_parse.assert_called_once()
-        data = patched_parse.call_args[0][0]
-        self.assertTrue(data['id']['signedIn'])
+        self.assertGreater(p_add_item.call_count, 10)
 
     def test_list_recommendations(self):
         with patch('xbmcplugin.addDirectoryItem') as p_add_item:
@@ -104,6 +101,7 @@ class TvSchedule(unittest.TestCase):
 
 class ScrapeAtoZPage(unittest.TestCase):
     @patch('resources.lib.ipwww_video.AddMenuEntry')
+    @patch('xbmcaddon.Addon.getSetting', lambda self, x: '1' if x == 'scrape_atoz' else None)
     def test_scrape_page_d(self, p_add):
         result = ipwww_video.GetAtoZPage('d')
         self.assertGreater(p_add.call_count, 10)

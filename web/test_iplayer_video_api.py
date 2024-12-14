@@ -192,7 +192,7 @@ class Search(TestCase):
 
 class Watching(TestCase):
     def test_get_watching_data(self):
-        resp = requests.get(url = "https://www.bbc.co.uk/iplayer/watching",
+        resp = requests.get(url = "https://www.bbc.co.uk/iplayer/continue-watching",
                             headers=ipwww_common.headers,
                             cookies=ipwww_common.cookie_jar,
                             allow_redirects=False)
@@ -224,7 +224,7 @@ class Watching(TestCase):
 
     def test_get_watching_without_signed_in(self):
         """This just return a normal HTML page with a button to sign in or register."""
-        page_url = "https://www.bbc.co.uk/iplayer/watching"
+        page_url = "https://www.bbc.co.uk/iplayer/continue-watching"
         resp = requests.get(page_url, headers=ipwww_common.headers, allow_redirects=False)
         self.assertEqual(200, resp.status_code)
         self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
@@ -240,7 +240,7 @@ class Watching(TestCase):
             session.cookies = jar = cookiejar.LWPCookieJar()
             jar.load(doc_path('cookies/expired.cookies'), ignore_discard=True)
 
-            resp = session.get(url="https://www.bbc.co.uk/iplayer/watching", allow_redirects=False)
+            resp = session.get(url="https://www.bbc.co.uk/iplayer/continue-watching", allow_redirects=False)
             self.assertEqual(302, resp.status_code)
             new_url = resp.headers['location']
             self.assertTrue(new_url.startswith('https://session.bbc.co.uk/session?'))
@@ -251,7 +251,7 @@ class Watching(TestCase):
             self.assertTrue('ckns_atkn' in resp.cookies)
             self.assertTrue('ckns_idtkn' in resp.cookies)
             new_url = resp.headers['location']
-            self.assertTrue(new_url.startswith('https://www.bbc.co.uk/iplayer/watching'))
+            self.assertTrue(new_url.startswith('https://www.bbc.co.uk/iplayer/continue-watching'))
 
             resp = session.get(new_url, allow_redirects=False)
             self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
@@ -308,7 +308,7 @@ class TestAdded(TestCase):
             resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added',
                                 headers= ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
-                                # allow_redirects=False
+                                allow_redirects=False
                                 )
             self.assertEqual(200, resp.status_code)
             data = resp.json()

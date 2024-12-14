@@ -15,6 +15,7 @@ from support.object_checks import is_li_compatible_dict, has_keys, is_url, is_no
 setUp = fixtures.setup_local_tests()
 
 
+@patch('resources.lib.ipwww_video.ADDON.getSetting', lambda x: 0 if x == 'scrape_atoz' else None)
 class TestGetAtoZPage_ProgressDialog(TestCase):
     def setUp(self):
         self.mocked_dialog = MagicMock()

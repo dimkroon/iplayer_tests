@@ -192,7 +192,7 @@ class Search(TestCase):
 
 class Watching(TestCase):
     def test_get_watching_data(self):
-        resp = requests.get(url = "https://www.bbc.co.uk/iplayer/watching",
+        resp = requests.get(url = "https://www.bbc.co.uk/iplayer/continue-watching",
                             headers=ipwww_common.headers,
                             cookies=ipwww_common.cookie_jar,
                             allow_redirects=False)

@@ -82,9 +82,12 @@ class SetSortMethod(TestCase):
 class TestSelectSynopsis(TestCase):
     def setUp(self):
         self.synopses = {'editorial': 'editorial plot',
-                        'large': 'large plot',
-                        'medium': 'medium plot',
-                        'small': 'small plot'}
+                         'large': 'large plot',
+                         'medium': 'medium plot',
+                         'small': 'small plot',
+                         'programme_small': 'programme small plot',
+                         'programmeSmall': 'programmeSmall plot',
+                         'live': 'live plot'}
 
     def test_get_synopsis_presence(self):
         syn = self.synopses
@@ -96,7 +99,17 @@ class TestSelectSynopsis(TestCase):
         del syn['large']
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         del syn['small']
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
+        del syn['programme_small']
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
+        del syn['programmeSmall']
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn))
+        del syn['live']
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+
+    def test_some_types_absent(self):
+        syn = {'editorial': None, 'small': 'small plot'}
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
 
     def test_get_synopsis_empty(self):
         syn = self.synopses
@@ -108,7 +121,12 @@ class TestSelectSynopsis(TestCase):
         syn['large'] = ''
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         syn['small'] = ''
-        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
+        syn['programme_small'] = ''
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
+        syn['programmeSmall'] = ''
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn))
+        syn['live'] = ''
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
     def test_get_synopsis_none(self):
@@ -121,12 +139,67 @@ class TestSelectSynopsis(TestCase):
         syn['large'] = None
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         syn['small'] = None
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
+        syn['programme_small'] = None
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
+        syn['programmeSmall'] = None
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn))
+        syn['live'] = None
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+
+    def test_synopsis_all_fields_none(self):
+        syn = {k: None for k in self.synopses.keys()}
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
     def test_empy_dicts(self):
         self.assertEqual('', ipwww_video.SelectSynopsis(None))
         self.assertEqual('', ipwww_video.SelectSynopsis({}))
-        self.assertRaises(AttributeError, ipwww_video.SelectSynopsis, '')
+
+    def test_synopsis_as_string(self):
+        self.assertEqual('description', ipwww_video.SelectSynopsis('description'))
+
+
+class TestSelectImage(TestCase):
+    def setUp(self):
+        self.images = {'standard': 'standard image',
+                       'default': 'default image',
+                       'promotional': 'promotional image',
+                       'promotional_with_logo': 'promotional_with_logo image',
+                       'portrait': 'portrait image'}
+
+    def test_get_images_presence(self):
+        images = self.images
+        while images:
+            key, value = list(images.items())[0]
+            self.assertEqual(value, ipwww_video.SelectImage(images))
+            images.pop(key)
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(images))
+
+    def test_some_image_types_absent(self):
+        images = {'standard': None,
+                  'promotional_with_logo': 'promotional_with_logo image',}
+        self.assertEqual('promotional_with_logo image', ipwww_video.SelectImage(images))
+
+    def test_get_images_empty(self):
+        images = self.images
+        for i in range(len(images)):
+            key, value = list(images.items())[i]
+            self.assertEqual(value, ipwww_video.SelectImage(images))
+            images[key] = ''
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(images))
+
+    def test_get_images_none(self):
+        images = self.images
+        for i in range(len(images)):
+            key, value = list(images.items())[i]
+            self.assertEqual(value, ipwww_video.SelectImage(images))
+            images[key] = None
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(images))
+
+    def test_empy_dicts(self):
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(None))
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage({}))
+        self.assertRaises(AttributeError, ipwww_video.SelectImage, 'DefaultFolder.png')
 
 
 class TestParseProgramme(TestCase):

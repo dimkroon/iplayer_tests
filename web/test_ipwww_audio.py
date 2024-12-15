@@ -17,7 +17,7 @@ setUp = fixtures.setup_web_test()
 @patch('resources.lib.ipwww_common.AddMenuEntry')
 class GenericListings(unittest.TestCase):
     def test_list_listen_list(self, patched_add):
-        ipwww_radio.ListListenList(True)
+        tuple(ipwww_radio.ListListenList(True))
         patched_add.assert_called()
 
 

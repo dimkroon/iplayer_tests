@@ -35,17 +35,17 @@ def check_synopses(testcase, synopses):
 
 
 def check_images(testcase, images):
-    testcase.assertIsInstance(images, dict)
-    img_types = ('portrait', 'standard', 'promotional', 'promotional_with_logo')
+    testcase.assertTrue(is_not_empty(images, dict))
+    img_types = ('portrait', 'standard', 'default', 'live', 'promotional', 'promotional_with_logo',
+                 'promotionalWithLogo', 'character', 'portrait')
     for key in images.keys():
         # Just to flag if an unknown image type comes up.
         assert(key=='type' or key in img_types)
-    testcase.assertTrue(any(key in images.keys() for key in img_types))
     for key, value in images.items():
         if key == 'type':
             testcase.assertEqual(value, 'image')
         else:
-            testcase.assertTrue(is_url(value, ('.jpg', '.png')))
+            testcase.assertTrue(is_url(value, ('.jpg', '.png')) or value is None)
 
 
 def check_programme_data(testcase, programme, parent_name):
@@ -87,10 +87,12 @@ def check_large_version_data(testcase, version, parent_name=''):
     testcase.assertTrue(is_not_empty(version['availability']['remaining']['text'], str))
     testcase.assertTrue(is_iso_utc_time(version['first_broadcast_date_time']))
 
+
 def check_version_data(testcase, version, parent_name=''):
     obj_name = '.'.join((parent_name, 'version'))
     has_keys(version, 'kind', 'duration', obj_name=obj_name)
-    misses_keys(version, 'availability', 'first_broadcast_date_time', 'hd', 'uhd', 'type', 'events', 'download',
+    expect_keys(version, 'availability', obj_name=obj_name)
+    misses_keys(version, 'first_broadcast_date_time', 'hd', 'uhd', 'type', 'events', 'download',
                 'first_broadcast', obj_name=obj_name)
 
     testcase.assertTrue(version['kind'] in ('original', 'audio-described', 'signed', 'technical-replacement', 'editorial'))
@@ -98,6 +100,8 @@ def check_version_data(testcase, version, parent_name=''):
     testcase.assertTrue(is_not_empty(version['duration']['text'], str))
     # Assert iso duration is absent.
     misses_keys(version['duration'], 'value', obj_name=obj_name + '.duration')
+    if 'availability' in version.keys():
+        testcase.assertTrue(is_not_empty(version['availability']['remaining'], str))
 
 
 def check_episode_data(testcase, episode, parent_name=''):
@@ -110,7 +114,6 @@ def check_episode_data(testcase, episode, parent_name=''):
                 'has_credits', 'status', 'requires_sign_in', 'labels', 'signed')
     expect_keys(episode, 'versions', 'synopses', 'subtitle', obj_name=obj_name)
 
-    testcase.assertIsInstance(episode['images'], dict)
     check_images(testcase, episode['images'])
     testcase.assertTrue(is_not_empty(episode['tleo_id'], str))  # not always the same is 'id'.
     if 'synopses' in episode.keys():
@@ -123,6 +126,38 @@ def check_episode_data(testcase, episode, parent_name=''):
     for version in episode['versions']:
         # Check that a version from episode does not parse as full version
         testcase.assertRaises(AssertionError, check_version_data, testcase, version, obj_name)
+
+
+def check_episode_data_from_bundle(testcase, episode, parent_name=''):
+    """Episodes from bundles from the main page provide roughly the same data, but formatted in a different way"""
+    obj_name = '.'.join((parent_name, episode['title']['default']))
+
+    has_keys(episode, 'id', 'title', 'tleo', 'image', 'synopsis', 'subtitle', 'versions', obj_name=obj_name)
+    # All keys from the previously available long version of episode.
+    misses_keys(episode, 'type', 'programme_type', 'original_title', 'tleo_type', 'signed', 'audio_described',
+                'requires_ab', 'lexical_sort_letter', 'release_date', 'guidance', 'type', 'requires_tv_licence',
+                'editorial_subtitle', 'childrens', 'categories', 'release_date_time', 'master_brand',   # childrens is not a typo (at least not mine)
+                'has_credits', 'status', 'requires_sign_in', 'signed', obj_name=obj_name)
+    expect_keys(episode, 'labels', 'live', 'previewId', obj_name=obj_name)
+
+    testcase.assertTrue(is_not_empty(episode['id'], str))
+    testcase.assertTrue(is_not_empty(episode['title'], dict))
+    testcase.assertTrue(is_not_empty(episode['title']['default'], str))
+    testcase.assertTrue(is_not_empty(episode['tleo'], dict))
+    testcase.assertTrue(is_not_empty(episode['tleo']['id'], str))
+    check_images(testcase, episode['image'] )
+    check_synopses(testcase, episode['synopsis'])
+
+    if 'subtitle' in episode.keys():
+        subtitle = episode['subtitle']
+        # Field 'subtitles' is optional, in particular films and single episode documentaries may lack a subtitle.
+        testcase.assertTrue(is_not_empty(subtitle, dict) or subtitle is None)
+        if isinstance(subtitle, dict):
+            testcase.assertTrue('default' in subtitle.keys())   # There may be other keys, but this is the only one currently used.
+
+    for version in episode['versions']:
+        # Check that a version from episode does not parse as full version
+        check_version_data(testcase, version, obj_name)
 
 
 class HtmlPages(TestCase):
@@ -424,7 +459,7 @@ class TestAdded(TestCase):
 
 class Recommendations(TestCase):
     def test_get_recommendations_signed_in(self):
-        resp = requests.get('https://www.bbc.co.uk/iplayer/recommendations',
+        resp = requests.get('https://www.bbc.co.uk/iplayer',
                             headers=ipwww_common.headers,
                             cookies=ipwww_common.cookie_jar,
                             allow_redirects=False,
@@ -432,10 +467,16 @@ class Recommendations(TestCase):
         self.assertEqual(200, resp.status_code)
         self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
         page = resp.text
+        # save_doc(page, 'html/iplayer.html')
         data = ipwww_video.ScrapeJSON(page)
-        # save_json(data, 'html/recommendations.json')
-        for item in data['items']['elements']:
-            check_episode_data(self, item['episode'], 'Recommended')
+        # save_json(data, 'json/iplayer.json')
+        self.assertTrue('signedIn' in data['identity'])
+        # find recommendations:
+        bundles = [b for b in data['bundles'] if b['id'] in ('recommendations', 'if-you-liked')]
+        self.assertEqual(2, len(bundles))
+        for bundle in bundles:
+            for item in bundle['entities']:
+                check_episode_data_from_bundle(self, item['episode'], bundle['id'])
 
 
 class SchedulesFromHtml(TestCase):

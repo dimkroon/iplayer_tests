@@ -15,6 +15,13 @@ from support.object_checks import is_li_compatible_dict, has_keys, is_url, is_no
 setUp = fixtures.setup_local_tests()
 
 
+class TestGetJsonDataWithBBCId(TestCase):
+    @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/iplayer.html'))
+    def test_main_page(self):
+        data = ipwww_video.GetJsonDataWithBBCid('https://www.bbc.co.uk/iplayer')
+        pass
+
+
 @patch('resources.lib.ipwww_video.ADDON.getSetting', lambda x: 0 if x == 'scrape_atoz' else None)
 class TestGetAtoZPage_ProgressDialog(TestCase):
     def setUp(self):
@@ -249,9 +256,19 @@ class TestListFavourites(TestCase):
         self.assertEqual(16, p_AddMenuEntry.call_count)
 
 
+@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('json/iplayer.json'))
 class TestListRecommendations(TestCase):
-    @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/recommendations.json'))
     def test_list_recommendations_authenticated(self, _):
         with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
             ipwww_video.ListRecommendations()
-        self.assertEqual(20, p_AddItem.call_count)
+        self.assertEqual(2, p_AddItem.call_count)
+
+    def test_list_if_you_liked_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('if-you-liked')
+        self.assertEqual(12, p_AddItem.call_count)
+
+    def test_recommended_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('recommendations')
+        self.assertEqual(12, p_AddItem.call_count)

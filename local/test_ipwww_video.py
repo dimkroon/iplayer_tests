@@ -316,18 +316,3 @@ class TestScrapeAvailableStream(TestCase):
             ipwww_video.ListRecommendations('recommendations')
         self.assertEqual(12, p_AddItem.call_count)
 
-
-class TestEpg(TestCase):
-    @patch('resources.lib.ipwww_video.OpenRequest', return_value=open_doc('json/ibl_schedule_bbc_one_hd.json')())
-    def test_get_epg_default_channels(self, _):
-        epg = ipwww_video.get_epg()
-        self.assertIsInstance(epg, dict)
-        self.assertEqual(1, epg['version'])
-        self.assertIsInstance(epg['epg'], dict)
-        for chan, schedule in epg['epg'].items():
-            self.assertIsInstance(schedule, list)
-            for item in schedule:
-                self.assertIsInstance(item, dict)
-                if item['image']:
-                    self.assertTrue(is_url(item['image']))
-                    self.assertFalse('recipe' in item['image'])

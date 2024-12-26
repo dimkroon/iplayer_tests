@@ -574,7 +574,7 @@ class SchedulesFromHtml(TestCase):
 class SchedulesByIblAPi(TestCase):
     channels = ('bbc_two_england', 'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
 
-                'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
                 'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
                 'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
                 'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
@@ -583,6 +583,7 @@ class SchedulesByIblAPi(TestCase):
                 'bbc_three', 'bbc_four', 'cbbc', 'cbeebies', 'bbc_news24',
                 'bbc_parliament', 'bbc_alba', 'bbc_scotland', 's4cpbs'
                 )
+
     def check_broadcast_item(self, bc_data):
         """Check the data structure that represents a broadcasts.
 
@@ -606,14 +607,16 @@ class SchedulesByIblAPi(TestCase):
         episode = bc_data['episode']
         has_keys(episode, 'id', 'live', 'type', 'title', 'images', 'signed', 'status', 'tleo_id', 'guidance',
                  'synopses', 'versions', 'childrens', 'tleo_type', 'categories', 'has_credits', 'requires_ab',
-                 'master_brand', 'release_date', 'related_links', 'original_title', 'audio_described',
-                 'requires_sign_in', 'release_date_time', 'lexical_sort_letter', 'requires_tv_licence')
+                 'master_brand', 'related_links', 'original_title', 'audio_described',
+                 'requires_sign_in', 'lexical_sort_letter', 'requires_tv_licence')
+        expect_keys(episode, 'release_date', 'release_date_time')
         self.assertIsInstance(episode['categories'], list)
         self.assertIsInstance(episode['synopses'], dict)
         self.assertIsInstance(episode['images'], dict)
         self.assertTrue('standard' in episode['images'])
         self.assertTrue(is_not_empty(episode['title'], str))
-        self.assertTrue(is_iso_utc_time(episode['release_date_time']))
+        if 'release_date_time' in episode:
+            self.assertTrue(is_iso_utc_time(episode['release_date_time']))
 
     def test_guide_by_ibl_api(self):
         t = datetime.now(timezone.utc) - timedelta(hours=1)

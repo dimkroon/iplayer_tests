@@ -13,20 +13,42 @@ from resources.lib import ipwww_iptv
 setUp = fixtures.setup_local_tests()
 
 
-@patch('resources.lib.ipwww_iptv.ADDON.getSetting', lambda x: 'bbc_one_london' if x == 'iptv.tv-channels' else '')
-class TestTvEpg(TestCase):
-    @patch('resources.lib.ipwww_video.OpenRequest', return_value=open_doc('json/ibl_schedule_bbc_one_hd.json')())
-    def test_get_epg_default_channels(self, _):
-        epg = ipwww_iptv.get_tv_epg()
+class TestEpg(TestCase):
+    def check_schedule_item(self, item):
+        self.assertTrue(is_not_empty(item['start'], str))
+        self.assertTrue(is_not_empty(item['stop'], str))
+        self.assertTrue(is_not_empty(item['title'], str))
+        self.assertTrue(is_not_empty(item['description'], str))
+        for key in ('subtitle', 'image', 'date', 'stream'):
+            if item.get('key') is not None:
+                self.assertTrue(is_not_empty(item[key], str))
+        if item['image']:
+            self.assertFalse('recipe' in item['image'])
+
+
+    @patch('resources.lib.ipwww_iptv.ADDON.getSetting', lambda x: 'bbc_one_london' if x == 'iptv.tv-channels' else '')
     @patch('resources.lib.ipwww_iptv.OpenRequest', open_doc('json/ibl_schedule_bbc_one_hd.json'))
-    def test_get_epg_default_channels(self):
+    def test_tv_epg_(self):
+        epg = ipwww_iptv.tv_epg()
         self.assertIsInstance(epg, dict)
-        self.assertEqual(1, epg['version'])
-        self.assertIsInstance(epg['epg'], dict)
-        for chan, schedule in epg['epg'].items():
+        for chan, schedule in epg.items():
             self.assertIsInstance(schedule, list)
             for item in schedule:
                 self.assertIsInstance(item, dict)
                 if item['image']:
                     self.assertTrue(is_url(item['image']))
                     self.assertFalse('recipe' in item['image'])
+
+    @patch.object(ipwww_iptv.ADDON, 'getSetting', lambda x: 'bbc_radio_one;bbc_radio_two' if x == 'iptv.radio-channels' else '')
+    @patch('resources.lib.ipwww_iptv.OpenRequest', open_doc('sounds/json/schedule_1.json'))
+    @patch('resources.lib.ipwww_iptv.get_next_revision', return_value='123456789')
+    def test_radio_epg(self,_):
+        epg = ipwww_iptv.radio_epg()
+        self.assertIsInstance(epg, dict)
+        self.assertEqual(['ipwww.bbc_radio_one', 'ipwww.bbc_radio_two'], list(epg.keys()))
+        for schedule in epg.values():
+            self.assertIsInstance(schedule, list)
+            for item in schedule:
+                self.check_schedule_item(item)
+
+

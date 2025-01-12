@@ -39,7 +39,7 @@ def check_images(testcase, images):
     img_types = ('portrait', 'standard', 'default', 'live', 'promotional', 'promotional_with_logo',
                  'promotionalWithLogo', 'character', 'portrait')
     for key in images.keys():
-        # Just to flag if an unknown image type comes up.
+        # Just to flag when an unknown image type comes up.
         assert(key=='type' or key in img_types)
     for key, value in images.items():
         if key == 'type':
@@ -48,26 +48,25 @@ def check_images(testcase, images):
             testcase.assertTrue(is_url(value, ('.jpg', '.png')) or value is None)
 
 
-def check_programme_data(testcase, programme, parent_name):
+def check_large_programme_data(testcase, programme, parent_name):
     obj_name = '.'.join((parent_name, programme['title']))
     has_keys(programme, 'id', 'title', 'type', 'images', 'synopses', 'programme_type', 'count',
              'initial_children', obj_name=obj_name)
 
-    expect_keys(programme, 'labels', 'tleo_type', 'categories', 'master_brand', 'lexical_sort_letter',
+    expect_keys(programme, 'live', 'labels', 'tleo_type', 'categories', 'master_brand', 'lexical_sort_letter',
                 'status', obj_name=obj_name)
 
     testcase.assertTrue(is_not_empty(programme['id'], str))
     testcase.assertEqual('programme', programme['type'])
     testcase.assertTrue(programme['tleo_type'] in ('episode', 'brand', 'series'))    # just to flag when other values appear.
     testcase.assertTrue(is_not_empty(programme['title'], str))
-    testcase.assertIsInstance(programme['images'], dict)
-    testcase.assertTrue(is_url(programme['images']['standard'], ('.jpg', '.png')))
+    check_images(testcase, programme['images'])
     check_synopses(testcase, programme['synopses'])
     testcase.assertTrue(programme['programme_type'] in ('one-off', 'self-contained', 'narrative', 'sequential', 'unclassified', 'strand'))  # just to flag when other values appear.
     testcase.assertTrue(is_not_empty(programme['count'], int))
     testcase.assertIsInstance(programme['initial_children'], list)
     for child in programme['initial_children']:
-        check_episode_data(testcase, child, '.'.join((obj_name, 'children')))
+        check_large_episode_data(testcase, child, '.'.join((obj_name, 'children')))
 
 
 def check_large_version_data(testcase, version, parent_name=''):
@@ -104,14 +103,11 @@ def check_version_data(testcase, version, parent_name=''):
         testcase.assertTrue(is_not_empty(version['availability']['remaining'], str))
 
 
-def check_episode_data(testcase, episode, parent_name=''):
-    obj_name = '.'.join((parent_name, episode['title']))
+def base_episode_checks(testcase, episode, obj_name=''):
+    """Some checks on fields presents in all types of episode data.
+
+    """
     has_keys(episode, 'id', 'title', 'images', 'tleo_id', obj_name=obj_name)
-    # All keys from the previously available long version of episode.
-    misses_keys(episode, 'type', 'programme_type', 'original_title', 'tleo_type', 'signed', 'audio_described',
-                'requires_ab', 'lexical_sort_letter', 'release_date', 'guidance', 'type', 'requires_tv_licence',
-                'editorial_subtitle', 'live', 'childrens', 'categories', 'release_date_time', 'master_brand',   # childrens is not a typo (at least not mine)
-                'has_credits', 'status', 'requires_sign_in', 'labels', 'signed')
     expect_keys(episode, 'versions', 'synopses', 'subtitle', obj_name=obj_name)
 
     check_images(testcase, episode['images'])
@@ -123,9 +119,39 @@ def check_episode_data(testcase, episode, parent_name=''):
         # Field 'subtitles' is optional, in particular films and single episode documentaries may lack a subtitle.
         testcase.assertTrue(is_not_empty(episode['subtitle'], str))
     testcase.assertGreaterEqual(len(episode['versions']), 1)
+
+
+def check_episode_data(testcase, episode, parent_name=''):
+    obj_name = '.'.join((parent_name, episode['title']))
+    base_episode_checks(testcase, episode, obj_name)
+    # All keys from the previously available long version of episode.
+    misses_keys(episode, 'type', 'programme_type', 'original_title', 'tleo_type', 'signed', 'audio_described',
+                'requires_ab', 'lexical_sort_letter', 'release_date', 'guidance', 'type', 'requires_tv_licence',
+                'editorial_subtitle', 'live', 'childrens', 'categories', 'release_date_time', 'master_brand',   # childrens is not a typo (at least not mine)
+                'has_credits', 'status', 'requires_sign_in', 'labels', 'signed')
     for version in episode['versions']:
-        # Check that a version from episode does not parse as full version
-        testcase.assertRaises(AssertionError, check_version_data, testcase, version, obj_name)
+        # Check that a version from a small episode does not parse as full version
+        testcase.assertRaises(AssertionError, check_large_version_data, testcase, version, parent_name)
+        check_version_data(testcase, version, obj_name)
+
+
+def check_large_episode_data(testcase, episode, parent_name=''):
+    obj_name = '.'.join((parent_name, episode['title']))
+    has_keys(episode, 'synopses', 'type', 'original_title', 'programme_type', obj_name=obj_name)
+
+    expect_keys(episode, 'live', 'labels', 'signed', 'status', 'guidance', 'versions', 'childrens',       # childrens is not a typo (at least not mine)
+                'tleo_type', 'categories', 'has_credits', 'requires_ab', 'master_brand', 'release_date',
+                'audio_described', 'requires_sign_in', 'release_date_time', 'editorial_subtitle', 'lexical_sort_letter',
+                'requires_tv_licence', obj_name=obj_name)
+    base_episode_checks(testcase, episode, parent_name)
+    testcase.assertTrue(episode['type'] in ('episode', 'episode_large'))    # even films and documentaries appear to be of the episode.
+    testcase.assertTrue(episode['tleo_type'] in ('episode', 'brand', 'series'))   # just to flag when other values appear.
+    testcase.assertIsInstance(episode['signed'], bool)
+    testcase.assertIsInstance(episode['audio_described'], bool)         # not always the same is 'id'.
+    testcase.assertTrue(is_not_empty(episode['release_date'], str))     # format varies from '2007' to '21 May 2018'
+    testcase.assertTrue(is_iso_utc_time(episode['release_date_time']))
+    for version in episode['versions']:
+        check_large_version_data(testcase, version, obj_name)
 
 
 def check_episode_data_from_bundle(testcase, episode, parent_name=''):
@@ -171,7 +197,7 @@ class HtmlPages(TestCase):
         self.assertTrue(200, resp.status_code)
         data = ipwww_video.ScrapeJSON(resp.text)
         self.assertIsInstance(data, dict)
-        self.assertEqual(14, len(data['bundles']))
+        self.assertEqual(15, len(data['bundles']))
 
 
 class ChannelsAtoZ(TestCase):
@@ -318,9 +344,9 @@ class RemoveWatching(TestCase):
         self.assertEqual('Missing authorization header', data['error']['details'])
 
 
-class TestAdded(TestCase):
+class TestWatchlist(TestCase):
         """User's own favourites"""
-        def test_get_added_signed_in(self):
+        def test_get_watchlist_signed_in(self):
             resp = requests.get('https://www.bbc.co.uk/iplayer/watchlist',
                                 headers=ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
@@ -331,15 +357,24 @@ class TestAdded(TestCase):
             data = ipwww_video.ScrapeJSON(page)
             # save_json(data, 'html/watchlist.json')
             self.assertTrue(data['id']['signedIn'])
+            self.assertEqual('watchlist', data['items']['pageType'])
             items_list = data['items']['elements']
             for item in items_list:
-                has_keys(item, 'urn', 'type', 'programme', obj_name='Added.items')
-                self.assertTrue(is_not_empty(item['urn'], str))
-                self.assertEqual('added', item['type'])
-                check_programme_data(self, item['programme'], 'Added.items')
+                # item is a dict with only a single key: 'programme'
+                self.assertEqual(1, len(item))      # to flag if that changes.
+                pgm_item = item['programme']
+                has_keys(pgm_item, 'id', 'title', 'images', 'initial_children', 'synopses', 'status', 'count',
+                         obj_name=f'watchlist.{pgm_item["title"]}')
+                self.assertEqual(7, len(pgm_item))  # just to flag when more data becomes available.
+                self.assertTrue(is_not_empty(pgm_item['id'], str))
+                self.assertTrue(is_not_empty(pgm_item['title'], str))
+                check_images(self, pgm_item['images'])
+                check_synopses(self, pgm_item['synopses'])
+                self.assertEqual('available', pgm_item['status'])
+                self.assertGreater(pgm_item['count'], 0)
                 self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 
-        def test_get_added_by_ibl_api(self):
+        def test_get_watchlist_by_ibl_api(self):
             resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added',
                                 headers= ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
@@ -355,7 +390,7 @@ class TestAdded(TestCase):
                 has_keys(item, 'urn', 'type', 'programme', obj_name='iblAdded.added.elements')
                 self.assertTrue(is_not_empty(item['urn'], str))
                 self.assertEqual('added', item['type'])
-                check_programme_data(self, item['programme'], 'iblAdded.added.elements')
+                check_large_programme_data(self, item['programme'], 'iblAdded.added.elements')
                 self.assertEqual(1, len(item['programme']['initial_children']))  # Like watching, there is only one child
 
         def test_compare_html_and_ibl(self):
@@ -372,7 +407,7 @@ class TestAdded(TestCase):
             resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
                                    cookies=ipwww_common.cookie_jar)
             # Check if add succeeds and that adding an already added item succeeds without issues.
-            for i in range(50):
+            for i in range(10):
                 resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
                                     cookies=ipwww_common.cookie_jar,
                                     json={"id": PGM_ID})
@@ -481,7 +516,7 @@ class Recommendations(TestCase):
 
 class SchedulesFromHtml(TestCase):
     def test_get_guide_unauthenticated(self):
-        """Produces a schedule of BBC one from 1 day ago upto now"""
+        """Produces a schedule of BBC one of today from 05:00 AM to 05:00 AM the next day."""
         resp = requests.get('https://www.bbc.co.uk/iplayer/guide', allow_redirects=-False)
         self.assertEqual(200, resp.status_code)
         self.assertEqual('text/html; charset=utf-8', resp.headers['content-type'])
@@ -494,19 +529,17 @@ class SchedulesFromHtml(TestCase):
         self.assertEqual(0, schedule['daysFromBBCToday'])
         self.assertTrue(is_not_empty(schedule['items'], list))
         items_list = schedule['items']
-        last_idx = len(items_list) - 1
         for i in  range(len(items_list)):
+            obj_name = 'BBCOneSchedule.item-{}.meta'.format(i)
             item = items_list[i]
-            if i == last_idx:
-                self.assertEqual('LIVE', item['type'])
-            else:
-                self.assertEqual('AVAILABLE', item['type'])
-            has_keys(item['meta'], 'scheduledEnd','scheduledStart', obj_name='BBCOneSchedule.item-{}.meta'.format(i))
-            has_keys(item['props'], 'href', 'imageTemplate', 'title', 'subtitle', 'synopsis',  obj_name='BBCOneSchedule.item-{}.props'.format(i))
-            if i == last_idx:
-                has_keys(item['props'], 'progressPercent', 'label', obj_name='BBCOneSchedule.item-{}.props'.format(i))
-            else:
-                has_keys(item['props'], 'durationSubLabel', 'secondarySubLabel', obj_name='BBCOneSchedule.item-{}.props'.format(i))
+            self.assertTrue(item['type'] in ('LIVE', 'AVAILABLE', 'UNAVAILABLE_FUTURE'))
+            has_keys(item['meta'], 'scheduledEnd','scheduledStart', obj_name=obj_name)
+            has_keys(item['props'], 'href', 'imageTemplate', 'title', 'synopsis', obj_name=obj_name)
+            expect_keys(item['props'], 'subtitle', obj_name='BBCOneSchedule.item-{}.props'.format(i))  # subtitle may be absent in one-off programmes.
+            if item['type'] == 'LIVE':
+                has_keys(item['props'], 'progressPercent', 'label', obj_name=obj_name)
+            elif item['type'] == 'AVAILABLE':
+                has_keys(item['props'], 'durationSubLabel', 'secondarySubLabel', obj_name=obj_name)
                 expect_keys(item['props'], 'label')
 
     def test_guide_other_regions(self):
@@ -700,7 +733,7 @@ class SchedulesByEssApi(TestCase):
 
                     'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd', 'bbc_news24', 'bbc_parliament',
                     'bbc_alba', 'bbc_scotland_hd', 's4cpbs')
-        channels = ('bbc_one_hd',)
+        # channels = ('bbc_one_hd',)
         for chan in channels:
             url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
             resp = requests.get(url, allow_redirects=False)

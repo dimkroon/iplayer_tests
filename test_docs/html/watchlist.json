@@ -1,0 +1,687 @@
+{
+  "navigation": {
+    "items": [
+      {
+        "id": "channels",
+        "title": "Channels",
+        "active": false,
+        "subItems": [
+          {
+            "title": "BBC One",
+            "href": "/bbcone",
+            "liveHref": "/iplayer/live/bbcone",
+            "active": false,
+            "icon": "bbcone",
+            "id": "bbc_one"
+          },
+          {
+            "title": "BBC Two",
+            "href": "/bbctwo",
+            "liveHref": "/iplayer/live/bbctwo",
+            "active": false,
+            "icon": "bbctwo",
+            "id": "bbc_two"
+          },
+          {
+            "title": "BBC Three",
+            "href": "/tv/bbcthree",
+            "liveHref": "/iplayer/live/bbcthree",
+            "active": false,
+            "icon": "bbcthree",
+            "id": "bbc_three"
+          },
+          {
+            "title": "BBC Four",
+            "href": "/bbcfour",
+            "liveHref": "/iplayer/live/bbcfour",
+            "active": false,
+            "icon": "bbcfour",
+            "id": "bbc_four"
+          },
+          {
+            "title": "BBC Radio 1",
+            "href": "/tv/radio1",
+            "liveHref": "/iplayer/live/radio1",
+            "active": false,
+            "icon": "radio1",
+            "id": "bbc_radio_one"
+          },
+          {
+            "title": "CBBC",
+            "href": "/tv/cbbc",
+            "liveHref": "/iplayer/live/cbbc",
+            "active": false,
+            "icon": "cbbc",
+            "id": "cbbc"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/tv/cbeebies",
+            "liveHref": "/iplayer/live/cbeebies",
+            "active": false,
+            "icon": "cbeebies",
+            "id": "cbeebies"
+          },
+          {
+            "title": "BBC Scotland",
+            "href": "/tv/bbcscotland",
+            "liveHref": "/iplayer/live/bbcscotland",
+            "active": false,
+            "icon": "bbcscotland",
+            "id": "bbc_scotland"
+          },
+          {
+            "title": "BBC News",
+            "href": "/tv/bbcnews",
+            "liveHref": "/iplayer/live/bbcnews",
+            "active": false,
+            "icon": "bbcnews",
+            "id": "bbc_news24"
+          },
+          {
+            "title": "BBC Parliament",
+            "href": "/tv/bbcparliament",
+            "liveHref": "/iplayer/live/bbcparliament",
+            "active": false,
+            "icon": "bbcparliament",
+            "id": "bbc_parliament"
+          },
+          {
+            "title": "BBC Alba",
+            "href": "/tv/bbcalba",
+            "liveHref": "/iplayer/live/bbcalba",
+            "active": false,
+            "icon": "bbcalba",
+            "id": "bbc_alba"
+          },
+          {
+            "title": "S4C",
+            "href": "/tv/s4c",
+            "liveHref": "/iplayer/live/s4c",
+            "active": false,
+            "icon": "s4c",
+            "id": "s4cpbs"
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "title": "Categories",
+        "active": false,
+        "subItems": [
+          {
+            "title": "Drama & Soaps",
+            "href": "/iplayer/categories/drama-and-soaps/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "drama-and-soaps"
+          },
+          {
+            "title": "Films",
+            "href": "/iplayer/categories/films/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "films"
+          },
+          {
+            "title": "Comedy",
+            "href": "/iplayer/categories/comedy/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "comedy"
+          },
+          {
+            "title": "Documentaries",
+            "href": "/iplayer/categories/documentaries/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "documentaries"
+          },
+          {
+            "title": "Sport",
+            "href": "/iplayer/categories/sport/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "sport"
+          },
+          {
+            "title": "News",
+            "href": "/iplayer/categories/news/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "news"
+          },
+          {
+            "title": "Entertainment",
+            "href": "/iplayer/categories/entertainment/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "entertainment"
+          },
+          {
+            "title": "Music",
+            "href": "/iplayer/categories/music/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "music"
+          },
+          {
+            "title": "Food",
+            "href": "/iplayer/categories/food/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "food"
+          },
+          {
+            "title": "Lifestyle",
+            "href": "/iplayer/categories/lifestyle/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "lifestyle"
+          },
+          {
+            "title": "History",
+            "href": "/iplayer/categories/history/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "history"
+          },
+          {
+            "title": "Science & Nature",
+            "href": "/iplayer/categories/science-and-nature/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "science-and-nature"
+          },
+          {
+            "title": "Arts",
+            "href": "/iplayer/categories/arts/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "arts"
+          },
+          {
+            "title": "From the Archive",
+            "href": "/iplayer/categories/archive/featured",
+            "active": false,
+            "kind": "genre",
+            "id": "archive"
+          },
+          {
+            "title": "Audio Described",
+            "href": "/iplayer/categories/audio-described/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "audio-described"
+          },
+          {
+            "title": "Signed",
+            "href": "/iplayer/categories/signed/featured",
+            "active": false,
+            "kind": "accessibility",
+            "id": "signed"
+          },
+          {
+            "title": "Northern Ireland",
+            "href": "/iplayer/categories/northern-ireland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "northern-ireland"
+          },
+          {
+            "title": "Scotland",
+            "href": "/iplayer/categories/scotland/featured",
+            "active": false,
+            "kind": "national",
+            "id": "scotland"
+          },
+          {
+            "title": "Wales",
+            "href": "/iplayer/categories/wales/featured",
+            "active": false,
+            "kind": "national",
+            "id": "wales"
+          },
+          {
+            "title": "CBeebies",
+            "href": "/iplayer/categories/cbeebies/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbeebies"
+          },
+          {
+            "title": "CBBC",
+            "href": "/iplayer/categories/cbbc/featured",
+            "active": false,
+            "kind": "childrens",
+            "id": "cbbc"
+          }
+        ]
+      },
+      {
+        "title": "A-Z",
+        "ariaLabel": "A to Z",
+        "href": "/iplayer/a-z/a",
+        "active": false,
+        "id": "a-z"
+      },
+      {
+        "title": "TV Guide",
+        "href": "/iplayer/guide",
+        "active": false,
+        "id": "tv-guide"
+      },
+      {
+        "title": "Watchlist",
+        "href": "/iplayer/watchlist",
+        "active": true,
+        "id": "watchlist"
+      }
+    ],
+    "renderOpen": false,
+    "variant": "default",
+    "accessibilityHelpHref": "/iplayer/features/accessibility",
+    "useLiveHrefs": false
+  },
+  "footer": {
+    "locationLabel": "Change location",
+    "languageLabel": "Change language",
+    "locations": [
+      {
+        "label": "Nations",
+        "locations": [
+          {
+            "label": "Northern Ireland",
+            "value": "ni"
+          },
+          {
+            "label": "Scotland",
+            "value": "sc"
+          },
+          {
+            "label": "Wales",
+            "value": "wa"
+          }
+        ]
+      },
+      {
+        "label": "Regions",
+        "locations": [
+          {
+            "label": "Channel Islands",
+            "value": "ci"
+          },
+          {
+            "label": "East",
+            "value": "ea"
+          },
+          {
+            "label": "East Midlands",
+            "value": "em"
+          },
+          {
+            "label": "East Yorks & Lincs",
+            "value": "ey"
+          },
+          {
+            "label": "London",
+            "value": "lo"
+          },
+          {
+            "label": "North East & Cumbria",
+            "value": "ne"
+          },
+          {
+            "label": "North West",
+            "value": "nw"
+          },
+          {
+            "label": "South",
+            "value": "so"
+          },
+          {
+            "label": "South East",
+            "value": "se"
+          },
+          {
+            "label": "South West",
+            "value": "sw"
+          },
+          {
+            "label": "West",
+            "value": "we"
+          },
+          {
+            "label": "West Midlands",
+            "value": "wm"
+          },
+          {
+            "label": "Yorkshire",
+            "value": "yo"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "label": "English",
+        "value": "en"
+      },
+      {
+        "label": "Cymraeg",
+        "value": "cy"
+      },
+      {
+        "label": "Gaeilge",
+        "value": "ga"
+      },
+      {
+        "label": "G\u00e0idhlig",
+        "value": "gd"
+      }
+    ],
+    "parentalControlsLabel": "Parental Controls",
+    "helpFaqLabel": "Help & FAQ",
+    "parentalControlsHref": "/iplayer/guidance",
+    "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+    "defaultLocation": "lo",
+    "defaultLanguage": "en",
+    "regionalPage": false
+  },
+  "safeguarding": {
+    "clientAgeBracket": null,
+    "serverAgeBracket": "o18",
+    "dismissedModal": false
+  },
+  "language": "en",
+  "experiments": {},
+  "config": {
+    "iblBaseUrl": "https://ibl.api.bbc.co.uk/ibl/v1",
+    "iblUserBaseUrl": "https://user.ibl.api.bbc.co.uk/ibl/v1"
+  },
+  "id": {
+    "signedIn": true,
+    "auth": {
+      "token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IkVnVVUrOE5oYUFZS2M2eWxvQ0JybktQVGNlOD0ifQ.eyJzdWIiOiI2MDRkZWU1NS1kYmVjLTRjMjItYjg5Zi00OWFmNTkwMzUxMDciLCJjdHMiOiJPQVVUSDJfU1RBVEVMRVNTX0dSQU5UIiwiYXV0aF9sZXZlbCI6MiwiYXVkaXRUcmFja2luZ0lkIjoiUm9vdD0xLTY2ZWI0M2Y5LTNmMTYxN2YzMDQ0MmNjNzcyZGU5Nzk5NSIsImlzcyI6Imh0dHBzOi8vYWNjZXNzLmFwaS5iYmMuY29tL2JiY2lkdjUvb2F1dGgyIiwidG9rZW5OYW1lIjoiYWNjZXNzX3Rva2VuIiwidG9rZW5fdHlwZSI6IkJlYXJlciIsImF1dGhHcmFudElkIjoiVXhqU3BBN1I5VzlSLXdtNFlZVkEwYVNELXFVIiwiYXVkIjoiQWNjb3VudCIsImFjciI6IjAiLCJhenAiOiJBY2NvdW50IiwibmJmIjoxNzI2Njk0MzkzLCJncmFudF90eXBlIjoicmVmcmVzaF90b2tlbiIsInNjb3BlIjpbImV4cGxpY2l0IiwiY29yZSIsImltcGxpY2l0IiwicGlpIiwidWlkIiwib3BlbmlkIiwiZmkiXSwiYXV0aF90aW1lIjoxNjk4NjE5NTc2LCJyZWFsbSI6Ii8iLCJleHAiOjE3MjY3MDE1OTMsImlhdCI6MTcyNjY5NDM5MywiZXhwaXJlc19pbiI6NzIwMCwianRpIjoiRmpmWGc3Q3R1d2ViZG1jTDhVR0NvQmVCNWtBIiwidXNlckF0dHJpYnV0ZXMiOnsiYWxsb3dQZXJzb25hbGlzYXRpb24iOnRydWUsImFnZUJyYWNrZXQiOiJvMTgiLCJhbmFseXRpY3NIYXNoZWRJZCI6IldpckJpVkYtVFZmdHRoVzd4WHdLaUo1cnJLck1NREYxWjJfMnRzdUZHTUUiLCJwc2V1ZG9ueW0iOiJOa1ZOb1BxZmFlb0Zpc0RfQlpydlp6ZElKa0RYeFFoZS1Vb2hzck43Wi1BIn19._MYqenSlqVaAho5zxwSt_cHqQ_vBJPMEAlb0NyoVZ9Piqg0PjFbGuxBaRdqHEsrEvwNM0a9A__mbc_FKOrc3Ng",
+      "provider": "idv5"
+    },
+    "personalisationEnabled": true,
+    "ageBracket": "o18"
+  },
+  "page": {
+    "type": "watchlist",
+    "status": 0
+  },
+  "translations": {
+    "watchlistPageTitle": "Watchlist",
+    "continueWatchingPageTitle": "Continue watching\u2026",
+    "recommendationsPageTitle": "Recommended for you",
+    "resume": "Resume",
+    "myNextEpisode": "My next episode",
+    "remaining": "%s mins left",
+    "remainingSingular": "%s min left",
+    "watchlistSignInPurpose": "start using your Watchlist.",
+    "continueWatchingSignInPurpose": "continue watching.",
+    "recommendationsSignInPurpose": "start getting recommendations.",
+    "watchlistUpsellTitle": "Add TV shows and films",
+    "watchlistUpsellText": "Come back and watch, any time.",
+    "continueWatchingUpsellTitle": "Shows and films you're watching will appear here",
+    "continueWatchingUpsellText": "Come back to continue watching, any time.",
+    "continueWatchingEmptyUpsellTitle": "Shows and films you\u2019re watching will appear here",
+    "continueWatchingEmptyUpsellText": "Come back to continue watching, any time.",
+    "continueWatchingPersonalisationUpsellText": "Come back to continue watching, any time.",
+    "continueWatchingPersonalisationUpsellTitle": "Turn on personalisation to use your Watching list",
+    "recommendationsUpsellTitle": "Get ready to discover new programmes you\u2019ll love",
+    "recommendationsUpsellText": "We\u2019ll give you suggestions based on things you\u2019ve already watched.",
+    "recommendationsEmptyUpsellTitle": "Let\u2019s fill this with programmes you\u2019ll love",
+    "recommendationsEmptyUpsellText": "Start watching shows to get recommendations that are personalised to your tastes.",
+    "recommendationsPersonalisationUpsellTitle": "Turn on personalisation to start getting recommendations",
+    "recommendationsPersonalisationUpsellText": "We\u2019ll suggest new programmes based on things you\u2019ve already watched.",
+    "watchlistMetaDescription": "Add programmes to your Watchlist to enjoy later or be notified when they return",
+    "watchlistMetaKeywords": "Add, Added, Notifications, Watchlist",
+    "continueWatchingMetaDescription": "A quick, simple way to resume watching episodes and series you\u2019ve been watching.",
+    "continueWatchingMetaKeywords": "watching, next, resume, Watchlist",
+    "recommendationsMetaDescription": "Discover new programmes you\u2019ll love with recommendations based on what you watch.",
+    "recommendationsMetaKeywords": "My Programmes, recommendations, personal, personalised",
+    "findOutMore": "Find out more",
+    "turnOnPersonalisation": "Turn on personalisation",
+    "remove": "Remove",
+    "yes": "Yes",
+    "no": "No",
+    "viewAllEpisodes": "View all episodes",
+    "removeAriaLabel": "Remove %s from my %s list.",
+    "removeConfirmAriaLabel": "Yes, remove %s from my %s list.",
+    "removeCancelAriaLabel": "No, don't remove %s from my %s list.",
+    "removeWatchlistAriaLabel": "Remove %s from my watchlist.",
+    "removeWatchlistConfirmAriaLabel": "Yes, remove %s from my watchlist.",
+    "removeWatchlistCancelAriaLabel": "No, don't remove %s from my watchlist.",
+    "viewAllEpisodesAriaLabel": "View all episodes for %s."
+  },
+  "items": {
+    "pageType": "watchlist",
+    "elements": [
+      {
+        "programme": {
+          "id": "p00sydsh",
+          "title": "A City Crowned with Green",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p01hhrgb.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {}
+            }
+          ],
+          "synopses": {
+            "small": "How London has grown in size and spread into the surrounding country. (1964)"
+          },
+          "status": "available",
+          "count": 1
+        }
+      },
+      {
+        "programme": {
+          "id": "m0021dw6",
+          "title": "Hell Jumper",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jj7kvs.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jj7kvs.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jj7kv6.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Courage, love and loss among young people saving lives in Ukraine\u2019s most dangerous towns."
+          },
+          "status": "available",
+          "count": 1
+        }
+      },
+      {
+        "programme": {
+          "id": "p0c3zsnz",
+          "title": "The Railway Station Man",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgwcg3.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgwcg3.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0hgwcg7.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "A woman flees to Donegal, and meets a man restoring an abandoned railway station."
+          },
+          "status": "available",
+          "count": 1
+        }
+      },
+      {
+        "programme": {
+          "id": "m000p9tc",
+          "title": "Berlin 1945",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08xhd3c.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08xh9t9.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p08xh9vc.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Journey back in time to Berlin's most fateful year."
+          },
+          "status": "available",
+          "count": 3
+        }
+      },
+      {
+        "programme": {
+          "id": "p0gjkj43",
+          "title": "Berlin 1933",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gswmxs.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gsxdmc.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gsxdph.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Hitler's rise to power, told through the personal writings of those who lived through it."
+          },
+          "status": "available",
+          "count": 3
+        }
+      },
+      {
+        "programme": {
+          "id": "b09kk17g",
+          "title": "BBC Wales Investigates",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gnpgr2.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0j5lw1h.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0j5lw2x.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Investigative series examining subjects affecting the lives of people in Wales"
+          },
+          "status": "available",
+          "count": 7
+        }
+      },
+      {
+        "programme": {
+          "id": "m00072vr",
+          "title": "David Wilson's Crime Files",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09wmzll.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ghg7v6.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ghg83x.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Professor David Wilson explores Scottish crimes."
+          },
+          "status": "available",
+          "count": 40
+        }
+      },
+      {
+        "programme": {
+          "id": "b06v2v52",
+          "title": "And Then There Were None",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jy7fh.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p07jy7fh.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h0873y.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Period murder mystery based on Agatha Christie's novel."
+          },
+          "status": "available",
+          "count": 3
+        }
+      },
+      {
+        "programme": {
+          "id": "m001qwn0",
+          "title": "Nuremberg: The Nazis on Trial",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gfn195.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gfn195.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gfn1bz.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Drama documentary that probes the minds of the three most notorious Nazis in the dock."
+          },
+          "status": "available",
+          "count": 3
+        }
+      },
+      {
+        "programme": {
+          "id": "b009q1zw",
+          "title": "Hamish Macbeth",
+          "images": {
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gdbz2n.jpg"
+          },
+          "initial_children": [
+            {
+              "images": {
+                "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gdbz2n.jpg",
+                "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gdbz53.jpg"
+              }
+            }
+          ],
+          "synopses": {
+            "small": "Drama series about a young policeman whose beat is a seemingly sleepy Highland village."
+          },
+          "status": "available",
+          "count": 19
+        }
+      }
+    ]
+  },
+  "recommendations": {
+    "feed": null,
+    "set": null,
+    "source": null
+  }
+}

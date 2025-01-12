@@ -9,10 +9,10 @@ from datetime import datetime, timezone, timedelta
 
 from http import cookiejar
 
-from unittest import TestCase
+from unittest import TestCase, skip
 from resources.lib import ipwww_common
 from resources.lib import ipwww_video
-from tests.support.testutils import save_json, save_doc, doc_path, ExpiredCookieJar
+from tests.support.testutils import save_json, save_doc, open_doc, doc_path, ExpiredCookieJar
 from tests.support.object_checks import (has_keys, expect_keys, misses_keys, expect_misses_keys, is_not_empty, is_url,
                                          is_iso_utc_time, iso_duration_2_seconds)
 
@@ -673,3 +673,72 @@ class SchedulesByEssApi(TestCase):
         #     resp = requests.get(url, allow_redirects=False)
         #     self.assertEqual(404, resp.status_code)
 
+
+@skip("Run only when the live event is being broadcast and url's are properly set.")
+class LiveListItem(TestCase):
+    """Test items representing a live broadcast in normal listings, like categories, etc.
+
+    These test are all specific to a particular event and are only to be run when the
+    event has actual live broadcasts. URL's most like need to be adjusted for each live
+    broadcast.
+
+    """
+    def _check_gen_live_version(self, version_data):
+        """Check version data of a live item.
+        Is quite different to version data in catchup items.
+
+        """
+        has_keys(version_data, 'id', 'kind', 'hd', 'guidance', 'rrc', 'events', 'duration', 'startTime', 'endTime',
+                 'isoStartTime', 'isoEndTime')
+        self.assertTrue(version_data['kind'] in ('simulcast', 'webcast'))
+        self.assertTrue(is_iso_utc_time(version_data['isoStartTime']))
+        self.assertTrue(is_iso_utc_time(version_data['isoEndTime']))
+        self.assertTrue(is_not_empty(version_data['startTime'], int))
+        self.assertTrue(is_not_empty(version_data['endTime'], int))
+        if version_data['kind'] == 'simulcast':
+            self.assertTrue(is_not_empty(version_data['serviceId'], str))
+            self.assertTrue(is_not_empty(version_data['regionalServices'], dict))
+        else:
+            self.assertFalse('serviceId' in version_data)
+
+    def test_snooker_uk_championships_listing(self):
+        # A page with several types of live items.
+        url = 'https://www.bbc.co.uk/iplayer/episodes/b00g92ch/snooker-uk-championship?seriesId=b00g92ch-live-now'
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        # save_doc(resp.text, 'html/snooker_uk_listing_with_live.html')
+        data = ipwww_video.ScrapeJSON(resp.text)
+        self._check_gen_live_version(data['version'][0])
+
+    def test_red_button_episode(self):
+        """A page item representing a red-button live stream"""
+        url = 'https://www.bbc.co.uk/iplayer/episode/m0025kpd/snooker-uk-championship-2024-live-day-5-part-1'
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        # save_doc(resp.text, 'html/snooker_uk_rb_item.html')
+        data = ipwww_video.ScrapeJSON(resp.text)
+        version = data['versions'][0]
+        self.assertEqual('simulcast', version['kind'])
+        self._check_gen_live_version(version)
+
+    def test_main_live_episode(self):
+        """A page item representing a stream on one of BBC's main channels"""
+        url = 'https://www.bbc.co.uk/iplayer/episode/m0025f6k/snooker-uk-championship-2024-day-5-afternoon'
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        # save_doc(resp.text, 'html/snooker_uk_live_item.html')
+        data = ipwww_video.ScrapeJSON(resp.text)
+        version = data['versions'][0]
+        self.assertEqual('simulcast', version['kind'])
+        self._check_gen_live_version(version)
+
+    def test_sportstream_episode(self):
+        """A page item representing a 'sport stream', i.e. a stream only available on iplayer."""
+        url = 'https://www.bbc.co.uk/iplayer/episode/l0056v5y/snooker-uk-championship-2024-live-shaun-murphy-v-ding-junhui-table-one'
+        resp = requests.get(url, allow_redirects=False)
+        self.assertEqual(200, resp.status_code)
+        # save_doc(resp.text, 'html/snooker_uk_sportstream_item.html')
+        data = ipwww_video.ScrapeJSON(resp.text)
+        version = data['versions'][0]
+        self.assertEqual('webcast', version['kind'])
+        self._check_gen_live_version(version)

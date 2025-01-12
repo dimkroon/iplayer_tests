@@ -15,6 +15,13 @@ from support.object_checks import is_li_compatible_dict, has_keys, is_url, is_no
 setUp = fixtures.setup_local_tests()
 
 
+class TestGetJsonDataWithBBCId(TestCase):
+    @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/iplayer.html'))
+    def test_main_page(self):
+        data = ipwww_video.GetJsonDataWithBBCid('https://www.bbc.co.uk/iplayer')
+        pass
+
+
 @patch('resources.lib.ipwww_video.ADDON.getSetting', lambda x: 0 if x == 'scrape_atoz' else None)
 class TestGetAtoZPage_ProgressDialog(TestCase):
     def setUp(self):
@@ -82,9 +89,12 @@ class SetSortMethod(TestCase):
 class TestSelectSynopsis(TestCase):
     def setUp(self):
         self.synopses = {'editorial': 'editorial plot',
-                        'large': 'large plot',
-                        'medium': 'medium plot',
-                        'small': 'small plot'}
+                         'large': 'large plot',
+                         'medium': 'medium plot',
+                         'small': 'small plot',
+                         'programme_small': 'programme small plot',
+                         'programmeSmall': 'programmeSmall plot',
+                         'live': 'live plot'}
 
     def test_get_synopsis_presence(self):
         syn = self.synopses
@@ -96,7 +106,17 @@ class TestSelectSynopsis(TestCase):
         del syn['large']
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         del syn['small']
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
+        del syn['programme_small']
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
+        del syn['programmeSmall']
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn))
+        del syn['live']
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+
+    def test_some_types_absent(self):
+        syn = {'editorial': None, 'small': 'small plot'}
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
 
     def test_get_synopsis_empty(self):
         syn = self.synopses
@@ -108,7 +128,12 @@ class TestSelectSynopsis(TestCase):
         syn['large'] = ''
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         syn['small'] = ''
-        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
+        syn['programme_small'] = ''
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
+        syn['programmeSmall'] = ''
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn))
+        syn['live'] = ''
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
     def test_get_synopsis_none(self):
@@ -121,12 +146,67 @@ class TestSelectSynopsis(TestCase):
         syn['large'] = None
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         syn['small'] = None
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
+        syn['programme_small'] = None
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
+        syn['programmeSmall'] = None
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn))
+        syn['live'] = None
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn))
+
+    def test_synopsis_all_fields_none(self):
+        syn = {k: None for k in self.synopses.keys()}
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
     def test_empy_dicts(self):
         self.assertEqual('', ipwww_video.SelectSynopsis(None))
         self.assertEqual('', ipwww_video.SelectSynopsis({}))
-        self.assertRaises(AttributeError, ipwww_video.SelectSynopsis, '')
+
+    def test_synopsis_as_string(self):
+        self.assertEqual('description', ipwww_video.SelectSynopsis('description'))
+
+
+class TestSelectImage(TestCase):
+    def setUp(self):
+        self.images = {'standard': 'standard image',
+                       'default': 'default image',
+                       'promotional': 'promotional image',
+                       'promotional_with_logo': 'promotional_with_logo image',
+                       'portrait': 'portrait image'}
+
+    def test_get_images_presence(self):
+        images = self.images
+        while images:
+            key, value = list(images.items())[0]
+            self.assertEqual(value, ipwww_video.SelectImage(images))
+            images.pop(key)
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(images))
+
+    def test_some_image_types_absent(self):
+        images = {'standard': None,
+                  'promotional_with_logo': 'promotional_with_logo image',}
+        self.assertEqual('promotional_with_logo image', ipwww_video.SelectImage(images))
+
+    def test_get_images_empty(self):
+        images = self.images
+        for i in range(len(images)):
+            key, value = list(images.items())[i]
+            self.assertEqual(value, ipwww_video.SelectImage(images))
+            images[key] = ''
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(images))
+
+    def test_get_images_none(self):
+        images = self.images
+        for i in range(len(images)):
+            key, value = list(images.items())[i]
+            self.assertEqual(value, ipwww_video.SelectImage(images))
+            images[key] = None
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(images))
+
+    def test_empy_dicts(self):
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage(None))
+        self.assertEqual('DefaultFolder.png', ipwww_video.SelectImage({}))
+        self.assertRaises(AttributeError, ipwww_video.SelectImage, 'DefaultFolder.png')
 
 
 class TestParseProgramme(TestCase):
@@ -176,12 +256,22 @@ class TestListFavourites(TestCase):
         self.assertEqual(16, p_AddMenuEntry.call_count)
 
 
+@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('json/iplayer.json'))
 class TestListRecommendations(TestCase):
-    @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/recommendations.json'))
     def test_list_recommendations_authenticated(self, _):
         with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
             ipwww_video.ListRecommendations()
-        self.assertEqual(20, p_AddItem.call_count)
+        self.assertEqual(2, p_AddItem.call_count)
+
+    def test_list_if_you_liked_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('if-you-liked')
+        self.assertEqual(12, p_AddItem.call_count)
+
+    def test_recommended_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('recommendations')
+        self.assertEqual(12, p_AddItem.call_count)
 
 
 class TestScrapeAvailableStream(TestCase):
@@ -215,3 +305,13 @@ class TestScrapeAvailableStream(TestCase):
     def test_scrape_red_button_item(self):
         strm_ids = ipwww_video.ScrapeAvailableStreams('some url')
         self.assertEqual(strm_ids['stream_id_st'], 'red_button_one')
+
+    def test_list_if_you_liked_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('if-you-liked')
+        self.assertEqual(12, p_AddItem.call_count)
+
+    def test_recommended_content(self, _):
+        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
+            ipwww_video.ListRecommendations('recommendations')
+        self.assertEqual(12, p_AddItem.call_count)

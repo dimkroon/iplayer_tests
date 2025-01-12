@@ -7,7 +7,7 @@ from unittest.mock import patch
 from http import cookiejar
 
 from resources.lib import ipwww_video
-
+from support.testutils import NotLoggedInCookieJar
 
 setUp = fixtures.setup_web_test()
 
@@ -39,10 +39,27 @@ class GenericListings(unittest.TestCase):
         ipwww_video.ListMostPopular()
         self.assertGreater(p_add_item.call_count, 10)
 
-    def test_list_recommendations(self):
-        with patch('xbmcplugin.addDirectoryItem') as p_add_item:
-            ipwww_video.ListRecommendations()
-            self.assertGreater(p_add_item.call_count, 5)
+    def test_list_recommendations(self, p_add_item):
+        ipwww_video.ListRecommendations()
+        self.assertEqual(p_add_item.call_count, 2)
+        p_add_item.reset_mock()
+        ipwww_video.ListRecommendations('recommendations')
+        self.assertEqual(p_add_item.call_count, 12)
+        p_add_item.reset_mock()
+        ipwww_video.ListRecommendations('if-you-liked')
+        self.assertEqual(p_add_item.call_count, 12)
+
+    @patch('resources.lib.ipwww_common.cookie_jar', NotLoggedInCookieJar())
+    def test_list_recommendations_not_signed_in(self, p_add_item):
+        # The rather unusual situation where auto sign-in succeeds, but iplayer's main page still
+        # returns a not signed in status.
+        ipwww_video.ListRecommendations()
+        self.assertEqual(p_add_item.call_count, 0)
+        # The more usual situation where auto sign-in also fails
+        with patch('resources.lib.ipwww_video.CheckLogin', return_value=False):
+            with patch('resources.lib.ipwww_video.CreateBaseDirectory') as p_create_base:
+                ipwww_video.ListRecommendations()
+                p_create_base.assert_called_once()
 
 
 class MyProgrammes(unittest.TestCase):

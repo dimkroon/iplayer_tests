@@ -7,11 +7,13 @@
 
 import os
 import sys
+import re
 from typing import Dict, List, Tuple
 
 from unittest.mock import patch
 
 import xbmcaddon
+import xbmcgui
 import xbmcvfs
 
 patch_g = None
@@ -34,7 +36,8 @@ def global_setup():
                          new=lambda self, item: profile_dir if item == 'profile' else '')
         patch_g.start()
 
-        xbmcvfs.translatePath = lambda path: path
+        xbmcvfs.translatePath = translate_path_mock
+        xbmcaddon.Addon.getLocalizedString = localise_mock
 
         # Define an addon handle
         if len(sys.argv) == 1:
@@ -186,3 +189,38 @@ def patch_listitem():
             return self._path
 
     xbmcgui.ListItem = LI
+
+
+def translate_path_mock(path: str):
+    """Translate 'special://' paths to folders in a directory named 'kodifs' in the top
+    test directory, assuming this file is in a folder directly under test/.
+
+    It is not accurate enough to reliably translate every possible special path, but it's
+    enough to suit our needs right now.
+    """
+    if not path.startswith('special://'):
+        return path
+    special_path = path[10:]
+    test_base = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'kodifs'))
+    special_base_dir = special_path.split('/', 1)[0]
+    os.makedirs(os.path.join(test_base, special_base_dir), exist_ok=True)
+    local_dir = os.path.join(test_base, special_path)
+    return local_dir
+
+
+def localise_mock(self, str_id):
+    """Return the text corresponding to str_id in the original language file.
+    Returns only the text of the first line in the file.
+
+    """
+    pattern = f'msgctxt "#{str_id}"\nmsgid "([^"]*)"'
+    test_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '../'))
+    lang_file = os.path.join(
+        test_dir,
+        '../plugin.video.iplayerwww/resources/language/resource.language.en_gb/strings.po')
+    with open(lang_file) as f:
+        lang_texts = f.read()
+    match = re.search(pattern, lang_texts)
+    if match:
+        return match[1]
+    return ''

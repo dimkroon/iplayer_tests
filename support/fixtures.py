@@ -191,6 +191,43 @@ def patch_listitem():
     xbmcgui.ListItem = LI
 
 
+class ListItemCollector:
+    """Objected intended to patch xbmcplugin.addDirectoryItem, store all calls
+    and provide easier access than a standard Mock."""
+    def __init__(self):
+        self._call_args = []
+
+    @property
+    def calls(self) -> list[tuple[str, xbmcgui.ListItem, bool]]:
+        return self._call_args
+
+    @property
+    def paths(self) -> list[str]:
+        return [call[0] for call in self._call_args]
+
+    def path(self, index) -> str:
+        return self._call_args[index][0]
+
+    @property
+    def list_items(self) -> list[xbmcgui.ListItem]:
+        return [call[1] for call in self._call_args]
+
+    def list_item(self, index) -> xbmcgui.ListItem:
+        return self._call_args[index][1]
+
+    def __call__(self, handle:int, url: str, listitem=xbmcgui.ListItem, isFolder=bool):
+        self._call_args.append((url, listitem, isFolder))
+
+    def __len__(self):
+        return len(self._call_args)
+
+    def __iter__(self):
+        return iter(self.list_items)
+
+    def __getitem__(self, item):
+        return self._call_args[item]
+
+
 def translate_path_mock(path: str):
     """Translate 'special://' paths to folders in a directory named 'kodifs' in the top
     test directory, assuming this file is in a folder directly under test/.

@@ -247,6 +247,17 @@ class TestListSearchItems(TestCase):
         self.assertTrue('url=term1' in self.li_store.path(2))
         self.assertTrue('mode=130' in self.li_store.path(2))
 
+    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video':{}})
+    def test_list_without_saved_items(self, _, p_add_term, p_do_search):
+        # Without search term
+        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term'):
+            ipwww_search.list_search_terms('video', 130, keyword=None)
+            self.assertEqual(0, len(self.li_store))
+            p_do_search.assert_called_once_with('new term')
+            p_add_term.assert_called_once_with('new term')
+
+        p_add_term.reset_mock()
+        p_do_search.reset_mock()
 
 @patch('resources.lib.ipwww_search.SearchHistory.append')
 @patch('xbmc.executebuiltin')
@@ -350,3 +361,14 @@ class TestContextMenu(TestCase):
         p_remove.assert_not_called()
         p_clear.assert_not_called()
         self.assertEqual('Container.Refresh', p_exec_builtin.call_args.args[0])
+
+    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': []})
+    @patch('resources.lib.ipwww_radio.Search')
+    def test_search_radio_when_content_type_is_audio(self, p_do_radio_search, _, __, p_do_search):
+        """When keyboard entry is requested on radio search, assert the correct
+        search function is being called
+        """
+        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='blabla'):
+            ipwww_search.list_search_terms('audio', 140)
+            p_do_search.assert_not_called()
+            p_do_radio_search.assert_called_once_with('blabla')

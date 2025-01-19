@@ -191,6 +191,63 @@ def patch_listitem():
     xbmcgui.ListItem = LI
 
 
+class ListItemCollectorBase:
+    """Objected intended to patch xbmcplugin.addDirectoryItem, store all calls
+    and provide easier access than a standard Mock."""
+    def __init__(self):
+        self._call_args = []
+
+    @property
+    def calls(self) -> list[tuple[str, xbmcgui.ListItem, bool]]:
+        return self._call_args
+
+    @property
+    def paths(self) -> list[str]:
+        return [call[0] for call in self._call_args]
+
+    def path(self, index) -> str:
+        return self._call_args[index][0]
+
+    @property
+    def list_items(self) -> list[xbmcgui.ListItem]:
+        return [call[1] for call in self._call_args]
+
+    def list_item(self, index) -> xbmcgui.ListItem:
+        return self._call_args[index][1]
+
+    def __len__(self):
+        return len(self._call_args)
+
+    def __iter__(self):
+        return iter(self._call_args)
+
+    def __getitem__(self, item):
+        return self._call_args[item]
+
+
+class ListItemCollector(ListItemCollectorBase):
+    """Objected intended to patch xbmcplugin.addDirectoryItem, store all calls,
+    and provide easier access than a standard Mock.
+
+    """
+    def __call__(self, handle:int, url: str, listitem=xbmcgui.ListItem, isFolder=bool):
+        self._call_args.append((url, listitem, isFolder))
+
+
+class ListItemsCollector(ListItemCollectorBase):
+    """Objected intended to patch xbmcplugin.addDirectoryItems (plural).
+     Store all calls and provide easier access than a standard Mock.
+
+    """
+    def __call__(self,
+                 handle: int,
+                 items: list[tuple[str, xbmcgui.ListItem, bool]],
+                 totalitems: int = 0):
+        self._call_args.extend(items)
+        if len(self._call_args) > totalitems:
+            raise ValueError("xbmcplugin.addDirectoryItems has more itmes than specified in totalitems.")
+
+
 def translate_path_mock(path: str):
     """Translate 'special://' paths to folders in a directory named 'kodifs' in the top
     test directory, assuming this file is in a folder directly under test/.

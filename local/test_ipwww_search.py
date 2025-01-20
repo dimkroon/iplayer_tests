@@ -1,13 +1,13 @@
-import os.path
-
-import xbmc
 
 from support import fixtures
 fixtures.global_setup()
 
-from unittest import TestCase
-from unittest.mock import patch, Mock, MagicMock, call
+import os.path
 
+from unittest import TestCase
+from unittest.mock import patch
+
+from support.fixtures import keyb_mock
 from resources.lib import ipwww_search
 
 
@@ -54,6 +54,16 @@ class TestSearchTermsFile(TestCase):
         f.append('zaza')
         self.assertEqual(['zaza'], list(f))
 
+    def test_replace(self):
+        f = ipwww_search.SearchHistory('video')
+        f.append('term1')
+        f.append('term2')
+        self.assertListEqual(['term1', 'term2'], list(f))
+        f.replace('term1', 'term3')
+        self.assertListEqual(['term3', 'term2'], list(f))
+        f = ipwww_search.SearchHistory('video')
+        self.assertListEqual(['term3', 'term2'], list(f))
+
     def test_invalid_content_type(self):
         self.assertRaises(ValueError, ipwww_search.SearchHistory, 'iplayer')
         ipwww_search.SearchHistory('a;klj')
@@ -83,13 +93,7 @@ class test_list_search_items(TestCase):
     def tearDown(self):
         self.p.stop()
 
-    def keyb_mock(self, text, confirm=True):
-        class KeybMock(Mock):
-            isConfirmed = Mock(return_value=confirm)
-            getText = Mock(return_value=text)
-        return KeybMock()
-
-    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video':['term1', 'term2']})
+    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
     def test_list_with_saved_items(self, _, __, ___):
         ipwww_search.list_search_terms('video', 130, keyword=None)
         self.assertEqual(3, len(self.li_store))
@@ -106,7 +110,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video':[]})
     def test_list_without_saved_items(self, _, p_add_term, p_do_search):
         # Without search term
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term'):
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term'):
             ipwww_search.list_search_terms('video', 130, keyword=None)
             self.assertEqual(0, len(self.li_store))
             p_do_search.assert_called_once_with('new term')
@@ -116,7 +120,7 @@ class test_list_search_items(TestCase):
         p_do_search.reset_mock()
 
         # With a random search term
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term'):
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term'):
             ipwww_search.list_search_terms('video', 130, keyword='Some search term')
             self.assertEqual(0, len(self.li_store))
             p_do_search.assert_called_once_with('new term')
@@ -125,7 +129,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
     def test_explicit_new_search_with_saved_terms(self, _, p_add_term, p_do_search):
         """A new search has been requested by setting keyword to 'new_search'"""
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term'):
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term'):
             ipwww_search.list_search_terms('video', 130, keyword='new_search')
             self.assertEqual(0, len(self.li_store))
             p_do_search.assert_called_once_with('new term')
@@ -134,7 +138,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
     def test_saved_terms_with_random_keyword(self, p_get_terms, p_add_term, p_do_search):
         """Only keyword 'new_search' should trigger a keyboard entry."""
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term') as kb:
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term') as kb:
             ipwww_search.list_search_terms('video', 130, keyword='random term')
             p_get_terms.assert_called_once()
             self.assertEqual(3, len(self.li_store))
@@ -145,7 +149,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
     def test_keyboard_canceled_with_saved_terms(self, p_get_terms, p_add_term, p_do_search):
         """On keyboard cancel the saved list of search terms should be shown."""
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term', confirm=False) as kb:
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term', confirm=False):
             ipwww_search.list_search_terms('video', 130, keyword='new_search')
             p_get_terms.assert_called_once()
             self.assertEqual(3, len(self.li_store))
@@ -155,7 +159,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
     def test_keyboard_empty_string_with_saved_terms(self, p_get_terms, p_add_term, p_do_search):
         """Empty keyboard input should be handled the same as keyboard cancel."""
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='') as kb:
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='') as kb:
             ipwww_search.list_search_terms('video', 130, keyword='new_search')
             p_get_terms.assert_called_once()
             self.assertEqual(3, len(self.li_store))
@@ -167,7 +171,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.CreateBaseDirectory')
     def test_keyboard_canceled_NO_saved_terms(self, p_create_base, p_get_terms, p_add_term, p_do_search):
         """Show the main menu when input is canceled and there are no saved search terms."""
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term', confirm=False) as kb:
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term', confirm=False):
             ipwww_search.list_search_terms('video', 130, keyword='new_search')
             p_get_terms.assert_called_once()
             self.assertEqual(0, len(self.li_store))
@@ -179,7 +183,7 @@ class test_list_search_items(TestCase):
     @patch('resources.lib.ipwww_search.CreateBaseDirectory')
     def test_keyboard_canceled_NO_saved_terms(self, p_create_base, p_get_terms, p_add_term, p_do_search):
         """Empty keyboard input should be handled the same as keyboard cancel."""
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='') as kb:
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='') as kb:
             ipwww_search.list_search_terms('video', 130, keyword='new_search')
             p_get_terms.assert_called_once()
             self.assertEqual(0, len(self.li_store))
@@ -194,7 +198,7 @@ class test_list_search_items(TestCase):
         """When keyboard entry is requested on radio search, assert the correct
         search function is being called
         """
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='blabla'):
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='blabla'):
             ipwww_search.list_search_terms('audio', 140)
             p_do_search.assert_not_called()
             p_do_radio_search.assert_called_once_with('blabla')

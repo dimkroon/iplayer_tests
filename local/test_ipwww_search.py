@@ -250,7 +250,7 @@ class TestListSearchItems(TestCase):
     @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video':{}})
     def test_list_without_saved_items(self, _, p_add_term, p_do_search):
         # Without search term
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='new term'):
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term'):
             ipwww_search.list_search_terms('video', 130, keyword=None)
             self.assertEqual(0, len(self.li_store))
             p_do_search.assert_called_once_with('new term')
@@ -368,7 +368,7 @@ class TestContextMenu(TestCase):
         """When keyboard entry is requested on radio search, assert the correct
         search function is being called
         """
-        with patch('xbmc.Keyboard', new_callable=self.keyb_mock, text='blabla'):
+        with patch('xbmc.Keyboard', new_callable=keyb_mock, text='blabla'):
             ipwww_search.list_search_terms('audio', 140)
             p_do_search.assert_not_called()
             p_do_radio_search.assert_called_once_with('blabla')

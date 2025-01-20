@@ -36,7 +36,7 @@ class TestSearchTermsFile(TestCase):
         f.append('')
         self.assertEqual(['blabla', 'bibi'], list(f))
 
-        # Terms are actually saved
+        # Terms are saved to disk
         f = ipwww_search.SearchHistory('video')
         self.assertEqual(['blabla', 'bibi'], list(f))
 
@@ -44,7 +44,7 @@ class TestSearchTermsFile(TestCase):
         f.remove('blabla')
         self.assertEqual(['bibi'], list(f))
 
-        # Terms are again actually saved
+        # Terms are again saved to disk
         f = ipwww_search.SearchHistory('video')
         self.assertEqual(['bibi'], list(f))
 
@@ -66,7 +66,6 @@ class TestSearchTermsFile(TestCase):
 
     def test_invalid_content_type(self):
         self.assertRaises(ValueError, ipwww_search.SearchHistory, 'iplayer')
-        ipwww_search.SearchHistory('a;klj')
 
     def test_iterator(self):
         f = ipwww_search.SearchHistory('video')
@@ -84,7 +83,7 @@ class TestSearchTermsFile(TestCase):
 
 @patch('resources.lib.ipwww_video.Search')
 @patch('resources.lib.ipwww_search.SearchHistory.append')
-class test_list_search_items(TestCase):
+class TestListSearchItems(TestCase):
     def setUp(self):
         self.li_store = fixtures.ListItemCollector()
         self.p = patch('xbmcplugin.addDirectoryItem', self.li_store)
@@ -107,7 +106,7 @@ class test_list_search_items(TestCase):
         self.assertTrue('keyword=term2' in self.li_store.path(2))
         self.assertTrue('mode=130' in self.li_store.path(2))
 
-    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video':[]})
+    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': []})
     def test_list_without_saved_items(self, _, p_add_term, p_do_search):
         # Without search term
         with patch('xbmc.Keyboard', new_callable=keyb_mock, text='new term'):

@@ -202,3 +202,33 @@ class test_list_search_items(TestCase):
             ipwww_search.list_search_terms('audio', 140)
             p_do_search.assert_not_called()
             p_do_radio_search.assert_called_once_with('blabla')
+
+
+class TestRemoveSearchTerm(TestCase):
+    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
+    def test_remove_existing_term(self, _):
+        ipwww_search.remove_search_term('video', 'term1')
+
+
+    @patch('resources.lib.ipwww_search.SearchHistory._read_file', return_value={'video': ['term1', 'term2']})
+    def test_remove_non_existing_term(self, _):
+        """Should complete without error."""
+        ipwww_search.remove_search_term('video', ',kjhfnlz')
+
+
+@patch('resources.lib.ipwww_search.SearchHistory.replace')
+class TestEditSearchTerm(TestCase):
+    @patch('xbmc.Keyboard', new_callable=keyb_mock, text='new-text')
+    def test_edit_existing_term_with_new_text(self, p_kb, p_replace):
+        ipwww_search.edit_search_term('video', 'term1')
+        p_kb.getText.assert_called_once()
+        p_replace.assert_called_once_with('term1', 'new-text')
+
+    @patch('xbmc.Keyboard', new_callable=keyb_mock, text='')
+    @patch('resources.lib.ipwww_search.remove_search_term')
+    def test_edit_existing_term_with_empty_string(self, p_remove, p_kb, p_replace):
+        """Replacing with an empty string is the same as remove."""
+        ipwww_search.edit_search_term('video', 'term1')
+        p_kb.getText.assert_called_once()
+        p_remove.assert_called_once_with('video', 'term1')
+        p_replace.assert_not_called()

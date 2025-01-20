@@ -13,11 +13,10 @@ from tests.support.testutils import open_json
 
 
 class PlayStateEnum(unittest.TestCase):
+    """Somehow PlayState has never become an Enum"""
     def test_instantiate_playstate(self):
-        with self.assertRaises(NotImplementedError):
-            ps = ipwww_progress.PlayState()
-
-    def test_changes_value(self):
-        ipwww_progress.PlayState.PLAYING = 1
-        p = getattr(ipwww_progress.PlayState, 'PLAYING')
-        print(p)
+        ps = ipwww_progress.PlayState()
+        self.assertGreater(ps.UNDEFINED, 10000)
+        self.assertGreater(ps.PLAYING, 10000)
+        self.assertGreater(ps.STOPPED, 10000)
+        self.assertGreater(ps.PAUSED, 10000)

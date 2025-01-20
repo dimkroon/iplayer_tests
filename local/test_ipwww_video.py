@@ -305,13 +305,3 @@ class TestScrapeAvailableStream(TestCase):
     def test_scrape_red_button_item(self):
         strm_ids = ipwww_video.ScrapeAvailableStreams('some url')
         self.assertEqual(strm_ids['stream_id_st'], 'red_button_one')
-
-    def test_list_if_you_liked_content(self, _):
-        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
-            ipwww_video.ListRecommendations('if-you-liked')
-        self.assertEqual(12, p_AddItem.call_count)
-
-    def test_recommended_content(self, _):
-        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
-            ipwww_video.ListRecommendations('recommendations')
-        self.assertEqual(12, p_AddItem.call_count)

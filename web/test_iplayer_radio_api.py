@@ -137,7 +137,6 @@ class TestListening(TestCase):
         self.assertTrue(resp.is_permanent_redirect)
         self.assertEqual('https://www.bbc.co.uk/sounds/favourites', resp.headers['location'])
 
-
     def test_get_listening_list_page_logged_in(self):
         resp = requests.get(url="https://www.bbc.co.uk/sounds/favourites",
                             headers=ipwww_common.headers,

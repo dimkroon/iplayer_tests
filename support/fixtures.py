@@ -5,13 +5,14 @@
 #  See LICENSE.txt
 # ----------------------------------------------------------------------------------------------------------------------
 
+from __future__ import annotations
 import os
 import sys
 import re
-from typing import Dict, List, Tuple
+from collections.abc import Iterable
+from unittest.mock import patch, Mock
 
-from unittest.mock import patch
-
+import xbmc
 import xbmcaddon
 import xbmcgui
 import xbmcvfs
@@ -140,7 +141,7 @@ def patch_listitem():
             assert isinstance(label, str), "Argument 'label' must be a string."
             self._label2 = label
 
-        def setArt(self, dictionary: Dict[str, str]) -> None:
+        def setArt(self, dictionary: dict[str, str]) -> None:
             assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
             self._art.update(dictionary)
 
@@ -148,7 +149,7 @@ def patch_listitem():
             assert isinstance(isFolder, bool), "Argument 'isFolder' must be a boolean."
             self._is_folder = isFolder
 
-        def setInfo(self, type: str, infoLabels: Dict[str, str]) -> None:
+        def setInfo(self, type: str, infoLabels: dict[str, str]) -> None:
             assert isinstance(type, str), "Argument 'type' must be a string."
             assert isinstance(infoLabels, dict), "Argument 'infoLabels' must be a dict."
             type = type.lower()
@@ -161,7 +162,7 @@ def patch_listitem():
             assert isinstance(value, str), "Argument 'value' must be a string."
             self._props[key] = value
 
-        def setProperties(self, dictionary: Dict[str, str]) -> None:
+        def setProperties(self, dictionary: dict[str, str]) -> None:
             assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
             self._props.update(dictionary)
 
@@ -181,7 +182,7 @@ def patch_listitem():
             assert isinstance(enable, bool), "Argument 'enable' must be a boolean."
             self._content_lookup = enable
 
-        def setSubtitles(self, subtitleFiles: List[str]) -> None:
+        def setSubtitles(self, subtitleFiles: list[str]) -> None:
             assert isinstance(subtitleFiles, (list, tuple)), "Argument 'subtitleFiles' must be a tuple or a list."
             self._subtitles = subtitleFiles
 
@@ -261,3 +262,110 @@ def localise_mock(self, str_id):
     if match:
         return match[1]
     return ''
+
+
+def keyb_mock(text: str | Iterable[str], confirmed: bool | Iterable[bool] = True):
+    """Return a Mock object to replace xbmc.Keyboards that, when called, returns instance
+    of KeybMock. KeybMock acts as mocked instances of xbmc.Keyboard that returns text and
+    isConfirmed as defined by parameters `text` and `confirmed`.
+    KeybMock derives from unittest's Mock and as such all methods, like isConfirmed() and
+    getText(), are Mocks themselves and their calls can be examined like any other Mock.
+
+    Like Kodi's keyboard, each new instance of the mocked keyboard must first be opened
+    with `doModal()` before `isConfirmed()` and `getText()` will return the specified values.
+
+    When `text` and/or `confirmed` are sequences of values, each time after a keyboard is
+    opened with `doModal()` the next value in the sequence will be returned, regardless of
+    whether it is on the same keyboard object, or a new instance.
+    When a sequence is exhausted, each subsequent call will return the last value.
+
+    When testing code that uses keyboard entry you can patch xbmc.Keybaord by either pass the
+    return value of `keyb_mock(...)` to parameter `new`, or pass `keyb_mock` to `new_callable`.
+    Use the latter if patch is used as a decorator and you want to inspect the instantiation
+    of keyboards.
+
+    example::
+
+        @patch('xbmc.Keyboard', new=fixtures.keyb_mock(text='1234'))
+        def test_log_in(self):
+            log_in()    # Function that opens a keyboard with heading 'Enter password'.
+
+        @patch('xbmc.Keyboard', new_callable=fixtures.keyb_mock, text='1234')
+        def test_log_in(self, patched_keyboard):
+            log_in()        # Function that opens a keyboard with heading 'Enter password'.
+            patched_keyboard.assert_called_once_with(heading="Enter password")
+
+        def test_log_in(self):
+            with patch('xbmc.Keyboard', keyb_mock(text='1234')) as patched_keyb:
+                log_in()       # Function that opens a keyboard with heading 'Enter password'.
+                patched_keyboard.assert_called_once_with(heading="Enter password")
+
+
+    :param text: The text, or sequence of texts Keyboard.getText() is to return.
+    :param confirmed: [Opt] The status, or sequence of statuses Keyboard.isConfirmed()
+        will return. Default is True.
+
+    """
+    orig_keyboard = xbmc.Keyboard
+
+    if isinstance(text, str):
+        _text_iter = iter((text,))
+    else:
+        try:
+            _text_iter = iter(text)
+        except TypeError:
+            raise TypeError('Mock Error: Keyboard texts must be either a single string, or a sequence of strings')
+
+    if isinstance(confirmed, bool):
+        _confirmed_iter = iter((confirmed,))
+    else:
+        try:
+            _confirmed_iter = iter(confirmed)
+        except TypeError:
+            raise TypeError(
+                "Mock Error: Keyboard 'confirmed' value must be either a single bool, or a sequence of bools")
+    _last_text = None
+    _last_confirm = None
+
+    class KeybMock(Mock):
+        def __init__(self, line, heading, hidden, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.init_line = line
+            self.heading = heading
+            self.hidden = hidden
+            # Create as instance attributes to ensure each KeybMock instance
+            # has its own return_value.
+            self.getText = Mock(return_value='')
+            self.isConfirmed = Mock(return_value=False)
+
+        def doModal(self, _: int = 0):
+            """Load new return values."""
+            nonlocal _last_text
+            nonlocal _last_confirm
+
+            try:
+                new_txt = next(_text_iter)
+                if not isinstance(new_txt, str):
+                    raise ValueError(f"Mock Error: All keyboard texts must be of "
+                                     f"type str, not '{type(new_txt).__name__}'")
+                self.getText.return_value = _last_text = new_txt
+            except StopIteration:
+                if _last_text is None:
+                    raise ValueError('Mock Error: Keyboard has an empty sequence of texts')
+                self.getText.return_value = _last_text
+
+            try:
+                new_conf = next(_confirmed_iter)
+                if not isinstance(new_conf, bool):
+                    raise ValueError(f"Mock Error: All 'isConfirmed' values must be of "
+                                     f"type bool, not '{type(new_conf).__name__}'")
+                self.isConfirmed.return_value = _last_confirm = new_conf
+            except StopIteration:
+                if _last_confirm is None:
+                    raise ValueError("Mock Error: Keyboard has an empty sequence of 'isConfirmed' values")
+                self.isConfirmed.return_value = _last_confirm
+
+    return Mock(side_effect=lambda line='', heading='', hidden=False: KeybMock(line=line,
+                                                                               heading=heading,
+                                                                               hidden=hidden,
+                                                                               spec=orig_keyboard))

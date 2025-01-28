@@ -160,7 +160,7 @@ def patch_listitem():
         def setProperty(self, key: str, value: str) -> None:
             assert isinstance(key, str), "Argument 'key' must be a string."
             assert isinstance(value, str), "Argument 'value' must be a string."
-            self._props[key] = value
+            self._props[key.lower()] = value
 
         def setProperties(self, dictionary: dict[str, str]) -> None:
             assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
@@ -168,7 +168,7 @@ def patch_listitem():
 
         def getProperty(self, key: str) -> str:
             assert isinstance(key, str), "Argument 'key' must be a string."
-            return self._props['key']
+            return self._props[key.lower()]
 
         def setPath(self, path: str) -> None:
             assert isinstance(path, str), "Argument 'path' must be a string."

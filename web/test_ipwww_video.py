@@ -122,3 +122,15 @@ class ScrapeAtoZPage(unittest.TestCase):
     def test_scrape_page_d(self, p_add):
         result = ipwww_video.GetAtoZPage('d')
         self.assertGreater(p_add.call_count, 10)
+
+
+class ParseMediaSelector(unittest.TestCase):
+    def test_parse_media_selector_vod(self):
+        stream_id = 'm0014l55'      # episode of QI
+        result = ipwww_video.ParseMediaselector(stream_id)
+        self.assertIsInstance(result, tuple)
+
+    def test_parse_media_selector_live(self):
+        stream_id = 'bbc_one_london'
+        video_streams, caption_streams = ipwww_video.ParseMediaselector(stream_id)
+        self.assertIsInstance(video_streams, list)

@@ -14,7 +14,7 @@ from resources.lib import ipwww_common
 from resources.lib import ipwww_video
 from tests.support.testutils import save_json, save_doc, open_doc, doc_path, ExpiredCookieJar
 from tests.support.object_checks import (has_keys, expect_keys, misses_keys, expect_misses_keys, is_not_empty, is_url,
-                                         is_iso_utc_time, iso_duration_2_seconds)
+                                         is_iso_utc_time, iso_duration_2_seconds, check_dash_manifest)
 
 setUpModule = fixtures.setup_web_test()
 
@@ -816,3 +816,154 @@ class LiveListItem(TestCase):
         version = data['versions'][0]
         self.assertEqual('webcast', version['kind'])
         self._check_gen_live_version(version)
+
+
+class MediaSelector(TestCase):
+    live_strm_id = 'bbc_one_london'
+    vod_strm_id = 'm0014l55'      # episode of QI
+
+    def parse_media_set(self, data):
+        result = {
+            'has_thumbs': False,
+            'has_subtitles': False,
+            'max_res': 0,
+            'encodings': set(),
+            'max_encoding': '',        # encoding of the stream with the highest resolution.
+            'max_url': ''              # dash manifest url of a stream with the highest resolution.
+        }
+        self.assertIsInstance(data, dict)
+        media_list = data['media']
+        self.assertIsInstance(media_list, list)
+        for media_type in media_list:
+            # TODO: Check for audio description support.
+            save_url = False
+            if media_type['kind'] == 'thumbnails':
+                result['has_thumbs'] = True
+            elif media_type['kind'] == 'captions':
+                result['has_subtitles'] = True
+            elif media_type['kind'] == 'video':
+                resolution = int(media_type['height'])
+                if resolution > result['max_res']:
+                    result['max_res'] = resolution
+                    result['max_encoding'] = media_type['encoding']
+                    save_url = True
+                result['encodings'].add(media_type['encoding'])
+            for connection in media_type['connection']:
+                self.assertIsInstance(connection, dict)
+                has_keys(connection, 'href', 'protocol', 'supplier', 'transferFormat')
+                if 'priority' not in connection:
+                    self.assertTrue('dpw' in connection)
+                if save_url and connection['protocol'] == 'https' and connection['transferFormat'] == 'dash':
+                    result['max_url'] = connection['href']
+                    save_url = False
+
+        return result
+
+    def test_vod_website_url(self):
+        url = ('https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/'
+               'mediaset/pc/vpid/%s/format/json/cors/1') % self.vod_strm_id
+        resp = requests.get(url)
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        features = self.parse_media_set(data)
+        self.assertEqual(features['max_res'], 1080)
+        self.assertSetEqual(features['encodings'], {'h264'})
+        self.assertTrue(features['has_thumbs'])
+        self.assertTrue(features['has_subtitles'])
+
+        resp = requests.get(features['max_url'])
+        max_res = check_dash_manifest(self, resp.text)
+        # The resolution advertised in the mediaselector is not the max resolution we get.
+        self.assertNotEqual(max_res, features['max_res'])
+        self.assertEqual(max_res, 720)
+
+    def test_live_website_url(self):
+        url = ('https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/'
+               'mediaset/pc/vpid/%s/format/json/cors/1') % self.live_strm_id
+        resp = requests.get(url)
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        features = self.parse_media_set(data)
+        self.assertEqual(features['max_res'], 720)
+        self.assertSetEqual(features['encodings'], {'h264'})
+        self.assertFalse(features['has_thumbs'])        # The live selector has no thubms
+        self.assertTrue(features['has_subtitles'])
+
+        resp = requests.get(features['max_url'])
+        max_res = check_dash_manifest(self, resp.text)
+        self.assertEqual(max_res, features['max_res'])
+
+    def test_vod_tv_app_version_3(self):
+        # url from https://github.com/vonH/plugin.video.iplayerwww/issues/397#issue-3189720081
+        url = ('https://open.live.bbc.co.uk/mediaselector/6/select/version/3.0/'
+               'mediaset/iptv-mse/cvid/urn:bbc:pips:pid:%s/format/json/proto/https/cors/1')
+        resp = requests.get(url % self.vod_strm_id)
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        features = self.parse_media_set(data)
+        self.assertEqual(features['max_res'], 1080)
+        self.assertSetEqual(features['encodings'], {'h264'})
+        self.assertTrue(features['has_thumbs'])
+        self.assertTrue(features['has_subtitles'])
+
+        resp = requests.get(features['max_url'])
+        max_res = check_dash_manifest(self, resp.text)
+        # The resolution advertised in the mediaselector is not the max resolution we get.
+        self.assertNotEqual(max_res, features['max_res'])
+        self.assertEqual(max_res, 720)
+
+    def test_live_tv_app_version_3(self):
+        # url from https://github.com/vonH/plugin.video.iplayerwww/issues/397#issue-3189720081
+        url = ('https://open.live.bbc.co.uk/mediaselector/6/select/version/3.0/'
+               'mediaset/iptv-mse/cvid/urn:bbc:pips:pid:%s/format/json/proto/https/cors/1')
+        resp = requests.get(url % self.live_strm_id)
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        features = self.parse_media_set(data)
+        self.assertEqual(features['max_res'], 1080)
+        self.assertSetEqual(features['encodings'], {'h264', 'h265'})
+        self.assertEqual(features['max_encoding'], 'h265')
+        self.assertFalse(features['has_thumbs'])
+        self.assertTrue(features['has_subtitles'])
+
+        resp = requests.get(features['max_url'])
+        max_res = check_dash_manifest(self, resp.text)
+        self.assertEqual(max_res, 1080)
+
+    def test_vod_smart_tv_version_3(self):
+        # url from https://github.com/vonH/plugin.video.iplayerwww/issues/397#issue-3189720081
+        url = ('https://open.live.bbc.co.uk/mediaselector/6/select/version/3.0/'
+               'mediaset/iptv-native-hd/cvid/urn:bbc:pips:pid:%s/format/json/cors/1/proto/https')
+        resp = requests.get(url % self.vod_strm_id)
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        features = self.parse_media_set(data)
+        self.assertEqual(features['max_res'], 1080)
+        self.assertEqual(features['max_encoding'], 'h264')
+        self.assertSetEqual(features['encodings'], {'h264'})
+        self.assertTrue(features['has_thumbs'])
+        self.assertTrue(features['has_subtitles'])
+
+        resp = requests.get(features['max_url'])
+        max_res = check_dash_manifest(self, resp.text)
+        # The resolution advertised in the mediaselector is not the max resolution we get.
+        self.assertNotEqual(max_res, features['max_res'])
+        self.assertEqual(max_res, 720)
+
+    def test_live_smart_tv_version_3(self):
+        # url from https://github.com/vonH/plugin.video.iplayerwww/issues/397#issue-3189720081
+        url = ('https://open.live.bbc.co.uk/mediaselector/6/select/version/3.0/'
+               'mediaset/iptv-native-hd/cvid/urn:bbc:pips:pid:%s/format/json/cors/1/proto/https')
+        resp = requests.get(url % self.live_strm_id)
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        features = self.parse_media_set(data)
+        self.assertEqual(features['max_res'], 1080)
+        self.assertEqual(features['max_encoding'], 'h265')
+        self.assertSetEqual(features['encodings'], {'h264', 'h265'})
+        self.assertFalse(features['has_thumbs'])
+        self.assertTrue(features['has_subtitles'])
+
+        resp = requests.get(features['max_url'])
+        max_res = check_dash_manifest(self, resp.text)
+        self.assertEqual(max_res, 1080)

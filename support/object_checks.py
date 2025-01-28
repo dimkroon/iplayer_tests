@@ -6,6 +6,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 
 from __future__ import annotations
+import re
 import time
 import unittest
 
@@ -146,10 +147,28 @@ def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
     return True
 
 
-def is_not_empty(item, type):
-    if not isinstance(item, type):
+def is_not_empty(item, item_type):
+    if not isinstance(item, item_type):
         return False
-    if type in (int, float, bool):
+    if item_type in (int, float, bool):
         return True
     else:
         return bool(item)
+
+
+def check_dash_manifest(testcase, mpd: str):
+    """Check that `mpd` is a dash manifest and return the maximum video resolution
+
+    """
+    adapt_sets = re.findall(r'<AdaptationSet(.+?)</AdaptationSet>', mpd, re.DOTALL | re.IGNORECASE)
+    for adapt_set in adapt_sets:
+        if 'contentType="video"' in adapt_set:
+            match = re.search(r'maxHeight="(\d{3,4})"', adapt_set, re.IGNORECASE)
+            if match:
+                return int(match.group(1))
+            max_res = 0
+            for res in re.findall(r'<Representation [^>]*?height="(\d+)"[^>]*>', adapt_set, re.DOTALL | re.IGNORECASE):
+                res = int(res)
+                max_res = max(max_res, res)
+            return max_res
+    raise AssertionError("Invalid DASH manifest")

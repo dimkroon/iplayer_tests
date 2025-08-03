@@ -33,8 +33,10 @@ def global_setup():
         # Ensure that kodi's special://profile refers to a predefined folder. Just in case
         # some code want to write, whether intentional or not.
         profile_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'addon_profile_dir'))
+        addon_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '../..',  'plugin.video.iplayerwww'))
+        addon_info = {'profile': profile_dir, 'path': addon_dir}
         patch_g = patch('xbmcaddon.Addon.getAddonInfo',
-                         new=lambda self, item: profile_dir if item == 'profile' else '')
+                         new=lambda self, item: addon_info.get(item, ''))
         patch_g.start()
 
         xbmcvfs.translatePath = translate_path_mock

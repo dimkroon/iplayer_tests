@@ -40,14 +40,14 @@ class TestLive(TestCase):
         self.assertTrue(is_not_empty(data['smp']['liveStreamJwt'], str))
 
     def test_bbc_one_web_page_authenticated(self):
-        resp = requests.get('https://www.bbc.co.uk/sounds/play/live:bbc_radio_one',
+        resp = requests.get('https://www.bbc.co.uk/sounds/play/live/bbc_radio_one',
                             headers=ipwww_common.headers,
                             cookies=ipwww_common.cookie_jar,
                             allow_redirects=True)
         self.assertEqual(200, resp.status_code)
         data  = scrape_sound_data(resp.text)
         # save_json(data, 'json/sounds-live_radio1_authenticated.json')
-        # save_doc(resp.text, 'html/sounds-live_radio1_authenticated.html')
+        save_doc(resp.text, 'html/sounds-live_radio1_authenticated.html')
         self.assertTrue(data['userSettings']['isSignedIn'])
         self.assertTrue(is_not_empty(data['smp']['liveStreamJwt'], str))
 

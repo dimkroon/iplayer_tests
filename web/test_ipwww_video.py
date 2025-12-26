@@ -127,10 +127,22 @@ class ScrapeAtoZPage(unittest.TestCase):
 class ParseMediaSelector(unittest.TestCase):
     def test_parse_media_selector_vod(self):
         stream_id = 'm0014l55'      # episode of QI
-        result = ipwww_video.ParseMediaselector(stream_id)
-        self.assertIsInstance(result, tuple)
+        with patch('xbmcaddon.Addon.getSettingBool', return_value=True):
+            sd_streams, caption_streams = ipwww_video.ParseMediaselector(stream_id)
+            self.assertIsInstance(sd_streams, list)
+        with patch('xbmcaddon.Addon.getSettingBool', return_value=False):
+            hd_streams, caption_streams = ipwww_video.ParseMediaselector(stream_id)
+            self.assertIsInstance(hd_streams, list)
+        self.assertNotEqual(sd_streams, hd_streams)
 
-    def test_parse_media_selector_live(self):
+    def test_parse_media_selector_live_hd(self, ):
         stream_id = 'bbc_one_london'
-        video_streams, caption_streams = ipwww_video.ParseMediaselector(stream_id)
-        self.assertIsInstance(video_streams, list)
+
+        with patch('xbmcaddon.Addon.getSettingBool', return_value=True):
+            sd_streams, caption_streams = ipwww_video.ParseMediaselector(stream_id)
+            self.assertIsInstance(sd_streams, list)
+
+        with patch('xbmcaddon.Addon.getSettingBool', return_value=False):
+            hd_streams, caption_streams = ipwww_video.ParseMediaselector(stream_id)
+            self.assertIsInstance(hd_streams, list)
+        self.assertNotEqual(sd_streams, hd_streams)

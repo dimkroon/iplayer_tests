@@ -282,7 +282,6 @@ class Watching(TestCase):
             self.assertEqual(1, len(programme))
             self.assertTrue(is_not_empty(programme['id'], str))
 
-
     def test_get_watching_without_signed_in(self):
         """This just return a normal HTML page with a button to sign in or register."""
         page_url = "https://www.bbc.co.uk/iplayer/continue-watching"
@@ -376,7 +375,7 @@ class TestWatchlist(TestCase):
 
         def test_get_watchlist_by_ibl_api(self):
             resp = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added',
-                                headers= ipwww_common.headers,
+                                headers=ipwww_common.headers,
                                 cookies=ipwww_common.cookie_jar,
                                 allow_redirects=False
                                 )
@@ -395,7 +394,7 @@ class TestWatchlist(TestCase):
 
         def test_compare_html_and_ibl(self):
             """Somewhat surprisingly, HTML pages seem to complete much faster than API requests."""
-            req_kwargs = {'headers': ipwww_common.headers,'cookies': ipwww_common.cookie_jar, 'allow_redirects':False}
+            req_kwargs = {'headers': ipwww_common.headers, 'cookies': ipwww_common.cookie_jar, 'allow_redirects': False}
             resp_html = requests.get('https://www.bbc.co.uk/iplayer/added', **req_kwargs)
             resp_ibl = requests.get('https://user.ibl.api.bbc.co.uk/ibl/v1/user/added', **req_kwargs)
             self.assertLess(resp_html.elapsed, resp_ibl.elapsed)
@@ -409,8 +408,8 @@ class TestWatchlist(TestCase):
             # Check if add succeeds and that adding an already added item succeeds without issues.
             for i in range(10):
                 resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
-                                    cookies=ipwww_common.cookie_jar,
-                                    json={"id": PGM_ID})
+                                     cookies=ipwww_common.cookie_jar,
+                                     json={"id": PGM_ID})
                 self.assertEqual(202, resp.status_code)
                 if i == 0:
                     body = resp.content
@@ -429,7 +428,7 @@ class TestWatchlist(TestCase):
                                  json={"id": EPISODE_ID})
             self.assertEqual(404, resp.status_code)
             data = resp.json()
-            self.assertDictEqual(data['error'], {"details":"Not Found","http_response_code":404})
+            self.assertDictEqual(data['error'], {"details": "Not Found", "http_response_code": 404})
 
         def test_add_non_existing_programme(self):
             PGM_ID = 'zkdsfn8esdfc'  # a totally made up programme ID
@@ -438,7 +437,7 @@ class TestWatchlist(TestCase):
                                  json={"id": PGM_ID})
             self.assertEqual(404, resp.status_code)
             data = resp.json()
-            self.assertDictEqual(data['error'], {"details":"Not Found","http_response_code":404})
+            self.assertDictEqual(data['error'], {"details": "Not Found", "http_response_code": 404})
 
         def test_add_to_added_not_signed_in(self):
             PGM_ID = 'b006ml0g'  # QI
@@ -446,7 +445,8 @@ class TestWatchlist(TestCase):
             resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
                                  json={"id": PGM_ID})
             self.assertEqual(401, resp.status_code)
-            self.assertDictEqual(resp.json()['error'], {"details":"Missing authorization header","http_response_code":401})
+            self.assertDictEqual(resp.json()['error'], {"details": "Missing authorization header",
+                                                        "http_response_code": 401})
 
             # Expired cookies
             resp = requests.post('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds',
@@ -466,7 +466,7 @@ class TestWatchlist(TestCase):
             # now remove from the list
             for i in range(2):
                 resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
-                                    cookies=ipwww_common.cookie_jar)
+                                       cookies=ipwww_common.cookie_jar)
                 self.assertEqual(202, resp.status_code)
                 self.assertEqual(resp.text, '{"id":"' + PGM_ID + '"}')
 
@@ -475,13 +475,14 @@ class TestWatchlist(TestCase):
             # Not signed in at all
             resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID)
             self.assertEqual(401, resp.status_code)
-            self.assertDictEqual(resp.json()['error'], {"details":"Missing authorization header","http_response_code":401})
+            self.assertDictEqual(resp.json()['error'], {"details": "Missing authorization header",
+                                                        "http_response_code": 401})
 
         def test_remove_a_non_existing_programme(self):
             """Totally bogus programme IDs are accepted just as well."""
             PGM_ID = 'zldkjfghapoer9'
             resp = requests.delete('https://user.ibl.api.bbc.co.uk/ibl/v1/user/adds/' + PGM_ID,
-                                cookies=ipwww_common.cookie_jar)
+                                   cookies=ipwww_common.cookie_jar)
             self.assertEqual(202, resp.status_code)
             self.assertEqual(resp.text, '{"id":"' + PGM_ID + '"}')
 
@@ -523,19 +524,20 @@ class SchedulesFromHtml(TestCase):
         data = ipwww_video.ScrapeJSON(resp.text)
         # save_json(data, 'json/tv-schedules-bbcone-london.json')
         schedule = data['schedule']
-        has_keys(schedule, 'channelKey','title', 'bbcDate', 'ukDate', 'daysFromBBCToday', 'items' )
+        has_keys(schedule, 'channelKey', 'title', 'bbcDate', 'ukDate', 'daysFromBBCToday', 'items')
         self.assertEqual('bbcone', schedule['channelKey'])
         self.assertEqual('BBC One', schedule['title'])
         self.assertEqual(0, schedule['daysFromBBCToday'])
         self.assertTrue(is_not_empty(schedule['items'], list))
         items_list = schedule['items']
-        for i in  range(len(items_list)):
+        for i in range(len(items_list)):
             obj_name = 'BBCOneSchedule.item-{}.meta'.format(i)
             item = items_list[i]
             self.assertTrue(item['type'] in ('LIVE', 'AVAILABLE', 'UNAVAILABLE_FUTURE'))
-            has_keys(item['meta'], 'scheduledEnd','scheduledStart', obj_name=obj_name)
+            has_keys(item['meta'], 'scheduledEnd', 'scheduledStart', obj_name=obj_name)
             has_keys(item['props'], 'href', 'imageTemplate', 'title', 'synopsis', obj_name=obj_name)
-            expect_keys(item['props'], 'subtitle', obj_name='BBCOneSchedule.item-{}.props'.format(i))  # subtitle may be absent in one-off programmes.
+            # subtitle may be absent in one-off programmes.
+            expect_keys(item['props'], 'subtitle', obj_name='BBCOneSchedule.item-{}.props'.format(i))
             if item['type'] == 'LIVE':
                 has_keys(item['props'], 'progressPercent', 'label', obj_name=obj_name)
             elif item['type'] == 'AVAILABLE':
@@ -582,6 +584,7 @@ class SchedulesByIblAPi(TestCase):
                 'bbc_three', 'bbc_four', 'cbbc', 'cbeebies', 'bbc_news24',
                 'bbc_parliament', 'bbc_alba', 'bbc_scotland', 's4cpbs'
                 )
+
     def check_broadcast_item(self, bc_data):
         """Check the data structure that represents a broadcasts.
 
@@ -593,7 +596,7 @@ class SchedulesByIblAPi(TestCase):
         trans_start = bc_data.get('transmission_start')
         # Only items that have already started have a field transmission_start
         if trans_start:
-            trans_t = datetime.strptime(trans_start,'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+            trans_t = datetime.strptime(trans_start, '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
             self.assertGreater(now, trans_t)
 
         self.assertTrue(is_iso_utc_time(bc_data['scheduled_start']))
@@ -626,8 +629,9 @@ class SchedulesByIblAPi(TestCase):
             pass
 
     def test_guide_by_ibl_api_unavailable_channels(self):
-        """These are all channel ID's used for live streams in the addon, but cannot be used directly to obtain schedules.
-        Apart from bbc_one, all HD type of channels fail, but schedules are available as non-HD channel.
+        """These are all channel ID's used for live streams in the addon, but cannot
+        be used directly to obtain schedules. Apart from bbc_one, all HD type of
+        channels fail, but schedules are available as non-HD channel.
         """
         failing_channels = ('bbc_one', 'bbc_two', 'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd',
                             'bbc_scotland_hd', 'bbc_one_scotland_hd', 'bbc_one_northern_ireland_hd', 'bbc_one_wales_hd')
@@ -645,14 +649,15 @@ class SchedulesByIblAPi(TestCase):
         t = datetime.now(timezone.utc)
         end_t = t + timedelta(hours=4)
         url_fmt = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/bbc_one_london/broadcasts?from_date=' +
-               t.strftime('%Y-%m-%dT%H:%M') + '&{}=' + end_t.strftime('%Y-%m-%dT%H:%M'))
+                   t.strftime('%Y-%m-%dT%H:%M') + '&{}=' + end_t.strftime('%Y-%m-%dT%H:%M'))
         for key in ('end_date', 'to_date'):
             url = url_fmt.format(key)
             resp = requests.get(url, allow_redirects=False)
             self.assertEqual(200, resp.status_code)
             schedule = resp.json()['broadcasts']['elements']
             self.assertEqual(20, len(schedule))     # API defaults to 20 items per page when not specified
-            last_programme = datetime.strptime(schedule[-1]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+            last_programme = datetime.strptime(
+                schedule[-1]['scheduled_start'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
             self.assertGreater(last_programme, end_t)
 
     def test_guide_by_ibl_api_page_length(self):
@@ -678,7 +683,8 @@ class SchedulesByIblAPi(TestCase):
         self.assertEqual(200, resp.status_code)
         data = resp.json()
         schedule = data['broadcasts']['elements']
-        first_programme = datetime.strptime(schedule[0]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+        first_programme = datetime.strptime(
+            schedule[0]['scheduled_start'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
         # Check that the first programme in the list is appr. 8 days ago.
         self.assertGreaterEqual(first_programme, now - timedelta(days=8, hours=3))
         self.assertLessEqual(first_programme, now - timedelta(days=8))
@@ -699,12 +705,14 @@ class SchedulesByIblAPi(TestCase):
         self.assertEqual(200, resp.status_code)
         data = resp.json()
         schedule = data['broadcasts']['elements']
-        first_programme = datetime.strptime(schedule[0]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+        first_programme = datetime.strptime(
+            schedule[0]['scheduled_start'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
         # Check that the start of the first programme in the list is just before from_date.
         self.assertLessEqual(first_programme, start_t)
         self.assertGreater(first_programme, start_t - timedelta(hours=3))
         # Check that the last programme is roughly 10 days from now.
-        last_programme = datetime.strptime(schedule[-1]['scheduled_start'],'%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
+        last_programme = datetime.strptime(
+            schedule[-1]['scheduled_start'], '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=timezone.utc)
         self.assertLessEqual(last_programme, now + timedelta(days=10))
         self.assertGreater(last_programme, now + timedelta(days=9))
         # Check there is no more data than the maximum of 200 items on this page.
@@ -808,7 +816,8 @@ class LiveListItem(TestCase):
 
     def test_sportstream_episode(self):
         """A page item representing a 'sport stream', i.e. a stream only available on iplayer."""
-        url = 'https://www.bbc.co.uk/iplayer/episode/l0056v5y/snooker-uk-championship-2024-live-shaun-murphy-v-ding-junhui-table-one'
+        url = ('https://www.bbc.co.uk/iplayer/episode/l0056v5y/'
+               'snooker-uk-championship-2024-live-shaun-murphy-v-ding-junhui-table-one')
         resp = requests.get(url, allow_redirects=False)
         self.assertEqual(200, resp.status_code)
         # save_doc(resp.text, 'html/snooker_uk_sportstream_item.html')

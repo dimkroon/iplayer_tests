@@ -573,7 +573,7 @@ class SchedulesFromHtml(TestCase):
 class SchedulesByIblAPi(TestCase):
     channels = ('bbc_two_england', 'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
 
-                'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
                 'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
                 'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_north_west',
                 'bbc_one_south', 'bbc_one_south_east', 'bbc_one_south_west', 'bbc_one_west',
@@ -627,10 +627,13 @@ class SchedulesByIblAPi(TestCase):
 
     def test_guide_by_ibl_api_unavailable_channels(self):
         """These are all channel ID's used for live streams in the addon, but cannot be used directly to obtain schedules.
-        Apart from bbc_one, all HD type of channels fail, but schedules are available as non-HD channel.
+        All HD type of channels fail, but their schedules are available as non-HD channel.
+        Red_button_one and event stream schedules are also not available, although ess API does return schedules for
+        these items.
         """
-        failing_channels = ('bbc_one', 'bbc_two', 'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd',
-                            'bbc_scotland_hd', 'bbc_one_scotland_hd', 'bbc_one_northern_ireland_hd', 'bbc_one_wales_hd')
+        failing_channels = ('bbc_one', 'bbc_two', 'bbc_one_hd', 'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd',
+                            'bbc_scotland_hd', 'bbc_one_scotland_hd', 'bbc_one_northern_ireland_hd', 'bbc_one_wales_hd',
+                            'red_button_one',)
 
         for chan in failing_channels:
             url = ('https://ibl.api.bbc.co.uk/ibl/v1/channels/' + chan + '/broadcasts?per_page=8&from_date=' +
@@ -712,6 +715,22 @@ class SchedulesByIblAPi(TestCase):
 
 
 class SchedulesByEssApi(TestCase):
+    channels = ('bbc_two_england',
+                'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
+
+                'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
+                'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_south_east',
+                'bbc_one_south_west', 'bbc_one_west', 'bbc_one_yorks',
+                'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
+                'bbc_one_north_west', 'bbc_one_south', 'bbc_one_west_midlands',
+
+                'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd', 'bbc_news24', 'bbc_parliament',
+                'bbc_alba', 'bbc_scotland_hd', 's4cpbs',
+
+                'red_button_one')
+
+    fails = ('bbc_two_scotland', 'bbc_one_hd',)
+
     def check_ess_programme(self, sc_data, channel_id):
         has_keys(sc_data, 'id', 'service', 'version', 'episode', 'brand', 'masterbrand', 'published_time')
         self.assertEqual(sc_data['service']['id'], channel_id)
@@ -722,19 +741,7 @@ class SchedulesByEssApi(TestCase):
         self.assertTrue(is_iso_utc_time(sc_data['published_time']['end']))
 
     def test_available_channels(self):
-        channels = ('bbc_two_england', 'bbc_two_scotland',
-                    'bbc_two_northern_ireland_digital', 'bbc_two_wales_digital',
-
-                    'bbc_one_hd', 'bbc_one_northern_ireland', 'bbc_one_scotland', 'bbc_one_wales',
-                    'bbc_one_east_yorkshire', 'bbc_one_london', 'bbc_one_north_east', 'bbc_one_south_east',
-                    'bbc_one_south_west', 'bbc_one_west', 'bbc_one_yorks',
-                    'bbc_one_east_midlands', 'bbc_one_east_midlands', 'bbc_one_east', 'bbc_one_east_midlands',
-                    'bbc_one_north_west', 'bbc_one_south', 'bbc_one_west_midlands',
-
-                    'bbc_three_hd', 'bbc_four_hd', 'cbbc_hd', 'cbeebies_hd', 'bbc_news24', 'bbc_parliament',
-                    'bbc_alba', 'bbc_scotland_hd', 's4cpbs')
-        # channels = ('bbc_one_hd',)
-        for chan in channels:
+        for chan in self.channels:
             url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
             resp = requests.get(url, allow_redirects=False)
             self.assertEqual(200, resp.status_code)
@@ -742,10 +749,10 @@ class SchedulesByEssApi(TestCase):
             for item in data['items']:
                 self.check_ess_programme(item, chan)
 
-        # for chan in fails:
-        #     url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
-        #     resp = requests.get(url, allow_redirects=False)
-        #     self.assertEqual(404, resp.status_code)
+        for chan in self.fails:
+            url = 'https://ess.api.bbci.co.uk/schedules?serviceId=' + chan
+            resp = requests.get(url, allow_redirects=False)
+            self.assertEqual(404, resp.status_code)
 
 
 @skip("Run only when the live event is being broadcast and url's are properly set.")

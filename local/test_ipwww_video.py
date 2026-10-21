@@ -12,9 +12,6 @@ from support.testutils import open_json, open_doc
 from support.object_checks import is_li_compatible_dict, has_keys, is_url, is_not_empty
 
 
-setUp = fixtures.setup_local_tests()
-
-
 class TestGetJsonDataWithBBCId(TestCase):
     @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/iplayer.html'))
     def test_main_page(self):
@@ -22,9 +19,11 @@ class TestGetJsonDataWithBBCId(TestCase):
         pass
 
 
-@patch('resources.lib.ipwww_video.ADDON.getSetting', lambda x: 0 if x == 'scrape_atoz' else None)
-class TestGetAtoZPage_ProgressDialog(TestCase):
+class TestGetAtoZPage_ProgressDialog(fixtures.LocalTestCase):
+    addon_settings = {'scrape_atoz': 0}
+
     def setUp(self):
+        super().setUp()
         self.mocked_dialog = MagicMock()
         self.mocked_close = self.mocked_dialog.close = MagicMock()
 
@@ -48,9 +47,11 @@ class TestGetAtoZPage_ProgressDialog(TestCase):
         p_close.assert_called_once()
 
 
-@patch.object(ipwww_video.ADDON, 'getSetting', new=lambda x: 1 if x == 'paginate_episodes' else None)
-class TestScrapeAtoZEpisodes_ProgressDialog(TestCase):
+class TestScrapeAtoZEpisodes_ProgressDialog(fixtures.LocalTestCase):
+    addon_settings = {'paginate_episodes': '1'}
+
     def setUp(self):
+        super().setUp()
         self.mocked_dialog = MagicMock()
         self.mocked_close = self.mocked_dialog.close = MagicMock()
 
@@ -74,7 +75,7 @@ class TestScrapeAtoZEpisodes_ProgressDialog(TestCase):
         p_close.assert_called_once()
 
 
-class SetSortMethod(TestCase):
+class SetSortMethod(fixtures.LocalTestCase):
     @patch('xbmcplugin.addSortMethod')
     def test_set_default_sort_method(self,p_addsort):
         ipwww_video.SetSortMethods()
@@ -86,8 +87,9 @@ class SetSortMethod(TestCase):
         self.assertEqual(4, p_addsort.call_count)
 
 
-class TestSelectSynopsis(TestCase):
+class TestSelectSynopsis(fixtures.LocalTestCase):
     def setUp(self):
+        super().setUp()
         self.synopses = {'editorial': 'editorial plot',
                          'large': 'large plot',
                          'medium': 'medium plot',
@@ -166,8 +168,9 @@ class TestSelectSynopsis(TestCase):
         self.assertEqual('description', ipwww_video.SelectSynopsis('description'))
 
 
-class TestSelectImage(TestCase):
+class TestSelectImage(fixtures.LocalTestCase):
     def setUp(self):
+        super().setUp()
         self.images = {'standard': 'standard image',
                        'default': 'default image',
                        'promotional': 'promotional image',
@@ -209,7 +212,7 @@ class TestSelectImage(TestCase):
         self.assertRaises(AttributeError, ipwww_video.SelectImage, 'DefaultFolder.png')
 
 
-class TestParseProgramme(TestCase):
+class TestParseProgramme(fixtures.LocalTestCase):
     def test_parse_programma(self):
         data = open_json('video_programmes.json')
         for progr_data in data:
@@ -219,7 +222,7 @@ class TestParseProgramme(TestCase):
             is_li_compatible_dict(self, result)
 
 
-class TestParseEpisode(TestCase):
+class TestParseEpisode(fixtures.LocalTestCase):
     def test_parse_episode(self):
         data = open_json('html/watching.json')
         for item_data in data['items']['elements']:
@@ -229,7 +232,7 @@ class TestParseEpisode(TestCase):
             is_li_compatible_dict(self, result)
 
 
-class TestListWatching(TestCase):
+class TestListWatching(fixtures.LocalTestCase):
     @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watching.json'))
     def test_list_watching_authenticated(self, _):
         with patch('resources.lib.ipwww_video.CheckAutoplay') as p_CheckAutoplay:
@@ -249,7 +252,7 @@ class TestListWatching(TestCase):
 
 
 @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watchlist.json'))
-class TestListFavourites(TestCase):
+class TestListFavourites(fixtures.LocalTestCase):
     def test_list_favourites_authenticated(self, _):
         with patch('resources.lib.ipwww_video.AddMenuEntry') as p_AddMenuEntry:
             ipwww_video.ListFavourites()
@@ -257,7 +260,7 @@ class TestListFavourites(TestCase):
 
 
 @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('json/iplayer.json'))
-class TestListRecommendations(TestCase):
+class TestListRecommendations(fixtures.LocalTestCase):
     def test_list_recommendations_authenticated(self, _):
         with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
             ipwww_video.ListRecommendations()
@@ -274,8 +277,8 @@ class TestListRecommendations(TestCase):
         self.assertEqual(12, p_AddItem.call_count)
 
 
-class TestScrapeAvailableStream(TestCase):
-    """Play am item from a listing
+class TestScrapeAvailableStream(fixtures.LocalTestCase):
+    """Play an item from a listing
 
     """
     @patch('resources.lib.ipwww_video.OpenURL', new=open_doc('html/snooker_uk_sportstream_item.html'))

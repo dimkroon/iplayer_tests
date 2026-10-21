@@ -9,15 +9,13 @@ from http import cookiejar
 from resources.lib import ipwww_video
 from support.testutils import NotLoggedInCookieJar
 
-setUp = fixtures.setup_web_test()
 
-
-class AuthenticatedPages(unittest.TestCase):
+class AuthenticatedPages(fixtures.WebTestCase):
     def test_resume_wathing(self):
         ipwww_video.ListWatching()
 
 
-class TestAddAvailableStreamItem(unittest.TestCase):
+class TestAddAvailableStreamItem(fixtures.WebTestCase):
     def test_play_epdisode(self):
         ipwww_video.AddAvailableStreamItem(
             'Episode',
@@ -25,8 +23,9 @@ class TestAddAvailableStreamItem(unittest.TestCase):
             None,
             '')
 
+
 @patch('xbmcplugin.addDirectoryItem')
-class GenericListings(unittest.TestCase):
+class GenericListings(fixtures.WebTestCase):
     def test_list_live(self, p_add_item):
         self.assertRaises(SystemExit, ipwww_video.ListLive)
         self.assertEqual(p_add_item.call_count, 33)
@@ -62,7 +61,7 @@ class GenericListings(unittest.TestCase):
                 p_create_base.assert_called_once()
 
 
-class MyProgrammes(unittest.TestCase):
+class MyProgrammes(fixtures.WebTestCase):
     def test_added(self):
         ipwww_video.ListFavourites()
 
@@ -74,7 +73,7 @@ class MyProgrammes(unittest.TestCase):
         PGM_ID = 'b006ml0g'
 
 
-class TvSchedule(unittest.TestCase):
+class TvSchedule(fixtures.WebTestCase):
     channel_list = [
         ('bbc_one_hd',                       'BBC One',                  'bbc_one_london'),
         ('bbc_two_england',                  'BBC Two',                  'bbc_two_england'),
@@ -116,7 +115,7 @@ class TvSchedule(unittest.TestCase):
         self.assertEqual(len(self.channel_list) - 1, len(schedules))
 
 
-class ScrapeAtoZPage(unittest.TestCase):
+class ScrapeAtoZPage(fixtures.WebTestCase):
     @patch('resources.lib.ipwww_video.AddMenuEntry')
     @patch('xbmcaddon.Addon.getSetting', lambda self, x: '1' if x == 'scrape_atoz' else None)
     def test_scrape_page_d(self, p_add):
@@ -124,7 +123,7 @@ class ScrapeAtoZPage(unittest.TestCase):
         self.assertGreater(p_add.call_count, 10)
 
 
-class ParseMediaSelector(unittest.TestCase):
+class ParseMediaSelector(fixtures.WebTestCase):
     def test_parse_media_selector_vod(self):
         stream_id = 'm0014l55'      # episode of QI
         result = ipwww_video.ParseMediaselector(stream_id)

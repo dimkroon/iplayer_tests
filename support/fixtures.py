@@ -10,6 +10,7 @@ import os
 import sys
 import re
 from collections.abc import Iterable
+from unittest import TestCase
 from unittest.mock import patch, Mock
 
 import xbmc
@@ -34,7 +35,7 @@ def global_setup():
         # some code want to write, whether intentional or not.
         profile_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'addon_profile_dir'))
         patch_g = patch('xbmcaddon.Addon.getAddonInfo',
-                         new=lambda self, item: profile_dir if item == 'profile' else '')
+                        new=lambda self, item: profile_dir if item == 'profile' else '')
         patch_g.start()
 
         xbmcvfs.translatePath = translate_path_mock
@@ -47,7 +48,7 @@ def global_setup():
             sys.argv[1] = '1'
 
         # Define some settings.
-        def addon_setting(self, key):
+        def addon_setting(_, key):
             import credentials
             if key in ('bbc_id_enabled', 'bbc_id_autologin'):
                 return 'true'
@@ -55,8 +56,10 @@ def global_setup():
                 return credentials.uname
             if key == 'bbc_id_password':
                 return credentials.passw
-            if key in('catchup_source', 'subtitle_source', 'radio_source'):
+            if key in ('catchup_source', 'subtitle_source', 'radio_source'):
                 return '0'
+            else:
+                return None
 
         xbmcaddon.Addon.getSetting = addon_setting
 
@@ -91,6 +94,7 @@ def tear_down_local_tests():
 
 credentials_set = False
 
+
 def set_credentials() -> None:
     # IMPORTANT: import here, after global setup has been executed and paths to addon profile_dir are set!!
     from resources.lib import ipwww_common
@@ -99,7 +103,7 @@ def set_credentials() -> None:
     credentials_set = True
 
 
-def setup_web_test(*args):
+def setup_web_test(*_):
     # Sign in once per test run.
     if not credentials_set:
         set_credentials()
@@ -108,6 +112,7 @@ def setup_web_test(*args):
 def patch_listitem():
     import xbmcgui
 
+    # noinspection pep8-naming
     class LI(xbmcgui.ListItem):
         def __init__(self, label: str = "",
                      label2: str = "",
@@ -149,6 +154,7 @@ def patch_listitem():
             assert isinstance(isFolder, bool), "Argument 'isFolder' must be a boolean."
             self._is_folder = isFolder
 
+        # noinspection shadowing-builtins
         def setInfo(self, type: str, infoLabels: dict[str, str]) -> None:
             assert isinstance(type, str), "Argument 'type' must be a string."
             assert isinstance(infoLabels, dict), "Argument 'infoLabels' must be a dict."
@@ -192,6 +198,7 @@ def patch_listitem():
     xbmcgui.ListItem = LI
 
 
+# noinspection pep8-naming
 class ListItemCollector:
     """Objected intended to patch xbmcplugin.addDirectoryItem, store all calls
     and provide easier access than a standard Mock."""
@@ -216,7 +223,7 @@ class ListItemCollector:
     def list_item(self, index) -> xbmcgui.ListItem:
         return self._call_args[index][1]
 
-    def __call__(self, handle:int, url: str, listitem=xbmcgui.ListItem, isFolder=bool):
+    def __call__(self, handle: int, url: str, listitem=xbmcgui.ListItem, isFolder=bool):
         self._call_args.append((url, listitem, isFolder))
 
     def __len__(self):
@@ -369,3 +376,51 @@ def keyb_mock(text: str | Iterable[str], confirmed: bool | Iterable[bool] = True
                                                                                heading=heading,
                                                                                hidden=hidden,
                                                                                spec=orig_keyboard))
+
+
+class AddonTestCase(TestCase):
+    addon_settings = {}
+
+    def setUp(self):
+        self.li_store = ListItemCollector()
+        self._p1 = patch('xbmcplugin.addDirectoryItem', self.li_store)
+        self._p1.start()
+        self._p2 = patch('xbmcaddon.Addon.getSetting', self.__get_setting)
+        self._p2.start()
+
+    def tearDown(self):
+        self._p1.stop()
+        self._p2.stop()
+
+    def __get_setting(self, key):
+        value = self.addon_settings.get(key)
+        if value is None:
+            import credentials
+            value = {'bbc_id_enabled': 'true',
+                     'bbc_id_autologin': 'true',
+                     'catchup_source': '0',
+                     'subtitle_source': '0',
+                     'radio_source': '0',
+                     'streams_autoplay': 'true',
+                     'bbc_id_username': credentials.uname,
+                     'bbc_id_password': credentials.passw}.get(key)
+        return value
+
+
+class LocalTestCase(AddonTestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.__local_patches = [patch('requests.sessions.Session.send', side_effect=RealWebRequestMadeError)]
+        for p in cls.__local_patches:
+            p.start()
+
+    @classmethod
+    def tearDownClass(cls):
+        for p in cls.__local_patches:
+            p.stop()
+
+
+class WebTestCase(AddonTestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        setup_web_test()

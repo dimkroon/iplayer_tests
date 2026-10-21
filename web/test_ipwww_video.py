@@ -4,7 +4,7 @@ fixtures.global_setup()
 import requests
 import unittest
 from unittest.mock import patch
-from http import cookiejar
+from urllib.parse import parse_qsl
 
 from resources.lib import ipwww_video
 from support.testutils import NotLoggedInCookieJar
@@ -29,10 +29,6 @@ class GenericListings(fixtures.WebTestCase):
     def test_list_live(self, p_add_item):
         self.assertRaises(SystemExit, ipwww_video.ListLive)
         self.assertEqual(p_add_item.call_count, 33)
-
-    def test_list_available_categories(self, p_add_item):
-        ipwww_video.ListCategories()
-        self.assertGreater(p_add_item.call_count, 5)
 
     def test_list_most_popular(self, p_add_item):
         ipwww_video.ListMostPopular()
@@ -59,6 +55,25 @@ class GenericListings(fixtures.WebTestCase):
             with patch('resources.lib.ipwww_video.CreateBaseDirectory') as p_create_base:
                 ipwww_video.ListRecommendations()
                 p_create_base.assert_called_once()
+
+
+class Categories(fixtures.WebTestCase):
+    addon_settings = {'paginate_episodes': 1}
+
+    def test_get_all_categories(self):
+        ipwww_video.ListCategories()
+        self.assertEqual(len(self.li_store), 21)
+
+    def test_category_drama_and_soaps(self):
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.GetFilteredCategory(url='/iplayer/categories/drama-and-soaps/featured')
+        self.assertGreater(len(self.li_store), 6)
+
+    def test_request_all_category_pages(self):
+        ipwww_video.ListCategories()
+        for path in self.li_store.paths:
+            params = dict(parse_qsl(path.split('?')[-1]))
+            ipwww_video.GetFilteredCategory(params['url'])
 
 
 class MyProgrammes(fixtures.WebTestCase):

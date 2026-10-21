@@ -232,6 +232,20 @@ class TestParseEpisode(fixtures.LocalTestCase):
             is_li_compatible_dict(self, result)
 
 
+class Categories(fixtures.LocalTestCase):
+    addon_settings = {'paginate_episodes': 0}
+
+    @patch('resources.lib.ipwww_video.OpenURL', open_doc('html/homepage.html'))
+    def test_get_all_categories(self):
+        ipwww_video.ListCategories()
+        self.assertEqual(len(self.li_store), 21)
+
+    @patch('resources.lib.ipwww_video.OpenURL', open_doc('html/category_drama-and-soaps.html'))
+    def test_category_drama_and_soaps(self):
+        ipwww_video.GetFilteredCategory(url='dma and soaps')
+        self.assertGreater(len(self.li_store), 6)
+
+
 class TestListWatching(fixtures.LocalTestCase):
     @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watching.json'))
     def test_list_watching_authenticated(self, _):

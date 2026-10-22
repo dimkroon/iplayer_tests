@@ -19,60 +19,70 @@ class TestGetJsonDataWithBBCId(TestCase):
         pass
 
 
-class TestGetAtoZPage_ProgressDialog(fixtures.LocalTestCase):
-    addon_settings = {'scrape_atoz': 0}
+class TestListAtoZPage(fixtures.LocalTestCase):
+    def test_list_attoz_all_per_letter(self):
+        """Test that ListAtoZPage returns a list of all letters of the alphabet plus '0-9'."""
+        self.addon_settings = {'scrape_atoz': 0}
+        ipwww_video.ListAtoZ()
+        self.assertEqual(27, len(self.li_store))
+        self.assertEqual(self.li_store.list_item(0).getLabel(), 'A')
+        self.assertEqual(self.li_store.list_item(-1).getLabel(), '0-9')
 
-    def setUp(self):
-        super().setUp()
-        self.mocked_dialog = MagicMock()
-        self.mocked_close = self.mocked_dialog.close = MagicMock()
-
-    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/a_to_z_page_D.html'))
-    def test_close_progress_dialog(self):
+    @patch('resources.lib.ipwww_common.OpenRequest', return_value=open_doc('html/a_to_z_page_D.html')())
+    def test_close_progress_dialog(self, open_page):
+        """Get all pages of all letters at once, ensure the progress dialog is closed."""
+        self.addon_settings = {'scrape_atoz': 1}
         with patch('xbmcgui.DialogProgressBG.close') as p_close:
-            ipwww_video.GetAtoZPage('d')
+            ipwww_video.ListAtoZ()
+        # Programmes of letter 'D' are spread over 2 pages, so a total of 27 * 2 requests are expected.
+        self.assertEqual(54, open_page.call_count)
         p_close.assert_called_once()
 
     @patch('resources.lib.ipwww_common.OpenRequest', side_effect=SystemExit)
     def test_close_progress_dialog_on_network_error(self, _):
+        self.addon_settings = {'scrape_atoz': 1}
+
         with patch('xbmcgui.DialogProgressBG.close') as p_close:
-            self.assertRaises(SystemExit, ipwww_video.GetAtoZPage, 'd')
+            self.assertRaises(SystemExit, ipwww_video.ListAtoZ)
         p_close.assert_called_once()
 
     @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/a_to_z_page_D.html'))
     @patch('resources.lib.ipwww_video.ParseJSON', side_effect=TypeError)
     def test_close_progress_dialog_on_parse_error(self, _):
+        self.addon_settings = {'scrape_atoz': 1}
+
         with patch('xbmcgui.DialogProgressBG.close') as p_close:
-            self.assertRaises(TypeError, ipwww_video.GetAtoZPage, 'd')
+            self.assertRaises(TypeError, ipwww_video.ListAtoZ)
         p_close.assert_called_once()
 
 
-class TestScrapeAtoZEpisodes_ProgressDialog(fixtures.LocalTestCase):
-    addon_settings = {'paginate_episodes': '1'}
-
+class ScrapeEpisodes(fixtures.LocalTestCase):
     def setUp(self):
         super().setUp()
-        self.mocked_dialog = MagicMock()
-        self.mocked_close = self.mocked_dialog.close = MagicMock()
+        self.num_requested_pages = 0
 
-    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/bbc_two_az.html'))
-    def test_close_progress_dialog(self,):
-        with patch('xbmcgui.DialogProgressBG.close') as p_close:
-            ipwww_video.ScrapeAtoZEpisodes('bbctwo')
-        p_close.assert_called_once()
+    def page_feeder(self, *_, **__):
+        self.num_requested_pages += 1
+        return open_doc('html/bbc-three_az.html')()
 
-    @patch('resources.lib.ipwww_common.OpenRequest', side_effect=SystemExit)
-    def test_close_progress_dialog_on_network_error(self, _):
-        with patch('xbmcgui.DialogProgressBG.close') as p_close:
-            self.assertRaises(SystemExit, ipwww_video.ScrapeAtoZEpisodes, 'bbctwo')
-        p_close.assert_called_once()
+    def test_scrape_channel_az_page_paginated(self):
+        self.addon_settings['paginate_episodes'] = 0
 
-    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/bbc_two_az.html'))
-    @patch('resources.lib.ipwww_video.ParseJSON', side_effect=TypeError)
-    def test_close_progress_dialog_on_parse_error(self, _):
-        with patch('xbmcgui.DialogProgressBG.close')as p_close:
-            self.assertRaises(TypeError, ipwww_video.ScrapeAtoZEpisodes, 'bbctwo')
-        p_close.assert_called_once()
+        with patch('resources.lib.ipwww_common.OpenRequest', new=self.page_feeder):
+            ipwww_video.ScrapeEpisodes('bbctwo')
+        self.assertEqual(1, self.num_requested_pages)
+        self.assertEqual(len(self.li_store), 37)
+        self.assertTrue('Next page' in self.li_store.list_item(-1).getLabel())
+
+    def test_scrape_channel_az_page_all_at_once(self):
+        self.addon_settings['paginate_episodes'] = 1
+
+        with patch('resources.lib.ipwww_common.OpenRequest', new=self.page_feeder):
+            ipwww_video.ScrapeEpisodes('bbctwo')
+        self.assertEqual(7, self.num_requested_pages)
+        self.assertGreater(len(self.li_store), 100)
+        for item in self.li_store.list_items:
+            self.assertFalse('Next page' in item.getLabel())
 
 
 class SetSortMethod(fixtures.LocalTestCase):

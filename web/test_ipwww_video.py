@@ -95,6 +95,23 @@ class Collections(fixtures.WebTestCase):
         self.assertGreater(len(self.li_store), 10)
 
 
+class Episodes(fixtures.WebTestCase):
+    def test_get_single_page_episode(self):
+        self.addon_settings['paginate_episodes'] = 1
+        ipwww_video.GetEpisodes('b006ml0g')
+        self.assertGreater(len(self.li_store), 10)
+
+    def test_get_multi_page_episode(self):
+        self.addon_settings['paginate_episodes'] = 1
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episodes/m0028vr2')     # Remembers : 6 pages
+        self.assertGreater(len(self.li_store), 100)
+
+    def test_search_results(self):
+        self.addon_settings['paginate_episodes'] = 1
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/search?q=repair')
+        self.assertGreater(len(self.li_store), 10)
+
+
 class MyProgrammes(fixtures.WebTestCase):
     def test_added(self):
         ipwww_video.ListFavourites()
@@ -150,11 +167,10 @@ class TvSchedule(fixtures.WebTestCase):
 
 
 class ScrapeAtoZPage(fixtures.WebTestCase):
-    @patch('resources.lib.ipwww_video.AddMenuEntry')
-    @patch('xbmcaddon.Addon.getSetting', lambda self, x: '1' if x == 'scrape_atoz' else None)
-    def test_scrape_page_d(self, p_add):
-        result = ipwww_video.GetAtoZPage('d')
-        self.assertGreater(p_add.call_count, 10)
+    def test_scrape_page_d(self):
+        self.addon_settings = {'scrape_atoz': '1'}      # all letters in one go
+        ipwww_video.ListAtoZ()
+        self.assertGreater(len(self.li_store), 1000)
 
 
 class ParseMediaSelector(fixtures.WebTestCase):

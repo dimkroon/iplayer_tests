@@ -87,7 +87,7 @@ class SetSortMethod(fixtures.LocalTestCase):
         self.assertEqual(4, p_addsort.call_count)
 
 
-class TestSelectSynopsis(fixtures.LocalTestCase):
+class TestSelectSynopsisOfPlayable(fixtures.LocalTestCase):
     def setUp(self):
         super().setUp()
         self.synopses = {'editorial': 'editorial plot',
@@ -100,14 +100,14 @@ class TestSelectSynopsis(fixtures.LocalTestCase):
 
     def test_get_synopsis_presence(self):
         syn = self.synopses
-        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
-        del syn['editorial']
         self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn))
         del syn['medium']
         self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn))
         del syn['large']
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         del syn['small']
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
+        del syn['editorial']
         self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
         del syn['programme_small']
         self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
@@ -117,19 +117,19 @@ class TestSelectSynopsis(fixtures.LocalTestCase):
         self.assertEqual('', ipwww_video.SelectSynopsis(syn))
 
     def test_some_types_absent(self):
-        syn = {'editorial': None, 'small': 'small plot'}
+        syn = {'medium': None, 'small': 'small plot'}
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
 
     def test_get_synopsis_empty(self):
         syn = self.synopses
-        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
-        syn['editorial'] = ''
         self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn))
         syn['medium'] = ''
         self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn))
         syn['large'] = ''
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         syn['small'] = ''
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
+        syn['editorial'] = ''
         self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
         syn['programme_small'] = ''
         self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
@@ -140,14 +140,14 @@ class TestSelectSynopsis(fixtures.LocalTestCase):
 
     def test_get_synopsis_none(self):
         syn = self.synopses
-        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
-        syn['editorial'] = None
         self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn))
         syn['medium'] = None
         self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn))
         syn['large'] = None
         self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn))
         syn['small'] = None
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn))
+        syn['editorial'] = None
         self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn))
         syn['programme_small'] = None
         self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn))
@@ -168,14 +168,96 @@ class TestSelectSynopsis(fixtures.LocalTestCase):
         self.assertEqual('description', ipwww_video.SelectSynopsis('description'))
 
 
+class TestSelectSynopsisOfProgramme(fixtures.LocalTestCase):
+    def setUp(self):
+        super().setUp()
+        self.synopses = {'editorial': 'editorial plot',
+                         'large': 'large plot',
+                         'medium': 'medium plot',
+                         'small': 'small plot',
+                         'programme_small': 'programme small plot',
+                         'programmeSmall': 'programmeSmall plot',
+                         'live': 'live plot'}
+
+    def test_get_synopsis_presence(self):
+        syn = self.synopses
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['programme_small']
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['programmeSmall']
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['editorial']
+        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['medium']
+        self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['large']
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['small']
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn, False))
+        del syn['live']
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn, False))
+
+    def test_some_types_absent(self):
+        syn = {'programme_small': None, 'small': 'small plot'}
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn, False))
+
+    def test_get_synopsis_empty(self):
+        syn = self.synopses
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['programme_small'] = ''
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['programmeSmall'] = ''
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['editorial'] = ''
+        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['medium'] = ''
+        self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['large'] = ''
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['small'] = ''
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['live'] = ''
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn, False))
+
+    def test_get_synopsis_none(self):
+        syn = self.synopses
+        self.assertEqual('programme small plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['programme_small'] = None
+        self.assertEqual('programmeSmall plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['programmeSmall'] = None
+        self.assertEqual('editorial plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['editorial'] = None
+        self.assertEqual('medium plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['medium'] = None
+        self.assertEqual('large plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['large'] = None
+        self.assertEqual('small plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['small'] = None
+        self.assertEqual('live plot', ipwww_video.SelectSynopsis(syn, False))
+        syn['live'] = None
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn, False))
+
+    def test_synopsis_all_fields_none(self):
+        syn = {k: None for k in self.synopses.keys()}
+        self.assertEqual('', ipwww_video.SelectSynopsis(syn, False))
+
+    def test_empy_dicts(self):
+        self.assertEqual('', ipwww_video.SelectSynopsis(None, False))
+        self.assertEqual('', ipwww_video.SelectSynopsis({}, False))
+
+    def test_synopsis_as_string(self):
+        self.assertEqual('description', ipwww_video.SelectSynopsis('description', False))
+
+
 class TestSelectImage(fixtures.LocalTestCase):
     def setUp(self):
         super().setUp()
         self.images = {'standard': 'standard image',
                        'default': 'default image',
+                       'portrait': 'portrait image',
                        'promotional': 'promotional image',
-                       'promotional_with_logo': 'promotional_with_logo image',
-                       'portrait': 'portrait image'}
+                       'promotional_with_logo': 'promotional_with_logo image'
+                       }
 
     def test_get_images_presence(self):
         images = self.images
@@ -242,8 +324,27 @@ class Categories(fixtures.LocalTestCase):
 
     @patch('resources.lib.ipwww_video.OpenURL', open_doc('html/category_drama-and-soaps.html'))
     def test_category_drama_and_soaps(self):
+        "This category redirects to /browse/drama-and-soaps and returns a page in the format."
         ipwww_video.GetFilteredCategory(url='dma and soaps')
         self.assertGreater(len(self.li_store), 6)
+
+    @patch('resources.lib.ipwww_video.OpenURL', open_doc('html/category_comedy.html'))
+    def test_category_comedy(self):
+        "This category page in the classic format."
+        ipwww_video.GetFilteredCategory(url='comedy')
+        self.assertGreater(len(self.li_store), 6)
+
+
+class Groups(fixtures.LocalTestCase):
+    @patch('resources.lib.ipwww_video.OpenURL', open_doc('html/group.html'))
+    def test_single_page_group(self):
+        ipwww_video.GetGroup(url='bsfkgkj')
+        self.assertEqual(len(self.li_store), 16)
+
+    @patch('resources.lib.ipwww_video.OpenURL', open_doc('html/group_page-1-of-3.html'))
+    def test_multipage_page_group(self):
+        ipwww_video.GetGroup(url='bsfkgkj')
+        self.assertEqual(len(self.li_store), 108)
 
 
 class TestListWatching(fixtures.LocalTestCase):

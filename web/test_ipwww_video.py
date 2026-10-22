@@ -76,6 +76,26 @@ class Categories(fixtures.WebTestCase):
             ipwww_video.GetFilteredCategory(params['url'])
 
 
+class Highlights(fixtures.WebTestCase):
+    def test_get_home_page(self):
+        ipwww_video.ListHighlights(highlights_url='iplayer')
+        self.assertGreater(len(self.li_store), 10)
+
+    def test_get_highlights_bbc_four(self):
+        ipwww_video.ListHighlights(highlights_url='bbcfour')
+        self.assertGreaterEqual(len(self.li_store), 10)
+
+
+class Collections(fixtures.WebTestCase):
+    def test_get_single_page_collection(self):
+        ipwww_video.GetGroup('m002kgjz')
+        self.assertGreater(len(self.li_store), 10)
+
+    def test_get_multi_page_collection(self):
+        ipwww_video.GetGroup('comedy-box-sets')
+        self.assertGreater(len(self.li_store), 10)
+
+
 class MyProgrammes(fixtures.WebTestCase):
     def test_added(self):
         ipwww_video.ListFavourites()

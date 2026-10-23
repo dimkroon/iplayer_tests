@@ -18,10 +18,9 @@ class AuthenticatedPages(fixtures.WebTestCase):
 class TestAddAvailableStreamItem(fixtures.WebTestCase):
     def test_play_epdisode(self):
         ipwww_video.AddAvailableStreamItem(
-            'Episode',
             'https://www.bbc.co.uk/iplayer/episode/m001p3q5/who-do-you-think-you-are-series-20-9-lesley-manville',
-            None,
-            '')
+        )
+
 
 
 @patch('xbmcplugin.addDirectoryItem')

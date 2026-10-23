@@ -411,10 +411,9 @@ class TestScrapeAvailableStream(fixtures.LocalTestCase):
                                                              open_doc('json/media_selector_snooker_uk_live.json')()))
     def test_play_bbc_two_item(self, _):
         with patch('resources.lib.ipwww_video.PlayStream') as p_play_stream:
-            ipwww_video.AddAvailableStreamItem('bbc two', 'some url', '', '')
+            ipwww_video.AddAvailableStreamItem('https://bbc.co.uk/bbctwo')
         p_play_stream.assert_called_once()
-        name, url, iconimage, description, subtitles_url, *other_args = p_play_stream.call_args.args
-        self.assertEqual('Snooker: UK Championship', name)     # Check that we have in fact parsed the item
+        url, subtitles_url, *other_args = p_play_stream.call_args.args
         self.assertTrue(url.endswith('.mpd'))
         self.assertEqual('', subtitles_url)                    # Live subtitles must have been disregarded.
 

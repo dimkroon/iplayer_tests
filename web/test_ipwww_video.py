@@ -106,6 +106,10 @@ class Episodes(fixtures.WebTestCase):
         ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episodes/m0028vr2')     # Remembers : 6 pages
         self.assertGreater(len(self.li_store), 100)
 
+    def test_channel_az(self):
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/bbcfour/a-z')
+
     def test_search_results(self):
         self.addon_settings['paginate_episodes'] = 1
         ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/search?q=repair')
@@ -122,6 +126,10 @@ class MyProgrammes(fixtures.WebTestCase):
 
     def test_add_to_added(self):
         PGM_ID = 'b006ml0g'
+
+    def test_continue_watching(self):
+        ipwww_video.ListWatching()
+        self.assertGreater(len(self.li_store), 2)
 
 
 class TvSchedule(fixtures.WebTestCase):

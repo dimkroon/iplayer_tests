@@ -34,8 +34,8 @@ class TestListAtoZPage(fixtures.LocalTestCase):
         self.addon_settings = {'scrape_atoz': 1}
         with patch('xbmcgui.DialogProgressBG.close') as p_close:
             ipwww_video.ListAtoZ()
-        # Programmes of letter 'D' are spread over 2 pages, so a total of 27 * 2 requests are expected.
-        self.assertEqual(54, open_page.call_count)
+        # Programmes of letter 'D' are a single page, so a total of 27 requests are expected.
+        self.assertEqual(27, open_page.call_count)
         p_close.assert_called_once()
 
     @patch('resources.lib.ipwww_common.OpenRequest', side_effect=SystemExit)
@@ -83,6 +83,12 @@ class ScrapeEpisodes(fixtures.LocalTestCase):
         self.assertGreater(len(self.li_store), 100)
         for item in self.li_store.list_items:
             self.assertFalse('Next page' in item.getLabel())
+
+    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/series_all-at-sea.html'))
+    def test_scrape_episodes_from_programme_page_with_multiple_series(self):
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.ScrapeEpisodes('series_all-at-sea')
+        self.assertGreater(len(self.li_store), 10)
 
 
 class SetSortMethod(fixtures.LocalTestCase):
@@ -308,7 +314,7 @@ class TestParseProgramme(fixtures.LocalTestCase):
     def test_parse_programma(self):
         data = open_json('video_programmes.json')
         for progr_data in data:
-            result = ipwww_video.ParseProgramme(progr_data)
+            is_playable, result = ipwww_video.ParseProgramme(progr_data)
             # A mode is to be added by the caller of ParseProgramme, add a fake one to be AddMenuEntry compatible
             result['mode'] = 0
             is_li_compatible_dict(self, result)

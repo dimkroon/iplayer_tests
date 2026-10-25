@@ -108,6 +108,11 @@ def base_episode_checks(testcase, episode, obj_name=''):
 
     """
     has_keys(episode, 'id', 'title', 'images', 'tleo_id', obj_name=obj_name)
+    # All keys from the previously available long version of episode.
+    misses_keys(episode, 'type', 'programme_type', 'original_title', 'tleo_type', 'signed', 'audio_described',
+                'requires_ab', 'lexical_sort_letter', 'release_date', 'guidance', 'type', 'requires_tv_licence',
+                'editorial_subtitle', 'live', 'childrens', 'categories', 'release_date_time', 'master_brand',   # childrens is not a typo (at least not mine)
+                'has_credits', 'status', 'requires_sign_in', 'labels', 'signed')
     expect_keys(episode, 'versions', 'synopses', 'subtitle', obj_name=obj_name)
 
     check_images(testcase, episode['images'])
@@ -216,8 +221,27 @@ class CategoriesAtoZ(TestCase):
 
     def test_category_az_page(self):
         for cat in self.categories:
-            if cat  == 'drama-and-soaps':
-                check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/categories/{}/a-z'.format(cat))
+            page_data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/categories/{}/a-z'.format(cat))
+            # save_json(page_data, 'html/ip_categories/{}.json'.format(cat))
+
+    def test_category_default_page_size(self):
+        # Default page size
+        page_data = check_page_has_json_data(self, 'https://www.bbc.co.uk/iplayer/categories/documentaries/a-z')
+        self.assertEqual(1, page_data['pagination']['currentPage'])
+        self.assertEqual(36, page_data['pagination']['perPage'])
+        self.assertGreater(page_data['pagination']['totalPages'], 10)
+
+    def test_category_other_page_size(self):
+        """There seems to be no way to specify the page size for categories.
+        """
+        queryfields = ('perPage', 'perpage', 'per_page',
+                       'size', 'page_size', 'pagesize', 'pageSize',
+                       'len', 'page_len', 'pagelen', 'pageLen',
+                       'length', 'page_length', 'pagelength', 'pageLength')
+        for field in queryfields:
+            url = ''.join(('https://www.bbc.co.uk/iplayer/categories/documentaries/a-z?page=2&', field, '=50'))
+            page_data = check_page_has_json_data(self, url)
+            self.assertEqual(36, page_data['pagination']['perPage'])
 
 
 class ProgrammesAtoZ(TestCase):

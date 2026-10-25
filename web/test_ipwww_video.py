@@ -112,7 +112,7 @@ class Episodes(fixtures.WebTestCase):
 
     def test_search_results(self):
         self.addon_settings['paginate_episodes'] = 1
-        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/search?q=repair')
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/search?q=tennis')
         self.assertGreater(len(self.li_store), 10)
 
 
@@ -124,8 +124,14 @@ class MyProgrammes(fixtures.WebTestCase):
         PGM_ID = 'b006ml0g'     # QI's ProgrammeID, will probably be available for a very long time.
         ipwww_video.RemoveFavourite(PGM_ID)
 
-    def test_add_to_added(self):
+    def test_add_to_watchlist_with_programme_id(self):
         PGM_ID = 'b006ml0g'
+        ipwww_video.AddFavourite(programme_id=PGM_ID)
+
+    def test_add_to_watchlist_with_episode_id(self):
+        EPISODE_ID = 'm002np5m'
+        ipwww_video.AddFavourite(episode_id=EPISODE_ID)
+
 
     def test_continue_watching(self):
         ipwww_video.ListWatching()

@@ -393,19 +393,16 @@ class TestListFavourites(fixtures.LocalTestCase):
 @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('json/iplayer.json'))
 class TestListRecommendations(fixtures.LocalTestCase):
     def test_list_recommendations_authenticated(self, _):
-        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
-            ipwww_video.ListRecommendations()
-        self.assertEqual(2, p_AddItem.call_count)
+        ipwww_video.ListRecommendations()
+        self.assertEqual(2, len(self.li_store))
 
     def test_list_if_you_liked_content(self, _):
-        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
-            ipwww_video.ListRecommendations('if-you-liked')
-        self.assertEqual(12, p_AddItem.call_count)
+        ipwww_video.ListRecommendations('if-you-liked')
+        self.assertEqual(12, len(self.li_store))
 
     def test_recommended_content(self, _):
-        with patch('xbmcplugin.addDirectoryItem') as p_AddItem:
-            ipwww_video.ListRecommendations('recommendations')
-        self.assertEqual(12, p_AddItem.call_count)
+        ipwww_video.ListRecommendations('recommendations')
+        self.assertEqual(12, len(self.li_store))
 
 
 class TestScrapeAvailableStream(fixtures.LocalTestCase):

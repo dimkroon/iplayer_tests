@@ -122,7 +122,7 @@ def iso_duration_2_seconds(iso_str: str) -> int | None:
 
 
 def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
-    """Check if object can be passed as keyword arguments to AddMenuEntry()
+    """Check if an object can be passed as keyword arguments to AddMenuEntry()
 
     """
     all_args = {'name': str,
@@ -135,6 +135,8 @@ def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
                 'resolution': (str, type(None)),
                 'resume_time': str,
                 'total_time': str,
+                'programme_id': str,
+                'episode_id': str,
                 'context_mnu': list}
 
     mandatory_args = ('name', 'mode')

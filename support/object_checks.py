@@ -142,8 +142,10 @@ def is_li_compatible_dict(testcase: unittest.TestCase, dict_obj: dict):
     mandatory_args = ('name', 'mode')
 
     for key, value in dict_obj.items():
-        testcase.assertTrue(key in all_args.keys())
-        testcase.assertIsInstance(value, all_args[key])
+        testcase.assertTrue(key in all_args.keys(),
+                            f"Parameter '{key}' is not a valid argument")
+        testcase.assertIsInstance(value, all_args[key],
+                                  f"Parameter '{key}' is of type {type(value)} but should be {all_args[key]}")
     for arg_name in mandatory_args:
         testcase.assertTrue(is_not_empty(dict_obj[arg_name], all_args[arg_name]))
     return True

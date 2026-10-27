@@ -1,0 +1,1147 @@
+{
+    "navigation": {
+        "items": [
+            {
+                "id": "channels",
+                "title": "Channels",
+                "active": false,
+                "subItems": [
+                    {
+                        "title": "BBC One",
+                        "href": "/bbcone",
+                        "liveHref": "/iplayer/live/bbcone",
+                        "active": false,
+                        "icon": "bbcone",
+                        "id": "bbc_one"
+                    },
+                    {
+                        "title": "BBC Two",
+                        "href": "/bbctwo",
+                        "liveHref": "/iplayer/live/bbctwo",
+                        "active": false,
+                        "icon": "bbctwo",
+                        "id": "bbc_two"
+                    },
+                    {
+                        "title": "BBC Three",
+                        "href": "/tv/bbcthree",
+                        "liveHref": "/iplayer/live/bbcthree",
+                        "active": false,
+                        "icon": "bbcthree",
+                        "id": "bbc_three"
+                    },
+                    {
+                        "title": "BBC Four",
+                        "href": "/bbcfour",
+                        "liveHref": "/iplayer/live/bbcfour",
+                        "active": false,
+                        "icon": "bbcfour",
+                        "id": "bbc_four"
+                    },
+                    {
+                        "title": "BBC Radio 1",
+                        "href": "/tv/radio1",
+                        "liveHref": "/iplayer/live/radio1",
+                        "active": false,
+                        "icon": "radio1",
+                        "id": "bbc_radio_one"
+                    },
+                    {
+                        "title": "CBBC",
+                        "href": "/tv/cbbc",
+                        "liveHref": "/iplayer/live/cbbc",
+                        "active": false,
+                        "icon": "cbbc",
+                        "id": "cbbc"
+                    },
+                    {
+                        "title": "CBeebies",
+                        "href": "/tv/cbeebies",
+                        "liveHref": "/iplayer/live/cbeebies",
+                        "active": false,
+                        "icon": "cbeebies",
+                        "id": "cbeebies"
+                    },
+                    {
+                        "title": "BBC Scotland",
+                        "href": "/tv/bbcscotland",
+                        "liveHref": "/iplayer/live/bbcscotland",
+                        "active": false,
+                        "icon": "bbcscotland",
+                        "id": "bbc_scotland"
+                    },
+                    {
+                        "title": "BBC News",
+                        "href": "/tv/bbcnews",
+                        "liveHref": "/iplayer/live/bbcnews",
+                        "active": false,
+                        "icon": "bbcnews",
+                        "id": "bbc_news24"
+                    },
+                    {
+                        "title": "BBC Parliament",
+                        "href": "/tv/bbcparliament",
+                        "liveHref": "/iplayer/live/bbcparliament",
+                        "active": false,
+                        "icon": "bbcparliament",
+                        "id": "bbc_parliament"
+                    },
+                    {
+                        "title": "BBC Alba",
+                        "href": "/tv/bbcalba",
+                        "liveHref": "/iplayer/live/bbcalba",
+                        "active": false,
+                        "icon": "bbcalba",
+                        "id": "bbc_alba"
+                    },
+                    {
+                        "title": "S4C",
+                        "href": "/tv/s4c",
+                        "liveHref": "/iplayer/live/s4c",
+                        "active": false,
+                        "icon": "s4c",
+                        "id": "s4cpbs"
+                    }
+                ]
+            },
+            {
+                "id": "categories",
+                "title": "Categories",
+                "active": false,
+                "subItems": [
+                    {
+                        "title": "Drama & Soaps",
+                        "href": "/iplayer/categories/drama-and-soaps/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "drama-and-soaps"
+                    },
+                    {
+                        "title": "Films",
+                        "href": "/iplayer/browse/films",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "films"
+                    },
+                    {
+                        "title": "Comedy",
+                        "href": "/iplayer/categories/comedy/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "comedy"
+                    },
+                    {
+                        "title": "Documentaries",
+                        "href": "/iplayer/categories/documentaries/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "documentaries"
+                    },
+                    {
+                        "title": "Sport",
+                        "href": "/iplayer/categories/sport/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "sport"
+                    },
+                    {
+                        "title": "News",
+                        "href": "/iplayer/categories/news/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "news"
+                    },
+                    {
+                        "title": "Entertainment",
+                        "href": "/iplayer/categories/entertainment/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "entertainment"
+                    },
+                    {
+                        "title": "Music",
+                        "href": "/iplayer/browse/music",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "music"
+                    },
+                    {
+                        "title": "Food",
+                        "href": "/iplayer/categories/food/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "food"
+                    },
+                    {
+                        "title": "Lifestyle",
+                        "href": "/iplayer/categories/lifestyle/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "lifestyle"
+                    },
+                    {
+                        "title": "History",
+                        "href": "/iplayer/categories/history/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "history"
+                    },
+                    {
+                        "title": "Science & Nature",
+                        "href": "/iplayer/categories/science-and-nature/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "science-and-nature"
+                    },
+                    {
+                        "title": "Arts",
+                        "href": "/iplayer/browse/arts",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "arts"
+                    },
+                    {
+                        "title": "From the Archive",
+                        "href": "/iplayer/categories/archive/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "archive"
+                    },
+                    {
+                        "title": "Audio Described",
+                        "href": "/iplayer/categories/audio-described/featured",
+                        "active": false,
+                        "kind": "accessibility",
+                        "id": "audio-described"
+                    },
+                    {
+                        "title": "Signed",
+                        "href": "/iplayer/categories/signed/featured",
+                        "active": false,
+                        "kind": "accessibility",
+                        "id": "signed"
+                    },
+                    {
+                        "title": "Northern Ireland",
+                        "href": "/iplayer/categories/northern-ireland/featured",
+                        "active": false,
+                        "kind": "national",
+                        "id": "northern-ireland"
+                    },
+                    {
+                        "title": "Scotland",
+                        "href": "/iplayer/categories/scotland/featured",
+                        "active": false,
+                        "kind": "national",
+                        "id": "scotland"
+                    },
+                    {
+                        "title": "Wales",
+                        "href": "/iplayer/categories/wales/featured",
+                        "active": false,
+                        "kind": "national",
+                        "id": "wales"
+                    },
+                    {
+                        "title": "CBeebies",
+                        "href": "/iplayer/categories/cbeebies/featured",
+                        "active": false,
+                        "kind": "childrens",
+                        "id": "cbeebies"
+                    },
+                    {
+                        "title": "CBBC",
+                        "href": "/iplayer/categories/cbbc/featured",
+                        "active": false,
+                        "kind": "childrens",
+                        "id": "cbbc"
+                    }
+                ]
+            },
+            {
+                "title": "A-Z",
+                "ariaLabel": "A to Z",
+                "href": "/iplayer/a-z/a",
+                "active": false,
+                "id": "a-z"
+            },
+            {
+                "title": "TV Guide",
+                "href": "/iplayer/guide",
+                "active": false,
+                "id": "tv-guide"
+            },
+            {
+                "title": "Watchlist",
+                "href": "/iplayer/watchlist",
+                "active": false,
+                "id": "watchlist"
+            }
+        ],
+        "renderOpen": false,
+        "variant": "default",
+        "useLiveHrefs": false,
+        "accessibilityHelpHref": "/iplayer/features/accessibility"
+    },
+    "footer": {
+        "locationLabel": "Change location",
+        "languageLabel": "Change language",
+        "locations": [
+            {
+                "label": "Nations",
+                "locations": [
+                    {
+                        "label": "Northern Ireland",
+                        "value": "ni"
+                    },
+                    {
+                        "label": "Scotland",
+                        "value": "sc"
+                    },
+                    {
+                        "label": "Wales",
+                        "value": "wa"
+                    }
+                ]
+            },
+            {
+                "label": "Regions",
+                "locations": [
+                    {
+                        "label": "Channel Islands",
+                        "value": "ci"
+                    },
+                    {
+                        "label": "East",
+                        "value": "ea"
+                    },
+                    {
+                        "label": "East Midlands",
+                        "value": "em"
+                    },
+                    {
+                        "label": "East Yorks & Lincs",
+                        "value": "ey"
+                    },
+                    {
+                        "label": "London",
+                        "value": "lo"
+                    },
+                    {
+                        "label": "North East & Cumbria",
+                        "value": "ne"
+                    },
+                    {
+                        "label": "North West",
+                        "value": "nw"
+                    },
+                    {
+                        "label": "South",
+                        "value": "so"
+                    },
+                    {
+                        "label": "South East",
+                        "value": "se"
+                    },
+                    {
+                        "label": "South West",
+                        "value": "sw"
+                    },
+                    {
+                        "label": "West",
+                        "value": "we"
+                    },
+                    {
+                        "label": "West Midlands",
+                        "value": "wm"
+                    },
+                    {
+                        "label": "Yorkshire",
+                        "value": "yo"
+                    }
+                ]
+            }
+        ],
+        "languages": [
+            {
+                "label": "English",
+                "value": "en"
+            },
+            {
+                "label": "Cymraeg",
+                "value": "cy"
+            },
+            {
+                "label": "Gaeilge",
+                "value": "ga"
+            },
+            {
+                "label": "Gàidhlig",
+                "value": "gd"
+            }
+        ],
+        "parentalControlsLabel": "Parental Controls",
+        "helpFaqLabel": "Help & FAQ",
+        "parentalControlsHref": "/iplayer/guidance",
+        "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+        "defaultLocation": "lo",
+        "defaultLanguage": "en",
+        "regionalPage": true,
+        "forceDarkTheme": true
+    },
+    "safeguarding": {
+        "clientAgeBracket": "unknown",
+        "serverAgeBracket": "o18",
+        "dismissedModal": false
+    },
+    "language": "en",
+    "experiments": {
+        "iplwb_content_switching": "content_switching"
+    },
+    "watchlist": {},
+    "outsideUKResponse": {
+        "enabled": false
+    },
+    "translations": {
+        "page_title_version_ad": "Audio Described",
+        "page_title_version_sign": "Signed",
+        "related_episodes_this_episode_label": "This episode",
+        "related_episodes_title": "More episodes",
+        "related_episodes_view_all": "View all",
+        "msi_modal_title": "Sign in to watch",
+        "msi_modal_text": "You can save shows and pick up where you left off on your TV",
+        "msi_modal_dismiss_label": "Continue Browsing",
+        "msi_modal_dismiss_aria": "Continue Browsing",
+        "childrens_modal_why_sign_in": "Why sign in to the BBC?",
+        "duration": "Duration",
+        "cancel": "Cancel",
+        "cancel_autoplay": "Cancel autoplay of %s",
+        "programme_ended_aria_label": "The current programme has ended. %s will autoplay in %s seconds. Activate the cancel button to stop it playing",
+        "showhide_button_show": "Show more",
+        "showhide_button_hide": "Hide",
+        "showhide_button_aria_show": "Show more programmes",
+        "showhide_button_aria_hide": "Return to the player",
+        "scaled_video_button_aria_hide": "Return to the player",
+        "skip_trailer": "Skip trailer",
+        "restart_programme": "Restart programme",
+        "accessibility_banner_sign": "This is a Signed version of this programme.",
+        "accessibility_banner_sign_non_available": "The non-Signed version isn't available.",
+        "accessibility_banner_sign_turn_off": "Turn off Sign Language",
+        "accessibility_banner_ad": "This is an Audio Described version of this programme.",
+        "accessibility_banner_ad_non_available": "The non-Audio Described version isn't available.",
+        "accessibility_banner_ad_turn_off": "Turn off Audio Description",
+        "accessibility_banner_find_out_why": "Find out why",
+        "expand_synopsis": "More",
+        "collapse_synopsis": "Less",
+        "synopsis_initial_aria_label": "More synopsis",
+        "synopsis_expanded_aria_label": "Less synopsis",
+        "first_shown": "First shown",
+        "version_button_ad": "Audio Described",
+        "version_button_ad_aria": "Watch Audio Described version",
+        "version_button_ad_turn_off_aria": "Watch non-Audio Described version",
+        "version_button_sign": "Sign Language",
+        "version_button_sign_aria": "Watch Sign Language version",
+        "version_button_sign_turn_off_aria": "Watch non-Sign Language version",
+        "version_button_sign_not_available_why_aria_label": "Why is there no Sign Language version available?",
+        "version_button_ad_not_available_why_aria_label": "Why is there no Audio Described version available?",
+        "learn_more_about_availability": "Learn more about availability",
+        "watchlist_aria": "Add to Watchlist",
+        "watchlist_added_aria": "Added to Watchlist",
+        "watchlist": "Watchlist",
+        "remove_aria": "Remove from Watchlist",
+        "remove": "Remove",
+        "watchlist_banner_message": ":episodeTitle has been added to your",
+        "your_watchlist": "Watchlist",
+        "rrc_why_aria_label": "More information about revisions, revocations and corrections",
+        "programme_link_label": "Programme links",
+        "programme_link_programme_website": "Programme website",
+        "programme_link_credits": "Credits",
+        "foreign_region_banner": "BBC iPlayer only works in the UK. Sorry, it’s due to rights issues.",
+        "foreign_region_banner_advice": "In the UK? Here's some advice.",
+        "tvl_modal_subtitle": "You need one to watch any BBC programme on iPlayer - live, catch up, or on-demand. It’s the law.",
+        "tvl_modal_title": "Got a TV Licence?",
+        "tvl_modal_nln_title": "You told us you don't need a TV Licence",
+        "tvl_modal_nln_subtitle": "The content you're trying to access requires a TV Licence. Watching without one could lead to prosecution and a fine.",
+        "tvl_modal_nln_find_out_more": "Make sure you're covered",
+        "tvl_modal_nln_i_have_a_tv_license": "I have a TV Licence – watch now",
+        "tvl_modal_nln_i_dont_have_a_tv_license": "Buy a TV Licence",
+        "tvl_modal_i_have_a_tv_license": "I have a TV Licence. Watch now.",
+        "tvl_modal_i_dont_have_a_tv_license": "I do not have a TV Licence.",
+        "tvl_modal_find_out_more": "Find out more",
+        "error_modal_title": "Something went wrong!",
+        "error_modal_message": "Please check your connection and try reloading the page",
+        "error_modal_retry": "Retry",
+        "still_watching_modal_title": "Are you still watching?",
+        "still_watching_modal_continue_watching": "Continue watching",
+        "no_js_banner": "JavaScript seems to be disabled. Please enable JavaScript to take full advantage of iPlayer.",
+        "not_played_modal_title": "Hello!",
+        "not_played_modal_text": "Will you help us improve iPlayer by telling us why you're not playing this programme yet?",
+        "not_played_modal_option_dislike": "I don't think I'll like it",
+        "not_played_modal_option_wrong": "It's not the episode I was looking for",
+        "not_played_modal_option_problem": "I can't, something's broken",
+        "not_played_modal_option_browsing": "I'm just browsing",
+        "not_played_modal_option_other": "Other",
+        "continuous_play_modal_title": "You need to change your BBC cookie settings",
+        "continuous_play_modal_text": "If you are changing your Autoplay setting and want iPlayer to remember your preference, you need to turn on Functional cookies",
+        "continuous_play_modal_button_text": "Change your BBC cookie settings",
+        "error_message": "Content not available at this time",
+        "error_action_message": "Refresh page to retry",
+        "pagination_previous": "Previous",
+        "pagination_next": "Next",
+        "pagination_next_aria": "Next Page",
+        "pagination_previous_aria": "Previous Page",
+        "pagination_go_to_page_aria": "Page %s of %s",
+        "pagination_aria": "Pagination controls",
+        "related_episodes_title_no_series": "More Episodes",
+        "related_episodes_title_series": "%s Episodes",
+        "related_episodes_title_series_nav": "Series Navigation",
+        "remaining": "%s mins left",
+        "remainingSingular": "%s min left",
+        "resume": "Resume",
+        "next": "My Next Episode",
+        "watched": "Watched",
+        "tip_continue_watching": "Continue watching",
+        "tip_next_episode_in": "Next episode in",
+        "tip_next_episode": "Next episode",
+        "tip_recommended_episode_in": "Watch in",
+        "tip_recommended_episode": "Watch"
+    },
+    "episode": {
+        "id": "m002wl7v",
+        "status": "success",
+        "resumeOffset": null,
+        "playFromHighlightMarker": false,
+        "tleoId": "m002qktz",
+        "tleoType": "brand",
+        "title": "Dear England",
+        "synopses": {
+            "large": "As Euro 2024 begins, England arrive as favourites for Southgate’s final tournament. Gareth is forced to make some challenging changes to the team and puts his trust in a new generation. When the team struggles unexpectedly and pressure mounts, Gareth wonders how his story will end.",
+            "small": "As Euro 2024 begins, England arrive as favourites for Southgate’s final tournament.",
+            "medium": "As Euro 2024 begins, England arrive as favourites for Southgate’s final tournament. But the team struggles unexpectedly, and pressure mounts - Gareth wonders how his story will end.",
+            "editorial": "4/4 Euro 2024, Gareth Southgate’s final tournament as manager. How will his story end?"
+        },
+        "images": {
+            "type": "image",
+            "portrait": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nq9pvs.jpg",
+            "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nnb5qr.jpg",
+            "promotional": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nq9ps2.jpg",
+            "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nq9pzz.jpg",
+            "promotional_left_safe_zone": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nq9qr2.jpg"
+        },
+        "masterBrand": {
+            "id": "bbc_one",
+            "titles": {
+                "large": "BBC One",
+                "small": "BBC One",
+                "medium": "BBC One"
+            },
+            "attribution": "bbc_one"
+        },
+        "requiresSignIn": true,
+        "guidance": true,
+        "currentVersion": "standard",
+        "live": false,
+        "subtitle": "Series 1: Episode 4",
+        "requiresTvLicence": true,
+        "sliceId": "m002qktz-structural-1-m002qkv0",
+        "childrens": false,
+        "labels": {
+            "category": "Drama"
+        },
+        "hasCredits": true,
+        "programmeType": "narrative",
+        "firstVersionDuration": "PT58M1.880S",
+        "releaseDateTime": "2026-05-31T00:00:00.000Z",
+        "releaseDate": "31 May 2026",
+        "relatedLinks": []
+    },
+    "relatedEpisodes": {
+        "episodes": [
+            {
+                "episode": {
+                    "id": "m002qkv1",
+                    "live": false,
+                    "title": {
+                        "default": "Dear England"
+                    },
+                    "subtitle": {
+                        "default": "Series 1: Episode 1",
+                        "slice": "Episode 1"
+                    },
+                    "labels": {
+                        "editorial": null,
+                        "time": null,
+                        "category": "Drama"
+                    },
+                    "image": {
+                        "default": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nm6w02.jpg"
+                    },
+                    "synopsis": {
+                        "small": "With the England team at an all-time low, Gareth Southgate becomes the new manager."
+                    },
+                    "versions": [
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "technical-replacement"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "audio-described"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "signed"
+                        }
+                    ]
+                }
+            },
+            {
+                "episode": {
+                    "id": "m002wl7q",
+                    "live": false,
+                    "title": {
+                        "default": "Dear England"
+                    },
+                    "subtitle": {
+                        "default": "Series 1: Episode 2",
+                        "slice": "Episode 2"
+                    },
+                    "labels": {
+                        "editorial": null,
+                        "time": null,
+                        "category": "Drama"
+                    },
+                    "image": {
+                        "default": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nm6w5p.jpg"
+                    },
+                    "synopsis": {
+                        "small": "After a breakthrough World Cup reignites belief, can Southgate’s team triumph at Wembley?"
+                    },
+                    "versions": [
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "editorial"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "audio-described"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "signed"
+                        }
+                    ]
+                }
+            },
+            {
+                "episode": {
+                    "id": "m002wl7t",
+                    "live": false,
+                    "title": {
+                        "default": "Dear England"
+                    },
+                    "subtitle": {
+                        "default": "Series 1: Episode 3",
+                        "slice": "Episode 3"
+                    },
+                    "labels": {
+                        "editorial": null,
+                        "time": null,
+                        "category": "Drama"
+                    },
+                    "image": {
+                        "default": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nnb5gr.jpg"
+                    },
+                    "synopsis": {
+                        "small": "As a controversial World Cup in Qatar awaits, Gareth and the team must focus on winning."
+                    },
+                    "versions": [
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "original"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "audio-described"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for 7 months",
+                                "end": "2027-05-31T06:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "signed"
+                        }
+                    ]
+                }
+            },
+            {
+                "episode": {
+                    "id": "m002wl7v",
+                    "live": false,
+                    "title": {
+                        "default": "Dear England"
+                    },
+                    "subtitle": {
+                        "default": "Series 1: Episode 4",
+                        "slice": "Episode 4"
+                    },
+                    "labels": {
+                        "editorial": null,
+                        "time": null,
+                        "category": "Drama"
+                    },
+                    "image": {
+                        "default": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nnb5qr.jpg"
+                    },
+                    "synopsis": {
+                        "small": "As Euro 2024 begins, England arrive as favourites for Southgate’s final tournament."
+                    },
+                    "versions": [
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "editorial"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for over a year",
+                                "end": "2041-05-31T20:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "audio-described"
+                        },
+                        {
+                            "availability": {
+                                "remaining": "Available for 7 months",
+                                "end": "2027-05-31T06:00:00Z"
+                            },
+                            "duration": {
+                                "text": "58 mins"
+                            },
+                            "kind": "signed"
+                        }
+                    ]
+                }
+            }
+        ],
+        "count": 4,
+        "slices": [
+            {
+                "id": "m002qktz-structural-1-m002qkv0",
+                "title": {
+                    "default": "Series 1"
+                }
+            },
+            {
+                "id": "more-like-this",
+                "title": {
+                    "default": "More Like This"
+                }
+            }
+        ],
+        "status": "success",
+        "page": 1,
+        "perPage": 36,
+        "currentSliceId": "m002qktz-structural-1-m002qkv0",
+        "preferences": {
+            "episodeImage": [
+                "live",
+                "default"
+            ],
+            "episodeSubtitle": [
+                "live",
+                "slice",
+                "default"
+            ],
+            "episodeSynopsis": [
+                "live",
+                "small"
+            ]
+        },
+        "mltFallbackMessage": null
+    },
+    "versions": [
+        {
+            "id": "m002x874",
+            "kind": "editorial",
+            "hd": true,
+            "guidance": "Contains some strong language.",
+            "rrc": false,
+            "events": [
+                {
+                    "name": "started",
+                    "offset": 30,
+                    "system": "uas"
+                },
+                {
+                    "name": "iplxp-ep-started",
+                    "offset": 30,
+                    "system": "optimizely"
+                },
+                {
+                    "name": "iplxp-ep-started",
+                    "offset": 30,
+                    "system": "dax"
+                },
+                {
+                    "name": "iplxp-ep-watched",
+                    "offset": 3134,
+                    "system": "optimizely"
+                },
+                {
+                    "name": "iplxp-ep-watched",
+                    "offset": 3134,
+                    "system": "dax"
+                },
+                {
+                    "name": "ended",
+                    "offset": 3362,
+                    "system": "uas"
+                }
+            ],
+            "firstBroadcast": "31 May 2026",
+            "duration": {
+                "text": "58 mins",
+                "seconds": 3481
+            },
+            "availability": {
+                "remaining": {
+                    "text": "Available for over a year"
+                }
+            },
+            "creditsStart": 3454,
+            "endTime": 2253643200,
+            "isoStartTime": "2026-05-31T19:45:00Z",
+            "isoEndTime": "2041-05-31T20:00:00Z"
+        },
+        {
+            "id": "p0np71qm",
+            "kind": "audio-described",
+            "hd": false,
+            "guidance": "Contains some strong language.",
+            "rrc": false,
+            "events": [
+                {
+                    "name": "started",
+                    "offset": 30,
+                    "system": "uas"
+                },
+                {
+                    "name": "iplxp-ep-started",
+                    "offset": 30,
+                    "system": "optimizely"
+                },
+                {
+                    "name": "iplxp-ep-started",
+                    "offset": 30,
+                    "system": "dax"
+                },
+                {
+                    "name": "iplxp-ep-watched",
+                    "offset": 3134,
+                    "system": "optimizely"
+                },
+                {
+                    "name": "iplxp-ep-watched",
+                    "offset": 3134,
+                    "system": "dax"
+                },
+                {
+                    "name": "ended",
+                    "offset": 3362,
+                    "system": "uas"
+                }
+            ],
+            "firstBroadcast": "31 May 2026",
+            "duration": {
+                "text": "58 mins",
+                "seconds": 3481
+            },
+            "availability": {
+                "remaining": {
+                    "text": "Available for over a year"
+                }
+            },
+            "endTime": 2253643200,
+            "isoStartTime": "2026-05-31T19:45:00Z",
+            "isoEndTime": "2041-05-31T20:00:00Z"
+        },
+        {
+            "id": "m002xkhj",
+            "kind": "signed",
+            "hd": true,
+            "guidance": "Contains some strong language.",
+            "rrc": false,
+            "events": [
+                {
+                    "name": "started",
+                    "offset": 30,
+                    "system": "uas"
+                },
+                {
+                    "name": "iplxp-ep-started",
+                    "offset": 30,
+                    "system": "optimizely"
+                },
+                {
+                    "name": "iplxp-ep-started",
+                    "offset": 30,
+                    "system": "dax"
+                },
+                {
+                    "name": "iplxp-ep-watched",
+                    "offset": 3134,
+                    "system": "optimizely"
+                },
+                {
+                    "name": "iplxp-ep-watched",
+                    "offset": 3134,
+                    "system": "dax"
+                },
+                {
+                    "name": "ended",
+                    "offset": 3362,
+                    "system": "uas"
+                }
+            ],
+            "firstBroadcast": "31 May 2026",
+            "duration": {
+                "text": "58 mins",
+                "seconds": 3481
+            },
+            "availability": {
+                "remaining": {
+                    "text": "Available for 7 months"
+                }
+            },
+            "endTime": 1811743200,
+            "isoStartTime": "2026-06-08T03:44:49Z",
+            "isoEndTime": "2027-05-31T06:00:00Z"
+        }
+    ],
+    "page": {
+        "error": null,
+        "sliceId": null,
+        "referrer": ""
+    },
+    "player": {
+        "status": "loading",
+        "playingState": null,
+        "volume": 0.6,
+        "fakeFullscreen": false,
+        "fullscreen": false,
+        "moreLikeThisAvailability": {
+            "tleoId": null,
+            "hasResults": false
+        },
+        "contentSwitchingActivatedForTleoId": null,
+        "muted": false,
+        "subtitles": false,
+        "continuousPlay": true,
+        "shouldPlay": false,
+        "ableToPlay": false,
+        "shouldAutoplay": false,
+        "shouldAutoplayWithChecks": false,
+        "errorEventFired": false,
+        "metadataLoadedEventFired": false,
+        "currentlyPlayingKind": null,
+        "audioDescribed": false,
+        "watchFromStart": false
+    },
+    "config": {
+        "staticAssetsPath": "https://iplayer-web.files.bbci.co.uk/iplayer-web-app-playback-v2/1.0.0-2936.aarch64",
+        "host": "www.bbc.co.uk",
+        "uasApiKey": "e03ab8mvruobi",
+        "staticHost": "https://iplayer-web.files.bbci.co.uk",
+        "iblBaseUrl": "https://ibl.api.bbc.co.uk/ibl/v1",
+        "iblUserBaseUrl": "https://user.ibl.api.bbc.co.uk/ibl/v1",
+        "martechServerBaseUrl": "https://cedric.belfrage.api.bbc.co.uk/fd",
+        "martechBrowserBaseUrl": "https://mt.api.bbc.co.uk/fd",
+        "uasBaseUrl": "https://activity.api.bbc.co.uk",
+        "graphBaseUrl": "https://graph.ibl.api.bbc.co.uk",
+        "graphFallbackBaseUrl": "https://fallbacks.ibl.api.bbci.co.uk",
+        "tipBaseUrl": "https://iplayer-web.files.bbci.co.uk/iplayer-web-tip-playback/19.13.0",
+        "chaptersAndMomentsBaseUrl": "https://iplayer-web.files.bbci.co.uk/iplayer-web-playback-chapters-and-moments-plugin/0.18.0",
+        "boomrBaseUrl": "https://boomr.iplayer.api.bbc.co.uk",
+        "statsDestination": "iplayer",
+        "idctaBaseUrl": "https://idcta-origin.api.bbc.co.uk/idcta",
+        "notificationsBaseUrl": "https://preferences.notifications.api.bbc.co.uk",
+        "enablePersonalisation": "true"
+    },
+    "stats": {
+        "countername": "iplayer.tv.episode.dear_england.series_1_episode_4.m002wl7v.page",
+        "smpCountername": "iplayer.tv.episode.dear_england.series_1_episode_4.m002wl7v.page",
+        "firedEvents": [],
+        "playedTypeStatFired": false,
+        "smpStatsEnv": "live"
+    },
+    "id": {
+        "status": "green",
+        "signedIn": true,
+        "ageBracket": "o18",
+        "enablePersonalisation": true,
+        "ctaMarkup": "",
+        "cdnFailover": false,
+        "hasLinkedU13Account": false,
+        "pseudonym": "NkVNoPqfaeoFisD_BZrvZzdIJkDXxQhe-UohsrN7Z-A",
+        "displayName": "alnhjl",
+        "signInAvailabilityStatus": "green"
+    },
+    "user": {
+        "isForeignRegion": false,
+        "hasTvl": false,
+        "region": "lo",
+        "inNoLicenceSegment": null
+    },
+    "journey": {
+        "status": "success"
+    },
+    "modal": {
+        "tvl": false,
+        "continuousPlay": false
+    },
+    "msiModal": {
+        "visible": false,
+        "dismissed": false
+    },
+    "preroll": {
+        "id": "p0phyz7g",
+        "title": "US Midterm Elections",
+        "versionId": "p0phyz7s",
+        "interactions": {
+            "skipped": {
+                "purpose": "UAS",
+                "id": "3b80f443-576c-483a-ac6b-144bbeefd050",
+                "messageBody": {
+                    "resourceDomain": "tv",
+                    "activityType": "plays",
+                    "resourceType": "preroll",
+                    "resourceId": "urn:bbc:pips:pid:p0phyz7g",
+                    "action": "skipped",
+                    "actionContext": "urn:bbc:tv:version_offset:p0phyz7s"
+                }
+            },
+            "follow": {
+                "purpose": "UAS",
+                "id": "2d2ffcdb-7c43-4236-99c3-23055b75c287",
+                "messageBody": {
+                    "activityType": "follows",
+                    "resourceDomain": "tv",
+                    "resourceType": "brand",
+                    "resourceId": "m0033j39",
+                    "action": "followed"
+                }
+            }
+        },
+        "events": [
+            {
+                "offset": 2,
+                "purpose": "UAS",
+                "id": "fa7cca62-771b-425b-90a6-c5560b6491cd",
+                "messageBody": {
+                    "resourceDomain": "tv",
+                    "activityType": "plays",
+                    "resourceType": "preroll",
+                    "resourceId": "urn:bbc:pips:pid:p0phyz7g",
+                    "action": "started",
+                    "actionContext": "urn:bbc:tv:version_offset:p0phyz7s#2"
+                }
+            },
+            {
+                "offset": 16,
+                "purpose": "UAS",
+                "id": "6a800794-f931-4bb8-9e93-a139bae34b4c",
+                "messageBody": {
+                    "resourceDomain": "tv",
+                    "activityType": "plays",
+                    "resourceType": "preroll",
+                    "resourceId": "urn:bbc:pips:pid:p0phyz7g",
+                    "action": "ended",
+                    "actionContext": "urn:bbc:tv:version_offset:p0phyz7s#16"
+                }
+            }
+        ],
+        "loggedEventIds": [],
+        "skipStart": 0
+    },
+    "variants": {
+        "iplwb_content_switching": "content_switching"
+    },
+    "dials": {
+        "enableContinuousPlay": "true",
+        "enableContentSwitching": "true",
+        "enableProgressBars": "true",
+        "enableToucanOnIOSAndIPadOS": "true",
+        "enableBoomr": "true",
+        "enableChaptersAndMoments": "true",
+        "mediaTimelinesEndpointEnv": "production",
+        "requiresSignIn": "true",
+        "enablePrerollsSegmentation": "true",
+        "forceIblFallbackGraphQL": "false",
+        "enableTvLicenceSegmentation": "true",
+        "enableProgrammesRedirects": "true",
+        "enableProgrammesLinks": "true"
+    },
+    "upNext": null,
+    "chaptersAndMoments": {
+        "availability": "pending"
+    }
+}

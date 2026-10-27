@@ -86,9 +86,24 @@ class ScrapeEpisodes(fixtures.LocalTestCase):
 
     @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/series_all-at-sea.html'))
     def test_scrape_episodes_from_programme_page_with_multiple_series(self):
+        """Scrape a programme page with multiple series"""
         self.addon_settings['paginate_episodes'] = 0
         ipwww_video.ScrapeEpisodes('series_all-at-sea')
-        self.assertGreater(len(self.li_store), 10)
+        self.assertEqual(len(self.li_store), 3)
+        self.assertTrue('More Like This' in self.li_store.list_item(0).getLabel())
+        self.assertTrue('Series' in self.li_store.list_item(1).getLabel())
+        self.assertTrue('Series' in self.li_store.list_item(2).getLabel())
+
+    @patch('resources.lib.ipwww_video.GetJsonData', return_value=open_json('json/episode_page_with_one_series.json'))
+    def test_scrape_episodes_from_episode_page_with_one_series(self, p_get_json):
+        """Scrape an episode page with one series as a programme page."""
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.ScrapeEpisodes('episode_dear_England')
+        p_get_json.assert_called_once()
+        self.assertEqual(len(self.li_store), 5)      # 4 episodes + "More Like This"
+        self.assertTrue("More Like This" in self.li_store.list_item(0).getLabel())
+        for item in self.li_store.list_items:
+            self.assertFalse('Next page' in item.getLabel())
 
 
 class SetSortMethod(fixtures.LocalTestCase):
@@ -324,6 +339,20 @@ class TestParseEpisode(fixtures.LocalTestCase):
     def test_parse_episode(self):
         data = open_json('html/watching.json')
         for item_data in data['items']['elements']:
+            result = ipwww_video.ParseEpisode(item_data['episode'])
+            # A mode is to be added by the caller of ParseEpisode, add a fake one to be AddMenuEntry(...) compatible
+            result['mode'] = 0
+            is_li_compatible_dict(self, result)
+
+    def test_parse_from_episode_page(self):
+        """Sometimes the page of an episode is used to get the series/episodes of the whole programme.
+        An episode page basically has the same data as a programme page, but is a slightly different
+        structure and a little less detail.
+
+        """
+        data = open_json('json/episode_page_with_one_series.json')
+        episode_list = data['relatedEpisodes']['episodes']
+        for item_data in episode_list:
             result = ipwww_video.ParseEpisode(item_data['episode'])
             # A mode is to be added by the caller of ParseEpisode, add a fake one to be AddMenuEntry(...) compatible
             result['mode'] = 0

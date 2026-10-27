@@ -87,7 +87,7 @@ class Highlights(fixtures.WebTestCase):
 
 class Collections(fixtures.WebTestCase):
     def test_get_single_page_collection(self):
-        ipwww_video.GetGroup('m002kgjz')
+        ipwww_video.GetGroup('m001bm54')        # group 'new and trending' from the home page
         self.assertGreater(len(self.li_store), 10)
 
     def test_get_multi_page_collection(self):
@@ -114,6 +114,22 @@ class Episodes(fixtures.WebTestCase):
         self.addon_settings['paginate_episodes'] = 1
         ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/search?q=tennis')
         self.assertGreater(len(self.li_store), 10)
+
+    def test_programme_with_trailer_and_one_series(self):
+        """Should list the 6 episodes and a "More like this" folder."""
+        self.addon_settings['paginate_episodes'] = 1
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episodes/m00335ym/a-course-called-ireland')
+        self.assertEqual(len(self.li_store), 7)
+
+    def test_episode_page_as_programme_page(self):
+        """A page of an episode of a programme is used to get the programme's details.
+        An episode page contains the same info as the programme page, but in a slightly different structure.
+
+        This should list the series folders without episodes, just like a programme page.
+        """
+        self.addon_settings['paginate_episodes'] = 1
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episode/m002yfct/my-life-new-and-trending-tennis-to-the-max')
+        self.assertEqual(len(self.li_store), 8)
 
 
 class MyProgrammes(fixtures.WebTestCase):

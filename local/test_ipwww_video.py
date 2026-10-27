@@ -84,6 +84,11 @@ class ScrapeEpisodes(fixtures.LocalTestCase):
         for item in self.li_store.list_items:
             self.assertFalse('Next page' in item.getLabel())
 
+    @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/homepage.html'))
+    def test_scrape_homepage(self):
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer')
+
     @patch('resources.lib.ipwww_common.OpenRequest', new=open_doc('html/series_all-at-sea.html'))
     def test_scrape_episodes_from_programme_page_with_multiple_series(self):
         """Scrape a programme page with multiple series"""

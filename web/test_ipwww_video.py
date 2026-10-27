@@ -131,6 +131,16 @@ class Episodes(fixtures.WebTestCase):
         ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episode/m002yfct/my-life-new-and-trending-tennis-to-the-max')
         self.assertEqual(len(self.li_store), 8)
 
+    def test_series_more_like_this_from_programme_page(self):
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episodes/m002xfwk/goolagong?seriesId=more-like-this')
+        self.assertGreater(len(self.li_store), 10)
+
+    def test_series_more_like_this_from_episode_page(self):
+        self.addon_settings['paginate_episodes'] = 0
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episode/m002wl7v/dear-england-series-1-episode-4?seriesId=more-like-this')
+        self.assertGreater(len(self.li_store), 10)
+
 
 class MyProgrammes(fixtures.WebTestCase):
     def test_added(self):

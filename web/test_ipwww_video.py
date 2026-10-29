@@ -106,6 +106,10 @@ class Episodes(fixtures.WebTestCase):
         ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/iplayer/episodes/m0028vr2')     # Remembers : 6 pages
         self.assertGreater(len(self.li_store), 100)
 
+    def test_channel(self):
+        ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/bbcfour', True)
+        self.assertGreater(len(self.li_store), 10)
+
     def test_channel_az(self):
         self.addon_settings['paginate_episodes'] = 0
         ipwww_video.ScrapeEpisodes('https://www.bbc.co.uk/bbcfour/a-z')

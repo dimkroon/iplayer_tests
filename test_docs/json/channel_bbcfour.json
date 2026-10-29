@@ -1,0 +1,1898 @@
+{
+    "navigation": {
+        "items": [
+            {
+                "id": "channels",
+                "title": "Channels",
+                "active": true,
+                "subItems": [
+                    {
+                        "title": "BBC One",
+                        "href": "/bbcone",
+                        "liveHref": "/iplayer/live/bbcone",
+                        "active": false,
+                        "icon": "bbcone",
+                        "id": "bbc_one"
+                    },
+                    {
+                        "title": "BBC Two",
+                        "href": "/bbctwo",
+                        "liveHref": "/iplayer/live/bbctwo",
+                        "active": false,
+                        "icon": "bbctwo",
+                        "id": "bbc_two"
+                    },
+                    {
+                        "title": "BBC Three",
+                        "href": "/tv/bbcthree",
+                        "liveHref": "/iplayer/live/bbcthree",
+                        "active": false,
+                        "icon": "bbcthree",
+                        "id": "bbc_three"
+                    },
+                    {
+                        "title": "BBC Four",
+                        "href": "/bbcfour",
+                        "liveHref": "/iplayer/live/bbcfour",
+                        "active": true,
+                        "icon": "bbcfour",
+                        "id": "bbc_four"
+                    },
+                    {
+                        "title": "BBC Radio 1",
+                        "href": "/tv/radio1",
+                        "liveHref": "/iplayer/live/radio1",
+                        "active": false,
+                        "icon": "radio1",
+                        "id": "bbc_radio_one"
+                    },
+                    {
+                        "title": "CBBC",
+                        "href": "/tv/cbbc",
+                        "liveHref": "/iplayer/live/cbbc",
+                        "active": false,
+                        "icon": "cbbc",
+                        "id": "cbbc"
+                    },
+                    {
+                        "title": "CBeebies",
+                        "href": "/tv/cbeebies",
+                        "liveHref": "/iplayer/live/cbeebies",
+                        "active": false,
+                        "icon": "cbeebies",
+                        "id": "cbeebies"
+                    },
+                    {
+                        "title": "BBC Scotland",
+                        "href": "/tv/bbcscotland",
+                        "liveHref": "/iplayer/live/bbcscotland",
+                        "active": false,
+                        "icon": "bbcscotland",
+                        "id": "bbc_scotland"
+                    },
+                    {
+                        "title": "BBC News",
+                        "href": "/tv/bbcnews",
+                        "liveHref": "/iplayer/live/bbcnews",
+                        "active": false,
+                        "icon": "bbcnews",
+                        "id": "bbc_news24"
+                    },
+                    {
+                        "title": "BBC Parliament",
+                        "href": "/tv/bbcparliament",
+                        "liveHref": "/iplayer/live/bbcparliament",
+                        "active": false,
+                        "icon": "bbcparliament",
+                        "id": "bbc_parliament"
+                    },
+                    {
+                        "title": "BBC Alba",
+                        "href": "/tv/bbcalba",
+                        "liveHref": "/iplayer/live/bbcalba",
+                        "active": false,
+                        "icon": "bbcalba",
+                        "id": "bbc_alba"
+                    },
+                    {
+                        "title": "S4C",
+                        "href": "/tv/s4c",
+                        "liveHref": "/iplayer/live/s4c",
+                        "active": false,
+                        "icon": "s4c",
+                        "id": "s4cpbs"
+                    }
+                ]
+            },
+            {
+                "id": "categories",
+                "title": "Categories",
+                "active": false,
+                "subItems": [
+                    {
+                        "title": "Drama & Soaps",
+                        "href": "/iplayer/categories/drama-and-soaps/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "drama-and-soaps"
+                    },
+                    {
+                        "title": "Films",
+                        "href": "/iplayer/browse/films",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "films"
+                    },
+                    {
+                        "title": "Comedy",
+                        "href": "/iplayer/categories/comedy/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "comedy"
+                    },
+                    {
+                        "title": "Documentaries",
+                        "href": "/iplayer/categories/documentaries/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "documentaries"
+                    },
+                    {
+                        "title": "Sport",
+                        "href": "/iplayer/categories/sport/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "sport"
+                    },
+                    {
+                        "title": "News",
+                        "href": "/iplayer/categories/news/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "news"
+                    },
+                    {
+                        "title": "Entertainment",
+                        "href": "/iplayer/categories/entertainment/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "entertainment"
+                    },
+                    {
+                        "title": "Music",
+                        "href": "/iplayer/browse/music",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "music"
+                    },
+                    {
+                        "title": "Food",
+                        "href": "/iplayer/categories/food/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "food"
+                    },
+                    {
+                        "title": "Lifestyle",
+                        "href": "/iplayer/categories/lifestyle/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "lifestyle"
+                    },
+                    {
+                        "title": "History",
+                        "href": "/iplayer/categories/history/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "history"
+                    },
+                    {
+                        "title": "Science & Nature",
+                        "href": "/iplayer/categories/science-and-nature/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "science-and-nature"
+                    },
+                    {
+                        "title": "Arts",
+                        "href": "/iplayer/browse/arts",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "arts"
+                    },
+                    {
+                        "title": "From the Archive",
+                        "href": "/iplayer/categories/archive/featured",
+                        "active": false,
+                        "kind": "genre",
+                        "id": "archive"
+                    },
+                    {
+                        "title": "Audio Described",
+                        "href": "/iplayer/categories/audio-described/featured",
+                        "active": false,
+                        "kind": "accessibility",
+                        "id": "audio-described"
+                    },
+                    {
+                        "title": "Signed",
+                        "href": "/iplayer/categories/signed/featured",
+                        "active": false,
+                        "kind": "accessibility",
+                        "id": "signed"
+                    },
+                    {
+                        "title": "Northern Ireland",
+                        "href": "/iplayer/categories/northern-ireland/featured",
+                        "active": false,
+                        "kind": "national",
+                        "id": "northern-ireland"
+                    },
+                    {
+                        "title": "Scotland",
+                        "href": "/iplayer/categories/scotland/featured",
+                        "active": false,
+                        "kind": "national",
+                        "id": "scotland"
+                    },
+                    {
+                        "title": "Wales",
+                        "href": "/iplayer/categories/wales/featured",
+                        "active": false,
+                        "kind": "national",
+                        "id": "wales"
+                    },
+                    {
+                        "title": "CBeebies",
+                        "href": "/iplayer/categories/cbeebies/featured",
+                        "active": false,
+                        "kind": "childrens",
+                        "id": "cbeebies"
+                    },
+                    {
+                        "title": "CBBC",
+                        "href": "/iplayer/categories/cbbc/featured",
+                        "active": false,
+                        "kind": "childrens",
+                        "id": "cbbc"
+                    }
+                ]
+            },
+            {
+                "title": "A-Z",
+                "ariaLabel": "A to Z",
+                "href": "/iplayer/a-z/a",
+                "active": false,
+                "id": "a-z"
+            },
+            {
+                "title": "TV Guide",
+                "href": "/iplayer/guide",
+                "active": false,
+                "id": "tv-guide"
+            },
+            {
+                "title": "Watchlist",
+                "href": "/iplayer/watchlist",
+                "active": false,
+                "id": "watchlist"
+            }
+        ],
+        "renderOpen": true,
+        "variant": "default",
+        "useLiveHrefs": false,
+        "accessibilityHelpHref": "/iplayer/features/accessibility"
+    },
+    "footer": {
+        "locationLabel": "Change location",
+        "languageLabel": "Change language",
+        "locations": [
+            {
+                "label": "Nations",
+                "locations": [
+                    {
+                        "label": "Northern Ireland",
+                        "value": "ni"
+                    },
+                    {
+                        "label": "Scotland",
+                        "value": "sc"
+                    },
+                    {
+                        "label": "Wales",
+                        "value": "wa"
+                    }
+                ]
+            },
+            {
+                "label": "Regions",
+                "locations": [
+                    {
+                        "label": "Channel Islands",
+                        "value": "ci"
+                    },
+                    {
+                        "label": "East",
+                        "value": "ea"
+                    },
+                    {
+                        "label": "East Midlands",
+                        "value": "em"
+                    },
+                    {
+                        "label": "East Yorks & Lincs",
+                        "value": "ey"
+                    },
+                    {
+                        "label": "London",
+                        "value": "lo"
+                    },
+                    {
+                        "label": "North East & Cumbria",
+                        "value": "ne"
+                    },
+                    {
+                        "label": "North West",
+                        "value": "nw"
+                    },
+                    {
+                        "label": "South",
+                        "value": "so"
+                    },
+                    {
+                        "label": "South East",
+                        "value": "se"
+                    },
+                    {
+                        "label": "South West",
+                        "value": "sw"
+                    },
+                    {
+                        "label": "West",
+                        "value": "we"
+                    },
+                    {
+                        "label": "West Midlands",
+                        "value": "wm"
+                    },
+                    {
+                        "label": "Yorkshire",
+                        "value": "yo"
+                    }
+                ]
+            }
+        ],
+        "languages": [
+            {
+                "label": "English",
+                "value": "en"
+            },
+            {
+                "label": "Cymraeg",
+                "value": "cy"
+            },
+            {
+                "label": "Gaeilge",
+                "value": "ga"
+            },
+            {
+                "label": "Gàidhlig",
+                "value": "gd"
+            }
+        ],
+        "parentalControlsLabel": "Parental Controls",
+        "helpFaqLabel": "Help & FAQ",
+        "parentalControlsHref": "/iplayer/guidance",
+        "helpFaqHref": "https://www.bbc.co.uk/iplayer/help",
+        "defaultLocation": "lo",
+        "defaultLanguage": "en",
+        "regionalPage": true,
+        "forceDarkTheme": false
+    },
+    "safeguarding": {
+        "clientAgeBracket": "unknown",
+        "serverAgeBracket": "o18",
+        "dismissedModal": false
+    },
+    "language": "en",
+    "experiments": {},
+    "watchlist": {},
+    "outsideUKResponse": {
+        "enabled": false
+    },
+    "translations": {
+        "onNow": "On Now",
+        "onNext": "On Next",
+        "nowWatching": "Now Watching",
+        "watchLive": "Watch live",
+        "watchNow": "Watch now",
+        "watchFromStart": "Watch from start",
+        "topPick": "Top Pick",
+        "schedule": "BBC Four Schedule",
+        "highlightsPageTitle": "BBC Four",
+        "livePageTitle": "Watch BBC Four live",
+        "signInTitle": "Sign in to your BBC account",
+        "signInText": "It's quick and easy",
+        "signInDismissLabel": "Maybe later",
+        "signInDismissAria": "Maybe later",
+        "findOutMore": "Find out more",
+        "tvlModalTitle": "Got a TV Licence?",
+        "tvlModalSubtitle": "You need a licence to watch content on BBC iPlayer - live or on demand. It's the law.",
+        "tvlYes": "I have a TV Licence. Watch now.",
+        "tvlNo": "I do not have a TV Licence.",
+        "nlnTvlModalTitle": "You told us you don't need a TV Licence",
+        "nlnTvlModalSubtitle": "The content you're trying to access requires a TV Licence. Watching without one could lead to prosecution and a fine.",
+        "nlnTvlModalYes": "I have a TV Licence – watch now",
+        "nlnTvlModalNo": "Buy a TV Licence",
+        "nlnTvlModalFindOutMore": "Make sure you're covered",
+        "nlnTvlModalControlTitle": "Got a TV Licence?",
+        "nlnTvlModalControlSubtitle": "You need a licence to watch content on BBC iPlayer - live or on demand. It's the law.",
+        "nlnTvlModalControlYes": "I have a TV Licence. Watch now.",
+        "nlnTvlModalControlNo": "I do not have a TV Licence.",
+        "nlnTvlModalControlFindOutMore": "Find out more",
+        "channelFeaturedTitle": "Featured on %s",
+        "channelGroupViewAll": "View all",
+        "channelGroupViewAllAriaLabel": "View all programmes from the %s group",
+        "channelAtoZViewAll": "View all %s A-Z",
+        "noJsBanner": "JavaScript seems to be disabled. Please enable JavaScript to take full advantage of iPlayer."
+    },
+    "channel": {
+        "id": "bbc_four",
+        "slug": "bbcfour",
+        "title": "BBC Four",
+        "titleUnregionalised": "BBC Four",
+        "isChildrensPage": false,
+        "isSimulcast": false,
+        "links": {
+            "schedule": "/iplayer/schedules/bbcfour",
+            "highlights": "/bbcfour",
+            "simulcast": "/iplayer/live/bbcfour",
+            "simulcastWatchFromStart": "/iplayer/live/bbcfour?rewindTo=current",
+            "ptrts": {
+                "watchLive": "https://www.bbc.co.uk/iplayer/live/bbcfour",
+                "watchFromStart": "https://www.bbc.co.uk/iplayer/live/bbcfour?rewindTo=current"
+            }
+        },
+        "masterBrand": "bbc_four",
+        "hasSchedule": true,
+        "onAir": true
+    },
+    "broadcasts": {
+        "status": "succeeded",
+        "items": [
+            {
+                "image": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0dl52j9.jpg",
+                "endTime": "00:20",
+                "startTime": "23:00",
+                "scheduledStart": 1793228400,
+                "title": "The Singing Detective",
+                "subtitle": "Series 1: 6. Who Done It",
+                "href": "/programmes/m0032wg8",
+                "events": [
+                    {
+                        "name": "started",
+                        "system": "uas",
+                        "time": "2026-10-28T23:11:43.000Z"
+                    },
+                    {
+                        "name": "ended",
+                        "system": "uas",
+                        "time": "2026-10-29T00:00:25.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-started",
+                        "system": "optimizely",
+                        "time": "2026-10-28T23:02:13.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-watched",
+                        "system": "optimizely",
+                        "time": "2026-10-29T00:00:25.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-started",
+                        "system": "dax",
+                        "time": "2026-10-28T23:02:13.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-watched",
+                        "system": "dax",
+                        "time": "2026-10-29T00:00:25.000Z"
+                    }
+                ],
+                "episodeId": "b0074qy8",
+                "versionId": "m002chnx"
+            },
+            {
+                "image": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0gh8l9g.jpg",
+                "endTime": "01:10",
+                "startTime": "00:20",
+                "scheduledStart": 1793233200,
+                "title": "Timewatch",
+                "subtitle": "2005-2006: The Gunpowder Plot",
+                "href": "/programmes/b006qjlw",
+                "events": [
+                    {
+                        "name": "started",
+                        "system": "uas",
+                        "time": "2026-10-29T00:30:00.000Z"
+                    },
+                    {
+                        "name": "ended",
+                        "system": "uas",
+                        "time": "2026-10-29T00:57:30.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-started",
+                        "system": "optimizely",
+                        "time": "2026-10-29T00:20:30.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-watched",
+                        "system": "optimizely",
+                        "time": "2026-10-29T00:57:30.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-started",
+                        "system": "dax",
+                        "time": "2026-10-29T00:20:30.000Z"
+                    },
+                    {
+                        "name": "iplxp-ep-watched",
+                        "system": "dax",
+                        "time": "2026-10-29T00:57:30.000Z"
+                    }
+                ],
+                "episodeId": "b0078yy8",
+                "versionId": "m001dznn"
+            }
+        ]
+    },
+    "groups": [
+        {
+            "id": "m003355v",
+            "title": " World Cinema Classics",
+            "group_type": "curated",
+            "entities": [
+                {
+                    "id": "m0008rpl",
+                    "tleo_id": "m0008rpl",
+                    "title": "The Seventh Seal",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Ingmar Bergman's cinematic masterpiece",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pc666j.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pc6662.jpg"
+                    },
+                    "labels": {
+                        "category": "Film - Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Ingmar Bergman's cinematic masterpiece. As plague sweeps the land, a knight meets Death",
+                        "small": "A knight returning from the crusades makes the acquaintance of Death himself."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "1h 32m"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m00334xy",
+                    "tleo_id": "m00334xy",
+                    "title": "Cleo from 5 to 7",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Corinne Marchand stars",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pggsml.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pggsl7.jpg"
+                    },
+                    "labels": {
+                        "category": "Film - Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Corinne Marchand stars in Agnès Varda's radical portrait of a woman facing mortality",
+                        "small": "New Wave classic following a young Parisian singer as she awaits a cancer test result."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "1h 27m"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m003199h",
+                    "tleo_id": "b006pn88",
+                    "title": "Arena",
+                    "type": "episode",
+                    "programme_type": "strand",
+                    "editorial_subtitle": "Art, vision and legacy",
+                    "editorial_title": "Arena: Bergman and the Cinema",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p9vgy3.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p9vgv0.jpg"
+                    },
+                    "labels": {
+                        "category": "Arts"
+                    },
+                    "live": false,
+                    "subtitle": "Bergman and the Cinema",
+                    "synopses": {
+                        "editorial": "Art, vision and legacy of Ingmar Bergman and his unrivalled work in cinema and theatre",
+                        "small": "Ingmar Bergman pays one final visit to Filmstaden, where many of his films were made."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "58 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m00334xx",
+                    "tleo_id": "m00334xx",
+                    "title": "Fanny and Alexander",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Childhood wonder, secrets and the magic of memory",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pf8ztm.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pf8zqd.jpg"
+                    },
+                    "labels": {
+                        "category": "Film - Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Childhood wonder, secrets and the magic of memory. Ingmar Bergman's Oscar-winning saga",
+                        "small": "Ingmar Bergman’s dreamlike chronicle of an extended family in early 20th-century Sweden."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "2h 59m"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m00335p5",
+                    "tleo_id": "m00335p5",
+                    "title": "The Bride Wore Black",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Jeanne Moreau stars",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pfps0w.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pfprgz.jpg"
+                    },
+                    "labels": {
+                        "category": "Film - Horror"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Jeanne Moreau stars in François Truffaut’s stylish tale of love, loss and lethal revenge",
+                        "small": "Francois Truffaut's classic thriller about a woman seeking to avenge her husband's death."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "1h 43m"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m003199j",
+                    "tleo_id": "b006pn88",
+                    "title": "Arena",
+                    "type": "episode",
+                    "programme_type": "strand",
+                    "editorial_subtitle": "Childhood, film, inner demons",
+                    "editorial_title": "Arena: Bergman and Faro Island",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p95sz9.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p95s32.jpg"
+                    },
+                    "labels": {
+                        "category": "Arts"
+                    },
+                    "live": false,
+                    "subtitle": "Bergman and Faro Island",
+                    "synopses": {
+                        "editorial": "Childhood, film, inner demons - inside the private world of a cinematic master",
+                        "small": "Film-maker Ingmar Bergman shows us his world on the desolate Baltic island of Faro."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "59 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m0033705",
+                    "tleo_id": "b052vfvv",
+                    "title": "Talking Pictures",
+                    "type": "episode",
+                    "programme_type": "sequential",
+                    "editorial_subtitle": "A celebration of international films",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ph4fxy.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ph4fkv.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "World Cinema Classics",
+                    "synopses": {
+                        "editorial": "A celebration of international films and the visionary directors who inspired generations",
+                        "small": "Celia Imrie presents a celebration of international films."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "44 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m00319cp",
+                    "tleo_id": "b007z7k9",
+                    "title": "Omnibus",
+                    "type": "episode",
+                    "programme_type": "strand",
+                    "editorial_subtitle": "A defining figure",
+                    "editorial_title": "Francois Truffaut: Film-Maker",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p9vddx.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p9vcxy.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Francois Truffaut: Film-Maker",
+                    "synopses": {
+                        "editorial": "A defining figure of French cinema. The director on his life and revolutionary career",
+                        "small": "French director Francois Truffaut looks back candidly at his life and career."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "52 mins"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "stacked": false
+        },
+        {
+            "id": "m002kgjz",
+            "title": "Weird, Wonderful and Unexplained",
+            "group_type": "curated",
+            "entities": [
+                {
+                    "id": "m0027g7f",
+                    "tleo_id": "m001rcl0",
+                    "title": "Uncanny",
+                    "type": "episode",
+                    "programme_type": "narrative",
+                    "editorial_subtitle": "Oh my ghost!",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0kl3vh1.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0klwyqm.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Post Mortem: Episode 1",
+                    "synopses": {
+                        "editorial": "Oh my ghost! Celebs, experts and Danny Robins take a deeper dive into the paranormal",
+                        "small": "Danny Robins delves further into the haunting of Hollymount Farm with fresh revelations."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m0033jcm",
+                    "tleo_id": "m0033jck",
+                    "title": "Mythland",
+                    "type": "episode",
+                    "programme_type": "narrative",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pjnqyj.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pjpn4z.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Series 1: 1. The Witch of Torryburn",
+                    "synopses": {
+                        "small": "The mysterious story of a Fife woman accused of witchcraft is revealed."
+                    },
+                    "versions": [
+                        {
+                            "kind": "editorial",
+                            "duration": {
+                                "text": "28 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "p0g31550",
+                    "tleo_id": "p0g31444",
+                    "title": "Paranormal",
+                    "type": "episode",
+                    "programme_type": "narrative",
+                    "editorial_subtitle": "Haunting or hoax?",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g5vvfq.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0g5gbtj.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "The Girl, the Ghost and the Gravestone: 1. Carvings on the Wall",
+                    "synopses": {
+                        "editorial": "Haunting or hoax? Sian Eleri dives into the mystery of what was Wales' most haunted house",
+                        "small": "Radio 1’s Sian Eleri begins an investigation into 'the most haunted house in Britain'."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        },
+                        {
+                            "kind": "signed",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m002hqy7",
+                    "tleo_id": "m002hqy7",
+                    "title": "What Are UFOs?",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Out of the shadows",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0lxsp07.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0lxsnxz.jpg"
+                    },
+                    "labels": {
+                        "category": "Science"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Out of the shadows. The scientists looking closer at the strange objects in the skies",
+                        "small": "Can science reveal the secrets of mysterious objects seen in our skies?"
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "52 mins"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "52 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m002389b",
+                    "tleo_id": "m0023898",
+                    "title": "Hauntings",
+                    "type": "episode",
+                    "programme_type": "sequential",
+                    "editorial_subtitle": "Chilling true tales",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jx5v43.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jwxmf9.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Series 1: 1. The Enfield Poltergeist",
+                    "synopses": {
+                        "editorial": "Chilling true tales. Puzzling paranormal stories where the truth is still out there",
+                        "small": "In 1977, the police encounter activity in Enfield that remains hard to explain."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "46 mins"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "46 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m002384q",
+                    "tleo_id": "m002384n",
+                    "title": "Charlie Cooper’s Myth Country",
+                    "type": "episode",
+                    "programme_type": "narrative",
+                    "editorial_subtitle": "Crop circles to demon dogs",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jsy4wx.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0jszj08.png"
+                    },
+                    "live": false,
+                    "subtitle": "Series 1: 1. Black Shuck",
+                    "synopses": {
+                        "editorial": "Crop circles to demon dogs – Charlie explores gloriously bonkers British folklore",
+                        "small": "Charlie goes in search of Black Shuck, the demon dog of East Anglia."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        },
+                        {
+                            "kind": "signed",
+                            "duration": {
+                                "text": "29 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m001vdxm",
+                    "tleo_id": "m001vdxj",
+                    "title": "Amityville: An Origin Story",
+                    "type": "episode",
+                    "programme_type": "sequential",
+                    "editorial_subtitle": "Shining light on darkness",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h5tvd5.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0h7bwbt.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Series 1: 1. The Haunting",
+                    "synopses": {
+                        "editorial": "Shining light on darkness. The true horror of the world’s most infamous haunted house",
+                        "small": "In 1975, George and Kathy Lutz are driven out from their dream home in just 28 days. "
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "48 mins"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "48 mins"
+                            }
+                        },
+                        {
+                            "kind": "signed",
+                            "duration": {
+                                "text": "48 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m002thsc",
+                    "tleo_id": "m002thsc",
+                    "title": "Chauvet: Humanity's First Great Masterpiece",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "An archaeological, artistic adventure",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0n8gfk4.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0n7t1ny.jpg"
+                    },
+                    "labels": {
+                        "category": "History"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "An archaeological, artistic adventure. Preserving a priceless collection of cave art",
+                        "small": "Documentary following the work of scientists at archaeological marvel the Chauvet cave."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "59 mins"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "stacked": false
+        },
+        {
+            "id": "m002zvkf",
+            "title": "Celebrating British & Irish Theatre",
+            "group_type": "curated",
+            "entities": [
+                {
+                    "id": "p02z80kq",
+                    "tleo_id": "p02z80kq",
+                    "title": "An Inspector Calls",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Uncomfortable truths are revealed",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09mfqrh.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09mfqqj.jpg"
+                    },
+                    "labels": {
+                        "category": "Period Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Uncomfortable truths are revealed, but a darker mystery emerges – who is Inspector Goole?",
+                        "small": "A mysterious inspector interrupts a wealthy family's party with shocking news."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "1h 26m"
+                            }
+                        },
+                        {
+                            "kind": "audio-described",
+                            "duration": {
+                                "text": "1h 26m"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "p01x5k4n",
+                    "tleo_id": "p01x5k4n",
+                    "title": "Under Milk Wood",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Made in Wales",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nsn804.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nsn7tx.jpg"
+                    },
+                    "labels": {
+                        "category": "Period Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Made in Wales. A unique production of Dylan Thomas’ classic with a host of famous faces",
+                        "small": "A production of Dylan Thomas's famous play enacted by a community of Welsh performers."
+                    },
+                    "versions": [
+                        {
+                            "kind": "editorial",
+                            "duration": {
+                                "text": "59 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m002ykct",
+                    "tleo_id": "m002ykct",
+                    "title": "Not I",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Billie Whitelaw stars",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nvy5j2.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nvy57h.jpg"
+                    },
+                    "labels": {
+                        "category": "Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Billie Whitelaw stars in Samuel Beckett’s play, suspended in darkness, burning with words",
+                        "small": "Billie Whitelaw stars as a mouth suspended in space in Samuel Beckett's play."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "15 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m0010zdp",
+                    "tleo_id": "m0010zdp",
+                    "title": "Salt by Selina Thompson",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "A poetic and deeply personal journey",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0cvt0t9.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p09z0lbj.jpg"
+                    },
+                    "labels": {
+                        "category": "Arts"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "A poetic and deeply personal journey, reflecting on the transatlantic slave trade",
+                        "small": "Artist Selina Thompson recalls her journey by sea to retrace a route of the slave trade."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "46 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m0031n33",
+                    "tleo_id": "m0028vr2",
+                    "title": "Remembers...",
+                    "type": "episode",
+                    "programme_type": "sequential",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p8l7t9.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p8jb9d.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Selina Thompson Remembers... Salt",
+                    "synopses": {
+                        "small": "Performance artist Selina Thompson looks back on her award-winning dramatic monologue."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "12 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m0031c53",
+                    "tleo_id": "m0028vr2",
+                    "title": "Remembers...",
+                    "type": "episode",
+                    "programme_type": "sequential",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p8p53d.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p8p4x8.jpg"
+                    },
+                    "labels": {
+                        "category": "Documentary"
+                    },
+                    "live": false,
+                    "subtitle": "Peter Egan Remembers... A Taste of Honey",
+                    "synopses": {
+                        "small": "Peter Egan looks back on the 1984 adaptation of Shelagh Delaney's play A Taste of Honey."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "14 mins"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m002yph1",
+                    "tleo_id": "m002yph1",
+                    "title": "A Taste of Honey",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Sweetness is hard to find",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p0mwrx.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p0mw9j.jpg"
+                    },
+                    "labels": {
+                        "category": "Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Sweetness is hard to find when life turns bitter. A gritty tale of youth and defiance",
+                        "small": "1984 adaptation of Shelagh Delaney's classic play. "
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "1h 28m"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "m0014962",
+                    "tleo_id": "m0014962",
+                    "title": "Elmina's Kitchen",
+                    "type": "episode",
+                    "programme_type": "one-off",
+                    "editorial_subtitle": "Staying out of trouble is a full-time job",
+                    "images": {
+                        "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0blync2.jpg",
+                        "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0blyln5.jpg"
+                    },
+                    "labels": {
+                        "category": "Crime Drama"
+                    },
+                    "live": false,
+                    "synopses": {
+                        "editorial": "Staying out of trouble is a full-time job. Kwame Kewi-Armah’s breakthrough play",
+                        "small": "A cafe owner tries to prevent his son from getting involved in London's gun culture."
+                    },
+                    "versions": [
+                        {
+                            "kind": "original",
+                            "duration": {
+                                "text": "1h 29m"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "stacked": false
+        }
+    ],
+    "player": {
+        "open": false,
+        "persist": false,
+        "playhead": null,
+        "playFrom": null,
+        "volume": 0.6,
+        "muted": false,
+        "subtitles": false,
+        "audioDescribed": false,
+        "playingState": null,
+        "playerContentType": null,
+        "metadataLoadedEventFired": false
+    },
+    "id": {
+        "signedIn": true,
+        "signInAvailabilityStatus": "green",
+        "status": "green",
+        "requiresSignIn": true,
+        "msiModalVisible": false,
+        "msiModalType": null,
+        "ageBracket": "o18",
+        "enablePersonalisation": false,
+        "cdnFailover": false,
+        "ctas": {}
+    },
+    "tvl": {
+        "tvlModalVisible": false,
+        "tvlModalType": null,
+        "hasLicence": false,
+        "inNoLicenceSegment": null
+    },
+    "page": {},
+    "dials": {
+        "enableToucanOnIOSAndIPadOS": "true",
+        "enableChaptersAndMoments": "true",
+        "mediaTimelinesEndpointEnv": "production",
+        "enableTvLicenceSegmentation": "true"
+    },
+    "config": {
+        "staticHost": "https://iplayer-web.files.bbci.co.uk",
+        "iblBaseUrl": "https://ibl.api.bbc.co.uk/ibl/v1",
+        "iblUserBaseUrl": "https://user.ibl.api.bbc.co.uk/ibl/v1",
+        "chaptersAndMomentsBaseUrl": "https://iplayer-web.files.bbci.co.uk/iplayer-web-playback-chapters-and-moments-plugin/0.18.0"
+    },
+    "stats": {
+        "subscribedBroadcasts": [],
+        "playedTypeStatFired": false,
+        "smpStatsEnv": "live"
+    },
+    "rewindStats": {
+        "baseTimestamp": null,
+        "sendStatsDue": null,
+        "lastWatchedEpisodeId": null,
+        "sentEpisodes": []
+    },
+    "highlights": {
+        "items": [
+            {
+                "id": "m0033719",
+                "tleo_id": "b006mfx6",
+                "title": "Storyville",
+                "type": "episode",
+                "programme_type": "strand",
+                "editorial_subtitle": "A Want in Her",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgf53l.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgf4v4.jpg"
+                },
+                "labels": {
+                    "category": "Documentary Film"
+                },
+                "live": false,
+                "subtitle": "A Want in Her",
+                "synopses": {
+                    "editorial": "A Want in Her. Myrid Carten's powerful tale of family, addiction and unconditional love",
+                    "small": "An exploration of family, addiction and unconditional love from filmmaker Myrid Carten. "
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 17m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m003370l",
+                "tleo_id": "m003370l",
+                "title": "Asteroids: Spark of Life?",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "A revolutionary new theory",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgmzzd.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgmyzw.jpg"
+                },
+                "labels": {
+                    "category": "Science & Nature"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "A revolutionary new theory. Could the impact of asteroids be the key to our existence?",
+                    "small": "Could the destructive impacts of asteroids on Earth be the key to our very existence?"
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "52 mins"
+                        }
+                    },
+                    {
+                        "kind": "audio-described",
+                        "duration": {
+                            "text": "52 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m003370v",
+                "tleo_id": "b00dl7hr",
+                "title": "Mercury Prize",
+                "type": "episode",
+                "programme_type": "unclassified",
+                "editorial_subtitle": "Album of the year!",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgw0dx.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgw09c.jpg"
+                },
+                "labels": {
+                    "category": "Music"
+                },
+                "live": false,
+                "subtitle": "Mercury Prize 2026: Album of the Year",
+                "synopses": {
+                    "editorial": "Album of the year! Unique performances before music’s most prestigious prize is announced",
+                    "small": "Lauren Laverne presents the Mercury Prize Album of the Year from the Newcastle Arena."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 32m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "b01lc9s2",
+                "tleo_id": "b00glkch",
+                "title": "Miss Marple",
+                "type": "episode",
+                "programme_type": "sequential",
+                "editorial_subtitle": "The classy Christie classic",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0lll6zv.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0llrlxp.jpg"
+                },
+                "labels": {
+                    "category": "Crime Drama"
+                },
+                "live": false,
+                "subtitle": "The Body in the Library: Part 1",
+                "synopses": {
+                    "editorial": "The classy Christie classic with Joan Hickson’s definitive portrayal of the senior sleuth",
+                    "small": "The ordered tranquillity of life in St Mary Mead is shattered by a mysterious discovery."
+                },
+                "versions": [
+                    {
+                        "kind": "technical-replacement",
+                        "duration": {
+                            "text": "51 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m0033705",
+                "tleo_id": "b052vfvv",
+                "title": "Talking Pictures",
+                "type": "episode",
+                "programme_type": "sequential",
+                "editorial_subtitle": "A celebration of international films",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ph4fxy.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0ph4fkv.jpg"
+                },
+                "labels": {
+                    "category": "Documentary"
+                },
+                "live": false,
+                "subtitle": "World Cinema Classics",
+                "synopses": {
+                    "editorial": "A celebration of international films and the visionary directors who inspired generations",
+                    "small": "Celia Imrie presents a celebration of international films."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "44 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "b012tpyt",
+                "tleo_id": "b00704hg",
+                "title": "Top of the Pops",
+                "type": "episode",
+                "programme_type": "unclassified",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0mls1fw.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pgsnvr.jpg"
+                },
+                "labels": {
+                    "category": "Music"
+                },
+                "live": false,
+                "subtitle": "15/07/1976",
+                "synopses": {
+                    "small": "With Sunfighter, Liverpool Express, Bobby Goldsboro, Glamour Puss and Demis Roussos."
+                },
+                "versions": [
+                    {
+                        "kind": "lengthened",
+                        "duration": {
+                            "text": "34 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m0032wvx",
+                "tleo_id": "m0032wvx",
+                "title": "The Arctic Convoy",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "Courage was their lifeline",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pdbrzl.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pdbryt.jpg"
+                },
+                "labels": {
+                    "category": "Film - War"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "Courage was their lifeline. Norwegian ships face perilous waters to deliver war supplies",
+                    "small": "1942. A cargo ship’s captain and first mate clash on a voyage to Russia. Tense war drama."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 40m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "b0078nd6",
+                "tleo_id": "b0078nd6",
+                "title": "The Great Escape",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "Courage unites, freedom awaits",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0mf21x9.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0mf21w2.jpg"
+                },
+                "labels": {
+                    "category": "Film - War"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "Courage unites, freedom awaits. The all-time action classic action starring Steve McQueen",
+                    "small": "A group of Allied POWs mount a daring breakout from a supposedly inescapable Nazi camp."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "2h 45m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m002zkgt",
+                "tleo_id": "p09tqj2t",
+                "title": "Paris Police",
+                "type": "episode",
+                "programme_type": "narrative",
+                "editorial_subtitle": "Sex, lies and murder",
+                "editorial_title": "Paris Police 1910",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p943h0.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p9452p.jpg"
+                },
+                "labels": {
+                    "category": "Crime Drama"
+                },
+                "live": false,
+                "subtitle": "Paris Police 1910: Episode 1",
+                "synopses": {
+                    "editorial": "Sex, lies and murder. Everyone has a story to tell – and only one of them can be true",
+                    "small": "Meg Steinheil is discovered bound and gagged, with the bodies of her husband and mother."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "55 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m003285h",
+                "tleo_id": "m003285h",
+                "title": "The Shaman's Grave",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "One grave, 9,000 years of secrets",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pb1j1r.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pb1hr0.jpg"
+                },
+                "labels": {
+                    "category": "Documentary"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "One grave, 9,000 years of secrets brought to life. Who was the shaman of Bad Dürrenberg?",
+                    "small": "Researchers in Germany reopen an archaeological cold case from the Mesolithic period."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "52 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m0032ls7",
+                "tleo_id": "m0032ls7",
+                "title": "Echoes from Below: Exploring Britain's Caves",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "An uncharted abyss",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pczptq.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pczpqc.jpg"
+                },
+                "labels": {
+                    "category": "History"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "An uncharted abyss, millions of years in the making. What secrets wait in the Titan cave?",
+                    "small": "Miles of caves snake beneath Great Britain’s landscape, each with a unique story to tell. "
+                },
+                "versions": [
+                    {
+                        "kind": "editorial",
+                        "duration": {
+                            "text": "52 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "p032kjfh",
+                "tleo_id": "b00cnhjw",
+                "title": "Play for Today",
+                "type": "episode",
+                "programme_type": "strand",
+                "editorial_subtitle": "The past comes knocking…",
+                "editorial_title": "Schmoedipus",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pd1tn3.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pd1tlc.jpg"
+                },
+                "labels": {
+                    "category": "Drama"
+                },
+                "live": false,
+                "subtitle": "Series 4: Schmoedipus",
+                "synopses": {
+                    "editorial": "The past comes knocking… Dennis Potter's tale of secrets and mind games, with Tim Curry",
+                    "small": "A strange young man turns up on Elizabeth’s doorstep and makes a frightening claim."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 7m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m0029l9p",
+                "tleo_id": "m0029l9p",
+                "title": "Getting It Back: The Story of Cymande",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "Sampling superstars",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0l0xnbv.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0l0y6wz.jpg"
+                },
+                "labels": {
+                    "category": "Music"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "Sampling superstars. How an obscure 70s band became the backbone of classic hip-hop",
+                    "small": "The story of a band you may not have heard of but whose sound has influenced generations."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 30m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m0032lrl",
+                "tleo_id": "m0032lrl",
+                "title": "Bel",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "An unforgettable voice",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pdmg1c.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pdmg0x.jpg"
+                },
+                "labels": {
+                    "category": "Documentary"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "An unforgettable voice. Raw tribute to Beldina Odenyo, an artist on the cusp of stardom",
+                    "small": "A raw tribute celebrating the late Scottish-Kenyan singer-songwriter Beldina Odenyo."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 30m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m002yd3k",
+                "tleo_id": "b06chqn8",
+                "title": "Beck",
+                "type": "episode",
+                "programme_type": "sequential",
+                "editorial_subtitle": "In the Shadows",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p7htdj.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p7ht4q.jpg"
+                },
+                "labels": {
+                    "category": "Crime Drama"
+                },
+                "live": false,
+                "subtitle": "In the Shadows",
+                "synopses": {
+                    "editorial": "In the Shadows. A mysterious person delivers suspects in a fatal gang shooting to police",
+                    "small": "A fatal gang shooting leads police to a mysterious figure with unknown motives."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 27m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m002zylf",
+                "tleo_id": "b007v097",
+                "title": "BBC Proms",
+                "type": "episode",
+                "programme_type": "unclassified",
+                "editorial_subtitle": "New World Symphony",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p8s1nd.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0p8s1m7.jpg"
+                },
+                "labels": {
+                    "category": "Music"
+                },
+                "live": false,
+                "subtitle": "New World Symphony at the Proms",
+                "synopses": {
+                    "editorial": "New World Symphony and a new triple concerto for BBC Young Musician star alumni",
+                    "small": "Dvorak’s masterpiece alongside a new triple concerto from BBC Young Musician star alumni."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 57m"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m003284q",
+                "tleo_id": "m0028vr2",
+                "title": "Remembers...",
+                "type": "episode",
+                "programme_type": "sequential",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pbq5qv.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0pbq5gl.jpg"
+                },
+                "labels": {
+                    "category": "Documentary"
+                },
+                "live": false,
+                "subtitle": "Mary Moore Remembers... Henry Moore",
+                "synopses": {
+                    "small": "Mary Moore looks back on her father's life, work and relationship with television."
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "14 mins"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "m002x9vh",
+                "tleo_id": "m002x9vh",
+                "title": "The Three Kings",
+                "type": "episode",
+                "programme_type": "one-off",
+                "editorial_subtitle": "The makers of modern football",
+                "images": {
+                    "promotional_with_logo": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nnr3mk.jpg",
+                    "standard": "https://ichef.bbci.co.uk/images/ic/{recipe}/p0nnr2n1.jpg"
+                },
+                "labels": {
+                    "category": "Sport"
+                },
+                "live": false,
+                "synopses": {
+                    "editorial": "The makers of modern football. With stunning archive footage and behind-the-scenes access",
+                    "small": "The incredible story of three of the most influential men in football history. "
+                },
+                "versions": [
+                    {
+                        "kind": "original",
+                        "duration": {
+                            "text": "1h 42m"
+                        }
+                    },
+                    {
+                        "kind": "audio-described",
+                        "duration": {
+                            "text": "1h 42m"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

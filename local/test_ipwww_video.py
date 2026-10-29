@@ -392,6 +392,14 @@ class Groups(fixtures.LocalTestCase):
         self.assertEqual(len(self.li_store), 108)
 
 
+class ChannelPage(fixtures.LocalTestCase):
+    @patch('resources.lib.ipwww_video.GetJsonData', return_value=open_json('json/channel_bbcfour.json'))
+    def test_channel(self, _):
+        ipwww_video.GetChannelPage('bbcfour', 'img/bbcfour')
+        self.assertEqual(self.li_store.list_item(0).getLabel(), '[B]A - Z[/B]')
+        self.assertEqual(len(self.li_store), 22)      # 3 groups, 18 episodes, and A-Z
+
+
 class TestListWatching(fixtures.LocalTestCase):
     @patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('html/watching.json'))
     def test_list_watching_authenticated(self, _):

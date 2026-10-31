@@ -110,92 +110,93 @@ def setup_web_test(*_):
 
 
 def patch_listitem():
-    import xbmcgui
+    xbmcgui.ListItem = ListItemMock
 
-    # noinspection pep8-naming
-    class LI(xbmcgui.ListItem):
-        def __init__(self, label: str = "",
-                     label2: str = "",
-                     path: str = "",
-                     offscreen: bool = False) -> None:
-            super().__init__()
-            assert isinstance(label, str)
-            assert isinstance(label2, str)
-            assert isinstance(path, str)
-            assert isinstance(offscreen, bool)
-            self._label = label
-            self._label2 = label2
-            self._path = path
-            self._offscreen = offscreen
-            self._is_folder = False
-            self._art = {}
-            self._info = {}
-            self._props = {}
 
-        def getLabel(self) -> str:
-            return self._label
+# noinspection PyPep8Naming
+class ListItemMock(xbmcgui.ListItem):
+    def __init__(self, label: str = "",
+                 label2: str = "",
+                 path: str = "",
+                 offscreen: bool = False) -> None:
+        super().__init__()
+        assert isinstance(label, str)
+        assert isinstance(label2, str)
+        assert isinstance(path, str)
+        assert isinstance(offscreen, bool)
+        self._label = label
+        self._label2 = label2
+        self._path_ = path
+        self._offscreen_ = offscreen
+        self._is_folder_ = False
+        self._art = {}
+        self._info = {}
+        self._props_ = {}
 
-        def getLabel2(self) -> str:
-            return self._label2
+    def getLabel(self) -> str:
+        return self._label
 
-        def setLabel(self, label: str) -> None:
-            assert isinstance(label, str), "Argument 'label' must be a string."
-            self._label = label
+    def getLabel2(self) -> str:
+        return self._label2
 
-        def setLabel2(self, label: str) -> None:
-            assert isinstance(label, str), "Argument 'label' must be a string."
-            self._label2 = label
+    def setLabel(self, label: str) -> None:
+        assert isinstance(label, str), "Argument 'label' must be a string."
+        self._label = label
 
-        def setArt(self, dictionary: dict[str, str]) -> None:
-            assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
-            self._art.update(dictionary)
+    def setLabel2(self, label: str) -> None:
+        assert isinstance(label, str), "Argument 'label' must be a string."
+        self._label2 = label
 
-        def setIsFolder(self, isFolder: bool) -> None:
-            assert isinstance(isFolder, bool), "Argument 'isFolder' must be a boolean."
-            self._is_folder = isFolder
+    def setArt(self, dictionary: dict[str, str]) -> None:
+        assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
+        self._art.update(dictionary)
 
-        # noinspection shadowing-builtins
-        def setInfo(self, type: str, infoLabels: dict[str, str]) -> None:
-            assert isinstance(type, str), "Argument 'type' must be a string."
-            assert isinstance(infoLabels, dict), "Argument 'infoLabels' must be a dict."
-            type = type.lower()
-            assert type in ('video', 'audio', 'music', 'pictures', 'game')
-            info_dict = self._info.setdefault(type, {})
-            info_dict.update(infoLabels)
+    def setIsFolder(self, isFolder: bool) -> None:
+        assert isinstance(isFolder, bool), "Argument 'isFolder' must be a boolean."
+        self._is_folder_ = isFolder
 
-        def setProperty(self, key: str, value: str) -> None:
-            assert isinstance(key, str), "Argument 'key' must be a string."
-            assert isinstance(value, str), "Argument 'value' must be a string."
-            self._props[key.lower()] = value
+    # noinspection shadowing-builtins
+    def setInfo(self, type: str, infoLabels: dict[str, str]) -> None:
+        assert isinstance(type, str), "Argument 'type' must be a string."
+        assert isinstance(infoLabels, dict), "Argument 'infoLabels' must be a dict."
+        assert type in ('video', 'music', 'pictures', 'game')
+        info_dict = self._info.setdefault(type, {})
+        info_dict.update(infoLabels)
 
-        def setProperties(self, dictionary: dict[str, str]) -> None:
-            assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
-            self._props.update(dictionary)
+    def setProperty(self, key: str, value: str) -> None:
+        assert isinstance(key, str), "Argument 'key' must be a string."
+        assert isinstance(value, str), "Argument 'value' must be a string."
+        self._props_[key] = value
 
-        def getProperty(self, key: str) -> str:
-            assert isinstance(key, str), "Argument 'key' must be a string."
-            return self._props[key.lower()]
+    def setProperties(self, dictionary: dict[str, str]) -> None:
+        assert isinstance(dictionary, dict), "Argument 'dictionary' must be a dict."
+        self._props_.update(dictionary)
 
-        def setPath(self, path: str) -> None:
-            assert isinstance(path, str), "Argument 'path' must be a string."
-            self._path = path
+    def getProperty(self, key: str) -> str:
+        assert isinstance(key, str), "Argument 'key' must be a string."
+        return self._props_['key']
 
-        def setMimeType(self, mimetype: str) -> None:
-            assert isinstance(mimetype, str), "Argument 'mimetype' must be a string."
-            self._mimetype = mimetype
+    def setPath(self, path: str) -> None:
+        assert isinstance(path, str), "Argument 'callb_path' must be a string."
+        self._path_ = path
 
-        def setContentLookup(self, enable: bool) -> None:
-            assert isinstance(enable, bool), "Argument 'enable' must be a boolean."
-            self._content_lookup = enable
+    def setMimeType(self, mimetype: str) -> None:
+        assert isinstance(mimetype, str), "Argument 'mimetype' must be a string."
+        self._mimetype = mimetype
 
-        def setSubtitles(self, subtitleFiles: list[str]) -> None:
-            assert isinstance(subtitleFiles, (list, tuple)), "Argument 'subtitleFiles' must be a tuple or a list."
-            self._subtitles = subtitleFiles
+    def setContentLookup(self, enable: bool) -> None:
+        assert isinstance(enable, bool), "Argument 'enable' must be a boolean."
+        self._content_lookup = enable
 
-        def getPath(self) -> str:
-            return self._path
+    def setSubtitles(self, subtitleFiles: list[str] | tuple[str]) -> None:
+        assert isinstance(subtitleFiles, (list, tuple)), "Argument 'subtitleFiles' must be a tuple or a list."
+        self._subtitles = subtitleFiles
 
-    xbmcgui.ListItem = LI
+    def getPath(self) -> str:
+        return self._path_
+
+    def __repr__(self):
+        return f"<ListItem(label='{self._label}', path='{self._path_}>'"
 
 
 # noinspection pep8-naming
@@ -206,7 +207,7 @@ class ListItemCollector:
         self._call_args = []
 
     @property
-    def calls(self) -> list[tuple[str, xbmcgui.ListItem, bool]]:
+    def calls(self) -> list[tuple[str, ListItemMock, bool]]:
         return self._call_args
 
     @property
@@ -217,14 +218,22 @@ class ListItemCollector:
         return self._call_args[index][0]
 
     @property
-    def list_items(self) -> list[xbmcgui.ListItem]:
+    def list_items(self) -> list[ListItemMock]:
         return [call[1] for call in self._call_args]
 
-    def list_item(self, index) -> xbmcgui.ListItem:
+    def list_item(self, index) -> ListItemMock:
         return self._call_args[index][1]
 
-    def __call__(self, handle: int, url: str, listitem=xbmcgui.ListItem, isFolder=bool):
-        self._call_args.append((url, listitem, isFolder))
+    def append(self, item: tuple[str, xbmcgui.ListItem, bool]):
+        url, listitem, isFolder = item
+        if not isinstance(url, str):
+            raise TypeError(f"'url' must be a string, not {type(url).__name__}, in directory item {item}.")
+        if not isinstance(listitem, xbmcgui.ListItem):
+            raise TypeError(
+                f"'listitem' must be an xbmcgui.ListItem, not {type(listitem).__name__}, in directory item  {item}.")
+        if not isinstance(isFolder, bool):
+            raise TypeError(f"'isFolder' must be a boolean, not {type(isFolder).__name__}, in directory item {item}.")
+        self._call_args.append(item)
 
     def __len__(self):
         return len(self._call_args)
@@ -234,6 +243,35 @@ class ListItemCollector:
 
     def __getitem__(self, item):
         return self._call_args[item]
+
+    # noinspection unused-parameter
+    def add_item(self,
+                 handle: int,
+                 url: str,
+                 listitem: xbmcgui.ListItem,
+                 isFolder: bool):
+        """Method intended to patch xbmcplugin.addDirectoryItem, store all calls,
+            and provide easier access than a standard Mock.
+
+        """
+        self.append((url, listitem, isFolder))
+
+    # noinspection unused-parameter
+    def add_items(self,
+                  handle: int,
+                  items: list[tuple[str, xbmcgui.ListItem, bool]],
+                  totalItems: int = 0):
+        """Method intended to patch xbmcplugin.addDirectoryItems (plural).
+             Store all calls and provide easier access than a standard Mock.
+
+        """
+        for item in items:
+            if not isinstance(item, tuple):
+                raise TypeError(
+                    f"Invalid directory item '{item}': must be tuple[str, ListItem, bool], not {type(item).__name__}.")
+            self.append(item)
+        if totalItems and len(self._call_args) > totalItems:
+            raise ValueError("xbmcplugin.addDirectoryItems has more items than specified in 'totalItems'.")
 
 
 def translate_path_mock(path: str):
@@ -383,14 +421,17 @@ class AddonTestCase(TestCase):
 
     def setUp(self):
         self.li_store = ListItemCollector()
-        self._p1 = patch('xbmcplugin.addDirectoryItem', self.li_store)
+        self._p1 = patch('xbmcplugin.addDirectoryItem', self.li_store.add_item)
         self._p1.start()
-        self._p2 = patch('xbmcaddon.Addon.getSetting', self.__get_setting)
+        self._p2 = patch('xbmcplugin.addDirectoryItems', self.li_store.add_items)
         self._p2.start()
+        self._p3 = patch('xbmcaddon.Addon.getSetting', self.__get_setting)
+        self._p3.start()
 
     def tearDown(self):
         self._p1.stop()
         self._p2.stop()
+        self._p3.stop()
 
     def __get_setting(self, key):
         value = self.addon_settings.get(key)

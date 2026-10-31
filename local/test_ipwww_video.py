@@ -88,21 +88,21 @@ class ScrapeEpisodes(fixtures.LocalTestCase):
     def test_scrape_episodes_from_programme_page_with_multiple_series(self):
         """Scrape a programme page with multiple series"""
         self.addon_settings['paginate_episodes'] = 0
-        ipwww_video.ScrapeEpisodes('series_all-at-sea')
-        self.assertEqual(len(self.li_store), 3)
-        self.assertTrue('More Like This' in self.li_store.list_item(0).getLabel())
-        self.assertTrue('Series' in self.li_store.list_item(1).getLabel())
-        self.assertTrue('Series' in self.li_store.list_item(2).getLabel())
+        items = list(ipwww_video.ScrapeEpisodes('series_all-at-sea'))
+        self.assertEqual(len(items), 3)
+        self.assertTrue('More Like This' in items[0][1].getLabel())
+        self.assertTrue('Series' in items[1][1].getLabel())
+        self.assertTrue('Series' in items[2][1].getLabel())
 
     @patch('resources.lib.ipwww_video.GetJsonData', return_value=open_json('json/episode_page_with_one_series.json'))
     def test_scrape_episodes_from_episode_page_with_one_series(self, p_get_json):
         """Scrape an episode page with one series as a programme page."""
         self.addon_settings['paginate_episodes'] = 0
-        ipwww_video.ScrapeEpisodes('episode_dear_England')
+        items = list(ipwww_video.ScrapeEpisodes('episode_dear_England'))
         p_get_json.assert_called_once()
-        self.assertEqual(len(self.li_store), 5)      # 4 episodes + "More Like This"
+        self.assertEqual(len(items), 5)      # 4 episodes + "More Like This"
         self.assertTrue("More Like This" in self.li_store.list_item(0).getLabel())
-        for item in self.li_store.list_items:
+        for item in items:
             self.assertFalse('Next page' in item.getLabel())
 
 

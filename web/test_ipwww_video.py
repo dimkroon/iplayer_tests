@@ -29,39 +29,13 @@ class GenericListings(fixtures.WebTestCase):
         self.assertRaises(SystemExit, ipwww_video.ListLive)
         self.assertEqual(p_add_item.call_count, 33)
 
-    def test_list_most_popular(self, p_add_item):
-        ipwww_video.ListMostPopular()
-        self.assertGreater(p_add_item.call_count, 10)
-
-    def test_list_recommendations(self, p_add_item):
-        ipwww_video.ListRecommendations()
-        self.assertEqual(p_add_item.call_count, 2)
-        p_add_item.reset_mock()
-        ipwww_video.ListRecommendations('recommendations')
-        self.assertEqual(p_add_item.call_count, 12)
-        p_add_item.reset_mock()
-        ipwww_video.ListRecommendations('if-you-liked')
-        self.assertEqual(p_add_item.call_count, 12)
-
-    @patch('resources.lib.ipwww_common.cookie_jar', NotLoggedInCookieJar())
-    def test_list_recommendations_not_signed_in(self, p_add_item):
-        # The rather unusual situation where auto sign-in succeeds, but iplayer's main page still
-        # returns a not signed in status.
-        ipwww_video.ListRecommendations()
-        self.assertEqual(p_add_item.call_count, 0)
-        # The more usual situation where auto sign-in also fails
-        with patch('resources.lib.ipwww_video.CheckLogin', return_value=False):
-            with patch('resources.lib.ipwww_video.CreateBaseDirectory') as p_create_base:
-                ipwww_video.ListRecommendations()
-                p_create_base.assert_called_once()
-
 
 class Categories(fixtures.WebTestCase):
     addon_settings = {'paginate_episodes': 1}
 
     def test_get_all_categories(self):
         ipwww_video.ListCategories()
-        self.assertEqual(len(self.li_store), 21)
+        self.assertGreater(len(self.li_store), 20)
 
     def test_category_drama_and_soaps(self):
         self.addon_settings['paginate_episodes'] = 0

@@ -230,7 +230,7 @@ class ListItemCollector:
         return len(self._call_args)
 
     def __iter__(self):
-        return iter(self.list_items)
+        return iter(self._call_args)
 
     def __getitem__(self, item):
         return self._call_args[item]

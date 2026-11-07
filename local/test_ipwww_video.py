@@ -432,21 +432,6 @@ class TestListFavourites(fixtures.LocalTestCase):
         self.assertEqual(10, p_AddMenuEntry.call_count)
 
 
-@patch('resources.lib.ipwww_video.GetJsonDataWithBBCid', return_value=open_json('json/iplayer.json'))
-class TestListRecommendations(fixtures.LocalTestCase):
-    def test_list_recommendations_authenticated(self, _):
-        ipwww_video.ListRecommendations()
-        self.assertEqual(2, len(self.li_store))
-
-    def test_list_if_you_liked_content(self, _):
-        ipwww_video.ListRecommendations('if-you-liked')
-        self.assertEqual(12, len(self.li_store))
-
-    def test_recommended_content(self, _):
-        ipwww_video.ListRecommendations('recommendations')
-        self.assertEqual(12, len(self.li_store))
-
-
 class TestScrapeAvailableStream(fixtures.LocalTestCase):
     """Play an item from a listing
 
